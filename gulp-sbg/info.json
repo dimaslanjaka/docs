@@ -23,7 +23,7 @@
 							"fileName": "gulp.clean.ts",
 							"line": 13,
 							"character": 22,
-							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/gulp.clean.ts#L13"
 						}
 					],
 					"signatures": [
@@ -67,7 +67,7 @@
 							"fileName": "gulp.clean.ts",
 							"line": 65,
 							"character": 16,
-							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/gulp.clean.ts#L65"
 						}
 					],
 					"signatures": [
@@ -128,7 +128,7 @@
 							"fileName": "gulp.clean.ts",
 							"line": 45,
 							"character": 16,
-							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/gulp.clean.ts#L45"
 						}
 					],
 					"signatures": [
@@ -196,7 +196,7 @@
 					"fileName": "gulp.clean.ts",
 					"line": 1,
 					"character": 0,
-					"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+					"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/gulp.clean.ts#L1"
 				}
 			]
 		},
@@ -225,7 +225,7 @@
 									"fileName": "_config.json",
 									"line": 266,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L266"
 								}
 							],
 							"type": {
@@ -248,7 +248,7 @@
 													"fileName": "_config.json",
 													"line": 272,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L272"
 												}
 											],
 											"type": {
@@ -268,7 +268,7 @@
 													"fileName": "_config.json",
 													"line": 269,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L269"
 												}
 											],
 											"type": {
@@ -288,7 +288,7 @@
 													"fileName": "_config.json",
 													"line": 267,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L267"
 												}
 											],
 											"type": {
@@ -308,7 +308,7 @@
 													"fileName": "_config.json",
 													"line": 274,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L274"
 												}
 											],
 											"type": {
@@ -331,7 +331,7 @@
 													"fileName": "_config.json",
 													"line": 270,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L270"
 												}
 											],
 											"type": {
@@ -351,7 +351,7 @@
 													"fileName": "_config.json",
 													"line": 271,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L271"
 												}
 											],
 											"type": {
@@ -371,7 +371,7 @@
 													"fileName": "_config.json",
 													"line": 268,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L268"
 												}
 											],
 											"type": {
@@ -391,7 +391,7 @@
 													"fileName": "_config.json",
 													"line": 273,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L273"
 												}
 											],
 											"type": {
@@ -421,7 +421,7 @@
 											"fileName": "_config.json",
 											"line": 266,
 											"character": 13,
-											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L266"
 										}
 									]
 								}
@@ -443,7 +443,7 @@
 									"fileName": "_config.json",
 									"line": 282,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L282"
 								}
 							],
 							"type": {
@@ -466,7 +466,7 @@
 													"fileName": "_config.json",
 													"line": 285,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L285"
 												}
 											],
 											"type": {
@@ -486,7 +486,7 @@
 													"fileName": "_config.json",
 													"line": 284,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L284"
 												}
 											],
 											"type": {
@@ -506,7 +506,7 @@
 													"fileName": "_config.json",
 													"line": 286,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L286"
 												}
 											],
 											"type": {
@@ -526,7 +526,7 @@
 													"fileName": "_config.json",
 													"line": 283,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L283"
 												}
 											],
 											"type": {
@@ -552,7 +552,7 @@
 											"fileName": "_config.json",
 											"line": 282,
 											"character": 15,
-											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L282"
 										}
 									]
 								}
@@ -574,7 +574,7 @@
 									"fileName": "_config.json",
 									"line": 28,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L28"
 								}
 							],
 							"type": {
@@ -598,7 +598,7 @@
 									"fileName": "_config.json",
 									"line": 161,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L161"
 								}
 							],
 							"type": {
@@ -622,7 +622,7 @@
 									"fileName": "_config.json",
 									"line": 162,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L162"
 								}
 							],
 							"type": {
@@ -645,7 +645,7 @@
 													"fileName": "_config.json",
 													"line": 165,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L165"
 												}
 											],
 											"type": {
@@ -668,7 +668,7 @@
 																	"fileName": "_config.json",
 																	"line": 168,
 																	"character": 6,
-																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L168"
 																}
 															],
 															"type": {
@@ -688,7 +688,7 @@
 																	"fileName": "_config.json",
 																	"line": 166,
 																	"character": 6,
-																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L166"
 																}
 															],
 															"type": {
@@ -708,7 +708,7 @@
 																	"fileName": "_config.json",
 																	"line": 167,
 																	"character": 6,
-																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L167"
 																}
 															],
 															"type": {
@@ -733,7 +733,7 @@
 															"fileName": "_config.json",
 															"line": 165,
 															"character": 13,
-															"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+															"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L165"
 														}
 													]
 												}
@@ -751,7 +751,7 @@
 													"fileName": "_config.json",
 													"line": 164,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L164"
 												}
 											],
 											"type": {
@@ -771,7 +771,7 @@
 													"fileName": "_config.json",
 													"line": 163,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L163"
 												}
 											],
 											"type": {
@@ -796,7 +796,7 @@
 											"fileName": "_config.json",
 											"line": 162,
 											"character": 16,
-											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L162"
 										}
 									]
 								}
@@ -818,7 +818,7 @@
 									"fileName": "_config.json",
 									"line": 247,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L247"
 								}
 							],
 							"type": {
@@ -841,7 +841,7 @@
 													"fileName": "_config.json",
 													"line": 254,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L254"
 												}
 											],
 											"type": {
@@ -861,7 +861,7 @@
 													"fileName": "_config.json",
 													"line": 249,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L249"
 												}
 											],
 											"type": {
@@ -884,7 +884,7 @@
 																	"fileName": "_config.json",
 																	"line": 250,
 																	"character": 6,
-																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L250"
 																}
 															],
 															"type": {
@@ -907,7 +907,7 @@
 															"fileName": "_config.json",
 															"line": 249,
 															"character": 17,
-															"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+															"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L249"
 														}
 													]
 												}
@@ -925,7 +925,7 @@
 													"fileName": "_config.json",
 													"line": 252,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L252"
 												}
 											],
 											"type": {
@@ -945,7 +945,7 @@
 													"fileName": "_config.json",
 													"line": 248,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L248"
 												}
 											],
 											"type": {
@@ -965,7 +965,7 @@
 													"fileName": "_config.json",
 													"line": 255,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L255"
 												}
 											],
 											"type": {
@@ -985,7 +985,7 @@
 													"fileName": "_config.json",
 													"line": 253,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L253"
 												}
 											],
 											"type": {
@@ -1013,7 +1013,7 @@
 											"fileName": "_config.json",
 											"line": 247,
 											"character": 17,
-											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L247"
 										}
 									]
 								}
@@ -1035,7 +1035,7 @@
 									"fileName": "_config.json",
 									"line": 314,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L314"
 								}
 							],
 							"type": {
@@ -1058,7 +1058,7 @@
 													"fileName": "_config.json",
 													"line": 319,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L319"
 												}
 											],
 											"type": {
@@ -1078,7 +1078,7 @@
 													"fileName": "_config.json",
 													"line": 316,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L316"
 												}
 											],
 											"type": {
@@ -1098,7 +1098,7 @@
 													"fileName": "_config.json",
 													"line": 318,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L318"
 												}
 											],
 											"type": {
@@ -1118,7 +1118,7 @@
 													"fileName": "_config.json",
 													"line": 315,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L315"
 												}
 											],
 											"type": {
@@ -1138,7 +1138,7 @@
 													"fileName": "_config.json",
 													"line": 317,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L317"
 												}
 											],
 											"type": {
@@ -1165,7 +1165,7 @@
 											"fileName": "_config.json",
 											"line": 314,
 											"character": 21,
-											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L314"
 										}
 									]
 								}
@@ -1187,7 +1187,7 @@
 									"fileName": "_config.json",
 									"line": 29,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L29"
 								}
 							],
 							"type": {
@@ -1211,7 +1211,7 @@
 									"fileName": "_config.json",
 									"line": 84,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L84"
 								}
 							],
 							"type": {
@@ -1235,7 +1235,7 @@
 									"fileName": "_config.json",
 									"line": 325,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L325"
 								}
 							],
 							"type": {
@@ -1258,7 +1258,7 @@
 													"fileName": "_config.json",
 													"line": 326,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L326"
 												}
 											],
 											"type": {
@@ -1278,7 +1278,7 @@
 													"fileName": "_config.json",
 													"line": 327,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L327"
 												}
 											],
 											"type": {
@@ -1302,7 +1302,7 @@
 											"fileName": "_config.json",
 											"line": 325,
 											"character": 21,
-											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L325"
 										}
 									]
 								}
@@ -1324,7 +1324,7 @@
 									"fileName": "_config.json",
 									"line": 30,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L30"
 								}
 							],
 							"type": {
@@ -1348,7 +1348,7 @@
 									"fileName": "_config.json",
 									"line": 87,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L87"
 								}
 							],
 							"type": {
@@ -1372,7 +1372,7 @@
 									"fileName": "_config.json",
 									"line": 82,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L82"
 								}
 							],
 							"type": {
@@ -1396,7 +1396,7 @@
 									"fileName": "_config.json",
 									"line": 33,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L33"
 								}
 							],
 							"type": {
@@ -1420,7 +1420,7 @@
 									"fileName": "_config.json",
 									"line": 83,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L83"
 								}
 							],
 							"type": {
@@ -1444,7 +1444,7 @@
 									"fileName": "_config.json",
 									"line": 152,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L152"
 								}
 							],
 							"type": {
@@ -1467,7 +1467,7 @@
 													"fileName": "_config.json",
 													"line": 155,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L155"
 												}
 											],
 											"type": {
@@ -1487,7 +1487,7 @@
 													"fileName": "_config.json",
 													"line": 159,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L159"
 												}
 											],
 											"type": {
@@ -1507,7 +1507,7 @@
 													"fileName": "_config.json",
 													"line": 157,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L157"
 												}
 											],
 											"type": {
@@ -1527,7 +1527,7 @@
 													"fileName": "_config.json",
 													"line": 156,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L156"
 												}
 											],
 											"type": {
@@ -1547,7 +1547,7 @@
 													"fileName": "_config.json",
 													"line": 154,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L154"
 												}
 											],
 											"type": {
@@ -1567,7 +1567,7 @@
 													"fileName": "_config.json",
 													"line": 153,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L153"
 												}
 											],
 											"type": {
@@ -1587,7 +1587,7 @@
 													"fileName": "_config.json",
 													"line": 158,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L158"
 												}
 											],
 											"type": {
@@ -1616,7 +1616,7 @@
 											"fileName": "_config.json",
 											"line": 152,
 											"character": 12,
-											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L152"
 										}
 									]
 								}
@@ -1638,7 +1638,7 @@
 									"fileName": "_config.json",
 									"line": 4,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L4"
 								}
 							],
 							"type": {
@@ -1662,7 +1662,7 @@
 									"fileName": "_config.json",
 									"line": 95,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L95"
 								}
 							],
 							"type": {
@@ -1689,7 +1689,7 @@
 									"fileName": "_config.json",
 									"line": 35,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L35"
 								}
 							],
 							"type": {
@@ -1712,7 +1712,7 @@
 													"fileName": "_config.json",
 													"line": 36,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L36"
 												}
 											],
 											"type": {
@@ -1732,7 +1732,7 @@
 													"fileName": "_config.json",
 													"line": 48,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L48"
 												}
 											],
 											"type": {
@@ -1755,7 +1755,7 @@
 													"fileName": "_config.json",
 													"line": 37,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L37"
 												}
 											],
 											"type": {
@@ -1775,7 +1775,7 @@
 													"fileName": "_config.json",
 													"line": 38,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L38"
 												}
 											],
 											"type": {
@@ -1798,7 +1798,7 @@
 																	"fileName": "_config.json",
 																	"line": 39,
 																	"character": 6,
-																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L39"
 																}
 															],
 															"type": {
@@ -1818,7 +1818,7 @@
 																	"fileName": "_config.json",
 																	"line": 40,
 																	"character": 6,
-																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L40"
 																}
 															],
 															"type": {
@@ -1841,7 +1841,7 @@
 																	"fileName": "_config.json",
 																	"line": 46,
 																	"character": 6,
-																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L46"
 																}
 															],
 															"type": {
@@ -1861,7 +1861,7 @@
 																	"fileName": "_config.json",
 																	"line": 44,
 																	"character": 6,
-																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L44"
 																}
 															],
 															"type": {
@@ -1881,7 +1881,7 @@
 																	"fileName": "_config.json",
 																	"line": 45,
 																	"character": 6,
-																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L45"
 																}
 															],
 															"type": {
@@ -1908,7 +1908,7 @@
 															"fileName": "_config.json",
 															"line": 38,
 															"character": 16,
-															"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+															"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L38"
 														}
 													]
 												}
@@ -1932,7 +1932,7 @@
 											"fileName": "_config.json",
 											"line": 35,
 											"character": 19,
-											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L35"
 										}
 									]
 								}
@@ -1954,7 +1954,7 @@
 									"fileName": "_config.json",
 									"line": 175,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L175"
 								}
 							],
 							"type": {
@@ -1977,7 +1977,7 @@
 													"fileName": "_config.json",
 													"line": 177,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L177"
 												}
 											],
 											"type": {
@@ -1997,7 +1997,7 @@
 													"fileName": "_config.json",
 													"line": 176,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L176"
 												}
 											],
 											"type": {
@@ -2017,7 +2017,7 @@
 													"fileName": "_config.json",
 													"line": 182,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L182"
 												}
 											],
 											"type": {
@@ -2040,7 +2040,7 @@
 													"fileName": "_config.json",
 													"line": 178,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L178"
 												}
 											],
 											"type": {
@@ -2069,7 +2069,7 @@
 											"fileName": "_config.json",
 											"line": 175,
 											"character": 10,
-											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L175"
 										}
 									]
 								}
@@ -2091,7 +2091,7 @@
 									"fileName": "_config.json",
 									"line": 54,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L54"
 								}
 							],
 							"type": {
@@ -2115,7 +2115,7 @@
 									"fileName": "_config.json",
 									"line": 62,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L62"
 								}
 							],
 							"type": {
@@ -2139,7 +2139,7 @@
 									"fileName": "_config.json",
 									"line": 257,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L257"
 								}
 							],
 							"type": {
@@ -2162,7 +2162,7 @@
 													"fileName": "_config.json",
 													"line": 258,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L258"
 												}
 											],
 											"type": {
@@ -2182,7 +2182,7 @@
 													"fileName": "_config.json",
 													"line": 260,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L260"
 												}
 											],
 											"type": {
@@ -2205,7 +2205,7 @@
 																	"fileName": "_config.json",
 																	"line": 261,
 																	"character": 6,
-																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L261"
 																}
 															],
 															"type": {
@@ -2228,7 +2228,7 @@
 																					"fileName": "_config.json",
 																					"line": 262,
 																					"character": 8,
-																					"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+																					"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L262"
 																				}
 																			],
 																			"type": {
@@ -2251,7 +2251,7 @@
 																			"fileName": "_config.json",
 																			"line": 261,
 																			"character": 15,
-																			"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+																			"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L261"
 																		}
 																	]
 																}
@@ -2272,7 +2272,7 @@
 															"fileName": "_config.json",
 															"line": 260,
 															"character": 12,
-															"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+															"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L260"
 														}
 													]
 												}
@@ -2290,7 +2290,7 @@
 													"fileName": "_config.json",
 													"line": 259,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L259"
 												}
 											],
 											"type": {
@@ -2315,7 +2315,7 @@
 											"fileName": "_config.json",
 											"line": 257,
 											"character": 15,
-											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L257"
 										}
 									]
 								}
@@ -2337,7 +2337,7 @@
 									"fileName": "_config.json",
 									"line": 63,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L63"
 								}
 							],
 							"type": {
@@ -2360,7 +2360,7 @@
 													"fileName": "_config.json",
 													"line": 66,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L66"
 												}
 											],
 											"type": {
@@ -2380,7 +2380,7 @@
 													"fileName": "_config.json",
 													"line": 64,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L64"
 												}
 											],
 											"type": {
@@ -2400,7 +2400,7 @@
 													"fileName": "_config.json",
 													"line": 69,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L69"
 												}
 											],
 											"type": {
@@ -2420,7 +2420,7 @@
 													"fileName": "_config.json",
 													"line": 65,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L65"
 												}
 											],
 											"type": {
@@ -2440,7 +2440,7 @@
 													"fileName": "_config.json",
 													"line": 67,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L67"
 												}
 											],
 											"type": {
@@ -2460,7 +2460,7 @@
 													"fileName": "_config.json",
 													"line": 68,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L68"
 												}
 											],
 											"type": {
@@ -2488,7 +2488,7 @@
 											"fileName": "_config.json",
 											"line": 63,
 											"character": 15,
-											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L63"
 										}
 									]
 								}
@@ -2510,7 +2510,7 @@
 									"fileName": "_config.json",
 									"line": 31,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L31"
 								}
 							],
 							"type": {
@@ -2534,7 +2534,7 @@
 									"fileName": "_config.json",
 									"line": 111,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L111"
 								}
 							],
 							"type": {
@@ -2561,7 +2561,7 @@
 									"fileName": "_config.json",
 									"line": 92,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L92"
 								}
 							],
 							"type": {
@@ -2588,7 +2588,7 @@
 									"fileName": "_config.json",
 									"line": 77,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L77"
 								}
 							],
 							"type": {
@@ -2611,7 +2611,7 @@
 													"fileName": "_config.json",
 													"line": 80,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L80"
 												}
 											],
 											"type": {
@@ -2631,7 +2631,7 @@
 													"fileName": "_config.json",
 													"line": 78,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L78"
 												}
 											],
 											"type": {
@@ -2651,7 +2651,7 @@
 													"fileName": "_config.json",
 													"line": 79,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L79"
 												}
 											],
 											"type": {
@@ -2676,7 +2676,7 @@
 											"fileName": "_config.json",
 											"line": 77,
 											"character": 21,
-											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L77"
 										}
 									]
 								}
@@ -2698,7 +2698,7 @@
 									"fileName": "_config.json",
 									"line": 5,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L5"
 								}
 							],
 							"type": {
@@ -2722,7 +2722,7 @@
 									"fileName": "_config.json",
 									"line": 6,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L6"
 								}
 							],
 							"type": {
@@ -2749,7 +2749,7 @@
 									"fileName": "_config.json",
 									"line": 224,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L224"
 								}
 							],
 							"type": {
@@ -2772,7 +2772,7 @@
 													"fileName": "_config.json",
 													"line": 228,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L228"
 												}
 											],
 											"type": {
@@ -2792,7 +2792,7 @@
 													"fileName": "_config.json",
 													"line": 225,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L225"
 												}
 											],
 											"type": {
@@ -2812,7 +2812,7 @@
 													"fileName": "_config.json",
 													"line": 226,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L226"
 												}
 											],
 											"type": {
@@ -2832,7 +2832,7 @@
 													"fileName": "_config.json",
 													"line": 229,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L229"
 												}
 											],
 											"type": {
@@ -2852,7 +2852,7 @@
 													"fileName": "_config.json",
 													"line": 230,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L230"
 												}
 											],
 											"type": {
@@ -2872,7 +2872,7 @@
 													"fileName": "_config.json",
 													"line": 233,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L233"
 												}
 											],
 											"type": {
@@ -2897,7 +2897,7 @@
 																		"fileName": "_config.json",
 																		"line": 235,
 																		"character": 8,
-																		"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+																		"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L235"
 																	}
 																],
 																"type": {
@@ -2920,7 +2920,7 @@
 																						"fileName": "_config.json",
 																						"line": 237,
 																						"character": 10,
-																						"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+																						"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L237"
 																					}
 																				],
 																				"type": {
@@ -2940,7 +2940,7 @@
 																						"fileName": "_config.json",
 																						"line": 236,
 																						"character": 10,
-																						"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+																						"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L236"
 																					}
 																				],
 																				"type": {
@@ -2960,7 +2960,7 @@
 																						"fileName": "_config.json",
 																						"line": 238,
 																						"character": 10,
-																						"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+																						"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L238"
 																					}
 																				],
 																				"type": {
@@ -2983,7 +2983,7 @@
 																										"fileName": "_config.json",
 																										"line": 241,
 																										"character": 12,
-																										"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+																										"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L241"
 																									}
 																								],
 																								"type": {
@@ -3006,7 +3006,7 @@
 																										"fileName": "_config.json",
 																										"line": 239,
 																										"character": 12,
-																										"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+																										"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L239"
 																									}
 																								],
 																								"type": {
@@ -3026,7 +3026,7 @@
 																										"fileName": "_config.json",
 																										"line": 240,
 																										"character": 12,
-																										"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+																										"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L240"
 																									}
 																								],
 																								"type": {
@@ -3051,7 +3051,7 @@
 																								"fileName": "_config.json",
 																								"line": 238,
 																								"character": 21,
-																								"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+																								"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L238"
 																							}
 																						]
 																					}
@@ -3074,7 +3074,7 @@
 																				"fileName": "_config.json",
 																				"line": 235,
 																				"character": 18,
-																				"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+																				"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L235"
 																			}
 																		]
 																	}
@@ -3095,7 +3095,7 @@
 																"fileName": "_config.json",
 																"line": 234,
 																"character": 6,
-																"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+																"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L234"
 															}
 														]
 													}
@@ -3114,7 +3114,7 @@
 													"fileName": "_config.json",
 													"line": 232,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L232"
 												}
 											],
 											"type": {
@@ -3134,7 +3134,7 @@
 													"fileName": "_config.json",
 													"line": 231,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L231"
 												}
 											],
 											"type": {
@@ -3154,7 +3154,7 @@
 													"fileName": "_config.json",
 													"line": 227,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L227"
 												}
 											],
 											"type": {
@@ -3185,7 +3185,7 @@
 											"fileName": "_config.json",
 											"line": 224,
 											"character": 22,
-											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L224"
 										}
 									]
 								}
@@ -3207,7 +3207,7 @@
 									"fileName": "_config.json",
 									"line": 57,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L57"
 								}
 							],
 							"type": {
@@ -3230,7 +3230,7 @@
 													"fileName": "_config.json",
 													"line": 59,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L59"
 												}
 											],
 											"type": {
@@ -3250,7 +3250,7 @@
 													"fileName": "_config.json",
 													"line": 58,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L58"
 												}
 											],
 											"type": {
@@ -3274,7 +3274,7 @@
 											"fileName": "_config.json",
 											"line": 57,
 											"character": 12,
-											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L57"
 										}
 									]
 								}
@@ -3296,7 +3296,7 @@
 									"fileName": "_config.json",
 									"line": 86,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L86"
 								}
 							],
 							"type": {
@@ -3320,7 +3320,7 @@
 									"fileName": "_config.json",
 									"line": 32,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L32"
 								}
 							],
 							"type": {
@@ -3344,7 +3344,7 @@
 									"fileName": "_config.json",
 									"line": 91,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L91"
 								}
 							],
 							"type": {
@@ -3368,7 +3368,7 @@
 									"fileName": "_config.json",
 									"line": 90,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L90"
 								}
 							],
 							"type": {
@@ -3392,7 +3392,7 @@
 									"fileName": "_config.json",
 									"line": 19,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L19"
 								}
 							],
 							"type": {
@@ -3416,7 +3416,7 @@
 									"fileName": "_config.json",
 									"line": 20,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L20"
 								}
 							],
 							"type": {
@@ -3440,7 +3440,7 @@
 									"fileName": "_config.json",
 									"line": 56,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L56"
 								}
 							],
 							"type": {
@@ -3464,7 +3464,7 @@
 									"fileName": "_config.json",
 									"line": 21,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L21"
 								}
 							],
 							"type": {
@@ -3487,7 +3487,7 @@
 													"fileName": "_config.json",
 													"line": 23,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L23"
 												}
 											],
 											"type": {
@@ -3507,7 +3507,7 @@
 													"fileName": "_config.json",
 													"line": 22,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L22"
 												}
 											],
 											"type": {
@@ -3531,7 +3531,7 @@
 											"fileName": "_config.json",
 											"line": 21,
 											"character": 17,
-											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L21"
 										}
 									]
 								}
@@ -3553,7 +3553,7 @@
 									"fileName": "_config.json",
 									"line": 71,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L71"
 								}
 							],
 							"type": {
@@ -3576,7 +3576,7 @@
 													"fileName": "_config.json",
 													"line": 72,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L72"
 												}
 											],
 											"type": {
@@ -3596,7 +3596,7 @@
 													"fileName": "_config.json",
 													"line": 74,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L74"
 												}
 											],
 											"type": {
@@ -3616,7 +3616,7 @@
 													"fileName": "_config.json",
 													"line": 73,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L73"
 												}
 											],
 											"type": {
@@ -3636,7 +3636,7 @@
 													"fileName": "_config.json",
 													"line": 75,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L75"
 												}
 											],
 											"type": {
@@ -3662,7 +3662,7 @@
 											"fileName": "_config.json",
 											"line": 71,
 											"character": 13,
-											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L71"
 										}
 									]
 								}
@@ -3684,7 +3684,7 @@
 									"fileName": "_config.json",
 									"line": 26,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L26"
 								}
 							],
 							"type": {
@@ -3708,7 +3708,7 @@
 									"fileName": "_config.json",
 									"line": 279,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L279"
 								}
 							],
 							"type": {
@@ -3731,7 +3731,7 @@
 													"fileName": "_config.json",
 													"line": 280,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L280"
 												}
 											],
 											"type": {
@@ -3754,7 +3754,7 @@
 											"fileName": "_config.json",
 											"line": 279,
 											"character": 14,
-											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L279"
 										}
 									]
 								}
@@ -3776,7 +3776,7 @@
 									"fileName": "_config.json",
 									"line": 196,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L196"
 								}
 							],
 							"type": {
@@ -3799,7 +3799,7 @@
 													"fileName": "_config.json",
 													"line": 198,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L198"
 												}
 											],
 											"type": {
@@ -3819,7 +3819,7 @@
 													"fileName": "_config.json",
 													"line": 197,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L197"
 												}
 											],
 											"type": {
@@ -3839,7 +3839,7 @@
 													"fileName": "_config.json",
 													"line": 199,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L199"
 												}
 											],
 											"type": {
@@ -3859,7 +3859,7 @@
 													"fileName": "_config.json",
 													"line": 200,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L200"
 												}
 											],
 											"type": {
@@ -3879,7 +3879,7 @@
 													"fileName": "_config.json",
 													"line": 214,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L214"
 												}
 											],
 											"type": {
@@ -3902,7 +3902,7 @@
 													"fileName": "_config.json",
 													"line": 209,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L209"
 												}
 											],
 											"type": {
@@ -3925,7 +3925,7 @@
 													"fileName": "_config.json",
 													"line": 201,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L201"
 												}
 											],
 											"type": {
@@ -3948,7 +3948,7 @@
 																	"fileName": "_config.json",
 																	"line": 206,
 																	"character": 6,
-																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L206"
 																}
 															],
 															"type": {
@@ -3968,7 +3968,7 @@
 																	"fileName": "_config.json",
 																	"line": 203,
 																	"character": 6,
-																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L203"
 																}
 															],
 															"type": {
@@ -3988,7 +3988,7 @@
 																	"fileName": "_config.json",
 																	"line": 204,
 																	"character": 6,
-																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L204"
 																}
 															],
 															"type": {
@@ -4008,7 +4008,7 @@
 																	"fileName": "_config.json",
 																	"line": 205,
 																	"character": 6,
-																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L205"
 																}
 															],
 															"type": {
@@ -4028,7 +4028,7 @@
 																	"fileName": "_config.json",
 																	"line": 207,
 																	"character": 6,
-																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L207"
 																}
 															],
 															"type": {
@@ -4048,7 +4048,7 @@
 																	"fileName": "_config.json",
 																	"line": 202,
 																	"character": 6,
-																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L202"
 																}
 															],
 															"type": {
@@ -4076,7 +4076,7 @@
 															"fileName": "_config.json",
 															"line": 201,
 															"character": 14,
-															"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+															"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L201"
 														}
 													]
 												}
@@ -4103,7 +4103,7 @@
 											"fileName": "_config.json",
 											"line": 196,
 											"character": 19,
-											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L196"
 										}
 									]
 								}
@@ -4125,7 +4125,7 @@
 									"fileName": "_config.json",
 									"line": 61,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L61"
 								}
 							],
 							"type": {
@@ -4149,7 +4149,7 @@
 									"fileName": "_config.json",
 									"line": 55,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L55"
 								}
 							],
 							"type": {
@@ -4173,7 +4173,7 @@
 									"fileName": "_config.json",
 									"line": 18,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L18"
 								}
 							],
 							"type": {
@@ -4197,7 +4197,7 @@
 									"fileName": "_config.json",
 									"line": 11,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L11"
 								}
 							],
 							"type": {
@@ -4220,7 +4220,7 @@
 													"fileName": "_config.json",
 													"line": 14,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L14"
 												}
 											],
 											"type": {
@@ -4240,7 +4240,7 @@
 													"fileName": "_config.json",
 													"line": 13,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L13"
 												}
 											],
 											"type": {
@@ -4260,7 +4260,7 @@
 													"fileName": "_config.json",
 													"line": 15,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L15"
 												}
 											],
 											"type": {
@@ -4280,7 +4280,7 @@
 													"fileName": "_config.json",
 													"line": 12,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L12"
 												}
 											],
 											"type": {
@@ -4306,7 +4306,7 @@
 											"fileName": "_config.json",
 											"line": 11,
 											"character": 12,
-											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L11"
 										}
 									]
 								}
@@ -4328,7 +4328,7 @@
 									"fileName": "_config.json",
 									"line": 288,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L288"
 								}
 							],
 							"type": {
@@ -4351,7 +4351,7 @@
 													"fileName": "_config.json",
 													"line": 295,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L295"
 												}
 											],
 											"type": {
@@ -4371,7 +4371,7 @@
 													"fileName": "_config.json",
 													"line": 289,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L289"
 												}
 											],
 											"type": {
@@ -4394,7 +4394,7 @@
 																	"fileName": "_config.json",
 																	"line": 291,
 																	"character": 6,
-																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L291"
 																}
 															],
 															"type": {
@@ -4417,7 +4417,7 @@
 																	"fileName": "_config.json",
 																	"line": 290,
 																	"character": 6,
-																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L290"
 																}
 															],
 															"type": {
@@ -4441,7 +4441,7 @@
 															"fileName": "_config.json",
 															"line": 289,
 															"character": 12,
-															"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+															"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L289"
 														}
 													]
 												}
@@ -4459,7 +4459,7 @@
 													"fileName": "_config.json",
 													"line": 298,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L298"
 												}
 											],
 											"type": {
@@ -4482,7 +4482,7 @@
 																	"fileName": "_config.json",
 																	"line": 299,
 																	"character": 6,
-																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L299"
 																}
 															],
 															"type": {
@@ -4502,7 +4502,7 @@
 																	"fileName": "_config.json",
 																	"line": 300,
 																	"character": 6,
-																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L300"
 																}
 															],
 															"type": {
@@ -4522,7 +4522,7 @@
 																	"fileName": "_config.json",
 																	"line": 301,
 																	"character": 6,
-																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L301"
 																}
 															],
 															"type": {
@@ -4547,7 +4547,7 @@
 															"fileName": "_config.json",
 															"line": 298,
 															"character": 11,
-															"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+															"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L298"
 														}
 													]
 												}
@@ -4565,7 +4565,7 @@
 													"fileName": "_config.json",
 													"line": 296,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L296"
 												}
 											],
 											"type": {
@@ -4585,7 +4585,7 @@
 													"fileName": "_config.json",
 													"line": 303,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L303"
 												}
 											],
 											"type": {
@@ -4608,7 +4608,7 @@
 																	"fileName": "_config.json",
 																	"line": 304,
 																	"character": 6,
-																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L304"
 																}
 															],
 															"type": {
@@ -4628,7 +4628,7 @@
 																	"fileName": "_config.json",
 																	"line": 305,
 																	"character": 6,
-																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L305"
 																}
 															],
 															"type": {
@@ -4655,7 +4655,7 @@
 															"fileName": "_config.json",
 															"line": 303,
 															"character": 13,
-															"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+															"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L303"
 														}
 													]
 												}
@@ -4673,7 +4673,7 @@
 													"fileName": "_config.json",
 													"line": 297,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L297"
 												}
 											],
 											"type": {
@@ -4693,7 +4693,7 @@
 													"fileName": "_config.json",
 													"line": 311,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L311"
 												}
 											],
 											"type": {
@@ -4722,7 +4722,7 @@
 											"fileName": "_config.json",
 											"line": 288,
 											"character": 9,
-											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L288"
 										}
 									]
 								}
@@ -4744,7 +4744,7 @@
 									"fileName": "_config.json",
 									"line": 138,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L138"
 								}
 							],
 							"type": {
@@ -4767,7 +4767,7 @@
 													"fileName": "_config.json",
 													"line": 143,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L143"
 												}
 											],
 											"type": {
@@ -4787,7 +4787,7 @@
 													"fileName": "_config.json",
 													"line": 142,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L142"
 												}
 											],
 											"type": {
@@ -4807,7 +4807,7 @@
 													"fileName": "_config.json",
 													"line": 144,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L144"
 												}
 											],
 											"type": {
@@ -4827,7 +4827,7 @@
 													"fileName": "_config.json",
 													"line": 141,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L141"
 												}
 											],
 											"type": {
@@ -4847,7 +4847,7 @@
 													"fileName": "_config.json",
 													"line": 140,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L140"
 												}
 											],
 											"type": {
@@ -4867,7 +4867,7 @@
 													"fileName": "_config.json",
 													"line": 139,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L139"
 												}
 											],
 											"type": {
@@ -4887,7 +4887,7 @@
 													"fileName": "_config.json",
 													"line": 145,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L145"
 												}
 											],
 											"type": {
@@ -4910,7 +4910,7 @@
 																	"fileName": "_config.json",
 																	"line": 146,
 																	"character": 6,
-																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L146"
 																}
 															],
 															"type": {
@@ -4936,7 +4936,7 @@
 															"fileName": "_config.json",
 															"line": 145,
 															"character": 19,
-															"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+															"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L145"
 														}
 													]
 												}
@@ -4963,7 +4963,7 @@
 											"fileName": "_config.json",
 											"line": 138,
 											"character": 12,
-											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L138"
 										}
 									]
 								}
@@ -4985,7 +4985,7 @@
 									"fileName": "_config.json",
 									"line": 187,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L187"
 								}
 							],
 							"type": {
@@ -5008,7 +5008,7 @@
 													"fileName": "_config.json",
 													"line": 194,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L194"
 												}
 											],
 											"type": {
@@ -5028,7 +5028,7 @@
 													"fileName": "_config.json",
 													"line": 188,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L188"
 												}
 											],
 											"type": {
@@ -5051,7 +5051,7 @@
 													"fileName": "_config.json",
 													"line": 192,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L192"
 												}
 											],
 											"type": {
@@ -5071,7 +5071,7 @@
 													"fileName": "_config.json",
 													"line": 193,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L193"
 												}
 											],
 											"type": {
@@ -5097,7 +5097,7 @@
 											"fileName": "_config.json",
 											"line": 187,
 											"character": 13,
-											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L187"
 										}
 									]
 								}
@@ -5119,7 +5119,7 @@
 									"fileName": "_config.json",
 									"line": 114,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L114"
 								}
 							],
 							"type": {
@@ -5146,7 +5146,7 @@
 									"fileName": "_config.json",
 									"line": 171,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L171"
 								}
 							],
 							"type": {
@@ -5169,7 +5169,7 @@
 													"fileName": "_config.json",
 													"line": 172,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L172"
 												}
 											],
 											"type": {
@@ -5189,7 +5189,7 @@
 													"fileName": "_config.json",
 													"line": 173,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L173"
 												}
 											],
 											"type": {
@@ -5213,7 +5213,7 @@
 											"fileName": "_config.json",
 											"line": 171,
 											"character": 18,
-											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L171"
 										}
 									]
 								}
@@ -5235,7 +5235,7 @@
 									"fileName": "_config.json",
 									"line": 25,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L25"
 								}
 							],
 							"type": {
@@ -5259,7 +5259,7 @@
 									"fileName": "_config.json",
 									"line": 3,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L3"
 								}
 							],
 							"type": {
@@ -5283,7 +5283,7 @@
 									"fileName": "_config.json",
 									"line": 313,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L313"
 								}
 							],
 							"type": {
@@ -5307,7 +5307,7 @@
 									"fileName": "_config.json",
 									"line": 27,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L27"
 								}
 							],
 							"type": {
@@ -5331,7 +5331,7 @@
 									"fileName": "_config.json",
 									"line": 85,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L85"
 								}
 							],
 							"type": {
@@ -5355,7 +5355,7 @@
 									"fileName": "_config.json",
 									"line": 321,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L321"
 								}
 							],
 							"type": {
@@ -5378,7 +5378,7 @@
 													"fileName": "_config.json",
 													"line": 322,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L322"
 												}
 											],
 											"type": {
@@ -5398,7 +5398,7 @@
 													"fileName": "_config.json",
 													"line": 323,
 													"character": 4,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L323"
 												}
 											],
 											"type": {
@@ -5422,7 +5422,7 @@
 											"fileName": "_config.json",
 											"line": 321,
 											"character": 16,
-											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L321"
 										}
 									]
 								}
@@ -5444,7 +5444,7 @@
 									"fileName": "_config.json",
 									"line": 151,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L151"
 								}
 							],
 							"type": {
@@ -5468,7 +5468,7 @@
 									"fileName": "_config.json",
 									"line": 88,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L88"
 								}
 							],
 							"type": {
@@ -5492,7 +5492,7 @@
 									"fileName": "_config.json",
 									"line": 10,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L10"
 								}
 							],
 							"type": {
@@ -5516,7 +5516,7 @@
 									"fileName": "_config.json",
 									"line": 2,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L2"
 								}
 							],
 							"type": {
@@ -5540,7 +5540,7 @@
 									"fileName": "_config.json",
 									"line": 34,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L34"
 								}
 							],
 							"type": {
@@ -5564,7 +5564,7 @@
 									"fileName": "_config.json",
 									"line": 89,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L89"
 								}
 							],
 							"type": {
@@ -5588,7 +5588,7 @@
 									"fileName": "_config.json",
 									"line": 17,
 									"character": 2,
-									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+									"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/_config.json#L17"
 								}
 							],
 							"type": {
@@ -5680,7 +5680,7 @@
 							"fileName": "gulp.config.ts",
 							"line": 15,
 							"character": 17,
-							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/gulp.config.ts#L15"
 						}
 					],
 					"indexSignature": {
@@ -5726,7 +5726,7 @@
 							"fileName": "gulp.config.ts",
 							"line": 29,
 							"character": 13,
-							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/gulp.config.ts#L29"
 						}
 					],
 					"type": {
@@ -5751,7 +5751,7 @@
 							"fileName": "gulp.config.ts",
 							"line": 19,
 							"character": 6,
-							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/gulp.config.ts#L19"
 						}
 					],
 					"type": {
@@ -5774,7 +5774,7 @@
 							"fileName": "gulp.config.ts",
 							"line": 22,
 							"character": 13,
-							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/gulp.config.ts#L22"
 						}
 					],
 					"type": {
@@ -5794,7 +5794,7 @@
 							"fileName": "gulp.config.ts",
 							"line": 23,
 							"character": 16,
-							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/gulp.config.ts#L23"
 						}
 					],
 					"signatures": [
@@ -5824,7 +5824,7 @@
 													"fileName": "gulp.config.ts",
 													"line": 26,
 													"character": 22,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/gulp.config.ts#L26"
 												}
 											],
 											"type": {
@@ -5844,7 +5844,7 @@
 													"fileName": "gulp.config.ts",
 													"line": 26,
 													"character": 11,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/gulp.config.ts#L26"
 												}
 											],
 											"type": {
@@ -5863,7 +5863,7 @@
 													"fileName": "gulp.config.ts",
 													"line": 26,
 													"character": 30,
-													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+													"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/gulp.config.ts#L26"
 												}
 											],
 											"type": {
@@ -5889,7 +5889,7 @@
 											"fileName": "gulp.config.ts",
 											"line": 26,
 											"character": 9,
-											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+											"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/gulp.config.ts#L26"
 										}
 									]
 								}
@@ -5925,7 +5925,7 @@
 					"fileName": "gulp.config.ts",
 					"line": 1,
 					"character": 0,
-					"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+					"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/gulp.config.ts#L1"
 				}
 			]
 		},
@@ -5947,7 +5947,7 @@
 							"fileName": "gulp.deploy.ts",
 							"line": 16,
 							"character": 16,
-							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/gulp.deploy.ts#L16"
 						}
 					],
 					"signatures": [
@@ -5994,7 +5994,7 @@
 					"fileName": "gulp.deploy.ts",
 					"line": 1,
 					"character": 0,
-					"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+					"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/gulp.deploy.ts#L1"
 				}
 			]
 		},
@@ -6009,7 +6009,7 @@
 					"fileName": "gulp.feed.ts",
 					"line": 1,
 					"character": 0,
-					"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+					"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/gulp.feed.ts#L1"
 				}
 			]
 		},
@@ -6031,7 +6031,7 @@
 							"fileName": "gulp.post.ts",
 							"line": 133,
 							"character": 16,
-							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/gulp.post.ts#L133"
 						}
 					],
 					"signatures": [
@@ -6061,7 +6061,7 @@
 							"fileName": "gulp.post.ts",
 							"line": 36,
 							"character": 13,
-							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/gulp.post.ts#L36"
 						}
 					],
 					"signatures": [
@@ -6125,7 +6125,7 @@
 							"fileName": "gulp.post.ts",
 							"line": 55,
 							"character": 16,
-							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/gulp.post.ts#L55"
 						}
 					],
 					"signatures": [
@@ -6169,7 +6169,7 @@
 							"fileName": "gulp.post.ts",
 							"line": 20,
 							"character": 16,
-							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/gulp.post.ts#L20"
 						}
 					],
 					"signatures": [
@@ -6226,7 +6226,7 @@
 					"fileName": "gulp.post.ts",
 					"line": 1,
 					"character": 0,
-					"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+					"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/gulp.post.ts#L1"
 				}
 			]
 		},
@@ -6248,7 +6248,7 @@
 							"fileName": "gulp.safelink.ts",
 							"line": 34,
 							"character": 16,
-							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/gulp.safelink.ts#L34"
 						}
 					],
 					"signatures": [
@@ -6304,7 +6304,7 @@
 					"fileName": "gulp.safelink.ts",
 					"line": 1,
 					"character": 0,
-					"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+					"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/gulp.safelink.ts#L1"
 				}
 			]
 		},
@@ -6326,7 +6326,7 @@
 							"fileName": "gulp.sitemap.ts",
 							"line": 27,
 							"character": 16,
-							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/gulp.sitemap.ts#L27"
 						}
 					],
 					"signatures": [
@@ -6431,7 +6431,7 @@
 							"fileName": "gulp.sitemap.ts",
 							"line": 97,
 							"character": 16,
-							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/gulp.sitemap.ts#L97"
 						}
 					],
 					"signatures": [
@@ -6471,7 +6471,7 @@
 					"fileName": "gulp.sitemap.ts",
 					"line": 1,
 					"character": 0,
-					"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+					"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/gulp.sitemap.ts#L1"
 				}
 			]
 		},
@@ -6493,7 +6493,7 @@
 							"fileName": "gulpfile.ts",
 							"line": 12,
 							"character": 16,
-							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/gulpfile.ts#L12"
 						}
 					],
 					"signatures": [
@@ -6556,7 +6556,7 @@
 					"fileName": "gulpfile.ts",
 					"line": 1,
 					"character": 0,
-					"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+					"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/gulpfile.ts#L1"
 				}
 			]
 		},
@@ -6578,7 +6578,7 @@
 							"fileName": "index.ts",
 							"line": 7,
 							"character": 20,
-							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/index.ts#L7"
 						}
 					],
 					"target": 263
@@ -6594,7 +6594,7 @@
 							"fileName": "index.ts",
 							"line": 10,
 							"character": 9,
-							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/index.ts#L10"
 						}
 					],
 					"target": 292
@@ -6610,7 +6610,7 @@
 							"fileName": "index.ts",
 							"line": 8,
 							"character": 9,
-							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/index.ts#L8"
 						}
 					],
 					"target": 274
@@ -6626,7 +6626,7 @@
 							"fileName": "index.ts",
 							"line": 8,
 							"character": 53,
-							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/index.ts#L8"
 						}
 					],
 					"target": 272
@@ -6642,7 +6642,7 @@
 							"fileName": "index.ts",
 							"line": 8,
 							"character": 23,
-							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/index.ts#L8"
 						}
 					],
 					"target": 276
@@ -6658,7 +6658,7 @@
 							"fileName": "index.ts",
 							"line": 6,
 							"character": 9,
-							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/index.ts#L6"
 						}
 					],
 					"target": 4
@@ -6674,7 +6674,7 @@
 							"fileName": "index.ts",
 							"line": 6,
 							"character": 21,
-							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/index.ts#L6"
 						}
 					],
 					"target": 4
@@ -6690,7 +6690,7 @@
 							"fileName": "index.ts",
 							"line": 7,
 							"character": 35,
-							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/index.ts#L7"
 						}
 					],
 					"target": 11
@@ -6706,7 +6706,7 @@
 							"fileName": "index.ts",
 							"line": 9,
 							"character": 9,
-							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/index.ts#L9"
 						}
 					],
 					"target": 285
@@ -6722,7 +6722,7 @@
 							"fileName": "index.ts",
 							"line": 9,
 							"character": 26,
-							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/index.ts#L9"
 						}
 					],
 					"target": 289
@@ -6738,7 +6738,7 @@
 							"fileName": "index.ts",
 							"line": 8,
 							"character": 63,
-							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/index.ts#L8"
 						}
 					],
 					"target": 269
@@ -6754,7 +6754,7 @@
 							"fileName": "utils/array.ts",
 							"line": 6,
 							"character": 16,
-							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/utils/array.ts#L6"
 						}
 					],
 					"signatures": [
@@ -6834,7 +6834,7 @@
 							"fileName": "utils/array.ts",
 							"line": 47,
 							"character": 16,
-							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/utils/array.ts#L47"
 						}
 					],
 					"signatures": [
@@ -6909,7 +6909,7 @@
 							"fileName": "utils/array.ts",
 							"line": 23,
 							"character": 16,
-							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/utils/array.ts#L23"
 						}
 					],
 					"signatures": [
@@ -7021,7 +7021,7 @@
 							"fileName": "gulp-utils/gulp.cache.ts",
 							"line": 30,
 							"character": 16,
-							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/gulp-utils/gulp.cache.ts#L30"
 						}
 					],
 					"signatures": [
@@ -7091,7 +7091,7 @@
 																	"fileName": "gulp-utils/gulp.cache.ts",
 																	"line": 22,
 																	"character": 2,
-																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+																	"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/gulp-utils/gulp.cache.ts#L22"
 																}
 															],
 															"type": {
@@ -7113,7 +7113,7 @@
 															"fileName": "gulp-utils/gulp.cache.ts",
 															"line": 21,
 															"character": 68,
-															"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+															"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/gulp-utils/gulp.cache.ts#L21"
 														}
 													]
 												}
@@ -7143,7 +7143,7 @@
 							"fileName": "gulp-utils/gulp.debug.ts",
 							"line": 3,
 							"character": 16,
-							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/gulp-utils/gulp.debug.ts#L3"
 						}
 					],
 					"signatures": [
@@ -7173,7 +7173,7 @@
 							"fileName": "utils/noop.ts",
 							"line": 6,
 							"character": 16,
-							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/utils/noop.ts#L6"
 						}
 					],
 					"signatures": [
@@ -7233,7 +7233,7 @@
 							"fileName": "utils/noop.ts",
 							"line": 22,
 							"character": 16,
-							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+							"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/utils/noop.ts#L22"
 						}
 					],
 					"signatures": [
@@ -7313,7 +7313,7 @@
 					"fileName": "index.ts",
 					"line": 1,
 					"character": 0,
-					"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo.git/master"
+					"url": "https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/packages/gulp-sbg/src/index.ts#L1"
 				}
 			]
 		}
