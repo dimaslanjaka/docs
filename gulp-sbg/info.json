@@ -6041,6 +6041,14 @@
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "copy all posts from src-posts to source/_posts"
+									}
+								]
+							},
 							"type": {
 								"type": "reference",
 								"name": "ReadWriteStream",
@@ -6503,6 +6511,14 @@
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "commit current project"
+									}
+								]
+							},
 							"parameters": [
 								{
 									"id": 294,
