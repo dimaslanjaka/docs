@@ -1,9 +1,8 @@
 {
 	"id": 0,
-	"name": "gulp-sbg",
+	"name": "Static Blog Generator Gulp",
 	"kind": 1,
 	"flags": {},
-	"originalName": "",
 	"children": [
 		{
 			"id": 1,
