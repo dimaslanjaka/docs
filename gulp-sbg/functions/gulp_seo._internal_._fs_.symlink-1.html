@@ -31,11 +31,11 @@ not set, Node.js will autodetect <code>target</code> type and use <code>&#39;fil
 the <code>target</code> does not exist, <code>&#39;file&#39;</code> will be used. Windows junction points
 require the destination path to be absolute. When using <code>&#39;junction&#39;</code>, the<code>target</code> argument will automatically be normalized to absolute path.</p>
 <p>Relative targets are relative to the link’s parent directory.</p>
-<pre><code class="language-js"><span class="hl-9">import</span><span class="hl-0"> { </span><span class="hl-6">symlink</span><span class="hl-0"> } </span><span class="hl-9">from</span><span class="hl-0"> </span><span class="hl-4">&#39;fs&#39;</span><span class="hl-0">;</span><br/><br/><span class="hl-3">symlink</span><span class="hl-0">(</span><span class="hl-4">&#39;./mew&#39;</span><span class="hl-0">, </span><span class="hl-4">&#39;./mewtwo&#39;</span><span class="hl-0">, </span><span class="hl-6">callback</span><span class="hl-0">);</span>
+<pre><code class="language-js"><span class="hl-1">import</span><span class="hl-0"> { </span><span class="hl-2">symlink</span><span class="hl-0"> } </span><span class="hl-1">from</span><span class="hl-0"> </span><span class="hl-3">&#39;fs&#39;</span><span class="hl-0">;</span><br/><br/><span class="hl-6">symlink</span><span class="hl-0">(</span><span class="hl-3">&#39;./mew&#39;</span><span class="hl-0">, </span><span class="hl-3">&#39;./mewtwo&#39;</span><span class="hl-0">, </span><span class="hl-2">callback</span><span class="hl-0">);</span>
 </code></pre>
 <p>The above example creates a symbolic link <code>mewtwo</code> which points to <code>mew</code> in the
 same directory:</p>
-<pre><code class="language-bash"><span class="hl-0">$ tree </span><span class="hl-3">.</span><br/><span class="hl-3">.</span><br/><span class="hl-0">├── mew</span><br/><span class="hl-0">└── mewtwo -&gt; ./mew</span>
+<pre><code class="language-bash"><span class="hl-0">$ tree </span><span class="hl-6">.</span><br/><span class="hl-6">.</span><br/><span class="hl-0">├── mew</span><br/><span class="hl-0">└── mewtwo -&gt; ./mew</span>
 </code></pre>
 
 <h3>Since</h3><p>v0.1.31</p>
@@ -95,6 +95,9 @@ same directory:</p>
 <ul>
 <li class="current"><a href="../modules.html">Static <wbr/>Blog <wbr/>Generator <wbr/>Gulp</a>
 <ul>
+<li class="tsd-kind-module"><a href="../modules/api.html">api</a>
+<ul>
+<li class="tsd-kind-module tsd-parent-kind-module"><a href="../modules/api._internal_.html">&lt;internal&gt;</a></li></ul></li>
 <li class="tsd-kind-module"><a href="../modules/gulp_utils_gulp_cache.html">gulp-<wbr/>utils/gulp.cache</a>
 <ul>
 <li class="tsd-kind-module tsd-parent-kind-module"><a href="../modules/gulp_utils_gulp_cache._internal_.html">&lt;internal&gt;</a></li></ul></li>

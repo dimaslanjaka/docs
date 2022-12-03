@@ -28,7 +28,7 @@ be overwritten. If there is a directory at <code>newPath</code>, an error will
 be raised instead. No arguments other than a possible exception are
 given to the completion callback.</p>
 <p>See also: <a href="http://man7.org/linux/man-pages/man2/rename.2.html"><code>rename(2)</code></a>.</p>
-<pre><code class="language-js"><span class="hl-9">import</span><span class="hl-0"> { </span><span class="hl-6">rename</span><span class="hl-0"> } </span><span class="hl-9">from</span><span class="hl-0"> </span><span class="hl-4">&#39;fs&#39;</span><span class="hl-0">;</span><br/><br/><span class="hl-3">rename</span><span class="hl-0">(</span><span class="hl-4">&#39;oldFile.txt&#39;</span><span class="hl-0">, </span><span class="hl-4">&#39;newFile.txt&#39;</span><span class="hl-0">, (</span><span class="hl-6">err</span><span class="hl-0">) </span><span class="hl-1">=&gt;</span><span class="hl-0"> {</span><br/><span class="hl-0">  </span><span class="hl-9">if</span><span class="hl-0"> (</span><span class="hl-6">err</span><span class="hl-0">) </span><span class="hl-9">throw</span><span class="hl-0"> </span><span class="hl-6">err</span><span class="hl-0">;</span><br/><span class="hl-0">  </span><span class="hl-6">console</span><span class="hl-0">.</span><span class="hl-3">log</span><span class="hl-0">(</span><span class="hl-4">&#39;Rename complete!&#39;</span><span class="hl-0">);</span><br/><span class="hl-0">});</span>
+<pre><code class="language-js"><span class="hl-1">import</span><span class="hl-0"> { </span><span class="hl-2">rename</span><span class="hl-0"> } </span><span class="hl-1">from</span><span class="hl-0"> </span><span class="hl-3">&#39;fs&#39;</span><span class="hl-0">;</span><br/><br/><span class="hl-6">rename</span><span class="hl-0">(</span><span class="hl-3">&#39;oldFile.txt&#39;</span><span class="hl-0">, </span><span class="hl-3">&#39;newFile.txt&#39;</span><span class="hl-0">, (</span><span class="hl-2">err</span><span class="hl-0">) </span><span class="hl-4">=&gt;</span><span class="hl-0"> {</span><br/><span class="hl-0">  </span><span class="hl-1">if</span><span class="hl-0"> (</span><span class="hl-2">err</span><span class="hl-0">) </span><span class="hl-1">throw</span><span class="hl-0"> </span><span class="hl-2">err</span><span class="hl-0">;</span><br/><span class="hl-0">  </span><span class="hl-2">console</span><span class="hl-0">.</span><span class="hl-6">log</span><span class="hl-0">(</span><span class="hl-3">&#39;Rename complete!&#39;</span><span class="hl-0">);</span><br/><span class="hl-0">});</span>
 </code></pre>
 
 <h3>Since</h3><p>v0.0.2</p>
@@ -66,6 +66,9 @@ given to the completion callback.</p>
 <ul>
 <li class="current"><a href="../modules.html">Static <wbr/>Blog <wbr/>Generator <wbr/>Gulp</a>
 <ul>
+<li class="tsd-kind-module"><a href="../modules/api.html">api</a>
+<ul>
+<li class="tsd-kind-module tsd-parent-kind-module"><a href="../modules/api._internal_.html">&lt;internal&gt;</a></li></ul></li>
 <li class="tsd-kind-module"><a href="../modules/gulp_utils_gulp_cache.html">gulp-<wbr/>utils/gulp.cache</a>
 <ul>
 <li class="tsd-kind-module tsd-parent-kind-module"><a href="../modules/gulp_utils_gulp_cache._internal_.html">&lt;internal&gt;</a></li></ul></li>
