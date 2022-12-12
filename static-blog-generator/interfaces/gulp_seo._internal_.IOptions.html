@@ -258,7 +258,7 @@ you do not walk down paths that can never be a match.</p>
 
 <h3>Default</h3><p>false</p>
 
-<h3>Example</h3><pre><code class="language-ts"><span class="hl-1">import</span><span class="hl-0"> </span><span class="hl-2">minimatch</span><span class="hl-0"> = </span><span class="hl-1">require</span><span class="hl-0">(</span><span class="hl-3">&quot;minimatch&quot;</span><span class="hl-0">);</span><br/><br/><span class="hl-6">minimatch</span><span class="hl-0">(</span><span class="hl-3">&#39;/a/b&#39;</span><span class="hl-0">, </span><span class="hl-3">&#39;/a/*&#39;</span><span class="hl-0"> + </span><span class="hl-3">&#39;/c/d&#39;</span><span class="hl-0">, { </span><span class="hl-2">partial:</span><span class="hl-0"> </span><span class="hl-4">true</span><span class="hl-0"> })  </span><span class="hl-7">// true, might be /a/b/c/d</span><br/><span class="hl-6">minimatch</span><span class="hl-0">(</span><span class="hl-3">&#39;/a/b&#39;</span><span class="hl-0">, </span><span class="hl-3">&#39;/**&#39;</span><span class="hl-0"> + </span><span class="hl-3">&#39;/d&#39;</span><span class="hl-0">, { </span><span class="hl-2">partial:</span><span class="hl-0"> </span><span class="hl-4">true</span><span class="hl-0"> })     </span><span class="hl-7">// true, might be /a/b/.../d</span><br/><span class="hl-6">minimatch</span><span class="hl-0">(</span><span class="hl-3">&#39;/x/y/z&#39;</span><span class="hl-0">, </span><span class="hl-3">&#39;/a/**&#39;</span><span class="hl-0"> + </span><span class="hl-3">&#39;/z&#39;</span><span class="hl-0">, { </span><span class="hl-2">partial:</span><span class="hl-0"> </span><span class="hl-4">true</span><span class="hl-0"> }) </span><span class="hl-7">// false, because x !== a</span>
+<h3>Example</h3><pre><code class="language-ts"><span class="hl-3">import</span><span class="hl-1"> </span><span class="hl-4">minimatch</span><span class="hl-1"> = </span><span class="hl-3">require</span><span class="hl-1">(</span><span class="hl-2">&quot;minimatch&quot;</span><span class="hl-1">);</span><br/><br/><span class="hl-7">minimatch</span><span class="hl-1">(</span><span class="hl-2">&#39;/a/b&#39;</span><span class="hl-1">, </span><span class="hl-2">&#39;/a/*&#39;</span><span class="hl-1"> + </span><span class="hl-2">&#39;/c/d&#39;</span><span class="hl-1">, { </span><span class="hl-4">partial:</span><span class="hl-1"> </span><span class="hl-5">true</span><span class="hl-1"> })  </span><span class="hl-8">// true, might be /a/b/c/d</span><br/><span class="hl-7">minimatch</span><span class="hl-1">(</span><span class="hl-2">&#39;/a/b&#39;</span><span class="hl-1">, </span><span class="hl-2">&#39;/**&#39;</span><span class="hl-1"> + </span><span class="hl-2">&#39;/d&#39;</span><span class="hl-1">, { </span><span class="hl-4">partial:</span><span class="hl-1"> </span><span class="hl-5">true</span><span class="hl-1"> })     </span><span class="hl-8">// true, might be /a/b/.../d</span><br/><span class="hl-7">minimatch</span><span class="hl-1">(</span><span class="hl-2">&#39;/x/y/z&#39;</span><span class="hl-1">, </span><span class="hl-2">&#39;/a/**&#39;</span><span class="hl-1"> + </span><span class="hl-2">&#39;/z&#39;</span><span class="hl-1">, { </span><span class="hl-4">partial:</span><span class="hl-1"> </span><span class="hl-5">true</span><span class="hl-1"> }) </span><span class="hl-8">// false, because x !== a</span>
 </code></pre>
 </div><aside class="tsd-sources">
 <p>Inherited from <a href="gulp_seo._internal_.IOptions-1.html">IOptions</a>.<a href="gulp_seo._internal_.IOptions-1.html#partial">partial</a></p>
@@ -380,7 +380,7 @@ caution, and be mindful of the caveat about Windows paths</p>
 <ul>
 <li class="tsd-kind-module tsd-parent-kind-module"><a href="../modules/gulp_config._internal_.html">&lt;internal&gt;</a>
 <ul>
-<li class="tsd-kind-namespace tsd-parent-kind-module"><a href="../modules/gulp_config._internal_._D__Repositories_static_blog_generator_hexo_packages_gulp_sbg_src__config_.html">&quot;<wbr/>D:/<wbr/>Repositories/static-<wbr/>blog-<wbr/>generator-<wbr/>hexo/packages/gulp-<wbr/>sbg/src/_<wbr/>config&quot;</a></li>
+<li class="tsd-kind-namespace tsd-parent-kind-module"><a href="../modules/gulp_config._internal_._D__Repositories_static_blog_generator_hexo_packages_static_blog_generator_src__config_.html">&quot;<wbr/>D:/<wbr/>Repositories/static-<wbr/>blog-<wbr/>generator-<wbr/>hexo/packages/static-<wbr/>blog-<wbr/>generator/src/_<wbr/>config&quot;</a></li>
 <li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-external"><a href="../modules/gulp_config._internal_._node_stream_consumers_.html">&quot;node:stream/consumers&quot;</a></li>
 <li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-external"><a href="../modules/gulp_config._internal_._node_stream_promises_.html">&quot;node:stream/promises&quot;</a></li>
 <li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-external"><a href="../modules/gulp_config._internal_.EventEmitter.html">Event<wbr/>Emitter</a></li>
@@ -445,6 +445,7 @@ caution, and be mindful of the caveat about Windows paths</p>
 <li class="tsd-kind-namespace tsd-parent-kind-namespace tsd-is-external"><a href="../modules/gulp_seo._internal_._fs_.writev.html">writev</a></li></ul></li></ul></li>
 <li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-external"><a href="../modules/gulp_seo.default.html">default</a></li></ul></li>
 <li class="tsd-kind-module"><a href="../modules/gulp_sitemap.html">gulp.sitemap</a></li>
+<li class="tsd-kind-module"><a href="../modules/gulp_standalone.html">gulp.standalone</a></li>
 <li class="tsd-kind-module"><a href="../modules/gulpfile.html">gulpfile</a></li>
 <li class="tsd-kind-module"><a href="../modules/index.html">index</a></li>
 <li class="tsd-kind-module"><a href="../modules/utils_array.html">utils/array</a></li>
@@ -453,7 +454,10 @@ caution, and be mindful of the caveat about Windows paths</p>
 <ul>
 <li class="tsd-kind-module tsd-parent-kind-module"><a href="../modules/utils_noop._internal_.html">&lt;internal&gt;</a></li></ul></li>
 <li class="tsd-kind-module"><a href="../modules/utils_nunjucks_env.html">utils/nunjucks-<wbr/>env</a></li>
-<li class="tsd-kind-module"><a href="../modules/utils_scheduler.html">utils/scheduler</a></li></ul></li></ul></div></details></nav>
+<li class="tsd-kind-module"><a href="../modules/utils_scheduler.html">utils/scheduler</a></li>
+<li class="tsd-kind-module"><a href="../modules/utils_string.html">utils/string</a>
+<ul>
+<li class="tsd-kind-module tsd-parent-kind-module"><a href="../modules/utils_string._internal_.html">&lt;internal&gt;</a></li></ul></li></ul></li></ul></div></details></nav>
 <nav class="tsd-navigation secondary menu-sticky">
 <ul>
 <li class="current tsd-kind-interface tsd-parent-kind-module tsd-is-external"><a href="gulp_seo._internal_.IOptions.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-interface)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-256-path"></rect><path d="M9.51 16V15.016H11.298V8.224H9.51V7.24H14.19V8.224H12.402V15.016H14.19V16H9.51Z" fill="var(--color-text)" id="icon-256-text"></path></svg><span>IOptions</span></a>
