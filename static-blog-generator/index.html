@@ -101,6 +101,7 @@ Checkboxed inside markdown table
   <h2>Gulp Tasks</h2>
 </a>
 <pre><code class="language-text">Gulp tasks of static-blog-generator
+├── clean
 ├── clean-archives
 ├─┬ clean-all
 │ └─┬ &lt;series&gt;
@@ -121,11 +122,19 @@ Checkboxed inside markdown table
 │   ├── commit
 │   └── push
 ├── feed
-├── copy-all-post
-├── copy-all-posts
-├── copy-posts
-├── copy-post
 ├── post:copy
+├─┬ copy-all-post
+│ └─┬ &lt;series&gt;
+│   └── post:copy
+├─┬ copy-all-posts
+│ └─┬ &lt;series&gt;
+│   └── post:copy
+├─┬ copy-posts
+│ └─┬ &lt;series&gt;
+│   └── post:copy
+├─┬ copy-post
+│ └─┬ &lt;series&gt;
+│   └── post:copy
 ├── watch-post
 ├── watch-posts
 ├── seo
