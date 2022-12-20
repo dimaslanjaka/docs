@@ -18,31 +18,31 @@
         <h1><a href="index.html">All files</a> gulp.clean.ts</h1>
         <div class="clearfix">
             
-            <div class="fl pad1y space-right2">
-                <span class="strong">36.73% </span>
+            <div class='fl pad1y space-right2'>
+                <span class="strong">6.12% </span>
                 <span class="quiet">Statements</span>
-                <span class="fraction">18/49</span>
+                <span class='fraction'>3/49</span>
             </div>
         
             
-            <div class="fl pad1y space-right2">
-                <span class="strong">28.57% </span>
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class="fraction">4/14</span>
+                <span class='fraction'>0/14</span>
             </div>
         
             
-            <div class="fl pad1y space-right2">
-                <span class="strong">14.28% </span>
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class="fraction">1/7</span>
+                <span class='fraction'>0/7</span>
             </div>
         
             
-            <div class="fl pad1y space-right2">
-                <span class="strong">41.86% </span>
+            <div class='fl pad1y space-right2'>
+                <span class="strong">6.97% </span>
                 <span class="quiet">Lines</span>
-                <span class="fraction">18/43</span>
+                <span class='fraction'>3/43</span>
             </div>
         
             
@@ -177,37 +177,37 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -279,38 +279,38 @@ import noop from './utils/noop';
 /**
  * Clean Project Databases
  */
-export async function cleanDb() {
-  const config = getConfig();
-  <span class="missing-if-branch" title="if path not taken">I</span>if (typeof config.source_dir !== 'string') {
-<span class="cstat-no" title="statement not covered">    writefile(join(config.cwd, 'tmp/errors/clean.log'), inspect(config));</span>
-<span class="cstat-no" title="statement not covered">    throw new Error('config.source_dir must be configured');</span>
+export async function <span class="fstat-no" title="function not covered" >cleanDb(</span>) {
+  const config = <span class="cstat-no" title="statement not covered" >getConfig();</span>
+<span class="cstat-no" title="statement not covered" >  if (typeof config.source_dir !== 'string') {</span>
+<span class="cstat-no" title="statement not covered" >    writefile(join(config.cwd, 'tmp/errors/clean.log'), inspect(config));</span>
+<span class="cstat-no" title="statement not covered" >    throw new Error('config.source_dir must be configured');</span>
   }
 &nbsp;
-  const postDir = join(config.cwd, config.source_dir, '_posts');
-  const publicDir = join(config.cwd, config.public_dir);
-  const tmpDir = join(config.cwd, 'tmp');
+  const postDir = <span class="cstat-no" title="statement not covered" >join(config.cwd, config.source_dir, '_posts');</span>
+  const publicDir = <span class="cstat-no" title="statement not covered" >join(config.cwd, config.public_dir);</span>
+  const tmpDir = <span class="cstat-no" title="statement not covered" >join(config.cwd, 'tmp');</span>
 &nbsp;
-  Logger.log('[clean]', { tmpDir, postDir, publicDir });
+<span class="cstat-no" title="statement not covered" >  Logger.log('[clean]', { tmpDir, postDir, publicDir });</span>
 &nbsp;
-  try {
-    <span class="missing-if-branch" title="if path not taken">I</span>if (existsSync(tmpDir)) <span class="cstat-no" title="statement not covered">await del(tmpDir);</span>
+<span class="cstat-no" title="statement not covered" >  try {</span>
+<span class="cstat-no" title="statement not covered" >    if (existsSync(tmpDir)) <span class="cstat-no" title="statement not covered" >await del(tmpDir);</span></span>
   } catch {
 <span class="cstat-no" title="statement not covered">    Logger.log('[clean]', 'cannot delete', tmpDir);</span>
   }
-  try {
-    <span class="missing-if-branch" title="if path not taken">I</span>if (existsSync(publicDir)) <span class="cstat-no" title="statement not covered">await del(publicDir);</span>
+<span class="cstat-no" title="statement not covered" >  try {</span>
+<span class="cstat-no" title="statement not covered" >    if (existsSync(publicDir)) <span class="cstat-no" title="statement not covered" >await del(publicDir);</span></span>
   } catch {
 <span class="cstat-no" title="statement not covered">    Logger.log('[clean]', 'cannot delete', publicDir);</span>
   }
-  try {
-    <span class="missing-if-branch" title="if path not taken">I</span>if (existsSync(postDir)) <span class="cstat-no" title="statement not covered">await del(postDir);</span>
+<span class="cstat-no" title="statement not covered" >  try {</span>
+<span class="cstat-no" title="statement not covered" >    if (existsSync(postDir)) <span class="cstat-no" title="statement not covered" >await del(postDir);</span></span>
   } catch {
 <span class="cstat-no" title="statement not covered">    Logger.log('[clean]', 'cannot delete', postDir);</span>
   }
 &nbsp;
-  const hexo = new hexoLib(config.base_dir);
-  await hexo.init().catch(noop);
-  await hexo.call('clean').catch(noop);
+  const hexo = <span class="cstat-no" title="statement not covered" >new hexoLib(config.base_dir);</span>
+<span class="cstat-no" title="statement not covered" >  await hexo.init().catch(noop);</span>
+<span class="cstat-no" title="statement not covered" >  await hexo.call('clean').catch(noop);</span>
 }
 &nbsp;
 /**
@@ -374,8 +374,8 @@ gulp.task('clean-all', gulp.series('clean', 'clean-archives'));
             </div><!-- /wrapper -->
             <div class="footer quiet pad2 space-top1 center small">
                 Code coverage generated by
-                <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9pc3RhbmJ1bC5qcy5vcmcv" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2022-12-20T02:29:12.896Z
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2022-12-20T07:15:31.530Z
             </div>
         <script src="prettify.js"></script>
         <script>
