@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">14.92% </span>
+                <span class="strong">14.7% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>10/67</span>
+                <span class='fraction'>10/68</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">15.87% </span>
+                <span class="strong">15.62% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>10/63</span>
+                <span class='fraction'>10/64</span>
             </div>
         
             
@@ -257,7 +257,10 @@
 <a name='L192'></a><a href='#L192'>192</a>
 <a name='L193'></a><a href='#L193'>193</a>
 <a name='L194'></a><a href='#L194'>194</a>
-<a name='L195'></a><a href='#L195'>195</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L195'></a><a href='#L195'>195</a>
+<a name='L196'></a><a href='#L196'>196</a>
+<a name='L197'></a><a href='#L197'>197</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -393,6 +396,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -460,7 +464,8 @@ import through2 from 'through2';
 &nbsp;
 import { extname, join, toUnix } from 'upath';
 import { gulpCached } from './gulp-utils/gulp.cache';
-import ProjectConfig from './gulp.config';
+import { getConfig } from './gulp.config';
+import Logger from './utils/logger';
 import scheduler from './utils/scheduler';
 &nbsp;
 const sourceDir = join(process.cwd(), 'src-posts');
@@ -496,7 +501,7 @@ export const copySinglePost = <span class="fstat-no" title="function not covered
     .pipe(updatePost())
     .pipe(gulp.dest(destDir))
     .on('end', <span class="fstat-no" title="function not covered" >fu</span>nction () {
-      //console.log(fileList);
+      //Logger.log(fileList);
 <span class="cstat-no" title="statement not covered" >      if (typeof callback === 'function') <span class="cstat-no" title="statement not covered" >callback();</span></span>
     });
 };
@@ -511,7 +516,7 @@ export function <span class="fstat-no" title="function not covered" >updatePost(
 <span class="cstat-no" title="statement not covered" >    if (file.isNull()) <span class="cstat-no" title="statement not covered" >return next();</span></span>
     // process markdown files
 <span class="cstat-no" title="statement not covered" >    if (file.extname === '.md') {</span>
-      const config = <span class="cstat-no" title="statement not covered" >ProjectConfig;</span>
+      const config = <span class="cstat-no" title="statement not covered" >getConfig();</span>
       const parse = <span class="cstat-no" title="statement not covered" >await parsePost(file.path, {</span>
         shortcodes: {
           youtube: true,
@@ -559,7 +564,7 @@ export function <span class="fstat-no" title="function not covered" >updatePost(
 <span class="cstat-no" title="statement not covered" >        scheduler.add(oriPath, <span class="fstat-no" title="function not covered" >fu</span>nction () {</span>
           const rebuild = <span class="cstat-no" title="statement not covered" >buildPost(rBuild);</span>
           //writeFileSync(join(process.cwd(), 'tmp/rebuild.md'), rebuild);
-<span class="cstat-no" title="statement not covered" >          console.log(</span>
+<span class="cstat-no" title="statement not covered" >          Logger.log(</span>
             'write to',
             toUnix(oriPath).replace(toUnix(process.cwd()), ''),
             oriUp,
@@ -573,7 +578,7 @@ export function <span class="fstat-no" title="function not covered" >updatePost(
 <span class="cstat-no" title="statement not covered" >        file.contents = Buffer.from(build);</span>
 <span class="cstat-no" title="statement not covered" >        return next(null, file);</span>
       } else {
-<span class="cstat-no" title="statement not covered" >        console.log('cannot parse', file.path);</span>
+<span class="cstat-no" title="statement not covered" >        Logger.log('cannot parse', file.path);</span>
 <span class="cstat-no" title="statement not covered" >        return next(null);</span>
       }
     }
@@ -587,10 +592,11 @@ export function <span class="fstat-no" title="function not covered" >updatePost(
  * @returns
  */
 export function <span class="fstat-no" title="function not covered" >copyAllPosts(</span>) {
-  const excludes = <span class="cstat-no" title="statement not covered" >Array.isArray(ProjectConfig.exclude) ? ProjectConfig.exclude : [];</span>
+  const config = <span class="cstat-no" title="statement not covered" >getConfig();</span>
+  const excludes = <span class="cstat-no" title="statement not covered" >Array.isArray(config.exclude) ? config.exclude : [];</span>
 <span class="cstat-no" title="statement not covered" >  excludes.push('**/.vscode/**', '**/desktop.ini', '**/node_modules/**', '**/.frontmatter/**', '**/.git*/**');</span>
-<span class="cstat-no" title="statement not covered" >  console.log('[copy] cwd', toUnix(process.cwd()));</span>
-<span class="cstat-no" title="statement not covered" >  console.log('[copy] copying source posts from', sourceDir.replace(toUnix(process.cwd()), ''));</span>
+<span class="cstat-no" title="statement not covered" >  Logger.log('[copy] cwd', toUnix(process.cwd()));</span>
+<span class="cstat-no" title="statement not covered" >  Logger.log('[copy] copying source posts from', sourceDir.replace(toUnix(process.cwd()), ''));</span>
 <span class="cstat-no" title="statement not covered" >  return (</span>
     gulp
       .src(['**/*', '**/*.*', '*.*'], { cwd: sourceDir, ignore: excludes })
@@ -601,7 +607,7 @@ export function <span class="fstat-no" title="function not covered" >copyAllPost
 <span class="cstat-no" title="statement not covered" >          if (file.isNull()) <span class="cstat-no" title="statement not covered" >return callback();</span></span>
           // process markdown files
 <span class="cstat-no" title="statement not covered" >          if (file.extname === '.md') {</span>
-            const config = <span class="cstat-no" title="statement not covered" >ProjectConfig;</span>
+            const config = <span class="cstat-no" title="statement not covered" >getConfig();</span>
             const contents = <span class="cstat-no" title="statement not covered" >file.contents?.toString() || '';</span>
             // drop empty body
 <span class="cstat-no" title="statement not covered" >            if (contents.trim().length === 0) <span class="cstat-no" title="statement not covered" >return callback();</span></span>
@@ -627,7 +633,7 @@ export function <span class="fstat-no" title="function not covered" >copyAllPost
 <span class="cstat-no" title="statement not covered" >              file.contents = Buffer.from(build);</span>
 <span class="cstat-no" title="statement not covered" >              return callback(null, file);</span>
             } else {
-<span class="cstat-no" title="statement not covered" >              console.log('cannot parse', toUnix(file.path).replace(toUnix(process.cwd()), ''));</span>
+<span class="cstat-no" title="statement not covered" >              Logger.log('cannot parse', toUnix(file.path).replace(toUnix(process.cwd()), ''));</span>
             }
           }
 <span class="cstat-no" title="statement not covered" >          callback(null, file);</span>
@@ -652,7 +658,7 @@ gulp.task('watch-posts', watchPost);
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2022-12-20T02:29:12.896Z
+                at 2022-12-20T07:15:31.530Z
             </div>
         <script src="prettify.js"></script>
         <script>

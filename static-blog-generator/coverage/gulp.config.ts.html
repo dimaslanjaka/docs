@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">77.27% </span>
+                <span class="strong">36.36% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>17/22</span>
+                <span class='fraction'>8/22</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">20% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>5/10</span>
+                <span class='fraction'>2/10</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">66.66% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/3</span>
+                <span class='fraction'>0/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">77.27% </span>
+                <span class="strong">36.36% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>17/22</span>
+                <span class='fraction'>8/22</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -201,8 +201,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -211,16 +211,16 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -288,9 +288,9 @@ let settledConfig = ProjectConfig as Record&lt;string, any&gt;;
  * * useful for jest
  * @param obj
  */
-export function setConfig(obj: Record&lt;string, any&gt; | ProjConf) {
-  settledConfig = Object.assign({}, settledConfig, obj);
-  return getConfig();
+export function <span class="fstat-no" title="function not covered" >setConfig(</span>obj: Record&lt;string, any&gt; | ProjConf) {
+<span class="cstat-no" title="statement not covered" >  settledConfig = Object.assign({}, settledConfig, obj);</span>
+<span class="cstat-no" title="statement not covered" >  return getConfig();</span>
 }
 &nbsp;
 /**
@@ -298,17 +298,17 @@ export function setConfig(obj: Record&lt;string, any&gt; | ProjConf) {
  * * useful for jest
  * @returns
  */
-export function getConfig() {
-  <span class="missing-if-branch" title="else path not taken" >E</span>if ('cwd' in settledConfig) {
-    const fileYML = join(settledConfig.cwd, '_config.yml');
-    if (existsSync(fileYML)) {
-      const configYML = yaml.parse(readFileSync(fileYML, 'utf-8'));
-      settledConfig = Object.assign({}, configYML, settledConfig);
-      writefile(join(__dirname, '_config.json'), JSON.stringify(configYML, null, 2));
+export function <span class="fstat-no" title="function not covered" >getConfig(</span>) {
+<span class="cstat-no" title="statement not covered" >  if ('cwd' in settledConfig) {</span>
+    const fileYML = <span class="cstat-no" title="statement not covered" >join(settledConfig.cwd, '_config.yml');</span>
+<span class="cstat-no" title="statement not covered" >    if (existsSync(fileYML)) {</span>
+      const configYML = <span class="cstat-no" title="statement not covered" >yaml.parse(readFileSync(fileYML, 'utf-8'));</span>
+<span class="cstat-no" title="statement not covered" >      settledConfig = Object.assign({}, configYML, settledConfig);</span>
+<span class="cstat-no" title="statement not covered" >      writefile(join(__dirname, '_config.json'), JSON.stringify(configYML, null, 2));</span>
     }
   }
   //const deployDir = join(settledConfig.cwd, '.deploy_' + settledConfig.deploy?.type || 'git');
-  return settledConfig as ProjConf;
+<span class="cstat-no" title="statement not covered" >  return settledConfig as ProjConf;</span>
 }
 &nbsp;
 /** common ignore files */
@@ -334,7 +334,7 @@ export const commonIgnore = [
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2022-12-20T02:29:12.896Z
+                at 2022-12-20T07:15:31.530Z
             </div>
         <script src="prettify.js"></script>
         <script>
