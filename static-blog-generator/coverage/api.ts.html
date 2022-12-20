@@ -18,31 +18,31 @@
         <h1><a href="index.html">All files</a> api.ts</h1>
         <div class="clearfix">
             
-            <div class='fl pad1y space-right2'>
+            <div class="fl pad1y space-right2">
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/27</span>
+                <span class="fraction">0/27</span>
             </div>
         
             
-            <div class='fl pad1y space-right2'>
+            <div class="fl pad1y space-right2">
                 <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/5</span>
+                <span class="fraction">0/5</span>
             </div>
         
             
-            <div class='fl pad1y space-right2'>
+            <div class="fl pad1y space-right2">
                 <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/9</span>
+                <span class="fraction">0/9</span>
             </div>
         
             
-            <div class='fl pad1y space-right2'>
+            <div class="fl pad1y space-right2">
                 <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/24</span>
+                <span class="fraction">0/24</span>
             </div>
         
             
@@ -252,34 +252,34 @@ import noop from './utils/noop';
 &nbsp;
 class SBG {
   cwd: string;
-  config = <span class="cstat-no" title="statement not covered" >getConfig();</span>
+  config = <span class="cstat-no" title="statement not covered">getConfig();</span>
   /**
    * Static blog generator
    * @param cwd base folder
    */
-<span class="fstat-no" title="function not covered" >  co</span>nstructor(cwd: null | string = <span class="branch-0 cbranch-no" title="branch not covered" >null)</span> {
-<span class="cstat-no" title="statement not covered" >    if (typeof cwd === 'string') {</span>
-<span class="cstat-no" title="statement not covered" >      this.cwd = cwd;</span>
-<span class="cstat-no" title="statement not covered" >      this.config = setConfig({ cwd });</span>
+<span class="fstat-no" title="function not covered">  co</span>nstructor(cwd: null | string = <span class="branch-0 cbranch-no" title="branch not covered">null)</span> {
+<span class="cstat-no" title="statement not covered">    if (typeof cwd === 'string') {</span>
+<span class="cstat-no" title="statement not covered">      this.cwd = cwd;</span>
+<span class="cstat-no" title="statement not covered">      this.config = setConfig({ cwd });</span>
     }
   }
 &nbsp;
-  standalone = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >standaloneRunner();</span></span>
+  standalone = <span class="cstat-no" title="statement not covered"><span class="fstat-no" title="function not covered">()</span> =&gt; <span class="cstat-no" title="statement not covered">standaloneRunner();</span></span>
 &nbsp;
   /**
    * Auto seo on public dir (_config_yml.public_dir) (run after generated)
    * @returns
    */
-  seo = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >autoSeo(join(this.cwd, ProjectConfig.public_dir));</span></span>
+  seo = <span class="cstat-no" title="statement not covered"><span class="fstat-no" title="function not covered">()</span> =&gt; <span class="cstat-no" title="statement not covered">autoSeo(join(this.cwd, ProjectConfig.public_dir));</span></span>
 &nbsp;
   /**
    * Copy all **src-post** to **source/_posts** (run before generate)
    * * see the method {@link copyAllPosts}
    * @returns
    */
-  copy = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >fu</span>nction () {</span>
-<span class="cstat-no" title="statement not covered" >    return new Promise(<span class="fstat-no" title="function not covered" >(r</span>esolve) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >      copyAllPosts().once('end', resolve);</span>
+  copy = <span class="cstat-no" title="statement not covered"><span class="fstat-no" title="function not covered">fu</span>nction () {</span>
+<span class="cstat-no" title="statement not covered">    return new Promise(<span class="fstat-no" title="function not covered">(r</span>esolve) =&gt; {</span>
+<span class="cstat-no" title="statement not covered">      copyAllPosts().once('end', resolve);</span>
     });
   };
 &nbsp;
@@ -287,7 +287,7 @@ class SBG {
    * Anonymize external links on public dir (_config_yml.public_dir) (run after generated)
    * @returns
    */
-  safelink = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >safelinkProcess(noop, join(this.cwd, ProjectConfig.public_dir));</span></span>
+  safelink = <span class="cstat-no" title="statement not covered"><span class="fstat-no" title="function not covered">()</span> =&gt; <span class="cstat-no" title="statement not covered">safelinkProcess(noop, join(this.cwd, ProjectConfig.public_dir));</span></span>
 &nbsp;
   /**
    * generate site with hexo
@@ -319,11 +319,11 @@ class SBG {
    * @see {@link cleanDb}
    * @see {@link cleanOldArchives}
    */
-<span class="fstat-no" title="function not covered" >  cl</span>ean(opt?: 'all') {
-<span class="cstat-no" title="statement not covered" >    if (opt !== 'all') {</span>
-<span class="cstat-no" title="statement not covered" >      return cleanDb();</span>
+<span class="fstat-no" title="function not covered">  cl</span>ean(opt?: 'all') {
+<span class="cstat-no" title="statement not covered">    if (opt !== 'all') {</span>
+<span class="cstat-no" title="statement not covered">      return cleanDb();</span>
     } else {
-<span class="cstat-no" title="statement not covered" >      return cleanOldArchives();</span>
+<span class="cstat-no" title="statement not covered">      return cleanOldArchives();</span>
     }
   }
 }
@@ -335,7 +335,7 @@ export default SBG;
             </div><!-- /wrapper -->
             <div class="footer quiet pad2 space-top1 center small">
                 Code coverage generated by
-                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9pc3RhbmJ1bC5qcy5vcmcv" target="_blank" rel="noopener noreferrer">istanbul</a>
                 at 2022-12-20T07:15:31.530Z
             </div>
         <script src="prettify.js"></script>
