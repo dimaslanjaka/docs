@@ -18,12 +18,28 @@
 </a>
 <p>Static Blog Generator v3 using Gulp System.</p>
 <p>Pre-processing all source posts before rendering from hexo. Useful for low-end devices to avoid memory heap errors. With this package you can prevent using large number of hexo plugins, because some function (runner) separated by task, so memory friendly.</p>
-<p>API documentation:</p>
+
+<a href="#api-documentation" id="api-documentation" style="color: inherit; text-decoration: none;">
+  <h2>API documentation</h2>
+</a>
 <ul>
 <li><a href="https://www.webmanajemen.com/docs/static-blog-generator/">index</a></li>
 <li><a href="https://www.webmanajemen.com/docs/static-blog-generator/modules/">modules</a></li>
 </ul>
-<p>Usages:</p>
+
+<a href="#usages" id="usages" style="color: inherit; text-decoration: none;">
+  <h2>Usages</h2>
+</a>
+<ul>
+<li>copy source posts (<code>gulp post:copy</code>)</li>
+<li>generate site (<code>hexo generate</code>)</li>
+<li>anonymize link (<code>gulp safelink</code>) optional</li>
+<li>fix seo (<code>gulp seo</code>) optional</li>
+</ul>
+
+<a href="#references" id="references" style="color: inherit; text-decoration: none;">
+  <h3>References</h3>
+</a>
 <ul>
 <li><a href="https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/gulpfile.js">https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/gulpfile.js</a></li>
 </ul>
@@ -51,7 +67,7 @@
 <td align="left">./source/_posts</td>
 </tr>
 </tbody></table>
-<pre><code class="language-bash"><span class="hl-1">gulp copy-all-posts</span>
+<pre><code class="language-bash"><span class="hl-1">gulp post:copy</span>
 </code></pre>
 
 <a href="#anonymize-external-links" id="anonymize-external-links" style="color: inherit; text-decoration: none;">
@@ -73,6 +89,28 @@
 <pre><code class="language-bash"><span class="hl-1">gulp safelink</span>
 </code></pre>
 
+<a href="#automatic-seo" id="automatic-seo" style="color: inherit; text-decoration: none;">
+  <h2>Automatic SEO</h2>
+</a>
+<ul>
+<li>adds an alt tag to an image element when none exists</li>
+<li>adds an title tag to an iframe element when none exists</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">Source</th>
+<th align="left">Destination</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">./.deploy_git</td>
+<td align="left">./.deploy_git</td>
+</tr>
+</tbody></table>
+<pre><code class="language-bash"><span class="hl-1">gulp seo</span>
+</code></pre>
+
 <a href="#todo" id="todo" style="color: inherit; text-decoration: none;">
   <h2>todo</h2>
 </a>
@@ -82,7 +120,7 @@
 <table>
 <thead>
 <tr>
-<th align="left">:heavy_check_mark:</th>
+<th align="left">&#9745;</th>
 <th align="left">command</th>
 <th align="left">Description</th>
 </tr>
@@ -91,6 +129,11 @@
 <td align="left">&#9744;</td>
 <td align="left">sbg copy post</td>
 <td align="left">process and copy post from <code>src-posts</code> to <code>source/_posts</code></td>
+</tr>
+<tr>
+<td align="left">&#9745;</td>
+<td align="left">gulp --tasks</td>
+<td align="left">list all tasks</td>
 </tr>
 </tbody></table>
 <!--
@@ -105,6 +148,45 @@ Checkboxed inside markdown table
   <h2>Gulp Tasks</h2>
 </a>
 <pre><code class="language-text">Gulp tasks of static-blog-generator
+├── clean
+├── clean-archives
+├─┬ clean-all
+│ └─┬ &lt;series&gt;
+│   ├── clean
+│   └── clean-archives
+├── safelink
+├── copy
+├── push
+├── status
+├── commit
+├── pull
+├─┬ deploy
+│ └─┬ &lt;series&gt;
+│   ├── pull
+│   ├── clean-archives
+│   ├── copy
+│   ├── safelink
+│   ├── commit
+│   └── push
+├── feed
+├── post:copy
+├─┬ copy-all-post
+│ └─┬ &lt;series&gt;
+│   └── post:copy
+├─┬ copy-all-posts
+│ └─┬ &lt;series&gt;
+│   └── post:copy
+├─┬ copy-posts
+│ └─┬ &lt;series&gt;
+│   └── post:copy
+├─┬ copy-post
+│ └─┬ &lt;series&gt;
+│   └── post:copy
+├── watch-post
+├── watch-posts
+├── seo
+├── project-commit
+└── commitProject
 </code></pre>
 
 <a href="#coverage" id="coverage" style="color: inherit; text-decoration: none;">
