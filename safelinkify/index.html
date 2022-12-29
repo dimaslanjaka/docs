@@ -1,0 +1,493 @@
+<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>Static Blog Generator Gulp</title><meta name="description" content="Documentation for Static Blog Generator Gulp"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script async src="assets/search.js" id="search-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
+<div class="tsd-toolbar-contents container">
+<div class="table-cell" id="tsd-search" data-base=".">
+<div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M15.7824 13.833L12.6666 10.7177C12.5259 10.5771 12.3353 10.499 12.1353 10.499H11.6259C12.4884 9.39596 13.001 8.00859 13.001 6.49937C13.001 2.90909 10.0914 0 6.50048 0C2.90959 0 0 2.90909 0 6.49937C0 10.0896 2.90959 12.9987 6.50048 12.9987C8.00996 12.9987 9.39756 12.4863 10.5008 11.6239V12.1332C10.5008 12.3332 10.5789 12.5238 10.7195 12.6644L13.8354 15.7797C14.1292 16.0734 14.6042 16.0734 14.8948 15.7797L15.7793 14.8954C16.0731 14.6017 16.0731 14.1267 15.7824 13.833ZM6.50048 10.499C4.29094 10.499 2.50018 8.71165 2.50018 6.49937C2.50018 4.29021 4.28781 2.49976 6.50048 2.49976C8.71001 2.49976 10.5008 4.28708 10.5008 6.49937C10.5008 8.70852 8.71314 10.499 6.50048 10.499Z" fill="var(--color-text)"></path></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div>
+<div class="field">
+<div id="tsd-toolbar-links"><a href="https://www.webmanajemen.com">Homepage</a><a href="https://github.com/dimaslanjaka">GitHub</a></div></div>
+<ul class="results">
+<li class="state loading">Preparing search index...</li>
+<li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">Static Blog Generator Gulp</a></div>
+<div class="table-cell" id="tsd-widgets"><a href="#" class="tsd-widget tsd-toolbar-icon menu no-caption" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1" y="3" width="14" height="2" fill="var(--color-text)"></rect><rect x="1" y="7" width="14" height="2" fill="var(--color-text)"></rect><rect x="1" y="11" width="14" height="2" fill="var(--color-text)"></rect></svg></a></div></div></header>
+<div class="container container-main">
+<div class="col-8 col-content">
+<div class="tsd-page-title">
+<h2>Static Blog Generator Gulp</h2></div>
+<div class="tsd-panel tsd-typography">
+<a href="#safelinkify" id="safelinkify" style="color: inherit; text-decoration: none;">
+  <h1>Safelinkify</h1>
+</a>
+<p><img src="https://img.shields.io/npm/v/safelinkify?label=safelinkify&style=flat" alt="npm version">
+<img src="https://img.shields.io/website?down_color=red&down_message=down&label=www.webmanajemen.com&logo=www.webmanajemen.com&style=flat&up_color=green&up_message=up&url=https%3A%2F%2Fwww.webmanajemen.com" alt="www.webmanajemen.com">
+<img src="https://img.shields.io/npm/l/safelinkify" alt="LICENSE">
+<img src="https://img.shields.io/github/languages/count/dimaslanjaka/safelink" alt="GitHub language count">
+<img src="https://github.com/dimaslanjaka/safelink/actions/workflows/build-release.yml/badge.svg" alt="Github Workflow">
+<img src="https://img.shields.io/github/forks/dimaslanjaka/safelink" alt="GitHub forks">
+<img src="https://img.shields.io/github/stars/dimaslanjaka/safelink" alt="GitHub stars"></p>
+<p>Customized safelink url redirector. Transform and Anonymize all hyperlinks to outbound pages. Useful for SEO external links and ADS.</p>
+<p><strong><a href="https://www.webmanajemen.com/safelink/index.html">READ FULL DOCUMENTATION AND LIVE DEMO</a></strong></p>
+
+<a href="#our-production" id="our-production" style="color: inherit; text-decoration: none;">
+  <h2>Our Production</h2>
+</a>
+<table>
+<thead>
+<tr>
+<th align="left">page</th>
+<th align="left">source</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a href="https://www.webmanajemen.com/page/safelink.html">https://www.webmanajemen.com/page/safelink.html</a></td>
+<td align="left"><a href="https://github.com/dimaslanjaka/page/blob/master/safelink/safelink-decode.js">safelink-decode.js</a> <br /><a href="https://github.com/dimaslanjaka/page/tree/master/safelink/layout1">layout</a> <br/><a href="https://github.com/dimaslanjaka/page/blob/master/_layout.njk">template</a> <br /><a href="https://github.com/dimaslanjaka/page/blob/1601e212200eaa7e8b4534ae7511b4fb6f179a96/gulpfile.js#L222">compiler</a></td>
+</tr>
+</tbody></table>
+
+<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
+  <h2>Installation</h2>
+</a>
+
+<a href="#bundles" id="bundles" style="color: inherit; text-decoration: none;">
+  <h3>Bundles</h3>
+</a>
+<table>
+<thead>
+<tr>
+<th align="left">registry</th>
+<th align="left">link</th>
+<th align="left">commands</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">npm</td>
+<td align="left"><a href="https://www.npmjs.com/package/safelinkify">https://www.npmjs.com/package/safelinkify</a></td>
+<td align="left"><code>npm i safelinkify</code></td>
+</tr>
+<tr>
+<td align="left">github</td>
+<td align="left"><a href="https://github.com/dimaslanjaka/safelink">https://github.com/dimaslanjaka/safelink</a></td>
+<td align="left"><code>npm i https://github.com/dimaslanjaka/safelink</code></td>
+</tr>
+<tr>
+<td align="left">tarball</td>
+<td align="left"><a href="https://github.com/dimaslanjaka/safelink/raw/master/release/safelinkify.tgz">https://github.com/dimaslanjaka/safelink/raw/master/release/safelinkify.tgz</a></td>
+<td align="left"><code>npm i https://github.com/dimaslanjaka/safelink/raw/master/release/safelinkify.tgz</code></td>
+</tr>
+</tbody></table>
+
+<a href="#npm" id="npm" style="color: inherit; text-decoration: none;">
+  <h3>npm</h3>
+</a>
+<pre><code class="language-bash"><span class="hl-0">npm install safelinkify --production</span>
+</code></pre>
+
+<a href="#yarn" id="yarn" style="color: inherit; text-decoration: none;">
+  <h3>yarn</h3>
+</a>
+<pre><code><span class="hl-1">yarn</span><span class="hl-0"> </span><span class="hl-1">install</span><span class="hl-0"> </span><span class="hl-1">safelinkify</span><span class="hl-0"> --</span><span class="hl-1">production</span><span class="hl-0">=</span><span class="hl-2">true</span>
+</code></pre>
+
+<a href="#development" id="development" style="color: inherit; text-decoration: none;">
+  <h2>Development</h2>
+</a>
+<pre><code class="language-bash"><span class="hl-0">git clone --single-branch --branch main https://github.com/dimaslanjaka/safelink foldername</span><br/><span class="hl-3">cd</span><span class="hl-0"> foldername</span><br/><span class="hl-4"># install dependents</span><br/><span class="hl-0">yarn install</span><br/><span class="hl-4"># or</span><br/><span class="hl-0">npm install</span>
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>command</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>yarn start</code></td>
+<td>watch tests and start server</td>
+</tr>
+<tr>
+<td></td>
+<td>watch src and compile tsc webpack</td>
+</tr>
+<tr>
+<td><code>tsc</code></td>
+<td>build definition and js files</td>
+</tr>
+<tr>
+<td><code>webpack</code></td>
+<td>build safelink script</td>
+</tr>
+</tbody></table>
+
+<a href="#usages" id="usages" style="color: inherit; text-decoration: none;">
+  <h2>Usages</h2>
+</a>
+<p>Setup options:</p>
+<pre><code class="language-js"><span class="hl-2">const</span><span class="hl-0"> </span><span class="hl-5">options</span><span class="hl-0"> = {</span><br/><span class="hl-0">  </span><span class="hl-4">// exclude patterns (dont anonymize these patterns)</span><br/><span class="hl-0">  </span><span class="hl-1">exclude:</span><span class="hl-0"> [</span><span class="hl-6">&#39;domain.com&#39;</span><span class="hl-0">,</span><span class="hl-7"> /another.domain.com/</span><span class="hl-0">, </span><span class="hl-7">/https</span><span class="hl-8">?</span><span class="hl-7">:</span><span class="hl-9">\/\/</span><span class="hl-8">?</span><span class="hl-10">(?:([^</span><span class="hl-7">*</span><span class="hl-10">]</span><span class="hl-8">+</span><span class="hl-10">)</span><span class="hl-9">\.</span><span class="hl-10">)</span><span class="hl-8">?</span><span class="hl-7">webmanajemen</span><span class="hl-9">\.</span><span class="hl-7">com/</span><span class="hl-0">, </span><span class="hl-7">/</span><span class="hl-10">([</span><span class="hl-7">a-z0-9</span><span class="hl-10">](?:[</span><span class="hl-7">a-z0-9-</span><span class="hl-10">]</span><span class="hl-8">{1,61}</span><span class="hl-10">[</span><span class="hl-7">a-z0-9</span><span class="hl-10">])</span><span class="hl-8">?</span><span class="hl-10">[</span><span class="hl-7">.</span><span class="hl-10">])</span><span class="hl-8">*</span><span class="hl-7">webmanajemen</span><span class="hl-9">\.</span><span class="hl-7">com/</span><span class="hl-0">],</span><br/><span class="hl-0">  </span><span class="hl-4">// url redirector</span><br/><span class="hl-0">  </span><span class="hl-1">redirect:</span><span class="hl-0"> </span><span class="hl-6">&#39;https://www.webmanajemen.com/page/safelink.html?url=&#39;</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-4">// debug</span><br/><span class="hl-0">  </span><span class="hl-1">verbose:</span><span class="hl-0"> </span><span class="hl-2">false</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-4">// encryption type = &#39;base64&#39; | &#39;aes&#39;</span><br/><span class="hl-0">  </span><span class="hl-1">type:</span><span class="hl-0"> </span><span class="hl-6">&#39;base64&#39;</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-4">// password aes, default = root</span><br/><span class="hl-0">  </span><span class="hl-1">password:</span><span class="hl-0"> </span><span class="hl-6">&#39;unique-password&#39;</span><br/><span class="hl-0">}</span>
+</code></pre>
+
+<a href="#browser" id="browser" style="color: inherit; text-decoration: none;">
+  <h3>Browser</h3>
+</a>
+<p>script location: <code>node_modules/safelinkify/dist/bundle.min.js</code>.</p>
+<p>Call Core Script:</p>
+<pre><code class="language-html"><span class="hl-11">&lt;</span><span class="hl-12">script</span><span class="hl-13"> </span><span class="hl-14">src</span><span class="hl-13">=</span><span class="hl-15">&quot;dist/bundle.min.js&quot;</span><span class="hl-11">&gt;&lt;/</span><span class="hl-12">script</span><span class="hl-11">&gt;</span><br/><span class="hl-4">&lt;!--or using rawgit--&gt;</span><br/><span class="hl-11">&lt;</span><span class="hl-12">script</span><span class="hl-13"> </span><span class="hl-14">src</span><span class="hl-13">=</span><span class="hl-15">&quot;https://raw.githack.com/dimaslanjaka/safelink/main/dist/bundle.min.js&quot;</span><span class="hl-11">&gt;&lt;/</span><span class="hl-12">script</span><span class="hl-11">&gt;</span><br/><span class="hl-4">&lt;!--or using statically--&gt;</span><br/><span class="hl-11">&lt;</span><span class="hl-12">script</span><span class="hl-13"> </span><span class="hl-14">src</span><span class="hl-13">=</span><span class="hl-15">&quot;https://cdn.statically.io/gh/dimaslanjaka/safelink/main/dist/bundle.min.js&quot;</span><span class="hl-11">&gt;&lt;/</span><span class="hl-12">script</span><span class="hl-11">&gt;</span>
+</code></pre>
+<p>Execute functions:</p>
+<pre><code class="language-html"><span class="hl-11">&lt;</span><span class="hl-12">script</span><span class="hl-11">&gt;</span><br/><span class="hl-13">  </span><span class="hl-2">const</span><span class="hl-13"> </span><span class="hl-5">sf</span><span class="hl-13"> </span><span class="hl-0">=</span><span class="hl-13"> </span><span class="hl-2">new</span><span class="hl-13"> </span><span class="hl-3">safelink</span><span class="hl-13">(</span><span class="hl-1">options</span><span class="hl-13">);</span><br/><span class="hl-13">  </span><span class="hl-4">// automated safelinkify all hyperlinks in body</span><br/><span class="hl-13">  </span><span class="hl-1">sf</span><span class="hl-13">.</span><span class="hl-3">parse</span><span class="hl-13">(</span><span class="hl-1">document</span><span class="hl-13">.</span><span class="hl-3">querySelector</span><span class="hl-13">(</span><span class="hl-6">&#39;body&#39;</span><span class="hl-13">)).</span><span class="hl-3">then</span><span class="hl-13">((</span><span class="hl-1">result</span><span class="hl-13">)</span><span class="hl-2">=&gt;</span><span class="hl-13">{</span><br/><span class="hl-13">    </span><span class="hl-1">console</span><span class="hl-13">.</span><span class="hl-3">log</span><span class="hl-13">(</span><span class="hl-1">result</span><span class="hl-13">);</span><br/><span class="hl-13">    </span><span class="hl-4">// in page redirector</span><br/><span class="hl-13">    </span><span class="hl-1">sf</span><span class="hl-13">.</span><span class="hl-3">resolveQueryUrl</span><span class="hl-13">(</span><span class="hl-1">window</span><span class="hl-13">.</span><span class="hl-1">location</span><span class="hl-13">.</span><span class="hl-1">href</span><span class="hl-13">);</span><br/><span class="hl-13">  });</span><br/><span class="hl-11">&lt;/</span><span class="hl-12">script</span><span class="hl-11">&gt;</span>
+</code></pre>
+
+<a href="#nodejs" id="nodejs" style="color: inherit; text-decoration: none;">
+  <h3>NodeJS</h3>
+</a>
+
+<a href="#reference-examples" id="reference-examples" style="color: inherit; text-decoration: none;">
+  <h4>Reference Examples:</h4>
+</a>
+<ul>
+<li><a href="https://github.com/dimaslanjaka/safelink/blob/main/src/index.test.ts">full sample</a></li>
+<li><a href="https://github.com/dimaslanjaka/page/blob/master/gulpfile.js">https://github.com/dimaslanjaka/page/blob/master/gulpfile.js</a></li>
+</ul>
+
+<a href="#import-list" id="import-list" style="color: inherit; text-decoration: none;">
+  <h4>Import list</h4>
+</a>
+<pre><code class="language-js"><span class="hl-2">const</span><span class="hl-0"> { </span><span class="hl-5">safelink</span><span class="hl-0"> } = </span><span class="hl-3">require</span><span class="hl-0">(</span><span class="hl-6">&#39;safelinkify&#39;</span><span class="hl-0">);</span><br/><span class="hl-2">const</span><span class="hl-0"> { </span><span class="hl-1">default</span><span class="hl-0">: </span><span class="hl-5">safelink</span><span class="hl-0"> } = </span><span class="hl-3">require</span><span class="hl-0">(</span><span class="hl-6">&#39;safelinkify/dist/safelink&#39;</span><span class="hl-0">);</span>
+</code></pre>
+
+<a href="#usages-example" id="usages-example" style="color: inherit; text-decoration: none;">
+  <h4>Usages Example</h4>
+</a>
+<pre><code class="language-ts"><span class="hl-16">import</span><span class="hl-0"> </span><span class="hl-1">safelinkify</span><span class="hl-0"> </span><span class="hl-16">from</span><span class="hl-0"> </span><span class="hl-6">&#39;safelinkify&#39;</span><span class="hl-0">;</span><br/><span class="hl-4">// const safelinkify = require(&#39;safelinkify&#39;)</span><br/><span class="hl-2">const</span><span class="hl-0"> </span><span class="hl-5">sf</span><span class="hl-0"> = </span><span class="hl-2">new</span><span class="hl-0"> </span><span class="hl-1">safelinkify</span><span class="hl-0">.</span><span class="hl-3">safelink</span><span class="hl-0">(</span><span class="hl-1">options</span><span class="hl-0">);</span><br/><span class="hl-2">const</span><span class="hl-0"> </span><span class="hl-5">processedExternalLinks</span><span class="hl-0"> = </span><span class="hl-1">sf</span><span class="hl-0">.</span><span class="hl-3">parse</span><span class="hl-0">(</span><span class="hl-6">`</span><br/><span class="hl-6">&lt;a href=&quot;www.example.com/page.php?id=xxxx&amp;name=yyyy&quot; ....&gt;external&lt;/a&gt;</span><br/><span class="hl-6">&lt;a href=&quot;http://www.example.com/page.php?id=xxxx&amp;name=yyyy&quot; ....&gt;external&lt;/a&gt;</span><br/><span class="hl-6">&lt;a href=&quot;https://www.example.com/page.php?id=xxxx&amp;name=yyyy&quot; ....&gt;external&lt;/a&gt;</span><br/><span class="hl-6">&lt;a href=&quot;www.example.com/page.php/404&quot; ....&gt;&lt;/a&gt;</span><br/><span class="hl-6">&lt;a href=&quot;http://external.domain.com&quot;&gt;internal&lt;/a&gt;</span><br/><span class="hl-6">&lt;a href=&quot;http://www.webmanajemen.com&quot;&gt;internal&lt;/a&gt;</span><br/><span class="hl-6">&lt;a href=&quot;http://webmanajemen.com&quot;&gt;internal&lt;/a&gt;</span><br/><span class="hl-6">&lt;a href=&quot;#http://webmanajemen.com&quot;&gt;#internal&lt;/a&gt;</span><br/><span class="hl-6">&lt;a href=&quot;?http://webmanajemen.com&quot;&gt;?internal&lt;/a&gt;</span><br/><span class="hl-6">&lt;a href=&quot;&quot;&gt;internal&lt;/a&gt;</span><br/><span class="hl-6">`</span><span class="hl-0">);</span><br/><span class="hl-1">processedExternalLinks</span><span class="hl-0">.</span><span class="hl-3">then</span><span class="hl-0">(</span><span class="hl-1">console</span><span class="hl-0">.</span><span class="hl-1">log</span><span class="hl-0">);</span><br/><br/><span class="hl-4">/*</span><br/><span class="hl-4">&lt;a href=&quot;www.example.com/page.php?id=xxxx&amp;name=yyyy&quot; ....&gt;external&lt;/a&gt;</span><br/><span class="hl-4">&lt;a href=&quot;https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL3d3dy5leGFtcGxlLmNvbS9wYWdlLnBocD9pZD14eHh4Jm5hbWU9eXl5eQ==&quot; ....&gt;external&lt;/a&gt;</span><br/><span class="hl-4">&lt;a href=&quot;https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly93d3cuZXhhbXBsZS5jb20vcGFnZS5waHA/aWQ9eHh4eCZuYW1lPXl5eXk=&quot; ....&gt;external&lt;/a&gt;</span><br/><span class="hl-4">&lt;a href=&quot;www.example.com/page.php/404&quot; ....&gt;&lt;/a&gt;</span><br/><span class="hl-4">&lt;a href=&quot;http://external.domain.com&quot;&gt;internal&lt;/a&gt;</span><br/><span class="hl-4">&lt;a href=&quot;http://www.webmanajemen.com&quot;&gt;internal&lt;/a&gt;</span><br/><span class="hl-4">&lt;a href=&quot;http://webmanajemen.com&quot;&gt;internal&lt;/a&gt;</span><br/><span class="hl-4">&lt;a href=&quot;#http://webmanajemen.com&quot;&gt;#internal&lt;/a&gt;</span><br/><span class="hl-4">&lt;a href=&quot;?http://webmanajemen.com&quot;&gt;?internal&lt;/a&gt;</span><br/><span class="hl-4">&lt;a href=&quot;&quot;&gt;internal&lt;/a&gt;</span><br/><span class="hl-4">*/</span>
+</code></pre>
+
+<a href="#using-gulp" id="using-gulp" style="color: inherit; text-decoration: none;">
+  <h4>Using gulp</h4>
+</a>
+<p>Reference Examples:</p>
+<ul>
+<li><a href="https://github.com/dimaslanjaka/page/blob/a2f16cb5470992ac149204fdca621d1bcac1107c/gulpfile.js#L325">https://github.com/dimaslanjaka/page/gulpfile.js</a></li>
+</ul>
+<p>Usages:</p>
+<pre><code class="language-typescript"><span class="hl-16">import</span><span class="hl-0"> </span><span class="hl-1">gulp</span><span class="hl-0"> </span><span class="hl-16">from</span><span class="hl-0"> </span><span class="hl-6">&#39;gulp&#39;</span><br/><span class="hl-16">import</span><span class="hl-0"> </span><span class="hl-1">sf</span><span class="hl-0"> </span><span class="hl-16">from</span><span class="hl-0"> </span><span class="hl-6">&#39;safelinkify&#39;</span><br/><span class="hl-16">import</span><span class="hl-0"> { </span><span class="hl-1">toUnix</span><span class="hl-0">, </span><span class="hl-1">join</span><span class="hl-0"> } </span><span class="hl-16">from</span><span class="hl-0"> </span><span class="hl-6">&#39;upath&#39;</span><br/><span class="hl-16">import</span><span class="hl-0"> </span><span class="hl-1">through2</span><span class="hl-0"> </span><span class="hl-16">from</span><span class="hl-0"> </span><span class="hl-6">&#39;through2&#39;</span><br/><br/><span class="hl-4">// folder to scan</span><br/><span class="hl-2">const</span><span class="hl-0"> </span><span class="hl-5">destDir</span><span class="hl-0"> = </span><span class="hl-3">join</span><span class="hl-0">(</span><span class="hl-1">__dirname</span><span class="hl-0">, </span><span class="hl-6">&#39;build&#39;</span><span class="hl-0">)</span><br/><span class="hl-4">// scan external link to safelink from dest dir</span><br/><span class="hl-1">gulp</span><span class="hl-0">.</span><span class="hl-3">task</span><span class="hl-0">(</span><span class="hl-6">&#39;safelink&#39;</span><span class="hl-0">, () </span><span class="hl-2">=&gt;</span><span class="hl-0"> {</span><br/><span class="hl-0">  </span><span class="hl-2">const</span><span class="hl-0"> </span><span class="hl-5">safelink</span><span class="hl-0"> = </span><span class="hl-2">new</span><span class="hl-0"> </span><span class="hl-1">sf</span><span class="hl-0">.</span><span class="hl-3">safelink</span><span class="hl-0">({</span><br/><span class="hl-0">    </span><span class="hl-4">// exclude patterns (dont anonymize these patterns)</span><br/><span class="hl-0">    </span><span class="hl-1">exclude:</span><span class="hl-0"> [</span><br/><span class="hl-0">      </span><span class="hl-7">/https</span><span class="hl-8">?</span><span class="hl-7">:</span><span class="hl-9">\/\/</span><span class="hl-8">?</span><span class="hl-10">(?:([^</span><span class="hl-7">*</span><span class="hl-10">]</span><span class="hl-8">+</span><span class="hl-10">)</span><span class="hl-9">\.</span><span class="hl-10">)</span><span class="hl-8">?</span><span class="hl-7">webmanajemen</span><span class="hl-9">\.</span><span class="hl-7">com/</span><span class="hl-0">,</span><br/><span class="hl-0">      </span><span class="hl-7">/</span><span class="hl-10">([</span><span class="hl-7">a-z0-9</span><span class="hl-10">](?:[</span><span class="hl-7">a-z0-9-</span><span class="hl-10">]</span><span class="hl-8">{1,61}</span><span class="hl-10">[</span><span class="hl-7">a-z0-9</span><span class="hl-10">])</span><span class="hl-8">?</span><span class="hl-10">[</span><span class="hl-7">.</span><span class="hl-10">])</span><span class="hl-8">*</span><span class="hl-7">webmanajemen</span><span class="hl-9">\.</span><span class="hl-7">com/</span><br/><span class="hl-0">    ],</span><br/><span class="hl-0">    </span><span class="hl-4">// url redirector</span><br/><span class="hl-0">    </span><span class="hl-1">redirect:</span><span class="hl-0"> </span><span class="hl-6">&#39;https://www.webmanajemen.com/page/safelink.html?url=&#39;</span><span class="hl-0">,</span><br/><span class="hl-0">    </span><span class="hl-4">// debug</span><br/><span class="hl-0">    </span><span class="hl-1">verbose:</span><span class="hl-0"> </span><span class="hl-2">false</span><span class="hl-0">,</span><br/><span class="hl-0">    </span><span class="hl-4">// encryption type = &#39;base64&#39; | &#39;aes&#39;</span><br/><span class="hl-0">    </span><span class="hl-1">type:</span><span class="hl-0"> </span><span class="hl-6">&#39;base64&#39;</span><span class="hl-0">,</span><br/><span class="hl-0">    </span><span class="hl-4">// password aes, default = root</span><br/><span class="hl-0">    </span><span class="hl-1">password:</span><span class="hl-0"> </span><span class="hl-6">&#39;unique-password&#39;</span><br/><span class="hl-0">  })</span><br/><span class="hl-0">  </span><span class="hl-16">return</span><span class="hl-0"> </span><span class="hl-1">gulp</span><br/><span class="hl-0">    .</span><span class="hl-3">src</span><span class="hl-0">([</span><span class="hl-6">&#39;**/*.html&#39;</span><span class="hl-0">], {</span><br/><span class="hl-0">      </span><span class="hl-1">cwd:</span><span class="hl-0"> </span><span class="hl-1">destDir</span><span class="hl-0">,</span><br/><span class="hl-0">      </span><span class="hl-1">ignore:</span><span class="hl-0"> [</span><br/><span class="hl-0">        </span><span class="hl-4">// exclude non-website and react production files</span><br/><span class="hl-0">        </span><span class="hl-6">&#39;**/tmp/**&#39;</span><span class="hl-0">,</span><br/><span class="hl-0">        </span><span class="hl-6">&#39;**/node_modules/**&#39;</span><span class="hl-0">,</span><br/><span class="hl-0">        </span><span class="hl-6">&#39;**/monsters/**/*&#39;</span><span class="hl-0">,</span><br/><span class="hl-0">        </span><span class="hl-6">&#39;**/attendants/**/*&#39;</span><span class="hl-0">,</span><br/><span class="hl-0">        </span><span class="hl-6">&#39;**/materials/**/*&#39;</span><span class="hl-0">,</span><br/><span class="hl-0">        </span><span class="hl-6">&#39;**/scenic-spots/**/*&#39;</span><span class="hl-0">,</span><br/><span class="hl-0">        </span><span class="hl-6">&#39;**/static/**/*&#39;</span><br/><span class="hl-0">      ]</span><br/><span class="hl-0">    })</span><br/><span class="hl-0">    .</span><span class="hl-3">pipe</span><span class="hl-0">(</span><br/><span class="hl-0">      </span><span class="hl-1">through2</span><span class="hl-0">.</span><span class="hl-3">obj</span><span class="hl-0">(</span><span class="hl-2">async</span><span class="hl-0"> (</span><span class="hl-1">file</span><span class="hl-0">, </span><span class="hl-1">_enc</span><span class="hl-0">, </span><span class="hl-1">next</span><span class="hl-0">) </span><span class="hl-2">=&gt;</span><span class="hl-0"> {</span><br/><span class="hl-0">        </span><span class="hl-4">// drop null</span><br/><span class="hl-0">        </span><span class="hl-16">if</span><span class="hl-0"> (</span><span class="hl-1">file</span><span class="hl-0">.</span><span class="hl-3">isNull</span><span class="hl-0">()) </span><span class="hl-16">return</span><span class="hl-0"> </span><span class="hl-3">next</span><span class="hl-0">()</span><br/><span class="hl-0">        </span><span class="hl-4">// do safelinkify</span><br/><span class="hl-0">        </span><span class="hl-2">const</span><span class="hl-0"> </span><span class="hl-5">content</span><span class="hl-0"> = </span><span class="hl-3">String</span><span class="hl-0">(</span><span class="hl-1">file</span><span class="hl-0">.</span><span class="hl-1">contents</span><span class="hl-0">)</span><br/><span class="hl-0">        </span><span class="hl-2">const</span><span class="hl-0"> </span><span class="hl-5">parsed</span><span class="hl-0"> = </span><span class="hl-16">await</span><span class="hl-0"> </span><span class="hl-1">safelink</span><span class="hl-0">.</span><span class="hl-3">parse</span><span class="hl-0">(</span><span class="hl-1">content</span><span class="hl-0">)</span><br/><span class="hl-0">        </span><span class="hl-16">if</span><span class="hl-0"> (</span><span class="hl-1">parsed</span><span class="hl-0">) {</span><br/><span class="hl-0">          </span><span class="hl-1">file</span><span class="hl-0">.</span><span class="hl-1">contents</span><span class="hl-0"> = </span><span class="hl-1">Buffer</span><span class="hl-0">.</span><span class="hl-3">from</span><span class="hl-0">(</span><span class="hl-1">parsed</span><span class="hl-0">)</span><br/><span class="hl-0">          </span><span class="hl-3">next</span><span class="hl-0">(</span><span class="hl-2">null</span><span class="hl-0">, </span><span class="hl-1">file</span><span class="hl-0">)</span><br/><span class="hl-0">        } </span><span class="hl-16">else</span><span class="hl-0"> {</span><br/><span class="hl-0">          </span><span class="hl-1">console</span><span class="hl-0">.</span><span class="hl-3">log</span><span class="hl-0">(</span><br/><span class="hl-0">            </span><span class="hl-6">&#39;cannot parse&#39;</span><span class="hl-0">,</span><br/><span class="hl-0">            </span><span class="hl-3">toUnix</span><span class="hl-0">(</span><span class="hl-1">file</span><span class="hl-0">.</span><span class="hl-1">path</span><span class="hl-0">).</span><span class="hl-3">replace</span><span class="hl-0">(</span><span class="hl-3">toUnix</span><span class="hl-0">(</span><span class="hl-1">process</span><span class="hl-0">.</span><span class="hl-3">cwd</span><span class="hl-0">()), </span><span class="hl-6">&#39;&#39;</span><span class="hl-0">)</span><br/><span class="hl-0">          )</span><br/><span class="hl-0">          </span><span class="hl-3">next</span><span class="hl-0">()</span><br/><span class="hl-0">        }</span><br/><span class="hl-0">      })</span><br/><span class="hl-0">    )</span><br/><span class="hl-0">    .</span><span class="hl-3">pipe</span><span class="hl-0">(</span><span class="hl-1">gulp</span><span class="hl-0">.</span><span class="hl-3">dest</span><span class="hl-0">(</span><span class="hl-1">destDir</span><span class="hl-0">))</span><br/><span class="hl-0">})</span>
+</code></pre>
+<p><strong>0.0.1</strong> - <em>init project</em></p>
+<ul>
+<li>[ <em>2022-04-23 00:29:55</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/45ad09e">45ad09e</a> Initial commit</li>
+<li>[ <em>2022-04-23 00:31:06</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/6cb4348">6cb4348</a> migrate from dimaslanjaka.github.io/tree/safelink</li>
+<li>[ <em>2022-04-23 00:31:59</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/90910d0">90910d0</a> migrate from origin <a href="https://github.com/dimaslanjaka.github.io/tree/safelink">https://github.com/dimaslanjaka.github.io/tree/safelink</a> </li>
+<li>[ <em>2022-04-23 00:32:03</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/1035436">1035436</a> Merge branch &#39;main&#39; of <a href="https://github.com/dimaslanjaka/safelink">https://github.com/dimaslanjaka/safelink</a> into main</li>
+<li>[ <em>2022-04-23 00:37:50</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/2e489c4">2e489c4</a> Update safelink.yml</li>
+<li>[ <em>2022-04-23 00:47:49</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/5fad709">5fad709</a> +submodule </li>
+<li>[ <em>2022-04-23 00:49:56</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/4a0be51">4a0be51</a> update deployment </li>
+<li>[ <em>2022-04-23 00:51:40</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/235d262">235d262</a> [workflow] update </li>
+<li>[ <em>2022-04-23 00:57:18</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/04ca596">04ca596</a> update </li>
+<li>[ <em>2022-04-23 00:57:50</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/0f27f27">0f27f27</a> update </li>
+<li>[ <em>2022-04-23 01:12:32</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/237af50">237af50</a> update </li>
+<li>[ <em>2022-04-23 01:15:41</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/f9687a2">f9687a2</a> [workflow] test </li>
+<li>[ <em>2022-04-23 01:17:32</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/62e09f3">62e09f3</a> [workflow] test</li>
+<li>[ <em>2022-04-23 01:22:03</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/5588b82">5588b82</a> update</li>
+<li>[ <em>2022-04-23 01:28:34</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/2266479">2266479</a> [workflow] test </li>
+<li>[ <em>2022-04-23 01:40:39</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/4034239">4034239</a> + .nojekyll </li>
+<li>[ <em>2022-04-23 01:43:18</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/a711a54">a711a54</a> fix bundle location </li>
+<li>[ <em>2022-04-23 01:53:21</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/36caf76">36caf76</a> [workflow] just test </li>
+<li>[ <em>2022-04-23 02:04:22</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/8af8a28">8af8a28</a> fix EJSHelper location </li>
+<li>[ <em>2022-04-23 02:06:23</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/badd507">badd507</a> v1.0.2 </li>
+<li>[ <em>2022-04-23 02:06:58</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/d55f1fd">d55f1fd</a> update 1.0.2 </li>
+<li>[ <em>2022-04-23 02:10:01</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/ad07842">ad07842</a> +docs </li>
+<li>[ <em>2022-04-23 03:14:51</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/addce76">addce76</a> +layout redirector </li>
+<li>[ <em>2022-04-23 04:04:53</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/30363e2">30363e2</a> v1.0.3 </li>
+<li>[ <em>2022-04-23 04:04:59</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/ee55c98">ee55c98</a> update 1.0.3</li>
+<li>[ <em>2022-04-23 04:05:42</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/5544bd6">5544bd6</a> update 1.0.3</li>
+<li>[ <em>2022-04-23 05:11:07</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/6b18aaa">6b18aaa</a> prepare redirector </li>
+<li>[ <em>2022-04-23 18:45:40</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/4f9fe86">4f9fe86</a> update</li>
+<li>[ <em>2022-04-23 18:45:57</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/067bf56">067bf56</a> update </li>
+<li>[ <em>2022-04-23 19:34:27</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/53ed674">53ed674</a> Update README.md </li>
+<li>[ <em>2022-04-23 19:37:35</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/5d7f3ed">5d7f3ed</a> Update README.md </li>
+<li>[ <em>2022-04-23 19:41:03</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/b1516da">b1516da</a> Update README.md </li>
+<li>[ <em>2022-04-23 19:41:37</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/cee579e">cee579e</a> Update README.md </li>
+<li>[ <em>2022-04-23 20:02:32</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/442b7e6">442b7e6</a> update </li>
+<li>[ <em>2022-04-23 20:02:46</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/3160589">3160589</a> update </li>
+<li>[ <em>2022-04-23 20:23:25</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/4201016">4201016</a> skip CNAME</li>
+<li>[ <em>2022-04-23 20:54:47</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/5570edc">5570edc</a> Update README.md </li>
+<li>[ <em>2022-04-23 23:49:18</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/b6153b3">b6153b3</a> fix yarn start </li>
+<li>[ <em>2022-04-24 01:23:12</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/848022d">848022d</a> fix file watchers </li>
+<li>[ <em>2022-04-24 01:23:47</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/4dd3fca">4dd3fca</a> [windows] eol </li>
+<li>[ <em>2022-04-24 01:34:55</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/2ac5c01">2ac5c01</a> fix import by typescript</li>
+<li>[ <em>2022-04-24 01:58:38</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/2d508ec">2d508ec</a> fix node instance </li>
+<li>[ <em>2022-04-24 02:15:49</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/9682678">9682678</a> +fix fs webpack, +nodemon ignore </li>
+<li>[ <em>2022-04-24 02:22:23</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/095009f">095009f</a> fix nodemon </li>
+<li>[ <em>2022-04-24 02:29:52</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/3fc9d30">3fc9d30</a> remove dumper </li>
+<li>[ <em>2022-04-24 03:09:23</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/eae4a57">eae4a57</a> update </li>
+<li>[ <em>2022-04-24 04:45:01</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/cb3d57d">cb3d57d</a> +ribbon</li>
+<li>[ <em>2022-04-24 05:07:19</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/2ce0af3">2ce0af3</a> [node] fix process content from string</li>
+<li>[ <em>2022-04-24 05:23:16</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/4fe6f3f">4fe6f3f</a> [node] fix parsing from string </li>
+<li>[ <em>2022-04-24 05:27:13</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/70a8997">70a8997</a> [gulp] dont copy d.ts </li>
+<li>[ <em>2022-04-24 05:29:24</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/45a42d7">45a42d7</a> Update README.md </li>
+<li>[ <em>2022-04-24 05:30:32</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/23e23d1">23e23d1</a> Update README.md </li>
+<li>[ <em>2022-04-24 06:08:37</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/2a33248">2a33248</a> fix index docs </li>
+<li>[ <em>2022-04-24 07:03:18</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/4e16d79">4e16d79</a> -nodemon no more limitation of watched files</li>
+<li>[ <em>2022-04-24 07:09:10</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/465d757">465d757</a> update docs </li>
+<li>[ <em>2022-04-24 07:27:01</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/cf8aced">cf8aced</a> update docs </li>
+<li>[ <em>2022-04-24 07:28:13</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/29a3116">29a3116</a> Update README.md </li>
+<li>[ <em>2022-04-24 07:30:06</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/2b69679">2b69679</a> Update README.md </li>
+<li>[ <em>2022-04-24 07:33:04</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/e92c6cf">e92c6cf</a> migrate to subfolder </li>
+<li>[ <em>2022-04-24 07:46:28</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/d610e28">d610e28</a> v1.0.4</li>
+<li>[ <em>2022-04-24 08:00:47</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/b689834">b689834</a> update docs </li>
+<li>[ <em>2022-04-24 08:27:16</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/4243ec6">4243ec6</a> +log summoner </li>
+<li>[ <em>2022-04-24 12:07:35</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/7ecd564">7ecd564</a> reload after summoner closed </li>
+<li>[ <em>2022-04-24 12:29:27</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/0e12853">0e12853</a> [dev] fix summoner </li>
+<li>[ <em>2022-04-24 12:42:18</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/be3db52">be3db52</a> anonymize only for url start with http/s </li>
+<li>[ <em>2022-04-24 12:45:12</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/1a1ccaa">1a1ccaa</a> [ejs] responsive improvement </li>
+<li>[ <em>2022-04-24 12:50:50</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/001deea">001deea</a> [filter] only process url with protocols </li>
+<li>[ <em>2022-04-24 12:53:00</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/3bdf2db">3bdf2db</a> [dev] fix <code>MaxListenersExceededWarning</code> </li>
+<li>[ <em>2022-04-24 12:55:36</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/2c9960f">2c9960f</a> [node] filter improvement </li>
+<li>[ <em>2022-04-24 13:02:55</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/0b59ef4">0b59ef4</a> migrate build to gulp </li>
+<li>[ <em>2022-04-24 13:15:55</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/a7f28a3">a7f28a3</a> [migrate] prefer old builder, webpack on-fly </li>
+<li>[ <em>2022-04-24 13:21:49</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/91a5238">91a5238</a> [webpack] improvement log </li>
+<li>[ <em>2022-04-24 13:27:13</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/7b6bb11">7b6bb11</a> [gulp] detach <code>index.ts</code> </li>
+<li>[ <em>2022-04-24 13:29:28</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/1f841c1">1f841c1</a> Update gulpfile.ts </li>
+<li>[ <em>2022-04-24 13:54:47</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/69e9ee1">69e9ee1</a> split webpack watcher </li>
+<li>[ <em>2022-04-24 14:20:24</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/0759d51">0759d51</a> [webpack] integrate <code>webpack</code> watcher to <code>browser-sync</code> [webpack] watcher improvements</li>
+<li>[ <em>2022-04-24 14:53:04</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/acd17c6">acd17c6</a> [dev] bring barck old watcher </li>
+<li>[ <em>2022-04-24 15:01:47</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/1383db2">1383db2</a> update docs </li>
+<li>[ <em>2022-04-24 15:02:25</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/9822e8c">9822e8c</a> Update README.md </li>
+<li>[ <em>2022-04-24 16:59:23</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/e3f1a1b">e3f1a1b</a> detach private script from compiler</li>
+<li>[ <em>2022-04-24 16:59:29</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/d67bc39">d67bc39</a> Merge branch &#39;main&#39; of <a href="https://github.com/dimaslanjaka/safelink">https://github.com/dimaslanjaka/safelink</a> </li>
+<li>[ <em>2022-04-24 17:00:19</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/c6ca0e6">c6ca0e6</a> update compiled</li>
+<li>[ <em>2022-04-24 17:10:22</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/f89cf49">f89cf49</a> restore docs index </li>
+<li>[ <em>2022-04-24 18:24:45</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/69f6cd9">69f6cd9</a> v1.0.5 </li>
+<li>[ <em>2022-04-24 20:31:41</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/5747ffa">5747ffa</a> prepare update 1.0.6 </li>
+<li>[ <em>2022-04-24 20:34:30</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/0d54a08">0d54a08</a> update docs </li>
+<li>[ <em>2022-04-24 20:36:04</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/d3c1f1e">d3c1f1e</a> v1.0.6 </li>
+<li>[ <em>2022-04-26 00:44:01</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/c962efc">c962efc</a> improve summoner </li>
+<li>[ <em>2022-04-26 01:02:26</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/294d5f9">294d5f9</a> [fix][1.0.7] <code>resolveQueryUrl</code></li>
+<li>[ <em>2022-04-26 01:03:55</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/3653aac">3653aac</a> -log </li>
+<li>[ <em>2022-04-26 01:04:53</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/3946a35">3946a35</a> skip non-exist search and hashes </li>
+<li>[ <em>2022-04-26 01:05:37</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/d63a58c">d63a58c</a> v1.0.7 </li>
+<li>[ <em>2022-04-26 01:06:06</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/e9033ba">e9033ba</a> release 1.0.7 </li>
+<li>[ <em>2022-04-26 01:12:56</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/74f2cad">74f2cad</a> update docs </li>
+<li>[ <em>2022-04-26 01:13:12</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/89431f1">89431f1</a> update docs </li>
+<li>[ <em>2022-04-26 01:22:18</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/9c850a7">9c850a7</a> Update README.md</li>
+<li>[ <em>2022-04-26 04:40:09</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/89ac38b">89ac38b</a> Update README.md </li>
+<li>[ <em>2022-04-26 14:30:25</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/458bd2c">458bd2c</a> [gh-pages] +toastr </li>
+<li>[ <em>2022-05-04 04:41:07</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/37c3fb0">37c3fb0</a> fix deps </li>
+<li>[ <em>2022-05-04 05:07:05</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/054611e">054611e</a> +encode single url</li>
+<li>[ <em>2022-05-04 05:10:04</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/01f504e">01f504e</a> +string type for dynamic typescript </li>
+<li>[ <em>2022-05-04 05:11:13</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/dfcd836">dfcd836</a> v1.0.8 </li>
+<li>[ <em>2022-05-17 01:10:04</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/3b0a439">3b0a439</a> update</li>
+<li>[ <em>2022-05-19 06:42:08</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/b7ab961">b7ab961</a> update linux</li>
+<li>[ <em>2022-05-19 08:24:16</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/772e5dc">772e5dc</a> Update README.md </li>
+<li>[ <em>2022-05-19 08:40:03</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/db5f5ca">db5f5ca</a> fix for nodeJS </li>
+<li>[ <em>2022-05-19 08:40:33</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/46a521f">46a521f</a> fix </li>
+<li>[ <em>2022-05-19 08:53:37</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/df13456">df13456</a> fix nodejs process </li>
+<li>[ <em>2022-05-19 08:53:49</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/9a68d2b">9a68d2b</a> update docs </li>
+<li>[ <em>2022-05-19 08:55:51</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/e607c06">e607c06</a> update docs </li>
+<li>[ <em>2022-05-19 08:55:57</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/76cec9f">76cec9f</a> update docs </li>
+<li>[ <em>2022-05-19 08:57:09</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/76f2135">76f2135</a> v1.0.9 </li>
+<li>[ <em>2022-05-19 08:57:37</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/2ec240d">2ec240d</a> +changelog </li>
+<li>[ <em>2022-05-19 08:58:57</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/25ff578">25ff578</a> v1.1.0 </li>
+<li>[ <em>2022-05-19 08:59:17</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/2611fef">2611fef</a> update changelog </li>
+<li>[ <em>2022-05-19 09:03:15</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/8e3977b">8e3977b</a> fix documenter </li>
+<li>[ <em>2022-05-19 10:22:24</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/4b1be16">4b1be16</a> fix nodejs process </li>
+<li>[ <em>2022-05-19 10:26:25</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/546e33d">546e33d</a> Update README.md </li>
+<li>[ <em>2022-05-19 10:26:57</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/8a2fb17">8a2fb17</a> update docs</li>
+<li>[ <em>2022-05-19 10:28:55</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/b5d6362">b5d6362</a> fix update </li>
+<li>[ <em>2022-05-19 10:30:25</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/c910922">c910922</a> update 1.1.1</li>
+<li>[ <em>2022-05-19 10:31:21</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/cc08fab">cc08fab</a> v1.1.1 </li>
+<li>[ <em>2022-05-19 10:31:47</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/de49114">de49114</a> update 1.1.1 </li>
+<li>[ <em>2022-05-19 10:35:02</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/58e9c38">58e9c38</a> update docs </li>
+<li>[ <em>2022-05-19 10:35:35</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/80cd1ec">80cd1ec</a> update docs </li>
+<li>[ <em>2022-05-19 10:35:42</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/96a7465">96a7465</a> update docs</li>
+<li>[ <em>2022-05-19 10:48:47</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/73ea90c">73ea90c</a> update docs </li>
+<li>[ <em>2022-05-19 10:49:28</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/e18de77">e18de77</a> update docs </li>
+<li>[ <em>2022-05-19 11:17:25</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/2482a80">2482a80</a> fix anonymizing same link on non-hyperlink </li>
+<li>[ <em>2022-05-19 11:17:46</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/2e64dce">2e64dce</a> fix anonymizing same link on non-hyperlink </li>
+<li>[ <em>2022-05-19 11:18:06</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/955f9ee">955f9ee</a> v1.1.2 </li>
+<li>[ <em>2022-05-19 11:19:01</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/5b3eb76">5b3eb76</a> fix anonymizing same link on non-hyperlink </li>
+<li>[ <em>2022-05-19 11:21:52</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/bdfa182">bdfa182</a> update docs </li>
+<li>[ <em>2022-05-19 11:24:45</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/0a24dcd">0a24dcd</a> update docs </li>
+<li>[ <em>2022-05-19 11:26:16</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/a87c735">a87c735</a> update docs </li>
+<li>[ <em>2022-05-21 10:14:05</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/41facd5">41facd5</a> export interface Nullable </li>
+<li>[ <em>2022-05-21 11:32:25</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/ee36bee">ee36bee</a> v1.1.3 </li>
+<li>[ <em>2022-05-21 11:32:57</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/bcde9f0">bcde9f0</a> update 1.1.3 ES5 </li>
+<li>[ <em>2022-05-21 11:33:54</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/35da245">35da245</a> compile to es5 </li>
+<li>[ <em>2022-05-25 00:25:15</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/eed24bc">eed24bc</a> +lib </li>
+<li>[ <em>2022-05-28 15:39:28</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/d50c52d">d50c52d</a> fix module resolutions </li>
+<li>[ <em>2022-05-28 15:47:45</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/eacf6bb">eacf6bb</a> fix build </li>
+<li>[ <em>2022-05-28 17:52:09</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/311c604">311c604</a> update d.ts </li>
+<li>[ <em>2022-05-31 07:40:04</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/786d238">786d238</a> export options</li>
+<li>[ <em>2022-06-03 07:40:56</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/1322357">1322357</a> migrate to <code>yarn v2</code> </li>
+<li>[ <em>2022-06-03 08:03:10</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/4313451">4313451</a> fix <code>yarn v2</code> exclusions</li>
+<li>[ <em>2022-06-03 08:32:17</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/3bdbb35">3bdbb35</a> update module resolutions </li>
+<li>[ <em>2022-06-03 08:51:04</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/f9564bf">f9564bf</a> enable global cache </li>
+<li>[ <em>2022-06-10 16:37:52</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/301f8a4">301f8a4</a> using <code>npm</code> instead of <code>yarn</code> </li>
+<li>[ <em>2022-06-14 18:29:13</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/29b7fae">29b7fae</a> fresh build </li>
+<li>[ <em>2022-06-14 18:29:42</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/b3b8803">b3b8803</a> add test unit </li>
+<li>[ <em>2022-06-14 18:31:01</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/3db17d7">3db17d7</a> fresh install </li>
+<li>[ <em>2022-06-14 18:34:14</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/aa36bea">aa36bea</a> fresh install </li>
+<li>[ <em>2022-10-17 00:51:27</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/78ffef3">78ffef3</a> update </li>
+<li>[ <em>2022-10-17 00:55:56</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/3344980">3344980</a> convert parse to async </li>
+<li>[ <em>2022-10-17 00:59:02</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/6447426">6447426</a> -test </li>
+<li>[ <em>2022-10-17 01:02:36</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/a2a60db">a2a60db</a> update </li>
+<li>[ <em>2022-10-17 01:16:56</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/c98019c">c98019c</a> update dependencies </li>
+<li>[ <em>2022-10-17 01:30:34</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/7d3d31e">7d3d31e</a> update </li>
+<li>[ <em>2022-10-17 01:40:24</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/6753a42">6753a42</a> fix nulled process </li>
+<li>[ <em>2022-10-17 01:43:15</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/1bd954d">1bd954d</a> add docs </li>
+<li>[ <em>2022-10-17 01:44:54</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/9e460f4">9e460f4</a> update docs </li>
+<li>[ <em>2022-10-17 01:45:16</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/8aa82c4">8aa82c4</a> update docs</li>
+</ul>
+<p><strong>1.1.4</strong></p>
+<ul>
+<li>[ <em>2022-10-17 01:49:39</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/3cafc9d">3cafc9d</a> Update README.md </li>
+<li>[ <em>2022-10-17 01:55:33</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/5298e34">5298e34</a> Update CHANGELOG.md </li>
+<li>[ <em>2022-10-17 01:58:21</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/2974c3a">2974c3a</a> update docs </li>
+<li>[ <em>2022-10-26 09:03:33</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/d50f681">d50f681</a> update dependencies</li>
+</ul>
+<p><strong>1.1.5</strong></p>
+<ul>
+<li>[ <em>2022-11-09 16:30:14</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/b5b6896">b5b6896</a> add OR </li>
+<li>[ <em>2022-11-09 16:31:28</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/ae6fca5">ae6fca5</a> add null validation </li>
+<li>[ <em>2022-11-09 16:32:08</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/6011523">6011523</a> Update safelink.yml </li>
+<li>[ <em>2022-11-09 16:33:27</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/61c0d03">61c0d03</a> Using npm </li>
+<li>[ <em>2022-11-09 16:37:43</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/ecc409f">ecc409f</a> add commits </li>
+<li>[ <em>2022-11-09 16:38:18</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/abd46eb">abd46eb</a> update build </li>
+<li>[ <em>2022-11-09 16:53:11</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/d63681d">d63681d</a> Update safelink.yml </li>
+<li>[ <em>2022-11-09 16:53:44</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/5acfae9">5acfae9</a> Update safelink.yml</li>
+<li>[ <em>2022-11-09 16:54:14</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/96ba98c">96ba98c</a> Update safelink.yml </li>
+<li>[ <em>2022-11-09 16:59:58</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/600ae45">600ae45</a> Update safelink.yml </li>
+<li>[ <em>2022-11-09 17:06:39</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/4c865fe">4c865fe</a> update build</li>
+</ul>
+<p><strong>1.1.6</strong></p>
+<ul>
+<li>[ <em>2022-11-20 11:38:32</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/7bc960f">7bc960f</a> Update README.md </li>
+<li>[ <em>2022-11-20 11:41:15</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/8d3c848">8d3c848</a> Update README.md </li>
+<li>[ <em>2022-12-21 10:12:29</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/694c87c">694c87c</a> update deps and scripts </li>
+<li>[ <em>2022-12-21 10:13:04</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/377a912">377a912</a> move and export all types from/to globals </li>
+<li>[ <em>2022-12-21 10:13:30</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/7405a4b">7405a4b</a> Update </li>
+<li>[ <em>2022-12-21 10:14:48</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/9051509">9051509</a> Update README.md </li>
+<li>[ <em>2022-12-21 10:16:11</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/3faabe5">3faabe5</a> Update README.md </li>
+<li>[ <em>2022-12-21 10:16:56</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/98d00d5">98d00d5</a> push release too</li>
+</ul>
+<p><strong>1.1.7</strong></p>
+<ul>
+<li>[ <em>2022-12-21 10:18:48</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/9d5848d">9d5848d</a> Update docs </li>
+<li>[ <em>2022-12-21 03:21:46</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/bbf14f7">bbf14f7</a> Build Wed Dec 21 03:21:46 UTC 2022 </li>
+<li>[ <em>2022-12-21 10:23:57</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/13adeeb">13adeeb</a> move types to globals </li>
+<li>[ <em>2022-12-21 10:26:37</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/71d007e">71d007e</a> Merge branch &#39;master&#39; of <a href="https://github.com/dimaslanjaka/safelink">https://github.com/dimaslanjaka/safelink</a></li>
+</ul>
+<p><strong>1.1.8</strong></p>
+<ul>
+<li>[ <em>2022-12-21 03:29:08</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/efe5f39">efe5f39</a> Build Wed Dec 21 03:29:08 UTC 2022</li>
+<li>[ <em>2022-12-21 11:48:28</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/7fcb525">7fcb525</a> add changelog builder </li>
+<li>[ <em>2022-12-21 11:49:39</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/f77bf91">f77bf91</a> Merge branch &#39;master&#39; of <a href="https://github.com/dimaslanjaka/safelink">https://github.com/dimaslanjaka/safelink</a> </li>
+<li>[ <em>2022-12-21 04:50:57</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/c6f6d10">c6f6d10</a> Build Wed Dec 21 04:50:57 UTC 2022 </li>
+<li>[ <em>2022-12-21 11:53:31</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/62ab8f2">62ab8f2</a> Update changelog </li>
+<li>[ <em>2022-12-21 12:02:39</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/20064ec">20064ec</a> Update docs and changelog </li>
+<li>[ <em>2022-12-21 12:02:48</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/6b571ce">6b571ce</a> Merge branch &#39;master&#39; of <a href="https://github.com/dimaslanjaka/safelink">https://github.com/dimaslanjaka/safelink</a> </li>
+<li>[ <em>2022-12-21 05:03:53</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/987061a">987061a</a> Build Wed Dec 21 05:03:53 UTC 2022 </li>
+<li>[ <em>2022-12-21 12:06:25</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/6323d22">6323d22</a> Update docs </li>
+<li>[ <em>2022-12-21 12:06:31</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/4e0e5b7">4e0e5b7</a> Merge branch &#39;master&#39; of <a href="https://github.com/dimaslanjaka/safelink">https://github.com/dimaslanjaka/safelink</a> </li>
+<li>[ <em>2022-12-21 05:07:42</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/2335f6b">2335f6b</a> Build Wed Dec 21 05:07:42 UTC 2022 </li>
+<li>[ <em>2022-12-21 12:27:37</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/fe68ba9">fe68ba9</a> Update docs </li>
+<li>[ <em>2022-12-21 12:48:00</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/2a3ea1a">2a3ea1a</a> using customized package cross-spawn </li>
+<li>[ <em>2022-12-21 12:48:07</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/38eee66">38eee66</a> Merge branch &#39;master&#39; of <a href="https://github.com/dimaslanjaka/safelink">https://github.com/dimaslanjaka/safelink</a> </li>
+<li>[ <em>2022-12-21 13:10:23</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/534a6e6">534a6e6</a> Update docs </li>
+<li>[ <em>2022-12-21 06:11:40</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/437e3ba">437e3ba</a> Build Wed Dec 21 06:11:40 UTC 2022 </li>
+<li>[ <em>2022-12-21 13:17:22</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/fd76b3b">fd76b3b</a> Update docs </li>
+<li>[ <em>2022-12-21 13:19:47</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/858ead5">858ead5</a> Update build</li>
+</ul>
+<p><strong>1.1.9</strong></p>
+<ul>
+<li>[ <em>2022-12-21 13:21:59</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/5422f9f">5422f9f</a> Merge branch &#39;master&#39; of <a href="https://github.com/dimaslanjaka/safelink">https://github.com/dimaslanjaka/safelink</a> </li>
+<li>[ <em>2022-12-21 06:23:16</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/34980a9">34980a9</a> Build Wed Dec 21 06:23:16 UTC 2022 </li>
+<li>[ <em>2022-12-26 12:35:58</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/5253b1d">5253b1d</a> declare to global scope <code>safelink</code> and <code>safelinkify</code> </li>
+<li>[ <em>2022-12-26 05:37:11</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/64542d5">64542d5</a> Build Mon Dec 26 05:37:11 UTC 2022 </li>
+<li>[ <em>2022-12-26 12:55:41</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/050a356">050a356</a> export safelink and safelinkify to global scrope - update docs </li>
+<li>[ <em>2022-12-26 12:55:50</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/28be9cc">28be9cc</a> export safelink and safelinkify to global scrope - update docs </li>
+<li>[ <em>2022-12-26 12:57:09</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/e41b97a">e41b97a</a> Merge branch &#39;master&#39; of <a href="https://github.com/dimaslanjaka/safelink">https://github.com/dimaslanjaka/safelink</a></li>
+</ul>
+<p><strong>1.1.10</strong></p>
+<ul>
+<li>[ <em>2022-12-26 12:58:46</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/5c7522e">5c7522e</a> update changelog </li>
+<li>[ <em>2022-12-26 05:59:54</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/b2c344c">b2c344c</a> Build Mon Dec 26 05:59:54 UTC 2022 </li>
+<li>[ <em>2022-12-26 13:02:29</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/074689d">074689d</a> rename <code>README.md</code> to lowercase </li>
+<li>[ <em>2022-12-26 13:02:38</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/997b116">997b116</a> Merge branch &#39;master&#39; of <a href="https://github.com/dimaslanjaka/safelink">https://github.com/dimaslanjaka/safelink</a> </li>
+<li>[ <em>2022-12-26 06:03:46</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/7a8591f">7a8591f</a> Build Mon Dec 26 06:03:46 UTC 2022 </li>
+<li>[ <em>2022-12-26 13:13:41</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/c3d4870">c3d4870</a> Update script.js</li>
+<li>[ <em>2022-12-27 18:13:26</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/f6eadd8">f6eadd8</a> update scripts </li>
+<li>[ <em>2022-12-27 11:14:25</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/80ec2fb">80ec2fb</a> Build Tue Dec 27 11:14:25 UTC 2022 </li>
+<li>[ <em>2022-12-28 03:17:12</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/32d231a">32d231a</a> Update readme.md</li>
+<li>[ <em>2022-12-27 20:18:29</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/cb13551">cb13551</a> Build Tue Dec 27 20:18:29 UTC 2022 </li>
+<li>[ <em>2022-12-28 03:23:55</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/e7ef4a8">e7ef4a8</a> update deps </li>
+<li>[ <em>2022-12-28 03:25:15</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/b7b2260">b7b2260</a> Update readme.md </li>
+<li>[ <em>2022-12-27 20:25:32</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/dec138a">dec138a</a> Update build from <a href="https://github.com/dimaslanjaka/safelink/commit/e7ef4a8f1d7e97ec34d7ce41d0d469923bafb80d">https://github.com/dimaslanjaka/safelink/commit/e7ef4a8f1d7e97ec34d7ce41d0d469923bafb80d</a> </li>
+<li>[ <em>2022-12-28 03:29:52</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/311f600">311f600</a> Update readme.md </li>
+<li>[ <em>2022-12-27 20:31:12</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/e2ca426">e2ca426</a> Update build from <a href="https://github.com/dimaslanjaka/safelink/commit/311f600c3b1070cb25abf40053a7e191dc10a4f7">https://github.com/dimaslanjaka/safelink/commit/311f600c3b1070cb25abf40053a7e191dc10a4f7</a> </li>
+<li>[ <em>2022-12-28 03:31:19</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/1cd8dca">1cd8dca</a> Update readme.md </li>
+<li>[ <em>2022-12-27 20:32:50</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/0555283">0555283</a> Update build from <a href="https://github.com/dimaslanjaka/safelink/commit/1cd8dca84c8753c1ccd7be96bc74253f18daa8e7">https://github.com/dimaslanjaka/safelink/commit/1cd8dca84c8753c1ccd7be96bc74253f18daa8e7</a> </li>
+<li>[ <em>2022-12-28 03:33:15</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/9aef05f">9aef05f</a> Update readme.md </li>
+<li>[ <em>2022-12-28 03:33:41</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/fabe245">fabe245</a> Update readme.md</li>
+<li>[ <em>2022-12-28 03:34:49</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/b32220a">b32220a</a> Update readme.md</li>
+<li>[ <em>2022-12-28 03:35:18</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/103c90c">103c90c</a> Update readme.md</li>
+<li>[ <em>2022-12-27 20:35:31</em> ] <a href="https://github.com/dimaslanjaka/safelink/commit/4d3107e">4d3107e</a> Update build from <a href="https://github.com/dimaslanjaka/safelink/commit/9aef05feff13da3a26818c382b4676ae57efeaa5">https://github.com/dimaslanjaka/safelink/commit/9aef05feff13da3a26818c382b4676ae57efeaa5</a>  (HEAD -&gt; master, origin/master, origin/HEAD)</li>
+</ul>
+</div></div>
+<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+<div class="tsd-navigation settings">
+<details class="tsd-index-accordion"><summary class="tsd-accordion-summary">
+<h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4.93896 8.531L12 15.591L19.061 8.531L16.939 6.409L12 11.349L7.06098 6.409L4.93896 8.531Z" fill="var(--color-text)"></path></svg> Settings</h3></summary>
+<div class="tsd-accordion-details">
+<div class="tsd-filter-visibility">
+<h4 class="uppercase">Member Visibility</h4><form>
+<ul id="tsd-filter-options">
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li>
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-private" name="private"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Private</span></label></li>
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li>
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></form></div>
+<div class="tsd-theme-toggle">
+<h4 class="uppercase">Theme</h4><select id="theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div>
+<nav class="tsd-navigation primary">
+<details class="tsd-index-accordion" open><summary class="tsd-accordion-summary">
+<h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4.93896 8.531L12 15.591L19.061 8.531L16.939 6.409L12 11.349L7.06098 6.409L4.93896 8.531Z" fill="var(--color-text)"></path></svg> Modules</h3></summary>
+<div class="tsd-accordion-details">
+<ul>
+<li class="current selected"><a href="modules.html">Static <wbr/>Blog <wbr/>Generator <wbr/>Gulp</a>
+<ul>
+<li class="tsd-kind-module"><a href="modules/aes.html">aes</a></li>
+<li class="tsd-kind-module"><a href="modules/b64.html">b64</a></li>
+<li class="tsd-kind-module"><a href="modules/encryptionURL.html">encryptionURL</a></li>
+<li class="tsd-kind-module"><a href="modules/extractDomain.html">extract<wbr/>Domain</a></li>
+<li class="tsd-kind-module"><a href="modules/globals.html">globals</a></li>
+<li class="tsd-kind-module"><a href="modules/index.html">index</a>
+<ul>
+<li class="tsd-kind-module tsd-parent-kind-module"><a href="modules/index._internal_.html">&lt;internal&gt;</a></li>
+<li class="tsd-kind-namespace tsd-parent-kind-module"><a href="modules/index.default.html">default</a></li></ul></li>
+<li class="tsd-kind-module"><a href="modules/index_test.html">index.test</a></li>
+<li class="tsd-kind-module"><a href="modules/lib_lib_dom.html">lib/lib.dom</a>
+<ul>
+<li class="tsd-kind-module tsd-parent-kind-module"><a href="modules/lib_lib_dom._internal_.html">&lt;internal&gt;</a>
+<ul>
+<li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-external"><a href="modules/lib_lib_dom._internal_._node_stream_consumers_.html">&quot;node:stream/consumers&quot;</a></li>
+<li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-external"><a href="modules/lib_lib_dom._internal_._node_stream_promises_.html">&quot;node:stream/promises&quot;</a></li>
+<li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-external"><a href="modules/lib_lib_dom._internal_.EventEmitter.html">Event<wbr/>Emitter</a></li>
+<li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-external"><a href="modules/lib_lib_dom._internal_.internal.html">internal</a>
+<ul>
+<li class="tsd-kind-namespace tsd-parent-kind-namespace tsd-is-external"><a href="modules/lib_lib_dom._internal_.internal.finished.html">finished</a></li>
+<li class="tsd-kind-namespace tsd-parent-kind-namespace tsd-is-external"><a href="modules/lib_lib_dom._internal_.internal.pipeline.html">pipeline</a></li></ul></li></ul></li>
+<li class="tsd-kind-namespace tsd-parent-kind-module"><a href="modules/lib_lib_dom.CSS.html">CSS</a></li>
+<li class="tsd-kind-namespace tsd-parent-kind-module"><a href="modules/lib_lib_dom.WebAssembly.html">Web<wbr/>Assembly</a></li>
+<li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-external"><a href="modules/lib_lib_dom.console.html">console</a></li>
+<li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-external"><a href="modules/lib_lib_dom.setInterval.html">set<wbr/>Interval</a></li>
+<li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-external"><a href="modules/lib_lib_dom.setTimeout.html">set<wbr/>Timeout</a></li></ul></li>
+<li class="tsd-kind-module"><a href="modules/parseQuery.html">parse<wbr/>Query</a></li>
+<li class="tsd-kind-module"><a href="modules/resolveQueryUrl.html">resolve<wbr/>Query<wbr/>Url</a></li>
+<li class="tsd-kind-module"><a href="modules/safelink.html">safelink</a>
+<ul>
+<li class="tsd-kind-module tsd-parent-kind-module"><a href="modules/safelink._internal_.html">&lt;internal&gt;</a></li></ul></li>
+<li class="tsd-kind-module"><a href="modules/safelink_test.html">safelink.test</a></li>
+<li class="tsd-kind-module"><a href="modules/string.html">string</a>
+<ul>
+<li class="tsd-kind-module tsd-parent-kind-module"><a href="modules/string._internal_.html">&lt;internal&gt;</a></li></ul></li>
+<li class="tsd-kind-module"><a href="modules/toURL.html">toURL</a></li></ul></li></ul></div></details></nav></div></div>
+<div class="overlay"></div><script src="assets/main.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-106238155-1"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-106238155-1');</script></body></html>
