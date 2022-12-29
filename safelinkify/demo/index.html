@@ -1,15 +1,308 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Safelinkify - External Link Anonymizer</title><meta name="description" content="NodeJS anonymizer external links. Anonymize external links to outbound page redirector for SEO."><link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"><link rel="shortcut icon" href="https://www.google.com/s2/favicons?domain=github.com" type="image/x-icon"><style>*{word-wrap:break-word}pre{white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;word-wrap:break-word}table{width:100%}</style><meta name="robots" content="index,nofollow"></head><body><nav class="navbar navbar-light bg-light"><div class="container-fluid"><a class="navbar-brand" href="/safelink">Safelinkify</a></div></nav><main class="container-fluid mb-4 py-4" id="main-contents"><style>/*!
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Safelinkify - External Link Anonymizer</title>
+    <meta name="description" content="NodeJS anonymizer external links. Anonymize external links to outbound page redirector for SEO." />
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="shortcut icon" href="https://www.google.com/s2/favicons?domain=github.com" type="image/x-icon" />
+    <style>* {
+  word-wrap: break-word;
+}
+
+pre {
+  white-space: pre-wrap; /* css-3 */
+  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+
+table {
+  width: 100%;
+}
+</style>
+    <meta name="robots" content="index,nofollow" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/safelink">Safelinkify</a>
+      </div>
+    </nav>
+    <main class="container-fluid mb-4 py-4" id="main-contents"><style>/*!
  * "Fork me on GitHub" CSS ribbon v0.2.3 | MIT License
  * https://github.com/simonwhitaker/github-fork-ribbon-css
-*/.github-fork-ribbon{width:12.1em;height:12.1em;position:absolute;overflow:hidden;top:0;right:0;z-index:9999;pointer-events:none;font-size:13px;text-decoration:none;text-indent:-999999px}.github-fork-ribbon.fixed{position:fixed}.github-fork-ribbon:active,.github-fork-ribbon:hover{background-color:rgba(0,0,0,0)}.github-fork-ribbon:after,.github-fork-ribbon:before{position:absolute;display:block;width:15.38em;height:1.54em;top:3.23em;right:-3.23em;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-ms-transform:rotate(45deg);-o-transform:rotate(45deg);transform:rotate(45deg)}.github-fork-ribbon:before{content:'';padding:.38em 0;background-color:#a00;background-image:-webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,0)),to(rgba(0,0,0,.15)));background-image:-webkit-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,.15));background-image:-moz-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,.15));background-image:-ms-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,.15));background-image:-o-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,.15));background-image:linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,.15));-webkit-box-shadow:0 .15em .23em 0 rgba(0,0,0,.5);-moz-box-shadow:0 .15em .23em 0 rgba(0,0,0,.5);box-shadow:0 .15em .23em 0 rgba(0,0,0,.5);pointer-events:auto}.github-fork-ribbon:after{content:attr(data-ribbon);color:#fff;font:700 1em 'Helvetica Neue',Helvetica,Arial,sans-serif;line-height:1.54em;text-decoration:none;text-shadow:0 -.08em rgba(0,0,0,.5);text-align:center;text-indent:0;padding:.15em 0;margin:.15em 0;border-width:.08em 0;border-style:dotted;border-color:#fff;border-color:rgba(255,255,255,.7)}.github-fork-ribbon.left-bottom,.github-fork-ribbon.left-top{right:auto;left:0}.github-fork-ribbon.left-bottom,.github-fork-ribbon.right-bottom{top:auto;bottom:0}.github-fork-ribbon.left-bottom:after,.github-fork-ribbon.left-bottom:before,.github-fork-ribbon.left-top:after,.github-fork-ribbon.left-top:before{right:auto;left:-3.23em}.github-fork-ribbon.left-bottom:after,.github-fork-ribbon.left-bottom:before,.github-fork-ribbon.right-bottom:after,.github-fork-ribbon.right-bottom:before{top:auto;bottom:3.23em}.github-fork-ribbon.left-top:after,.github-fork-ribbon.left-top:before,.github-fork-ribbon.right-bottom:after,.github-fork-ribbon.right-bottom:before{-webkit-transform:rotate(-45deg);-moz-transform:rotate(-45deg);-ms-transform:rotate(-45deg);-o-transform:rotate(-45deg);transform:rotate(-45deg)}</style><!-- TOP RIGHT RIBBON: START COPYING HERE --> <a class="github-fork-ribbon right-top" href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluaw==" target="_blank" rel="nofollow noopener noreferer" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a><!-- TOP RIGHT RIBBON: END COPYING HERE --><div class="mb-2"><div class="accordion" id="accordionExample"><div class="accordion-item"><h2 class="accordion-header" id="headingTwo"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Documentation</button></h2><div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample"><div class="accordion-body"><h1 id="safelinkify" tabindex="-1"><a class="header-anchor" href="#safelinkify">Safelinkify</a></h1><p><img src="https://img.shields.io/npm/v/safelinkify?label=safelinkify&amp;style=flat" alt="npm version"> <img src="https://img.shields.io/website?down_color=red&amp;down_message=down&amp;label=www.webmanajemen.com&amp;logo=www.webmanajemen.com&amp;style=flat&amp;up_color=green&amp;up_message=up&amp;url=https%3A%2F%2Fwww.webmanajemen.com" alt="www.webmanajemen.com"> <img src="https://img.shields.io/npm/l/safelinkify" alt="LICENSE"> <img src="https://img.shields.io/github/languages/count/dimaslanjaka/safelink" alt="GitHub language count"> <img src="https://github.com/dimaslanjaka/safelink/actions/workflows/build-release.yml/badge.svg" alt="Github Workflow"> <img src="https://img.shields.io/github/forks/dimaslanjaka/safelink" alt="GitHub forks"> <img src="https://img.shields.io/github/stars/dimaslanjaka/safelink" alt="GitHub stars"></p><p>Customized safelink url redirector. Transform and Anonymize all hyperlinks to outbound pages. Useful for SEO external links and ADS.</p><p><strong><a href="https://www.webmanajemen.com/safelink/index.html">READ FULL DOCUMENTATION AND LIVE DEMO</a></strong></p><h2 id="our-production" tabindex="-1"><a class="header-anchor" href="#our-production">Our Production</a></h2><table><thead><tr><th style="text-align:left">page</th><th style="text-align:left">source</th></tr></thead><tbody><tr><td style="text-align:left"><a href="https://www.webmanajemen.com/page/safelink.html">https://www.webmanajemen.com/page/safelink.html</a></td><td style="text-align:left"><a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9wYWdlL2Jsb2IvbWFzdGVyL3NhZmVsaW5rL3NhZmVsaW5rLWRlY29kZS5qcw==">safelink-decode.js</a><br><a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9wYWdlL3RyZWUvbWFzdGVyL3NhZmVsaW5rL2xheW91dDE=">layout</a><br><a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9wYWdlL2Jsb2IvbWFzdGVyL19sYXlvdXQubmpr">template</a><br><a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9wYWdlL2Jsb2IvMTYwMWUyMTIyMDBlYWE3ZThiNDUzNGFlNzUxMWI0ZmI2ZjE3OWE5Ni9ndWxwZmlsZS5qcyNMMjIy">compiler</a></td></tr></tbody></table><h2 id="installation" tabindex="-1"><a class="header-anchor" href="#installation">Installation</a></h2><h3 id="bundles" tabindex="-1"><a class="header-anchor" href="#bundles">Bundles</a></h3><table><thead><tr><th style="text-align:left">registry</th><th style="text-align:left">link</th><th style="text-align:left">commands</th></tr></thead><tbody><tr><td style="text-align:left">npm</td><td style="text-align:left"><a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly93d3cubnBtanMuY29tL3BhY2thZ2Uvc2FmZWxpbmtpZnk=">https://www.npmjs.com/package/safelinkify</a></td><td style="text-align:left"><code>npm i safelinkify</code></td></tr><tr><td style="text-align:left">github</td><td style="text-align:left"><a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluaw==">https://github.com/dimaslanjaka/safelink</a></td><td style="text-align:left"><code>npm i https://github.com/dimaslanjaka/safelink</code></td></tr><tr><td style="text-align:left">tarball</td><td style="text-align:left"><a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9yYXcvbWFzdGVyL3JlbGVhc2Uvc2FmZWxpbmtpZnkudGd6">https://github.com/dimaslanjaka/safelink/raw/master/release/safelinkify.tgz</a></td><td style="text-align:left"><code>npm i https://github.com/dimaslanjaka/safelink/raw/master/release/safelinkify.tgz</code></td></tr></tbody></table><h3 id="npm" tabindex="-1"><a class="header-anchor" href="#npm">npm</a></h3><pre><code class="language-bash">npm install safelinkify --production
-</code></pre><h3 id="yarn" tabindex="-1"><a class="header-anchor" href="#yarn">yarn</a></h3><pre><code>yarn install safelinkify --production=true
-</code></pre><h2 id="development" tabindex="-1"><a class="header-anchor" href="#development">Development</a></h2><pre><code class="language-bash">git clone --single-branch --branch main https://github.com/dimaslanjaka/safelink foldername
+*/
+
+.github-fork-ribbon {
+  width: 12.1em;
+  height: 12.1em;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+  pointer-events: none;
+  font-size: 13px;
+  text-decoration: none;
+  text-indent: -999999px;
+}
+
+.github-fork-ribbon.fixed {
+  position: fixed;
+}
+
+.github-fork-ribbon:hover,
+.github-fork-ribbon:active {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.github-fork-ribbon:before,
+.github-fork-ribbon:after {
+  /* The right and left classes determine the side we attach our banner to */
+  position: absolute;
+  display: block;
+  width: 15.38em;
+  height: 1.54em;
+
+  top: 3.23em;
+  right: -3.23em;
+
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.github-fork-ribbon:before {
+  content: '';
+
+  /* Add a bit of padding to give some substance outside the "stitching" */
+  padding: 0.38em 0;
+
+  /* Set the base colour */
+  background-color: #a00;
+
+  /* Set a gradient: transparent black at the top to almost-transparent black at the bottom */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.15)));
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+  background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+
+  /* Add a drop shadow */
+  -webkit-box-shadow: 0 0.15em 0.23em 0 rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0.15em 0.23em 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0.15em 0.23em 0 rgba(0, 0, 0, 0.5);
+
+  pointer-events: auto;
+}
+
+.github-fork-ribbon:after {
+  /* Set the text from the data-ribbon attribute */
+  content: attr(data-ribbon);
+
+  /* Set the text properties */
+  color: #fff;
+  font: 700 1em 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.54em;
+  text-decoration: none;
+  text-shadow: 0 -0.08em rgba(0, 0, 0, 0.5);
+  text-align: center;
+  text-indent: 0;
+
+  /* Set the layout properties */
+  padding: 0.15em 0;
+  margin: 0.15em 0;
+
+  /* Add "stitching" effect */
+  border-width: 0.08em 0;
+  border-style: dotted;
+  border-color: #fff;
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.github-fork-ribbon.left-top,
+.github-fork-ribbon.left-bottom {
+  right: auto;
+  left: 0;
+}
+
+.github-fork-ribbon.left-bottom,
+.github-fork-ribbon.right-bottom {
+  top: auto;
+  bottom: 0;
+}
+
+.github-fork-ribbon.left-top:before,
+.github-fork-ribbon.left-top:after,
+.github-fork-ribbon.left-bottom:before,
+.github-fork-ribbon.left-bottom:after {
+  right: auto;
+  left: -3.23em;
+}
+
+.github-fork-ribbon.left-bottom:before,
+.github-fork-ribbon.left-bottom:after,
+.github-fork-ribbon.right-bottom:before,
+.github-fork-ribbon.right-bottom:after {
+  top: auto;
+  bottom: 3.23em;
+}
+
+.github-fork-ribbon.left-top:before,
+.github-fork-ribbon.left-top:after,
+.github-fork-ribbon.right-bottom:before,
+.github-fork-ribbon.right-bottom:after {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+</style>
+<!-- TOP RIGHT RIBBON: START COPYING HERE -->
+<a
+  class="github-fork-ribbon right-top"
+  href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluaw=="
+  target="_blank"
+  rel="nofollow noopener noreferer"
+  data-ribbon="Fork me on GitHub"
+  title="Fork me on GitHub"
+  >Fork me on GitHub</a
+>
+<!-- TOP RIGHT RIBBON: END COPYING HERE -->
+
+<div class="mb-2">
+  <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseTwo"
+          aria-expanded="false"
+          aria-controls="collapseTwo"
+        >
+          Documentation
+        </button>
+      </h2>
+      <div
+        id="collapseTwo"
+        class="accordion-collapse collapse"
+        aria-labelledby="headingTwo"
+        data-bs-parent="#accordionExample"
+      >
+        <div class="accordion-body"><h1 id="safelinkify" tabindex="-1"><a class="header-anchor" href="#safelinkify">Safelinkify</a></h1>
+<p><img src="https://img.shields.io/npm/v/safelinkify?label=safelinkify&amp;style=flat" alt="npm version">
+<img src="https://img.shields.io/website?down_color=red&amp;down_message=down&amp;label=www.webmanajemen.com&amp;logo=www.webmanajemen.com&amp;style=flat&amp;up_color=green&amp;up_message=up&amp;url=https%3A%2F%2Fwww.webmanajemen.com" alt="www.webmanajemen.com">
+<img src="https://img.shields.io/npm/l/safelinkify" alt="LICENSE">
+<img src="https://img.shields.io/github/languages/count/dimaslanjaka/safelink" alt="GitHub language count">
+<img src="https://github.com/dimaslanjaka/safelink/actions/workflows/build-release.yml/badge.svg" alt="Github Workflow">
+<img src="https://img.shields.io/github/forks/dimaslanjaka/safelink" alt="GitHub forks">
+<img src="https://img.shields.io/github/stars/dimaslanjaka/safelink" alt="GitHub stars"></p>
+<p>Customized safelink url redirector. Transform and Anonymize all hyperlinks to outbound pages. Useful for SEO external links and ADS.</p>
+<ul>
+<li><strong><a href="https://www.webmanajemen.com/docs/safelinkify">API DOCUMENTATION</a></strong></li>
+<li><strong><a href="https://www.webmanajemen.com/docs/safelinkify/demo">LIVE DEMO</a></strong></li>
+</ul>
+<h2 id="our-production" tabindex="-1"><a class="header-anchor" href="#our-production">Our Production</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">page</th>
+<th style="text-align:left">source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="https://www.webmanajemen.com/page/safelink.html">https://www.webmanajemen.com/page/safelink.html</a></td>
+<td style="text-align:left"><a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9wYWdlL2Jsb2IvbWFzdGVyL3NhZmVsaW5rL3NhZmVsaW5rLWRlY29kZS5qcw==">safelink-decode.js</a> <br /><a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9wYWdlL3RyZWUvbWFzdGVyL3NhZmVsaW5rL2xheW91dDE=">layout</a> <br/><a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9wYWdlL2Jsb2IvbWFzdGVyL19sYXlvdXQubmpr">template</a> <br /><a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9wYWdlL2Jsb2IvMTYwMWUyMTIyMDBlYWE3ZThiNDUzNGFlNzUxMWI0ZmI2ZjE3OWE5Ni9ndWxwZmlsZS5qcyNMMjIy">compiler</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="installation" tabindex="-1"><a class="header-anchor" href="#installation">Installation</a></h2>
+<h3 id="bundles" tabindex="-1"><a class="header-anchor" href="#bundles">Bundles</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">registry</th>
+<th style="text-align:left">link</th>
+<th style="text-align:left">commands</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">npm</td>
+<td style="text-align:left"><a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly93d3cubnBtanMuY29tL3BhY2thZ2Uvc2FmZWxpbmtpZnk=">https://www.npmjs.com/package/safelinkify</a></td>
+<td style="text-align:left"><code>npm i safelinkify</code></td>
+</tr>
+<tr>
+<td style="text-align:left">github</td>
+<td style="text-align:left"><a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluaw==">https://github.com/dimaslanjaka/safelink</a></td>
+<td style="text-align:left"><code>npm i https://github.com/dimaslanjaka/safelink</code></td>
+</tr>
+<tr>
+<td style="text-align:left">tarball</td>
+<td style="text-align:left"><a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9yYXcvbWFzdGVyL3JlbGVhc2Uvc2FmZWxpbmtpZnkudGd6">https://github.com/dimaslanjaka/safelink/raw/master/release/safelinkify.tgz</a></td>
+<td style="text-align:left"><code>npm i https://github.com/dimaslanjaka/safelink/raw/master/release/safelinkify.tgz</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="npm" tabindex="-1"><a class="header-anchor" href="#npm">npm</a></h3>
+<pre><code class="language-bash">npm install safelinkify --production
+</code></pre>
+<h3 id="yarn" tabindex="-1"><a class="header-anchor" href="#yarn">yarn</a></h3>
+<pre><code>yarn install safelinkify --production=true
+</code></pre>
+<h2 id="development" tabindex="-1"><a class="header-anchor" href="#development">Development</a></h2>
+<pre><code class="language-bash">git clone --single-branch --branch main https://github.com/dimaslanjaka/safelink foldername
 cd foldername
 # install dependents
 yarn install
 # or
 npm install
-</code></pre><table><thead><tr><th>command</th><th>description</th></tr></thead><tbody><tr><td><code>yarn start</code></td><td>watch tests and start server</td></tr><tr><td></td><td>watch src and compile tsc webpack</td></tr><tr><td><code>tsc</code></td><td>build definition and js files</td></tr><tr><td><code>webpack</code></td><td>build safelink script</td></tr></tbody></table><h2 id="usages" tabindex="-1"><a class="header-anchor" href="#usages">Usages</a></h2><p>Setup options:</p><pre><code class="language-js">const options = {
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>command</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>yarn start</code></td>
+<td>watch tests and start server</td>
+</tr>
+<tr>
+<td></td>
+<td>watch src and compile tsc webpack</td>
+</tr>
+<tr>
+<td><code>tsc</code></td>
+<td>build definition and js files</td>
+</tr>
+<tr>
+<td><code>webpack</code></td>
+<td>build safelink script</td>
+</tr>
+</tbody>
+</table>
+<h2 id="usages" tabindex="-1"><a class="header-anchor" href="#usages">Usages</a></h2>
+<p>Setup options:</p>
+<pre><code class="language-js">const options = {
   // exclude patterns (dont anonymize these patterns)
   exclude: ['domain.com', /another.domain.com/, /https?:\/\/?(?:([^*]+)\.)?webmanajemen\.com/, /([a-z0-9](?:[a-z0-9-]{1,61}[a-z0-9])?[.])*webmanajemen\.com/],
   // url redirector
@@ -21,12 +314,18 @@ npm install
   // password aes, default = root
   password: 'unique-password'
 }
-</code></pre><h3 id="browser" tabindex="-1"><a class="header-anchor" href="#browser">Browser</a></h3><p>script location: <code>node_modules/safelinkify/dist/bundle.min.js</code>.</p><p>Call Core Script:</p><pre><code class="language-html">&lt;script src=&quot;dist/bundle.min.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<h3 id="browser" tabindex="-1"><a class="header-anchor" href="#browser">Browser</a></h3>
+<p>script location: <code>node_modules/safelinkify/dist/bundle.min.js</code>.</p>
+<p>Call Core Script:</p>
+<pre><code class="language-html">&lt;script src=&quot;dist/bundle.min.js&quot;&gt;&lt;/script&gt;
 &lt;!--or using rawgit--&gt;
 &lt;script src=&quot;https://raw.githack.com/dimaslanjaka/safelink/main/dist/bundle.min.js&quot;&gt;&lt;/script&gt;
 &lt;!--or using statically--&gt;
 &lt;script src=&quot;https://cdn.statically.io/gh/dimaslanjaka/safelink/main/dist/bundle.min.js&quot;&gt;&lt;/script&gt;
-</code></pre><p>Execute functions:</p><pre><code class="language-html">&lt;script&gt;
+</code></pre>
+<p>Execute functions:</p>
+<pre><code class="language-html">&lt;script&gt;
   const sf = new safelink(options);
   // automated safelinkify all hyperlinks in body
   sf.parse(document.querySelector('body')).then((result)=&gt;{
@@ -35,9 +334,19 @@ npm install
     sf.resolveQueryUrl(window.location.href);
   });
 &lt;/script&gt;
-</code></pre><h3 id="nodejs" tabindex="-1"><a class="header-anchor" href="#nodejs">NodeJS</a></h3><h4 id="reference-examples%3A" tabindex="-1"><a class="header-anchor" href="#reference-examples%3A">Reference Examples:</a></h4><ul><li><a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9ibG9iL21haW4vc3JjL2luZGV4LnRlc3QudHM=">full sample</a></li><li><a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9wYWdlL2Jsb2IvbWFzdGVyL2d1bHBmaWxlLmpz">https://github.com/dimaslanjaka/page/blob/master/gulpfile.js</a></li></ul><h4 id="import-list" tabindex="-1"><a class="header-anchor" href="#import-list">Import list</a></h4><pre><code class="language-js">const { safelink } = require('safelinkify');
+</code></pre>
+<h3 id="nodejs" tabindex="-1"><a class="header-anchor" href="#nodejs">NodeJS</a></h3>
+<h4 id="reference-examples%3A" tabindex="-1"><a class="header-anchor" href="#reference-examples%3A">Reference Examples:</a></h4>
+<ul>
+<li><a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9ibG9iL21haW4vc3JjL2luZGV4LnRlc3QudHM=">full sample</a></li>
+<li><a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9wYWdlL2Jsb2IvbWFzdGVyL2d1bHBmaWxlLmpz">https://github.com/dimaslanjaka/page/blob/master/gulpfile.js</a></li>
+</ul>
+<h4 id="import-list" tabindex="-1"><a class="header-anchor" href="#import-list">Import list</a></h4>
+<pre><code class="language-js">const { safelink } = require('safelinkify');
 const { default: safelink } = require('safelinkify/dist/safelink');
-</code></pre><h4 id="usages-example" tabindex="-1"><a class="header-anchor" href="#usages-example">Usages Example</a></h4><pre><code class="language-ts">import safelinkify from 'safelinkify';
+</code></pre>
+<h4 id="usages-example" tabindex="-1"><a class="header-anchor" href="#usages-example">Usages Example</a></h4>
+<pre><code class="language-ts">import safelinkify from 'safelinkify';
 // const safelinkify = require('safelinkify')
 const sf = new safelinkify.safelink(options);
 const processedExternalLinks = sf.parse(`
@@ -66,7 +375,14 @@ processedExternalLinks.then(console.log);
 &lt;a href=&quot;?http://webmanajemen.com&quot;&gt;?internal&lt;/a&gt;
 &lt;a href=&quot;&quot;&gt;internal&lt;/a&gt;
 */
-</code></pre><h4 id="using-gulp" tabindex="-1"><a class="header-anchor" href="#using-gulp">Using gulp</a></h4><p>Reference Examples:</p><ul><li><a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9wYWdlL2Jsb2IvYTJmMTZjYjU0NzA5OTJhYzE0OTIwNGZkY2E2MjFkMWJjYWMxMTA3Yy9ndWxwZmlsZS5qcyNMMzI1">https://github.com/dimaslanjaka/page/gulpfile.js</a></li></ul><p>Usages:</p><pre><code class="language-typescript">import gulp from 'gulp'
+</code></pre>
+<h4 id="using-gulp" tabindex="-1"><a class="header-anchor" href="#using-gulp">Using gulp</a></h4>
+<p>Reference Examples:</p>
+<ul>
+<li><a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9wYWdlL2Jsb2IvYTJmMTZjYjU0NzA5OTJhYzE0OTIwNGZkY2E2MjFkMWJjYWMxMTA3Yy9ndWxwZmlsZS5qcyNMMzI1">https://github.com/dimaslanjaka/page/gulpfile.js</a></li>
+</ul>
+<p>Usages:</p>
+<pre><code class="language-typescript">import gulp from 'gulp'
 import sf from 'safelinkify'
 import { toUnix, join } from 'upath'
 import through2 from 'through2'
@@ -125,7 +441,81 @@ gulp.task('safelink', () =&gt; {
     )
     .pipe(gulp.dest(destDir))
 })
-</code></pre></div></div></div></div></div><hr><div class="mb-4"><h2>Safelink Playground</h2><blockquote>Using <kbd>QueryResolver</kbd> only for <kbd>redirect page</kbd></blockquote><div class="mb-2"><b id="query-url">Query URL Resolver Samples</b><table class="table"><tr><td>To Encode</td><td><a href="?url=https://webmanajemen.com"></a></td></tr><tr><td>Decode base64</td><td><a href="?url=aHR0cHM6Ly93ZWJtYW5hamVtZW4uY29t"></a></td></tr><tr><td>Decode AES</td><td><a href="?url=Q2LNSrOqZbP8HLK8R2L1psx1x8CFmLIm7vKxqhswcPg="></a></td></tr><tr><td>Decode AES using hash</td><td><a href="#o=Q2LNSrOqZbP8HLK8R2L1psx1x8CFmLIm7vKxqhswcPg="></a></td></tr><tr><td colspan="2"><button class="btn btn-sm btn-primary" onclick="location.href=location.pathname">Remove URL Queries</button></td></tr></table></div><div class="mb-2" id="external"><b>External Link Samples (Hover)</b><div><a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL2V4YW1wbGUuY29t">example</a> <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL2dvb2dsZS5jb20=">google</a> <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9mYWNlYm9vay5jb20=">facebook</a></div></div><div class="mb-2" id="internal"><b>Internal Link Samples (Hover)</b><div><a href="http://webmanajemen.com">Homepage</a> <a href="https://webmanajemen.com/p/search.html">Search</a></div></div></div><div class="mb-4"><table class="table" id="table"><tr><td>global parseQuery</td><td><code class="language-javascript">typeof parseQuery</code></td><td><kbd id="parseQuery"></kbd></td></tr><tr><td>global resolveQueryUrl</td><td><code class="language-javascript">typeof resolveQueryUrl</code></td><td><kbd id="resolveQueryUrl"></kbd></td></tr></table></div><div class="mb-4"><h2>Current Page Script</h2><!-- prettier-ignore-start --><pre>
+</code></pre>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr />
+
+<div class="mb-4">
+  <h2>Safelink Playground</h2>
+  <blockquote>Using <kbd>QueryResolver</kbd> only for <kbd>redirect page</kbd></blockquote>
+  <div class="mb-2">
+    <b id="query-url">Query URL Resolver Samples</b>
+    <table class="table">
+      <tr>
+        <td>To Encode</td>
+        <td><a href="?url=https://webmanajemen.com"></a></td>
+      </tr>
+      <tr>
+        <td>Decode base64</td>
+        <td><a href="?url=aHR0cHM6Ly93ZWJtYW5hamVtZW4uY29t"></a></td>
+      </tr>
+      <tr>
+        <td>Decode AES</td>
+        <td><a href="?url=Q2LNSrOqZbP8HLK8R2L1psx1x8CFmLIm7vKxqhswcPg="></a></td>
+      </tr>
+      <tr>
+        <td>Decode AES using hash</td>
+        <td><a href="#o=Q2LNSrOqZbP8HLK8R2L1psx1x8CFmLIm7vKxqhswcPg="></a></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <button class="btn btn-sm btn-primary" onclick="location.href=location.pathname">Remove URL Queries</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="mb-2" id="external">
+    <b>External Link Samples (Hover)</b>
+    <div>
+      <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL2V4YW1wbGUuY29t">example</a> <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL2dvb2dsZS5jb20=">google</a>
+      <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9mYWNlYm9vay5jb20=">facebook</a>
+    </div>
+  </div>
+
+  <div class="mb-2" id="internal">
+    <b>Internal Link Samples (Hover)</b>
+    <div>
+      <a href="http://webmanajemen.com">Homepage</a>
+      <a href="https://webmanajemen.com/p/search.html">Search</a>
+    </div>
+  </div>
+</div>
+
+<div class="mb-4">
+  <table class="table" id="table">
+    <tr>
+      <td>global parseQuery</td>
+      <td><code class="language-javascript">typeof parseQuery</code></td>
+      <td><kbd id="parseQuery"></kbd></td>
+    </tr>
+    <tr>
+      <td>global resolveQueryUrl</td>
+      <td><code class="language-javascript">typeof resolveQueryUrl</code></td>
+      <td><kbd id="resolveQueryUrl"></kbd></td>
+    </tr>
+  </table>
+</div>
+
+<div class="mb-4">
+  <h2>Current Page Script</h2>
+  <!-- prettier-ignore-start -->
+  <pre>
     <code class="language-javascript">
 &lt;script src=&quot;dist/bundle.min.js&quot;&gt;&lt;/script&gt;
 &lt;script&gt;document.addEventListener(&#39;DOMContentLoaded&#39;, function () {
@@ -201,4 +591,394 @@ gulp.task('safelink', () =&gt; {
 });
 &lt;/script&gt;
     </code>
-  </pre><!-- prettier-ignore-end --></div><div class="accordion" id="accordionExample2"><div class="accordion-item"><h2 class="accordion-header" id="headingThree"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">CHANGELOG</button></h2><div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample"><div class="accordion-body"><p><strong>0.0.1</strong> - <em>init project</em></p><ul><li>[ <em>2022-04-23 00:29:55</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNDVhZDA5ZQ==">45ad09e</a> Initial commit</li><li>[ <em>2022-04-23 00:31:06</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNmNiNDM0OA==">6cb4348</a> migrate from <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL2RpbWFzbGFuamFrYS5naXRodWIuaW8vdHJlZS9zYWZlbGluaw==">dimaslanjaka.github.io/tree/safelink</a></li><li>[ <em>2022-04-23 00:31:59</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvOTA5MTBkMA==">90910d0</a> migrate from origin <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS5naXRodWIuaW8vdHJlZS9zYWZlbGluaw==">https://github.com/dimaslanjaka.github.io/tree/safelink</a></li><li>[ <em>2022-04-23 00:32:03</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMTAzNTQzNg==">1035436</a> Merge branch ‘main’ of <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluaw==">https://github.com/dimaslanjaka/safelink</a> into main</li><li>[ <em>2022-04-23 00:37:50</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMmU0ODljNA==">2e489c4</a> Update safelink.yml</li><li>[ <em>2022-04-23 00:47:49</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNWZhZDcwOQ==">5fad709</a> +submodule</li><li>[ <em>2022-04-23 00:49:56</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNGEwYmU1MQ==">4a0be51</a> update deployment</li><li>[ <em>2022-04-23 00:51:40</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMjM1ZDI2Mg==">235d262</a> [workflow] update</li><li>[ <em>2022-04-23 00:57:18</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMDRjYTU5Ng==">04ca596</a> update</li><li>[ <em>2022-04-23 00:57:50</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMGYyN2YyNw==">0f27f27</a> update</li><li>[ <em>2022-04-23 01:12:32</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMjM3YWY1MA==">237af50</a> update</li><li>[ <em>2022-04-23 01:15:41</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZjk2ODdhMg==">f9687a2</a> [workflow] test</li><li>[ <em>2022-04-23 01:17:32</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNjJlMDlmMw==">62e09f3</a> [workflow] test</li><li>[ <em>2022-04-23 01:22:03</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNTU4OGI4Mg==">5588b82</a> update</li><li>[ <em>2022-04-23 01:28:34</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMjI2NjQ3OQ==">2266479</a> [workflow] test</li><li>[ <em>2022-04-23 01:40:39</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNDAzNDIzOQ==">4034239</a> + .nojekyll</li><li>[ <em>2022-04-23 01:43:18</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYTcxMWE1NA==">a711a54</a> fix bundle location</li><li>[ <em>2022-04-23 01:53:21</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMzZjYWY3Ng==">36caf76</a> [workflow] just test</li><li>[ <em>2022-04-23 02:04:22</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvOGFmOGEyOA==">8af8a28</a> fix EJSHelper location</li><li>[ <em>2022-04-23 02:06:23</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYmFkZDUwNw==">badd507</a> v1.0.2</li><li>[ <em>2022-04-23 02:06:58</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZDU1ZjFmZA==">d55f1fd</a> update 1.0.2</li><li>[ <em>2022-04-23 02:10:01</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYWQwNzg0Mg==">ad07842</a> +docs</li><li>[ <em>2022-04-23 03:14:51</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYWRkY2U3Ng==">addce76</a> +layout redirector</li><li>[ <em>2022-04-23 04:04:53</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMzAzNjNlMg==">30363e2</a> v1.0.3</li><li>[ <em>2022-04-23 04:04:59</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZWU1NWM5OA==">ee55c98</a> update 1.0.3</li><li>[ <em>2022-04-23 04:05:42</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNTU0NGJkNg==">5544bd6</a> update 1.0.3</li><li>[ <em>2022-04-23 05:11:07</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNmIxOGFhYQ==">6b18aaa</a> prepare redirector</li><li>[ <em>2022-04-23 18:45:40</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNGY5ZmU4Ng==">4f9fe86</a> update</li><li>[ <em>2022-04-23 18:45:57</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMDY3YmY1Ng==">067bf56</a> update</li><li>[ <em>2022-04-23 19:34:27</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNTNlZDY3NA==">53ed674</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL1JFQURNRS5tZA==">README.md</a></li><li>[ <em>2022-04-23 19:37:35</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNWQ3ZjNlZA==">5d7f3ed</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL1JFQURNRS5tZA==">README.md</a></li><li>[ <em>2022-04-23 19:41:03</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYjE1MTZkYQ==">b1516da</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL1JFQURNRS5tZA==">README.md</a></li><li>[ <em>2022-04-23 19:41:37</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvY2VlNTc5ZQ==">cee579e</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL1JFQURNRS5tZA==">README.md</a></li><li>[ <em>2022-04-23 20:02:32</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNDQyYjdlNg==">442b7e6</a> update</li><li>[ <em>2022-04-23 20:02:46</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMzE2MDU4OQ==">3160589</a> update</li><li>[ <em>2022-04-23 20:23:25</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNDIwMTAxNg==">4201016</a> skip CNAME</li><li>[ <em>2022-04-23 20:54:47</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNTU3MGVkYw==">5570edc</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL1JFQURNRS5tZA==">README.md</a></li><li>[ <em>2022-04-23 23:49:18</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYjYxNTNiMw==">b6153b3</a> fix yarn start</li><li>[ <em>2022-04-24 01:23:12</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvODQ4MDIyZA==">848022d</a> fix file watchers</li><li>[ <em>2022-04-24 01:23:47</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNGRkM2ZjYQ==">4dd3fca</a> [windows] eol</li><li>[ <em>2022-04-24 01:34:55</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMmFjNWMwMQ==">2ac5c01</a> fix import by typescript</li><li>[ <em>2022-04-24 01:58:38</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMmQ1MDhlYw==">2d508ec</a> fix node instance</li><li>[ <em>2022-04-24 02:15:49</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvOTY4MjY3OA==">9682678</a> +fix fs webpack, +nodemon ignore</li><li>[ <em>2022-04-24 02:22:23</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMDk1MDA5Zg==">095009f</a> fix nodemon</li><li>[ <em>2022-04-24 02:29:52</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvM2ZjOWQzMA==">3fc9d30</a> remove dumper</li><li>[ <em>2022-04-24 03:09:23</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZWFlNGE1Nw==">eae4a57</a> update</li><li>[ <em>2022-04-24 04:45:01</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvY2IzZDU3ZA==">cb3d57d</a> +ribbon</li><li>[ <em>2022-04-24 05:07:19</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMmNlMGFmMw==">2ce0af3</a> [node] fix process content from string</li><li>[ <em>2022-04-24 05:23:16</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNGZlNmYzZg==">4fe6f3f</a> [node] fix parsing from string</li><li>[ <em>2022-04-24 05:27:13</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNzBhODk5Nw==">70a8997</a> [gulp] dont copy d.ts</li><li>[ <em>2022-04-24 05:29:24</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNDVhNDJkNw==">45a42d7</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL1JFQURNRS5tZA==">README.md</a></li><li>[ <em>2022-04-24 05:30:32</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMjNlMjNkMQ==">23e23d1</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL1JFQURNRS5tZA==">README.md</a></li><li>[ <em>2022-04-24 06:08:37</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMmEzMzI0OA==">2a33248</a> fix index docs</li><li>[ <em>2022-04-24 07:03:18</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNGUxNmQ3OQ==">4e16d79</a> -nodemon no more limitation of watched files</li><li>[ <em>2022-04-24 07:09:10</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNDY1ZDc1Nw==">465d757</a> update docs</li><li>[ <em>2022-04-24 07:27:01</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvY2Y4YWNlZA==">cf8aced</a> update docs</li><li>[ <em>2022-04-24 07:28:13</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMjlhMzExNg==">29a3116</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL1JFQURNRS5tZA==">README.md</a></li><li>[ <em>2022-04-24 07:30:06</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMmI2OTY3OQ==">2b69679</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL1JFQURNRS5tZA==">README.md</a></li><li>[ <em>2022-04-24 07:33:04</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZTkyYzZjZg==">e92c6cf</a> migrate to subfolder</li><li>[ <em>2022-04-24 07:46:28</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZDYxMGUyOA==">d610e28</a> v1.0.4</li><li>[ <em>2022-04-24 08:00:47</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYjY4OTgzNA==">b689834</a> update docs</li><li>[ <em>2022-04-24 08:27:16</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNDI0M2VjNg==">4243ec6</a> +log summoner</li><li>[ <em>2022-04-24 12:07:35</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvN2VjZDU2NA==">7ecd564</a> reload after summoner closed</li><li>[ <em>2022-04-24 12:29:27</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMGUxMjg1Mw==">0e12853</a> [dev] fix summoner</li><li>[ <em>2022-04-24 12:42:18</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYmUzZGI1Mg==">be3db52</a> anonymize only for url start with http/s</li><li>[ <em>2022-04-24 12:45:12</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMWExY2NhYQ==">1a1ccaa</a> [ejs] responsive improvement</li><li>[ <em>2022-04-24 12:50:50</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMDAxZGVlYQ==">001deea</a> [filter] only process url with protocols</li><li>[ <em>2022-04-24 12:53:00</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvM2JkZjJkYg==">3bdf2db</a> [dev] fix <code>MaxListenersExceededWarning</code></li><li>[ <em>2022-04-24 12:55:36</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMmM5OTYwZg==">2c9960f</a> [node] filter improvement</li><li>[ <em>2022-04-24 13:02:55</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMGI1OWVmNA==">0b59ef4</a> migrate build to gulp</li><li>[ <em>2022-04-24 13:15:55</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYTdmMjhhMw==">a7f28a3</a> [migrate] prefer old builder, webpack on-fly</li><li>[ <em>2022-04-24 13:21:49</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvOTFhNTIzOA==">91a5238</a> [webpack] improvement log</li><li>[ <em>2022-04-24 13:27:13</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvN2I2YmIxMQ==">7b6bb11</a> [gulp] detach <code>index.ts</code></li><li>[ <em>2022-04-24 13:29:28</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMWY4NDFjMQ==">1f841c1</a> Update gulpfile.ts</li><li>[ <em>2022-04-24 13:54:47</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNjllOWVlMQ==">69e9ee1</a> split webpack watcher</li><li>[ <em>2022-04-24 14:20:24</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMDc1OWQ1MQ==">0759d51</a> [webpack] integrate <code>webpack</code> watcher to <code>browser-sync</code> [webpack] watcher improvements</li><li>[ <em>2022-04-24 14:53:04</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYWNkMTdjNg==">acd17c6</a> [dev] bring barck old watcher</li><li>[ <em>2022-04-24 15:01:47</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMTM4M2RiMg==">1383db2</a> update docs</li><li>[ <em>2022-04-24 15:02:25</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvOTgyMmU4Yw==">9822e8c</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL1JFQURNRS5tZA==">README.md</a></li><li>[ <em>2022-04-24 16:59:23</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZTNmMWExYg==">e3f1a1b</a> detach private script from compiler</li><li>[ <em>2022-04-24 16:59:29</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZDY3YmMzOQ==">d67bc39</a> Merge branch ‘main’ of <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluaw==">https://github.com/dimaslanjaka/safelink</a></li><li>[ <em>2022-04-24 17:00:19</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYzZjYTBlNg==">c6ca0e6</a> update compiled</li><li>[ <em>2022-04-24 17:10:22</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZjg5Y2Y0OQ==">f89cf49</a> restore docs index</li><li>[ <em>2022-04-24 18:24:45</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNjlmNmNkOQ==">69f6cd9</a> v1.0.5</li><li>[ <em>2022-04-24 20:31:41</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNTc0N2ZmYQ==">5747ffa</a> prepare update 1.0.6</li><li>[ <em>2022-04-24 20:34:30</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMGQ1NGEwOA==">0d54a08</a> update docs</li><li>[ <em>2022-04-24 20:36:04</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZDNjMWYxZQ==">d3c1f1e</a> v1.0.6</li><li>[ <em>2022-04-26 00:44:01</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYzk2MmVmYw==">c962efc</a> improve summoner</li><li>[ <em>2022-04-26 01:02:26</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMjk0ZDVmOQ==">294d5f9</a> [fix][1.0.7] <code>resolveQueryUrl</code></li><li>[ <em>2022-04-26 01:03:55</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMzY1M2FhYw==">3653aac</a> -log</li><li>[ <em>2022-04-26 01:04:53</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMzk0NmEzNQ==">3946a35</a> skip non-exist search and hashes</li><li>[ <em>2022-04-26 01:05:37</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZDYzYTU4Yw==">d63a58c</a> v1.0.7</li><li>[ <em>2022-04-26 01:06:06</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZTkwMzNiYQ==">e9033ba</a> release 1.0.7</li><li>[ <em>2022-04-26 01:12:56</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNzRmMmNhZA==">74f2cad</a> update docs</li><li>[ <em>2022-04-26 01:13:12</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvODk0MzFmMQ==">89431f1</a> update docs</li><li>[ <em>2022-04-26 01:22:18</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvOWM4NTBhNw==">9c850a7</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL1JFQURNRS5tZA==">README.md</a></li><li>[ <em>2022-04-26 04:40:09</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvODlhYzM4Yg==">89ac38b</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL1JFQURNRS5tZA==">README.md</a></li><li>[ <em>2022-04-26 14:30:25</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNDU4YmQyYw==">458bd2c</a> [gh-pages] +toastr</li><li>[ <em>2022-05-04 04:41:07</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMzdjM2ZiMA==">37c3fb0</a> fix deps</li><li>[ <em>2022-05-04 05:07:05</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMDU0NjExZQ==">054611e</a> +encode single url</li><li>[ <em>2022-05-04 05:10:04</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMDFmNTA0ZQ==">01f504e</a> +string type for dynamic typescript</li><li>[ <em>2022-05-04 05:11:13</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZGZjZDgzNg==">dfcd836</a> v1.0.8</li><li>[ <em>2022-05-17 01:10:04</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvM2IwYTQzOQ==">3b0a439</a> update</li><li>[ <em>2022-05-19 06:42:08</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYjdhYjk2MQ==">b7ab961</a> update linux</li><li>[ <em>2022-05-19 08:24:16</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNzcyZTVkYw==">772e5dc</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL1JFQURNRS5tZA==">README.md</a></li><li>[ <em>2022-05-19 08:40:03</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZGI1ZjVjYQ==">db5f5ca</a> fix for nodeJS</li><li>[ <em>2022-05-19 08:40:33</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNDZhNTIxZg==">46a521f</a> fix</li><li>[ <em>2022-05-19 08:53:37</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZGYxMzQ1Ng==">df13456</a> fix nodejs process</li><li>[ <em>2022-05-19 08:53:49</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvOWE2OGQyYg==">9a68d2b</a> update docs</li><li>[ <em>2022-05-19 08:55:51</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZTYwN2MwNg==">e607c06</a> update docs</li><li>[ <em>2022-05-19 08:55:57</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNzZjZWM5Zg==">76cec9f</a> update docs</li><li>[ <em>2022-05-19 08:57:09</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNzZmMjEzNQ==">76f2135</a> v1.0.9</li><li>[ <em>2022-05-19 08:57:37</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMmVjMjQwZA==">2ec240d</a> +changelog</li><li>[ <em>2022-05-19 08:58:57</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMjVmZjU3OA==">25ff578</a> v1.1.0</li><li>[ <em>2022-05-19 08:59:17</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMjYxMWZlZg==">2611fef</a> update changelog</li><li>[ <em>2022-05-19 09:03:15</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvOGUzOTc3Yg==">8e3977b</a> fix documenter</li><li>[ <em>2022-05-19 10:22:24</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNGIxYmUxNg==">4b1be16</a> fix nodejs process</li><li>[ <em>2022-05-19 10:26:25</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNTQ2ZTMzZA==">546e33d</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL1JFQURNRS5tZA==">README.md</a></li><li>[ <em>2022-05-19 10:26:57</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvOGEyZmIxNw==">8a2fb17</a> update docs</li><li>[ <em>2022-05-19 10:28:55</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYjVkNjM2Mg==">b5d6362</a> fix update</li><li>[ <em>2022-05-19 10:30:25</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYzkxMDkyMg==">c910922</a> update 1.1.1</li><li>[ <em>2022-05-19 10:31:21</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvY2MwOGZhYg==">cc08fab</a> v1.1.1</li><li>[ <em>2022-05-19 10:31:47</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZGU0OTExNA==">de49114</a> update 1.1.1</li><li>[ <em>2022-05-19 10:35:02</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNThlOWMzOA==">58e9c38</a> update docs</li><li>[ <em>2022-05-19 10:35:35</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvODBjZDFlYw==">80cd1ec</a> update docs</li><li>[ <em>2022-05-19 10:35:42</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvOTZhNzQ2NQ==">96a7465</a> update docs</li><li>[ <em>2022-05-19 10:48:47</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNzNlYTkwYw==">73ea90c</a> update docs</li><li>[ <em>2022-05-19 10:49:28</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZTE4ZGU3Nw==">e18de77</a> update docs</li><li>[ <em>2022-05-19 11:17:25</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMjQ4MmE4MA==">2482a80</a> fix anonymizing same link on non-hyperlink</li><li>[ <em>2022-05-19 11:17:46</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMmU2NGRjZQ==">2e64dce</a> fix anonymizing same link on non-hyperlink</li><li>[ <em>2022-05-19 11:18:06</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvOTU1ZjllZQ==">955f9ee</a> v1.1.2</li><li>[ <em>2022-05-19 11:19:01</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNWIzZWI3Ng==">5b3eb76</a> fix anonymizing same link on non-hyperlink</li><li>[ <em>2022-05-19 11:21:52</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYmRmYTE4Mg==">bdfa182</a> update docs</li><li>[ <em>2022-05-19 11:24:45</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMGEyNGRjZA==">0a24dcd</a> update docs</li><li>[ <em>2022-05-19 11:26:16</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYTg3YzczNQ==">a87c735</a> update docs</li><li>[ <em>2022-05-21 10:14:05</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNDFmYWNkNQ==">41facd5</a> export interface Nullable</li><li>[ <em>2022-05-21 11:32:25</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZWUzNmJlZQ==">ee36bee</a> v1.1.3</li><li>[ <em>2022-05-21 11:32:57</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYmNkZTlmMA==">bcde9f0</a> update 1.1.3 ES5</li><li>[ <em>2022-05-21 11:33:54</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMzVkYTI0NQ==">35da245</a> compile to es5</li><li>[ <em>2022-05-25 00:25:15</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZWVkMjRiYw==">eed24bc</a> +lib</li><li>[ <em>2022-05-28 15:39:28</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZDUwYzUyZA==">d50c52d</a> fix module resolutions</li><li>[ <em>2022-05-28 15:47:45</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZWFjZjZiYg==">eacf6bb</a> fix build</li><li>[ <em>2022-05-28 17:52:09</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMzExYzYwNA==">311c604</a> update d.ts</li><li>[ <em>2022-05-31 07:40:04</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNzg2ZDIzOA==">786d238</a> export options</li><li>[ <em>2022-06-03 07:40:56</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMTMyMjM1Nw==">1322357</a> migrate to <code>yarn v2</code></li><li>[ <em>2022-06-03 08:03:10</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNDMxMzQ1MQ==">4313451</a> fix <code>yarn v2</code> exclusions</li><li>[ <em>2022-06-03 08:32:17</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvM2JkYmIzNQ==">3bdbb35</a> update module resolutions</li><li>[ <em>2022-06-03 08:51:04</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZjk1NjRiZg==">f9564bf</a> enable global cache</li><li>[ <em>2022-06-10 16:37:52</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMzAxZjhhNA==">301f8a4</a> using <code>npm</code> instead of <code>yarn</code></li><li>[ <em>2022-06-14 18:29:13</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMjliN2ZhZQ==">29b7fae</a> fresh build</li><li>[ <em>2022-06-14 18:29:42</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYjNiODgwMw==">b3b8803</a> add test unit</li><li>[ <em>2022-06-14 18:31:01</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvM2RiMTdkNw==">3db17d7</a> fresh install</li><li>[ <em>2022-06-14 18:34:14</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYWEzNmJlYQ==">aa36bea</a> fresh install</li><li>[ <em>2022-10-17 00:51:27</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNzhmZmVmMw==">78ffef3</a> update</li><li>[ <em>2022-10-17 00:55:56</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMzM0NDk4MA==">3344980</a> convert parse to async</li><li>[ <em>2022-10-17 00:59:02</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNjQ0NzQyNg==">6447426</a> -test</li><li>[ <em>2022-10-17 01:02:36</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYTJhNjBkYg==">a2a60db</a> update</li><li>[ <em>2022-10-17 01:16:56</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYzk4MDE5Yw==">c98019c</a> update dependencies</li><li>[ <em>2022-10-17 01:30:34</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvN2QzZDMxZQ==">7d3d31e</a> update</li><li>[ <em>2022-10-17 01:40:24</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNjc1M2E0Mg==">6753a42</a> fix nulled process</li><li>[ <em>2022-10-17 01:43:15</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMWJkOTU0ZA==">1bd954d</a> add docs</li><li>[ <em>2022-10-17 01:44:54</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvOWU0NjBmNA==">9e460f4</a> update docs</li><li>[ <em>2022-10-17 01:45:16</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvOGFhODJjNA==">8aa82c4</a> update docs</li></ul><p><strong>1.1.4</strong></p><ul><li>[ <em>2022-10-17 01:49:39</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvM2NhZmM5ZA==">3cafc9d</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL1JFQURNRS5tZA==">README.md</a></li><li>[ <em>2022-10-17 01:55:33</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNTI5OGUzNA==">5298e34</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL0NIQU5HRUxPRy5tZA==">CHANGELOG.md</a></li><li>[ <em>2022-10-17 01:58:21</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMjk3NGMzYQ==">2974c3a</a> update docs</li><li>[ <em>2022-10-26 09:03:33</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZDUwZjY4MQ==">d50f681</a> update dependencies</li></ul><p><strong>1.1.5</strong></p><ul><li>[ <em>2022-11-09 16:30:14</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYjViNjg5Ng==">b5b6896</a> add OR</li><li>[ <em>2022-11-09 16:31:28</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYWU2ZmNhNQ==">ae6fca5</a> add null validation</li><li>[ <em>2022-11-09 16:32:08</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNjAxMTUyMw==">6011523</a> Update safelink.yml</li><li>[ <em>2022-11-09 16:33:27</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNjFjMGQwMw==">61c0d03</a> Using npm</li><li>[ <em>2022-11-09 16:37:43</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZWNjNDA5Zg==">ecc409f</a> add commits</li><li>[ <em>2022-11-09 16:38:18</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYWJkNDZlYg==">abd46eb</a> update build</li><li>[ <em>2022-11-09 16:53:11</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZDYzNjgxZA==">d63681d</a> Update safelink.yml</li><li>[ <em>2022-11-09 16:53:44</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNWFjZmFlOQ==">5acfae9</a> Update safelink.yml</li><li>[ <em>2022-11-09 16:54:14</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvOTZiYTk4Yw==">96ba98c</a> Update safelink.yml</li><li>[ <em>2022-11-09 16:59:58</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNjAwYWU0NQ==">600ae45</a> Update safelink.yml</li><li>[ <em>2022-11-09 17:06:39</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNGM4NjVmZQ==">4c865fe</a> update build</li></ul><p><strong>1.1.6</strong></p><ul><li>[ <em>2022-11-20 11:38:32</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvN2JjOTYwZg==">7bc960f</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL1JFQURNRS5tZA==">README.md</a></li><li>[ <em>2022-11-20 11:41:15</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvOGQzYzg0OA==">8d3c848</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL1JFQURNRS5tZA==">README.md</a></li><li>[ <em>2022-12-21 10:12:29</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNjk0Yzg3Yw==">694c87c</a> update deps and scripts</li><li>[ <em>2022-12-21 10:13:04</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMzc3YTkxMg==">377a912</a> move and export all types from/to globals</li><li>[ <em>2022-12-21 10:13:30</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNzQwNWE0Yg==">7405a4b</a> Update</li><li>[ <em>2022-12-21 10:14:48</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvOTA1MTUwOQ==">9051509</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL1JFQURNRS5tZA==">README.md</a></li><li>[ <em>2022-12-21 10:16:11</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvM2ZhYWJlNQ==">3faabe5</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL1JFQURNRS5tZA==">README.md</a></li><li>[ <em>2022-12-21 10:16:56</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvOThkMDBkNQ==">98d00d5</a> push release too</li></ul><p><strong>1.1.7</strong></p><ul><li>[ <em>2022-12-21 10:18:48</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvOWQ1ODQ4ZA==">9d5848d</a> Update docs</li><li>[ <em>2022-12-21 03:21:46</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYmJmMTRmNw==">bbf14f7</a> Build Wed Dec 21 03:21:46 UTC 2022</li><li>[ <em>2022-12-21 10:23:57</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMTNhZGVlYg==">13adeeb</a> move types to globals</li><li>[ <em>2022-12-21 10:26:37</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNzFkMDA3ZQ==">71d007e</a> Merge branch ‘master’ of <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluaw==">https://github.com/dimaslanjaka/safelink</a></li></ul><p><strong>1.1.8</strong></p><ul><li>[ <em>2022-12-21 03:29:08</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZWZlNWYzOQ==">efe5f39</a> Build Wed Dec 21 03:29:08 UTC 2022</li><li>[ <em>2022-12-21 11:48:28</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvN2ZjYjUyNQ==">7fcb525</a> add changelog builder</li><li>[ <em>2022-12-21 11:49:39</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZjc3YmY5MQ==">f77bf91</a> Merge branch ‘master’ of <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluaw==">https://github.com/dimaslanjaka/safelink</a></li><li>[ <em>2022-12-21 04:50:57</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYzZmNmQxMA==">c6f6d10</a> Build Wed Dec 21 04:50:57 UTC 2022</li><li>[ <em>2022-12-21 11:53:31</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNjJhYjhmMg==">62ab8f2</a> Update changelog</li><li>[ <em>2022-12-21 12:02:39</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMjAwNjRlYw==">20064ec</a> Update docs and changelog</li><li>[ <em>2022-12-21 12:02:48</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNmI1NzFjZQ==">6b571ce</a> Merge branch ‘master’ of <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluaw==">https://github.com/dimaslanjaka/safelink</a></li><li>[ <em>2022-12-21 05:03:53</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvOTg3MDYxYQ==">987061a</a> Build Wed Dec 21 05:03:53 UTC 2022</li><li>[ <em>2022-12-21 12:06:25</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNjMyM2QyMg==">6323d22</a> Update docs</li><li>[ <em>2022-12-21 12:06:31</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNGUwZTViNw==">4e0e5b7</a> Merge branch ‘master’ of <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluaw==">https://github.com/dimaslanjaka/safelink</a></li><li>[ <em>2022-12-21 05:07:42</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMjMzNWY2Yg==">2335f6b</a> Build Wed Dec 21 05:07:42 UTC 2022</li><li>[ <em>2022-12-21 12:27:37</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZmU2OGJhOQ==">fe68ba9</a> Update docs</li><li>[ <em>2022-12-21 12:48:00</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMmEzZWExYQ==">2a3ea1a</a> using customized package cross-spawn</li><li>[ <em>2022-12-21 12:48:07</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMzhlZWU2Ng==">38eee66</a> Merge branch ‘master’ of <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluaw==">https://github.com/dimaslanjaka/safelink</a></li><li>[ <em>2022-12-21 13:10:23</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNTM0YTZlNg==">534a6e6</a> Update docs</li><li>[ <em>2022-12-21 06:11:40</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNDM3ZTNiYQ==">437e3ba</a> Build Wed Dec 21 06:11:40 UTC 2022</li><li>[ <em>2022-12-21 13:17:22</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZmQ3NmIzYg==">fd76b3b</a> Update docs</li><li>[ <em>2022-12-21 13:19:47</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvODU4ZWFkNQ==">858ead5</a> Update build</li></ul><p><strong>1.1.9</strong></p><ul><li>[ <em>2022-12-21 13:21:59</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNTQyMmY5Zg==">5422f9f</a> Merge branch ‘master’ of <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluaw==">https://github.com/dimaslanjaka/safelink</a></li><li>[ <em>2022-12-21 06:23:16</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMzQ5ODBhOQ==">34980a9</a> Build Wed Dec 21 06:23:16 UTC 2022</li><li>[ <em>2022-12-26 12:35:58</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNTI1M2IxZA==">5253b1d</a> declare to global scope <code>safelink</code> and <code>safelinkify</code></li><li>[ <em>2022-12-26 05:37:11</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNjQ1NDJkNQ==">64542d5</a> Build Mon Dec 26 05:37:11 UTC 2022</li><li>[ <em>2022-12-26 12:55:41</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMDUwYTM1Ng==">050a356</a> export safelink and safelinkify to global scrope - update docs</li><li>[ <em>2022-12-26 12:55:50</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMjhiZTljYw==">28be9cc</a> export safelink and safelinkify to global scrope - update docs</li><li>[ <em>2022-12-26 12:57:09</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZTQxYjk3YQ==">e41b97a</a> Merge branch ‘master’ of <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluaw==">https://github.com/dimaslanjaka/safelink</a></li></ul><p><strong>1.1.10</strong></p><ul><li>[ <em>2022-12-26 12:58:46</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNWM3NTIyZQ==">5c7522e</a> update changelog</li><li>[ <em>2022-12-26 05:59:54</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYjJjMzQ0Yw==">b2c344c</a> Build Mon Dec 26 05:59:54 UTC 2022</li><li>[ <em>2022-12-26 13:02:29</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMDc0Njg5ZA==">074689d</a> rename <code>README.md</code> to lowercase</li><li>[ <em>2022-12-26 13:02:38</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvOTk3YjExNg==">997b116</a> Merge branch ‘master’ of <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluaw==">https://github.com/dimaslanjaka/safelink</a></li><li>[ <em>2022-12-26 06:03:46</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvN2E4NTkxZg==">7a8591f</a> Build Mon Dec 26 06:03:46 UTC 2022</li><li>[ <em>2022-12-26 13:13:41</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYzNkNDg3MA==">c3d4870</a> Update script.js</li><li>[ <em>2022-12-27 18:13:26</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZjZlYWRkOA==">f6eadd8</a> update scripts</li><li>[ <em>2022-12-27 11:14:25</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvODBlYzJmYg==">80ec2fb</a> Build Tue Dec 27 11:14:25 UTC 2022</li><li>[ <em>2022-12-28 03:17:12</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMzJkMjMxYQ==">32d231a</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL3JlYWRtZS5tZA==">readme.md</a></li><li>[ <em>2022-12-27 20:18:29</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvY2IxMzU1MQ==">cb13551</a> Build Tue Dec 27 20:18:29 UTC 2022</li><li>[ <em>2022-12-28 03:23:55</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZTdlZjRhOA==">e7ef4a8</a> update deps</li><li>[ <em>2022-12-28 03:25:15</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYjdiMjI2MA==">b7b2260</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL3JlYWRtZS5tZA==">readme.md</a></li><li>[ <em>2022-12-27 20:25:32</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZGVjMTM4YQ==">dec138a</a> Update build from <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZTdlZjRhOGYxZDdlOTdlYzM0ZDdjZTQxZDBkNDY5OTIzYmFmYjgwZA==">https://github.com/dimaslanjaka/safelink/commit/e7ef4a8f1d7e97ec34d7ce41d0d469923bafb80d</a></li><li>[ <em>2022-12-28 03:29:52</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMzExZjYwMA==">311f600</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL3JlYWRtZS5tZA==">readme.md</a></li><li>[ <em>2022-12-27 20:31:12</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZTJjYTQyNg==">e2ca426</a> Update build from <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMzExZjYwMGMzYjEwNzBjYjI1YWJmNDAwNTNhN2UxOTFkYzEwYTRmNw==">https://github.com/dimaslanjaka/safelink/commit/311f600c3b1070cb25abf40053a7e191dc10a4f7</a></li><li>[ <em>2022-12-28 03:31:19</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMWNkOGRjYQ==">1cd8dca</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL3JlYWRtZS5tZA==">readme.md</a></li><li>[ <em>2022-12-27 20:32:50</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMDU1NTI4Mw==">0555283</a> Update build from <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMWNkOGRjYTg0Yzg3NTNjMWNjZDdiZTk2YmM3NDI1M2YxOGRhYThlNw==">https://github.com/dimaslanjaka/safelink/commit/1cd8dca84c8753c1ccd7be96bc74253f18daa8e7</a></li><li>[ <em>2022-12-28 03:33:15</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvOWFlZjA1Zg==">9aef05f</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL3JlYWRtZS5tZA==">readme.md</a></li><li>[ <em>2022-12-28 03:33:41</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZmFiZTI0NQ==">fabe245</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL3JlYWRtZS5tZA==">readme.md</a></li><li>[ <em>2022-12-28 03:34:49</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYjMyMjIwYQ==">b32220a</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL3JlYWRtZS5tZA==">readme.md</a></li><li>[ <em>2022-12-28 03:35:18</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMTAzYzkwYw==">103c90c</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL3JlYWRtZS5tZA==">readme.md</a></li><li>[ <em>2022-12-27 20:35:31</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNGQzMTA3ZQ==">4d3107e</a> Update build from <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvOWFlZjA1ZmVmZjEzZGEzYTI2ODE4YzM4MmI0Njc2YWU1N2VmZWFhNQ==">https://github.com/dimaslanjaka/safelink/commit/9aef05feff13da3a26818c382b4676ae57efeaa5</a> (HEAD -&gt; master, origin/master, origin/HEAD)</li></ul></div></div></div></div><script src="dist/bundle.js"></script><script>document.addEventListener("DOMContentLoaded",(function(){const e=document.querySelector("table#table");function t(e){return"function"==typeof e&&(()=>{try{return e(),!1}catch{return!0}})()}e.querySelector("#resolveQueryUrl").innerHTML=typeof resolveQueryUrl,e.querySelector("#parseQuery").innerHTML=typeof parseQuery;const r=t(safelink);if(e.innerHTML+=`<tr><td>global safelink</td> <td><code class="language-javascript">isClass(safelink)</code></td><td>is ES5 Class: ${r}</td></tr>`,e.innerHTML+=`<tr><td>global safelink</td> <td><code class="language-javascript">typeof safelink</code></td><td>${typeof safelink}</td></tr>`,e.innerHTML+=`<tr><td>global safelinkify</td> <td><code class="language-javascript">typeof safelinkify</code></td><td>${typeof safelinkify}</td></tr>`,e.innerHTML+=`<tr><td>global safelinkify.safelink</td> <td><code class="language-javascript">isClass(safelinkify.safelink)</code></td><td>is ES5 Class: ${t(safelinkify.safelink)}</td></tr>`,r){const t=new safelink({exclude:[/([a-z0-9](?:[a-z0-9-]{1,61}[a-z0-9])?[.])*webmanajemen\.com/],redirect:"https://www.webmanajemen.com/page/safelink.html?url=",verbose:!1,type:"base64",password:"unique-password"});t.parse(document.querySelector("div#external")),t.parse(document.querySelector("div#internal"));const r=JSON.stringify(t.resolveQueryUrl(location.href),null,2);e.innerHTML+=`<tr id="current-queries"><td>Redirector Resolver <a href="#query-url" class="btn btn-sm btn-warning">Change</a></td> <td><code>sf.resolveQueryUrl(location.href)</code></td><td><pre><code class="language-json">${r}</code></pre></td></tr>`;const n=new URLSearchParams(location.search);(n.has("o")||n.has("url")||location.href.match(/#(o|url)=/))&&document.getElementById("current-queries").scrollIntoView()}Array.from(document.links).forEach((e=>{e.innerHTML.length||(e.textContent=e.getAttribute("href"),e.addEventListener("click",(t=>{t.preventDefault(),window.location.href=e.href,e.href.match(/#(o|url)=/)&&location.reload()})))}))}))</script><link rel="stylesheet" href="/safelink/node_modules/highlight.js/styles/sunburst.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js" integrity="sha512-yUUc0qWm2rhM7X0EFe82LNnv2moqArj5nro/w1bi05A09hRVeIZbN6jlMoyu0+4I/Bu4Ck/85JQIU82T82M28w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script>hljs.highlightAll()</script><script src="https://www.webmanajemen.com/r-ads.js"></script></main><div class="container"><footer class="py-3 my-4"><ul class="nav justify-content-center border-bottom pb-3 mb-3"><li class="nav-item"><a href="/" class="nav-link px-2 text-muted">Home</a></li><li class="nav-item"><a href="/safelink" class="nav-link px-2 text-muted">Safelink</a></li><li class="nav-item"><a href="/js-prototypes" class="nav-link px-2 text-muted">js-prototypes</a></li><li class="nav-item"><a href="/smartform" class="nav-link px-2 text-muted">Smartform</a></li><li class="nav-item"><a href="/about" class="nav-link px-2 text-muted">About Me</a></li></ul><p class="text-center text-muted">© 2022 Website Manajemen Indonesia, Inc</p></footer></div><script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script></body></html>
+  </pre>
+  <!-- prettier-ignore-end -->
+</div>
+
+<div class="accordion" id="accordionExample2">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseThree"
+        aria-expanded="false"
+        aria-controls="collapseThree"
+      >
+        CHANGELOG
+      </button>
+    </h2>
+    <div
+      id="collapseThree"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingThree"
+      data-bs-parent="#accordionExample"
+    >
+      <div class="accordion-body"><p><strong>0.0.1</strong> - <em>init project</em></p>
+<ul>
+<li>[ <em>2022-04-23 00:29:55</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNDVhZDA5ZQ==">45ad09e</a> Initial commit</li>
+<li>[ <em>2022-04-23 00:31:06</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNmNiNDM0OA==">6cb4348</a> migrate from <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL2RpbWFzbGFuamFrYS5naXRodWIuaW8vdHJlZS9zYWZlbGluaw==">dimaslanjaka.github.io/tree/safelink</a></li>
+<li>[ <em>2022-04-23 00:31:59</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvOTA5MTBkMA==">90910d0</a> migrate from origin <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS5naXRodWIuaW8vdHJlZS9zYWZlbGluaw==">https://github.com/dimaslanjaka.github.io/tree/safelink</a></li>
+<li>[ <em>2022-04-23 00:32:03</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMTAzNTQzNg==">1035436</a> Merge branch ‘main’ of <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluaw==">https://github.com/dimaslanjaka/safelink</a> into main</li>
+<li>[ <em>2022-04-23 00:37:50</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMmU0ODljNA==">2e489c4</a> Update safelink.yml</li>
+<li>[ <em>2022-04-23 00:47:49</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNWZhZDcwOQ==">5fad709</a> +submodule</li>
+<li>[ <em>2022-04-23 00:49:56</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNGEwYmU1MQ==">4a0be51</a> update deployment</li>
+<li>[ <em>2022-04-23 00:51:40</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMjM1ZDI2Mg==">235d262</a> [workflow] update</li>
+<li>[ <em>2022-04-23 00:57:18</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMDRjYTU5Ng==">04ca596</a> update</li>
+<li>[ <em>2022-04-23 00:57:50</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMGYyN2YyNw==">0f27f27</a> update</li>
+<li>[ <em>2022-04-23 01:12:32</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMjM3YWY1MA==">237af50</a> update</li>
+<li>[ <em>2022-04-23 01:15:41</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZjk2ODdhMg==">f9687a2</a> [workflow] test</li>
+<li>[ <em>2022-04-23 01:17:32</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNjJlMDlmMw==">62e09f3</a> [workflow] test</li>
+<li>[ <em>2022-04-23 01:22:03</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNTU4OGI4Mg==">5588b82</a> update</li>
+<li>[ <em>2022-04-23 01:28:34</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMjI2NjQ3OQ==">2266479</a> [workflow] test</li>
+<li>[ <em>2022-04-23 01:40:39</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNDAzNDIzOQ==">4034239</a> + .nojekyll</li>
+<li>[ <em>2022-04-23 01:43:18</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYTcxMWE1NA==">a711a54</a> fix bundle location</li>
+<li>[ <em>2022-04-23 01:53:21</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMzZjYWY3Ng==">36caf76</a> [workflow] just test</li>
+<li>[ <em>2022-04-23 02:04:22</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvOGFmOGEyOA==">8af8a28</a> fix EJSHelper location</li>
+<li>[ <em>2022-04-23 02:06:23</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYmFkZDUwNw==">badd507</a> v1.0.2</li>
+<li>[ <em>2022-04-23 02:06:58</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZDU1ZjFmZA==">d55f1fd</a> update 1.0.2</li>
+<li>[ <em>2022-04-23 02:10:01</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYWQwNzg0Mg==">ad07842</a> +docs</li>
+<li>[ <em>2022-04-23 03:14:51</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYWRkY2U3Ng==">addce76</a> +layout redirector</li>
+<li>[ <em>2022-04-23 04:04:53</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMzAzNjNlMg==">30363e2</a> v1.0.3</li>
+<li>[ <em>2022-04-23 04:04:59</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZWU1NWM5OA==">ee55c98</a> update 1.0.3</li>
+<li>[ <em>2022-04-23 04:05:42</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNTU0NGJkNg==">5544bd6</a> update 1.0.3</li>
+<li>[ <em>2022-04-23 05:11:07</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNmIxOGFhYQ==">6b18aaa</a> prepare redirector</li>
+<li>[ <em>2022-04-23 18:45:40</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNGY5ZmU4Ng==">4f9fe86</a> update</li>
+<li>[ <em>2022-04-23 18:45:57</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMDY3YmY1Ng==">067bf56</a> update</li>
+<li>[ <em>2022-04-23 19:34:27</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNTNlZDY3NA==">53ed674</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL1JFQURNRS5tZA==">README.md</a></li>
+<li>[ <em>2022-04-23 19:37:35</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNWQ3ZjNlZA==">5d7f3ed</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL1JFQURNRS5tZA==">README.md</a></li>
+<li>[ <em>2022-04-23 19:41:03</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYjE1MTZkYQ==">b1516da</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL1JFQURNRS5tZA==">README.md</a></li>
+<li>[ <em>2022-04-23 19:41:37</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvY2VlNTc5ZQ==">cee579e</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL1JFQURNRS5tZA==">README.md</a></li>
+<li>[ <em>2022-04-23 20:02:32</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNDQyYjdlNg==">442b7e6</a> update</li>
+<li>[ <em>2022-04-23 20:02:46</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMzE2MDU4OQ==">3160589</a> update</li>
+<li>[ <em>2022-04-23 20:23:25</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNDIwMTAxNg==">4201016</a> skip CNAME</li>
+<li>[ <em>2022-04-23 20:54:47</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNTU3MGVkYw==">5570edc</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL1JFQURNRS5tZA==">README.md</a></li>
+<li>[ <em>2022-04-23 23:49:18</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYjYxNTNiMw==">b6153b3</a> fix yarn start</li>
+<li>[ <em>2022-04-24 01:23:12</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvODQ4MDIyZA==">848022d</a> fix file watchers</li>
+<li>[ <em>2022-04-24 01:23:47</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNGRkM2ZjYQ==">4dd3fca</a> [windows] eol</li>
+<li>[ <em>2022-04-24 01:34:55</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMmFjNWMwMQ==">2ac5c01</a> fix import by typescript</li>
+<li>[ <em>2022-04-24 01:58:38</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMmQ1MDhlYw==">2d508ec</a> fix node instance</li>
+<li>[ <em>2022-04-24 02:15:49</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvOTY4MjY3OA==">9682678</a> +fix fs webpack, +nodemon ignore</li>
+<li>[ <em>2022-04-24 02:22:23</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMDk1MDA5Zg==">095009f</a> fix nodemon</li>
+<li>[ <em>2022-04-24 02:29:52</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvM2ZjOWQzMA==">3fc9d30</a> remove dumper</li>
+<li>[ <em>2022-04-24 03:09:23</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZWFlNGE1Nw==">eae4a57</a> update</li>
+<li>[ <em>2022-04-24 04:45:01</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvY2IzZDU3ZA==">cb3d57d</a> +ribbon</li>
+<li>[ <em>2022-04-24 05:07:19</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMmNlMGFmMw==">2ce0af3</a> [node] fix process content from string</li>
+<li>[ <em>2022-04-24 05:23:16</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNGZlNmYzZg==">4fe6f3f</a> [node] fix parsing from string</li>
+<li>[ <em>2022-04-24 05:27:13</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNzBhODk5Nw==">70a8997</a> [gulp] dont copy d.ts</li>
+<li>[ <em>2022-04-24 05:29:24</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNDVhNDJkNw==">45a42d7</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL1JFQURNRS5tZA==">README.md</a></li>
+<li>[ <em>2022-04-24 05:30:32</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMjNlMjNkMQ==">23e23d1</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL1JFQURNRS5tZA==">README.md</a></li>
+<li>[ <em>2022-04-24 06:08:37</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMmEzMzI0OA==">2a33248</a> fix index docs</li>
+<li>[ <em>2022-04-24 07:03:18</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNGUxNmQ3OQ==">4e16d79</a> -nodemon no more limitation of watched files</li>
+<li>[ <em>2022-04-24 07:09:10</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNDY1ZDc1Nw==">465d757</a> update docs</li>
+<li>[ <em>2022-04-24 07:27:01</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvY2Y4YWNlZA==">cf8aced</a> update docs</li>
+<li>[ <em>2022-04-24 07:28:13</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMjlhMzExNg==">29a3116</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL1JFQURNRS5tZA==">README.md</a></li>
+<li>[ <em>2022-04-24 07:30:06</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMmI2OTY3OQ==">2b69679</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL1JFQURNRS5tZA==">README.md</a></li>
+<li>[ <em>2022-04-24 07:33:04</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZTkyYzZjZg==">e92c6cf</a> migrate to subfolder</li>
+<li>[ <em>2022-04-24 07:46:28</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZDYxMGUyOA==">d610e28</a> v1.0.4</li>
+<li>[ <em>2022-04-24 08:00:47</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYjY4OTgzNA==">b689834</a> update docs</li>
+<li>[ <em>2022-04-24 08:27:16</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNDI0M2VjNg==">4243ec6</a> +log summoner</li>
+<li>[ <em>2022-04-24 12:07:35</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvN2VjZDU2NA==">7ecd564</a> reload after summoner closed</li>
+<li>[ <em>2022-04-24 12:29:27</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMGUxMjg1Mw==">0e12853</a> [dev] fix summoner</li>
+<li>[ <em>2022-04-24 12:42:18</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYmUzZGI1Mg==">be3db52</a> anonymize only for url start with http/s</li>
+<li>[ <em>2022-04-24 12:45:12</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMWExY2NhYQ==">1a1ccaa</a> [ejs] responsive improvement</li>
+<li>[ <em>2022-04-24 12:50:50</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMDAxZGVlYQ==">001deea</a> [filter] only process url with protocols</li>
+<li>[ <em>2022-04-24 12:53:00</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvM2JkZjJkYg==">3bdf2db</a> [dev] fix <code>MaxListenersExceededWarning</code></li>
+<li>[ <em>2022-04-24 12:55:36</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMmM5OTYwZg==">2c9960f</a> [node] filter improvement</li>
+<li>[ <em>2022-04-24 13:02:55</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMGI1OWVmNA==">0b59ef4</a> migrate build to gulp</li>
+<li>[ <em>2022-04-24 13:15:55</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYTdmMjhhMw==">a7f28a3</a> [migrate] prefer old builder, webpack on-fly</li>
+<li>[ <em>2022-04-24 13:21:49</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvOTFhNTIzOA==">91a5238</a> [webpack] improvement log</li>
+<li>[ <em>2022-04-24 13:27:13</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvN2I2YmIxMQ==">7b6bb11</a> [gulp] detach <code>index.ts</code></li>
+<li>[ <em>2022-04-24 13:29:28</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMWY4NDFjMQ==">1f841c1</a> Update gulpfile.ts</li>
+<li>[ <em>2022-04-24 13:54:47</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNjllOWVlMQ==">69e9ee1</a> split webpack watcher</li>
+<li>[ <em>2022-04-24 14:20:24</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMDc1OWQ1MQ==">0759d51</a> [webpack] integrate <code>webpack</code> watcher to <code>browser-sync</code> [webpack] watcher improvements</li>
+<li>[ <em>2022-04-24 14:53:04</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYWNkMTdjNg==">acd17c6</a> [dev] bring barck old watcher</li>
+<li>[ <em>2022-04-24 15:01:47</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMTM4M2RiMg==">1383db2</a> update docs</li>
+<li>[ <em>2022-04-24 15:02:25</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvOTgyMmU4Yw==">9822e8c</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL1JFQURNRS5tZA==">README.md</a></li>
+<li>[ <em>2022-04-24 16:59:23</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZTNmMWExYg==">e3f1a1b</a> detach private script from compiler</li>
+<li>[ <em>2022-04-24 16:59:29</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZDY3YmMzOQ==">d67bc39</a> Merge branch ‘main’ of <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluaw==">https://github.com/dimaslanjaka/safelink</a></li>
+<li>[ <em>2022-04-24 17:00:19</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYzZjYTBlNg==">c6ca0e6</a> update compiled</li>
+<li>[ <em>2022-04-24 17:10:22</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZjg5Y2Y0OQ==">f89cf49</a> restore docs index</li>
+<li>[ <em>2022-04-24 18:24:45</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNjlmNmNkOQ==">69f6cd9</a> v1.0.5</li>
+<li>[ <em>2022-04-24 20:31:41</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNTc0N2ZmYQ==">5747ffa</a> prepare update 1.0.6</li>
+<li>[ <em>2022-04-24 20:34:30</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMGQ1NGEwOA==">0d54a08</a> update docs</li>
+<li>[ <em>2022-04-24 20:36:04</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZDNjMWYxZQ==">d3c1f1e</a> v1.0.6</li>
+<li>[ <em>2022-04-26 00:44:01</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYzk2MmVmYw==">c962efc</a> improve summoner</li>
+<li>[ <em>2022-04-26 01:02:26</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMjk0ZDVmOQ==">294d5f9</a> [fix][1.0.7] <code>resolveQueryUrl</code></li>
+<li>[ <em>2022-04-26 01:03:55</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMzY1M2FhYw==">3653aac</a> -log</li>
+<li>[ <em>2022-04-26 01:04:53</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMzk0NmEzNQ==">3946a35</a> skip non-exist search and hashes</li>
+<li>[ <em>2022-04-26 01:05:37</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZDYzYTU4Yw==">d63a58c</a> v1.0.7</li>
+<li>[ <em>2022-04-26 01:06:06</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZTkwMzNiYQ==">e9033ba</a> release 1.0.7</li>
+<li>[ <em>2022-04-26 01:12:56</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNzRmMmNhZA==">74f2cad</a> update docs</li>
+<li>[ <em>2022-04-26 01:13:12</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvODk0MzFmMQ==">89431f1</a> update docs</li>
+<li>[ <em>2022-04-26 01:22:18</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvOWM4NTBhNw==">9c850a7</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL1JFQURNRS5tZA==">README.md</a></li>
+<li>[ <em>2022-04-26 04:40:09</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvODlhYzM4Yg==">89ac38b</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL1JFQURNRS5tZA==">README.md</a></li>
+<li>[ <em>2022-04-26 14:30:25</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNDU4YmQyYw==">458bd2c</a> [gh-pages] +toastr</li>
+<li>[ <em>2022-05-04 04:41:07</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMzdjM2ZiMA==">37c3fb0</a> fix deps</li>
+<li>[ <em>2022-05-04 05:07:05</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMDU0NjExZQ==">054611e</a> +encode single url</li>
+<li>[ <em>2022-05-04 05:10:04</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMDFmNTA0ZQ==">01f504e</a> +string type for dynamic typescript</li>
+<li>[ <em>2022-05-04 05:11:13</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZGZjZDgzNg==">dfcd836</a> v1.0.8</li>
+<li>[ <em>2022-05-17 01:10:04</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvM2IwYTQzOQ==">3b0a439</a> update</li>
+<li>[ <em>2022-05-19 06:42:08</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYjdhYjk2MQ==">b7ab961</a> update linux</li>
+<li>[ <em>2022-05-19 08:24:16</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNzcyZTVkYw==">772e5dc</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL1JFQURNRS5tZA==">README.md</a></li>
+<li>[ <em>2022-05-19 08:40:03</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZGI1ZjVjYQ==">db5f5ca</a> fix for nodeJS</li>
+<li>[ <em>2022-05-19 08:40:33</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNDZhNTIxZg==">46a521f</a> fix</li>
+<li>[ <em>2022-05-19 08:53:37</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZGYxMzQ1Ng==">df13456</a> fix nodejs process</li>
+<li>[ <em>2022-05-19 08:53:49</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvOWE2OGQyYg==">9a68d2b</a> update docs</li>
+<li>[ <em>2022-05-19 08:55:51</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZTYwN2MwNg==">e607c06</a> update docs</li>
+<li>[ <em>2022-05-19 08:55:57</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNzZjZWM5Zg==">76cec9f</a> update docs</li>
+<li>[ <em>2022-05-19 08:57:09</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNzZmMjEzNQ==">76f2135</a> v1.0.9</li>
+<li>[ <em>2022-05-19 08:57:37</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMmVjMjQwZA==">2ec240d</a> +changelog</li>
+<li>[ <em>2022-05-19 08:58:57</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMjVmZjU3OA==">25ff578</a> v1.1.0</li>
+<li>[ <em>2022-05-19 08:59:17</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMjYxMWZlZg==">2611fef</a> update changelog</li>
+<li>[ <em>2022-05-19 09:03:15</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvOGUzOTc3Yg==">8e3977b</a> fix documenter</li>
+<li>[ <em>2022-05-19 10:22:24</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNGIxYmUxNg==">4b1be16</a> fix nodejs process</li>
+<li>[ <em>2022-05-19 10:26:25</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNTQ2ZTMzZA==">546e33d</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL1JFQURNRS5tZA==">README.md</a></li>
+<li>[ <em>2022-05-19 10:26:57</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvOGEyZmIxNw==">8a2fb17</a> update docs</li>
+<li>[ <em>2022-05-19 10:28:55</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYjVkNjM2Mg==">b5d6362</a> fix update</li>
+<li>[ <em>2022-05-19 10:30:25</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYzkxMDkyMg==">c910922</a> update 1.1.1</li>
+<li>[ <em>2022-05-19 10:31:21</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvY2MwOGZhYg==">cc08fab</a> v1.1.1</li>
+<li>[ <em>2022-05-19 10:31:47</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZGU0OTExNA==">de49114</a> update 1.1.1</li>
+<li>[ <em>2022-05-19 10:35:02</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNThlOWMzOA==">58e9c38</a> update docs</li>
+<li>[ <em>2022-05-19 10:35:35</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvODBjZDFlYw==">80cd1ec</a> update docs</li>
+<li>[ <em>2022-05-19 10:35:42</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvOTZhNzQ2NQ==">96a7465</a> update docs</li>
+<li>[ <em>2022-05-19 10:48:47</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNzNlYTkwYw==">73ea90c</a> update docs</li>
+<li>[ <em>2022-05-19 10:49:28</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZTE4ZGU3Nw==">e18de77</a> update docs</li>
+<li>[ <em>2022-05-19 11:17:25</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMjQ4MmE4MA==">2482a80</a> fix anonymizing same link on non-hyperlink</li>
+<li>[ <em>2022-05-19 11:17:46</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMmU2NGRjZQ==">2e64dce</a> fix anonymizing same link on non-hyperlink</li>
+<li>[ <em>2022-05-19 11:18:06</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvOTU1ZjllZQ==">955f9ee</a> v1.1.2</li>
+<li>[ <em>2022-05-19 11:19:01</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNWIzZWI3Ng==">5b3eb76</a> fix anonymizing same link on non-hyperlink</li>
+<li>[ <em>2022-05-19 11:21:52</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYmRmYTE4Mg==">bdfa182</a> update docs</li>
+<li>[ <em>2022-05-19 11:24:45</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMGEyNGRjZA==">0a24dcd</a> update docs</li>
+<li>[ <em>2022-05-19 11:26:16</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYTg3YzczNQ==">a87c735</a> update docs</li>
+<li>[ <em>2022-05-21 10:14:05</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNDFmYWNkNQ==">41facd5</a> export interface Nullable</li>
+<li>[ <em>2022-05-21 11:32:25</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZWUzNmJlZQ==">ee36bee</a> v1.1.3</li>
+<li>[ <em>2022-05-21 11:32:57</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYmNkZTlmMA==">bcde9f0</a> update 1.1.3 ES5</li>
+<li>[ <em>2022-05-21 11:33:54</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMzVkYTI0NQ==">35da245</a> compile to es5</li>
+<li>[ <em>2022-05-25 00:25:15</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZWVkMjRiYw==">eed24bc</a> +lib</li>
+<li>[ <em>2022-05-28 15:39:28</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZDUwYzUyZA==">d50c52d</a> fix module resolutions</li>
+<li>[ <em>2022-05-28 15:47:45</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZWFjZjZiYg==">eacf6bb</a> fix build</li>
+<li>[ <em>2022-05-28 17:52:09</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMzExYzYwNA==">311c604</a> update d.ts</li>
+<li>[ <em>2022-05-31 07:40:04</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNzg2ZDIzOA==">786d238</a> export options</li>
+<li>[ <em>2022-06-03 07:40:56</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMTMyMjM1Nw==">1322357</a> migrate to <code>yarn v2</code></li>
+<li>[ <em>2022-06-03 08:03:10</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNDMxMzQ1MQ==">4313451</a> fix <code>yarn v2</code> exclusions</li>
+<li>[ <em>2022-06-03 08:32:17</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvM2JkYmIzNQ==">3bdbb35</a> update module resolutions</li>
+<li>[ <em>2022-06-03 08:51:04</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZjk1NjRiZg==">f9564bf</a> enable global cache</li>
+<li>[ <em>2022-06-10 16:37:52</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMzAxZjhhNA==">301f8a4</a> using <code>npm</code> instead of <code>yarn</code></li>
+<li>[ <em>2022-06-14 18:29:13</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMjliN2ZhZQ==">29b7fae</a> fresh build</li>
+<li>[ <em>2022-06-14 18:29:42</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYjNiODgwMw==">b3b8803</a> add test unit</li>
+<li>[ <em>2022-06-14 18:31:01</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvM2RiMTdkNw==">3db17d7</a> fresh install</li>
+<li>[ <em>2022-06-14 18:34:14</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYWEzNmJlYQ==">aa36bea</a> fresh install</li>
+<li>[ <em>2022-10-17 00:51:27</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNzhmZmVmMw==">78ffef3</a> update</li>
+<li>[ <em>2022-10-17 00:55:56</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMzM0NDk4MA==">3344980</a> convert parse to async</li>
+<li>[ <em>2022-10-17 00:59:02</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNjQ0NzQyNg==">6447426</a> -test</li>
+<li>[ <em>2022-10-17 01:02:36</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYTJhNjBkYg==">a2a60db</a> update</li>
+<li>[ <em>2022-10-17 01:16:56</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYzk4MDE5Yw==">c98019c</a> update dependencies</li>
+<li>[ <em>2022-10-17 01:30:34</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvN2QzZDMxZQ==">7d3d31e</a> update</li>
+<li>[ <em>2022-10-17 01:40:24</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNjc1M2E0Mg==">6753a42</a> fix nulled process</li>
+<li>[ <em>2022-10-17 01:43:15</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMWJkOTU0ZA==">1bd954d</a> add docs</li>
+<li>[ <em>2022-10-17 01:44:54</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvOWU0NjBmNA==">9e460f4</a> update docs</li>
+<li>[ <em>2022-10-17 01:45:16</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvOGFhODJjNA==">8aa82c4</a> update docs</li>
+</ul>
+<p><strong>1.1.4</strong></p>
+<ul>
+<li>[ <em>2022-10-17 01:49:39</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvM2NhZmM5ZA==">3cafc9d</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL1JFQURNRS5tZA==">README.md</a></li>
+<li>[ <em>2022-10-17 01:55:33</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNTI5OGUzNA==">5298e34</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL0NIQU5HRUxPRy5tZA==">CHANGELOG.md</a></li>
+<li>[ <em>2022-10-17 01:58:21</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMjk3NGMzYQ==">2974c3a</a> update docs</li>
+<li>[ <em>2022-10-26 09:03:33</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZDUwZjY4MQ==">d50f681</a> update dependencies</li>
+</ul>
+<p><strong>1.1.5</strong></p>
+<ul>
+<li>[ <em>2022-11-09 16:30:14</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYjViNjg5Ng==">b5b6896</a> add OR</li>
+<li>[ <em>2022-11-09 16:31:28</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYWU2ZmNhNQ==">ae6fca5</a> add null validation</li>
+<li>[ <em>2022-11-09 16:32:08</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNjAxMTUyMw==">6011523</a> Update safelink.yml</li>
+<li>[ <em>2022-11-09 16:33:27</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNjFjMGQwMw==">61c0d03</a> Using npm</li>
+<li>[ <em>2022-11-09 16:37:43</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZWNjNDA5Zg==">ecc409f</a> add commits</li>
+<li>[ <em>2022-11-09 16:38:18</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYWJkNDZlYg==">abd46eb</a> update build</li>
+<li>[ <em>2022-11-09 16:53:11</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZDYzNjgxZA==">d63681d</a> Update safelink.yml</li>
+<li>[ <em>2022-11-09 16:53:44</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNWFjZmFlOQ==">5acfae9</a> Update safelink.yml</li>
+<li>[ <em>2022-11-09 16:54:14</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvOTZiYTk4Yw==">96ba98c</a> Update safelink.yml</li>
+<li>[ <em>2022-11-09 16:59:58</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNjAwYWU0NQ==">600ae45</a> Update safelink.yml</li>
+<li>[ <em>2022-11-09 17:06:39</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNGM4NjVmZQ==">4c865fe</a> update build</li>
+</ul>
+<p><strong>1.1.6</strong></p>
+<ul>
+<li>[ <em>2022-11-20 11:38:32</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvN2JjOTYwZg==">7bc960f</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL1JFQURNRS5tZA==">README.md</a></li>
+<li>[ <em>2022-11-20 11:41:15</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvOGQzYzg0OA==">8d3c848</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL1JFQURNRS5tZA==">README.md</a></li>
+<li>[ <em>2022-12-21 10:12:29</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNjk0Yzg3Yw==">694c87c</a> update deps and scripts</li>
+<li>[ <em>2022-12-21 10:13:04</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMzc3YTkxMg==">377a912</a> move and export all types from/to globals</li>
+<li>[ <em>2022-12-21 10:13:30</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNzQwNWE0Yg==">7405a4b</a> Update</li>
+<li>[ <em>2022-12-21 10:14:48</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvOTA1MTUwOQ==">9051509</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL1JFQURNRS5tZA==">README.md</a></li>
+<li>[ <em>2022-12-21 10:16:11</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvM2ZhYWJlNQ==">3faabe5</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL1JFQURNRS5tZA==">README.md</a></li>
+<li>[ <em>2022-12-21 10:16:56</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvOThkMDBkNQ==">98d00d5</a> push release too</li>
+</ul>
+<p><strong>1.1.7</strong></p>
+<ul>
+<li>[ <em>2022-12-21 10:18:48</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvOWQ1ODQ4ZA==">9d5848d</a> Update docs</li>
+<li>[ <em>2022-12-21 03:21:46</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYmJmMTRmNw==">bbf14f7</a> Build Wed Dec 21 03:21:46 UTC 2022</li>
+<li>[ <em>2022-12-21 10:23:57</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMTNhZGVlYg==">13adeeb</a> move types to globals</li>
+<li>[ <em>2022-12-21 10:26:37</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNzFkMDA3ZQ==">71d007e</a> Merge branch ‘master’ of <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluaw==">https://github.com/dimaslanjaka/safelink</a></li>
+</ul>
+<p><strong>1.1.8</strong></p>
+<ul>
+<li>[ <em>2022-12-21 03:29:08</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZWZlNWYzOQ==">efe5f39</a> Build Wed Dec 21 03:29:08 UTC 2022</li>
+<li>[ <em>2022-12-21 11:48:28</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvN2ZjYjUyNQ==">7fcb525</a> add changelog builder</li>
+<li>[ <em>2022-12-21 11:49:39</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZjc3YmY5MQ==">f77bf91</a> Merge branch ‘master’ of <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluaw==">https://github.com/dimaslanjaka/safelink</a></li>
+<li>[ <em>2022-12-21 04:50:57</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYzZmNmQxMA==">c6f6d10</a> Build Wed Dec 21 04:50:57 UTC 2022</li>
+<li>[ <em>2022-12-21 11:53:31</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNjJhYjhmMg==">62ab8f2</a> Update changelog</li>
+<li>[ <em>2022-12-21 12:02:39</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMjAwNjRlYw==">20064ec</a> Update docs and changelog</li>
+<li>[ <em>2022-12-21 12:02:48</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNmI1NzFjZQ==">6b571ce</a> Merge branch ‘master’ of <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluaw==">https://github.com/dimaslanjaka/safelink</a></li>
+<li>[ <em>2022-12-21 05:03:53</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvOTg3MDYxYQ==">987061a</a> Build Wed Dec 21 05:03:53 UTC 2022</li>
+<li>[ <em>2022-12-21 12:06:25</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNjMyM2QyMg==">6323d22</a> Update docs</li>
+<li>[ <em>2022-12-21 12:06:31</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNGUwZTViNw==">4e0e5b7</a> Merge branch ‘master’ of <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluaw==">https://github.com/dimaslanjaka/safelink</a></li>
+<li>[ <em>2022-12-21 05:07:42</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMjMzNWY2Yg==">2335f6b</a> Build Wed Dec 21 05:07:42 UTC 2022</li>
+<li>[ <em>2022-12-21 12:27:37</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZmU2OGJhOQ==">fe68ba9</a> Update docs</li>
+<li>[ <em>2022-12-21 12:48:00</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMmEzZWExYQ==">2a3ea1a</a> using customized package cross-spawn</li>
+<li>[ <em>2022-12-21 12:48:07</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMzhlZWU2Ng==">38eee66</a> Merge branch ‘master’ of <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluaw==">https://github.com/dimaslanjaka/safelink</a></li>
+<li>[ <em>2022-12-21 13:10:23</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNTM0YTZlNg==">534a6e6</a> Update docs</li>
+<li>[ <em>2022-12-21 06:11:40</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNDM3ZTNiYQ==">437e3ba</a> Build Wed Dec 21 06:11:40 UTC 2022</li>
+<li>[ <em>2022-12-21 13:17:22</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZmQ3NmIzYg==">fd76b3b</a> Update docs</li>
+<li>[ <em>2022-12-21 13:19:47</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvODU4ZWFkNQ==">858ead5</a> Update build</li>
+</ul>
+<p><strong>1.1.9</strong></p>
+<ul>
+<li>[ <em>2022-12-21 13:21:59</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNTQyMmY5Zg==">5422f9f</a> Merge branch ‘master’ of <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluaw==">https://github.com/dimaslanjaka/safelink</a></li>
+<li>[ <em>2022-12-21 06:23:16</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMzQ5ODBhOQ==">34980a9</a> Build Wed Dec 21 06:23:16 UTC 2022</li>
+<li>[ <em>2022-12-26 12:35:58</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNTI1M2IxZA==">5253b1d</a> declare to global scope <code>safelink</code> and <code>safelinkify</code></li>
+<li>[ <em>2022-12-26 05:37:11</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNjQ1NDJkNQ==">64542d5</a> Build Mon Dec 26 05:37:11 UTC 2022</li>
+<li>[ <em>2022-12-26 12:55:41</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMDUwYTM1Ng==">050a356</a> export safelink and safelinkify to global scrope - update docs</li>
+<li>[ <em>2022-12-26 12:55:50</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMjhiZTljYw==">28be9cc</a> export safelink and safelinkify to global scrope - update docs</li>
+<li>[ <em>2022-12-26 12:57:09</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZTQxYjk3YQ==">e41b97a</a> Merge branch ‘master’ of <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluaw==">https://github.com/dimaslanjaka/safelink</a></li>
+</ul>
+<p><strong>1.1.10</strong></p>
+<ul>
+<li>[ <em>2022-12-26 12:58:46</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNWM3NTIyZQ==">5c7522e</a> update changelog</li>
+<li>[ <em>2022-12-26 05:59:54</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYjJjMzQ0Yw==">b2c344c</a> Build Mon Dec 26 05:59:54 UTC 2022</li>
+<li>[ <em>2022-12-26 13:02:29</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMDc0Njg5ZA==">074689d</a> rename <code>README.md</code> to lowercase</li>
+<li>[ <em>2022-12-26 13:02:38</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvOTk3YjExNg==">997b116</a> Merge branch ‘master’ of <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluaw==">https://github.com/dimaslanjaka/safelink</a></li>
+<li>[ <em>2022-12-26 06:03:46</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvN2E4NTkxZg==">7a8591f</a> Build Mon Dec 26 06:03:46 UTC 2022</li>
+<li>[ <em>2022-12-26 13:13:41</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYzNkNDg3MA==">c3d4870</a> Update script.js</li>
+<li>[ <em>2022-12-27 18:13:26</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZjZlYWRkOA==">f6eadd8</a> update scripts</li>
+<li>[ <em>2022-12-27 11:14:25</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvODBlYzJmYg==">80ec2fb</a> Build Tue Dec 27 11:14:25 UTC 2022</li>
+<li>[ <em>2022-12-28 03:17:12</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMzJkMjMxYQ==">32d231a</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL3JlYWRtZS5tZA==">readme.md</a></li>
+<li>[ <em>2022-12-27 20:18:29</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvY2IxMzU1MQ==">cb13551</a> Build Tue Dec 27 20:18:29 UTC 2022</li>
+<li>[ <em>2022-12-28 03:23:55</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZTdlZjRhOA==">e7ef4a8</a> update deps</li>
+<li>[ <em>2022-12-28 03:25:15</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYjdiMjI2MA==">b7b2260</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL3JlYWRtZS5tZA==">readme.md</a></li>
+<li>[ <em>2022-12-27 20:25:32</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZGVjMTM4YQ==">dec138a</a> Update build from <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZTdlZjRhOGYxZDdlOTdlYzM0ZDdjZTQxZDBkNDY5OTIzYmFmYjgwZA==">https://github.com/dimaslanjaka/safelink/commit/e7ef4a8f1d7e97ec34d7ce41d0d469923bafb80d</a></li>
+<li>[ <em>2022-12-28 03:29:52</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMzExZjYwMA==">311f600</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL3JlYWRtZS5tZA==">readme.md</a></li>
+<li>[ <em>2022-12-27 20:31:12</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZTJjYTQyNg==">e2ca426</a> Update build from <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMzExZjYwMGMzYjEwNzBjYjI1YWJmNDAwNTNhN2UxOTFkYzEwYTRmNw==">https://github.com/dimaslanjaka/safelink/commit/311f600c3b1070cb25abf40053a7e191dc10a4f7</a></li>
+<li>[ <em>2022-12-28 03:31:19</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMWNkOGRjYQ==">1cd8dca</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL3JlYWRtZS5tZA==">readme.md</a></li>
+<li>[ <em>2022-12-27 20:32:50</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMDU1NTI4Mw==">0555283</a> Update build from <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMWNkOGRjYTg0Yzg3NTNjMWNjZDdiZTk2YmM3NDI1M2YxOGRhYThlNw==">https://github.com/dimaslanjaka/safelink/commit/1cd8dca84c8753c1ccd7be96bc74253f18daa8e7</a></li>
+<li>[ <em>2022-12-28 03:33:15</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvOWFlZjA1Zg==">9aef05f</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL3JlYWRtZS5tZA==">readme.md</a></li>
+<li>[ <em>2022-12-28 03:33:41</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZmFiZTI0NQ==">fabe245</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL3JlYWRtZS5tZA==">readme.md</a></li>
+<li>[ <em>2022-12-28 03:34:49</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYjMyMjIwYQ==">b32220a</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL3JlYWRtZS5tZA==">readme.md</a></li>
+<li>[ <em>2022-12-28 03:35:18</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMTAzYzkwYw==">103c90c</a> Update <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL3JlYWRtZS5tZA==">readme.md</a></li>
+<li>[ <em>2022-12-27 20:35:31</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNGQzMTA3ZQ==">4d3107e</a> Update build from <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvOWFlZjA1ZmVmZjEzZGEzYTI2ODE4YzM4MmI0Njc2YWU1N2VmZWFhNQ==">https://github.com/dimaslanjaka/safelink/commit/9aef05feff13da3a26818c382b4676ae57efeaa5</a>  (HEAD -&gt; master, origin/master, origin/HEAD)</li>
+</ul>
+</div>
+    </div>
+  </div>
+</div>
+
+<script src="dist/bundle.js"></script>
+<script>document.addEventListener('DOMContentLoaded', function () {
+  const table = document.querySelector('table#table');
+  table.querySelector('#resolveQueryUrl').innerHTML = typeof resolveQueryUrl;
+  table.querySelector('#parseQuery').innerHTML = typeof parseQuery;
+
+  /**
+   * Check if variable is ES5 class
+   * @param {any} f
+   * @returns {boolean}
+   */
+  function isClass(f) {
+    return (
+      typeof f === 'function' &&
+      (() => {
+        try {
+          f();
+          return false;
+        } catch {
+          return true;
+        }
+      })()
+    );
+  }
+
+  const isSafelinkClass = isClass(safelink);
+  table.innerHTML += `<tr><td>global safelink</td> <td><code class="language-javascript">isClass(safelink)</code></td><td>is ES5 Class: ${isSafelinkClass}</td></tr>`;
+  table.innerHTML += `<tr><td>global safelink</td> <td><code class="language-javascript">typeof safelink</code></td><td>${typeof safelink}</td></tr>`;
+  table.innerHTML += `<tr><td>global safelinkify</td> <td><code class="language-javascript">typeof safelinkify</code></td><td>${typeof safelinkify}</td></tr>`;
+  table.innerHTML += `<tr><td>global safelinkify.safelink</td> <td><code class="language-javascript">isClass(safelinkify.safelink)</code></td><td>is ES5 Class: ${isClass(
+    safelinkify.safelink
+  )}</td></tr>`;
+
+  if (isSafelinkClass) {
+    /**
+     * @type {(typeof import('safelinkify'))['default']}
+     */
+    const instance = new safelink({
+      // exclude patterns (dont anonymize these patterns)
+      exclude: [/([a-z0-9](?:[a-z0-9-]{1,61}[a-z0-9])?[.])*webmanajemen\.com/],
+      // url redirector
+      redirect: 'https://www.webmanajemen.com/page/safelink.html?url=',
+      // debug
+      verbose: false,
+      // encryption type = 'base64' | 'aes'
+      type: 'base64',
+      // password aes, default = root
+      password: 'unique-password'
+    });
+    instance.parse(document.querySelector('div#external'));
+    instance.parse(document.querySelector('div#internal'));
+
+    const currentQuery = JSON.stringify(instance.resolveQueryUrl(location.href), null, 2);
+    table.innerHTML += `<tr id="current-queries"><td>Redirector Resolver <a href="#query-url" class="btn btn-sm btn-warning">Change</a></td> <td><code>sf.resolveQueryUrl(location.href)</code></td><td><pre><code class="language-json">${currentQuery}</code></pre></td></tr>`;
+
+    const param = new URLSearchParams(location.search);
+    if (param.has('o') || param.has('url') || location.href.match(/#(o|url)=/)) {
+      document.getElementById('current-queries').scrollIntoView();
+    }
+  }
+
+  Array.from(document.links).forEach((el) => {
+    if (!el.innerHTML.length) {
+      el.textContent = el.getAttribute('href');
+      el.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.location.href = el.href;
+        if (el.href.match(/#(o|url)=/)) location.reload();
+      });
+    }
+  });
+});
+</script>
+<link rel="stylesheet" href="/safelink/node_modules/highlight.js/styles/sunburst.css" />
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"
+  integrity="sha512-yUUc0qWm2rhM7X0EFe82LNnv2moqArj5nro/w1bi05A09hRVeIZbN6jlMoyu0+4I/Bu4Ck/85JQIU82T82M28w=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+<script>
+  hljs.highlightAll();
+</script>
+<script src="https://www.webmanajemen.com/r-ads.js"></script>
+</main>
+    <div class="container">
+      <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item"><a href="/" class="nav-link px-2 text-muted">Home</a></li>
+          <li class="nav-item"><a href="/safelink" class="nav-link px-2 text-muted">Safelink</a></li>
+          <li class="nav-item"><a href="/js-prototypes" class="nav-link px-2 text-muted">js-prototypes</a></li>
+          <li class="nav-item"><a href="/smartform" class="nav-link px-2 text-muted">Smartform</a></li>
+          <li class="nav-item"><a href="/about" class="nav-link px-2 text-muted">About Me</a></li>
+        </ul>
+        <p class="text-center text-muted">© 2022 Website Manajemen Indonesia, Inc</p>
+      </footer>
+    </div>
+
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
