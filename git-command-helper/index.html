@@ -43,8 +43,16 @@
 <pre><code class="language-bash"><span class="hl-0">npm i git-command-helper</span>
 </code></pre>
 
-<a href="#main-class" id="main-class" style="color: inherit; text-decoration: none;">
-  <h3><a href="https://github.com/dimaslanjaka/git-command-helper/blob/master/src/index.ts">Main Class</a></h3>
+<a href="#documentation" id="documentation" style="color: inherit; text-decoration: none;">
+  <h2>Documentation</h2>
+</a>
+<ul>
+<li><a href="https://www.webmanajemen.com/docs/git-command-helper/">API DOCUMENTATION</a></li>
+<li><a href="https://github.com/dimaslanjaka/git-command-helper/blob/master/src/index.ts">Main Class</a></li>
+</ul>
+
+<a href="#usages" id="usages" style="color: inherit; text-decoration: none;">
+  <h2>Usages</h2>
 </a>
 <p>Example</p>
 <pre><code class="language-js"><span class="hl-1">import</span><span class="hl-0"> </span><span class="hl-2">git</span><span class="hl-0"> </span><span class="hl-1">from</span><span class="hl-0"> </span><span class="hl-3">&#39;git-command-helper&#39;</span><span class="hl-0"> </span><span class="hl-4">// const git = require(&#39;git-command-helper&#39;).default</span><br/><span class="hl-4">// start current dir</span><br/><span class="hl-5">const</span><span class="hl-0"> </span><span class="hl-6">github</span><span class="hl-0"> = </span><span class="hl-5">new</span><span class="hl-0"> </span><span class="hl-7">git</span><span class="hl-0">(</span><span class="hl-2">__dirname</span><span class="hl-0">)</span><br/><span class="hl-4">// get current status</span><br/><span class="hl-2">git</span><span class="hl-0">.</span><span class="hl-7">status</span><span class="hl-0">().</span><span class="hl-7">then</span><span class="hl-0">(</span><span class="hl-2">console</span><span class="hl-0">.</span><span class="hl-2">log</span><span class="hl-0">)</span><br/><span class="hl-4">// get submodule informations</span><br/><span class="hl-1">if</span><span class="hl-0"> (</span><span class="hl-2">git</span><span class="hl-0">.</span><span class="hl-2">submodule</span><span class="hl-0">.</span><span class="hl-7">hasSubmodule</span><span class="hl-0">()) </span><span class="hl-2">console</span><span class="hl-0">.</span><span class="hl-7">log</span><span class="hl-0">(</span><span class="hl-2">git</span><span class="hl-0">.</span><span class="hl-2">submodule</span><span class="hl-0">.</span><span class="hl-7">get</span><span class="hl-0">());</span>
@@ -60,7 +68,7 @@
   <h2>Another Examples</h2>
 </a>
 <ul>
-<li><a href="https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/deploy.ts">Usage Example With Gulp v4</a></li>
+<li><a href="https://github.com/dimaslanjaka/static-blog-generator-hexo/blob/master/gulpfile.js">Usage Example With Gulp v4</a></li>
 </ul>
 
 <a href="#links" id="links" style="color: inherit; text-decoration: none;">
@@ -119,6 +127,7 @@
 <ul>
 <li class="tsd-kind-module tsd-parent-kind-module"><a href="modules/index._internal_.html">&lt;internal&gt;</a></li>
 <li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-external"><a href="modules/index.spawnAsync.html">spawn<wbr/>Async</a></li></ul></li>
+<li class="tsd-kind-module"><a href="modules/instances.html">instances</a></li>
 <li class="tsd-kind-module"><a href="modules/latestCommit.html">latest<wbr/>Commit</a></li>
 <li class="tsd-kind-module"><a href="modules/noop.html">noop</a></li>
 <li class="tsd-kind-module"><a href="modules/shell.html">shell</a></li>
