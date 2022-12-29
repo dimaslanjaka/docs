@@ -1,25 +1,24 @@
 {
   "name": "safelinkify",
-  "version": "1.1.10",
+  "version": "1.1.11",
   "description": "NodeJS anonymizer external links. Anonymize external links to outbound page redirector for SEO.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist",
-    "src",
     "readme.md",
     "./*.json",
     "postinstall.js"
   ],
   "scripts": {
-    "start": "ts-node docs-serve.ts",
+    "start": "ts-node typedoc-server.js",
     "prebuild": "git pull -X theirs",
-    "build": "tsc -p tsconfig.build.json && webpack && gulp",
+    "build": "tsc -p tsconfig.build.json && webpack",
     "postbuild": "node packer.js",
-    "docs": "node docs.js && webpack && gulp",
+    "docs": "node docs.js && webpack",
     "postinstall": "node postinstall.js",
     "dev": "nodemon",
-    "preupdate": "curl -L https://github.com/microsoft/TypeScript/raw/main/lib/lib.dom.d.ts > src/lib/lib.dom.ts",
+    "preupdate": "curl -L https://github.com/microsoft/TypeScript/raw/main/lib/lib.dom.d.ts > src/lib/lib.dom.ts && curl -L https://github.com/dimaslanjaka/nodejs-package-types/raw/main/typedoc-server.js > typedoc-server.js",
     "update": "curl -L https://github.com/dimaslanjaka/nodejs-package-types/raw/main/.github/workflows/build-release.yml > .github/workflows/build-release.yml && curl -L https://github.com/dimaslanjaka/nodejs-package-types/raw/main/postinstall.js > postinstall.js && curl -L https://github.com/dimaslanjaka/nodejs-package-types/raw/main/packer.js > packer.js && npx npm-check-updates -u -x chalk,hexo && npm install --cache tmp/npm"
   },
   "repository": {
