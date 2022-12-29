@@ -1,0 +1,58 @@
+{
+  "name": "safelinkify",
+  "version": "1.1.10",
+  "description": "NodeJS anonymizer external links. Anonymize external links to outbound page redirector for SEO.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src",
+    "readme.md",
+    "./*.json",
+    "postinstall.js"
+  ],
+  "scripts": {
+    "start": "ts-node index.ts",
+    "prebuild": "git pull -X theirs",
+    "build": "tsc -p tsconfig.build.json && webpack && gulp",
+    "postbuild": "node packer.js && node typedoc-runner.js --commit",
+    "postinstall": "node postinstall.js",
+    "dev": "nodemon",
+    "ci": "yarn install --immutable --immutable-cache --check-cache --frozen-lockfile --check-files",
+    "preupdate": "curl -L https://github.com/microsoft/TypeScript/raw/main/lib/lib.dom.d.ts > src/lib/lib.dom.ts",
+    "update": "curl -L https://github.com/dimaslanjaka/nodejs-package-types/raw/main/.github/workflows/build-release.yml > .github/workflows/build-release.yml && curl -L https://github.com/dimaslanjaka/nodejs-package-types/raw/main/postinstall.js > postinstall.js && curl -L https://github.com/dimaslanjaka/nodejs-package-types/raw/main/packer.js > packer.js && npx npm-check-updates -u -x chalk,hexo && npm install --cache tmp/npm"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dimaslanjaka/safelink.git"
+  },
+  "keywords": [
+    "safelink",
+    "outbound-links",
+    "hyperlinks",
+    "redirector"
+  ],
+  "author": {
+    "email": "dimaslanjaka@gmail.com",
+    "name": "Dimas Lanjaka",
+    "url": "https://www.webmanajemen.com"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dimaslanjaka/safelink/issues"
+  },
+  "homepage": "https://www.webmanajemen.com/docs/safelinkify",
+  "devDependencies": {},
+  "dependencies": {
+    "@popperjs/core": "^2.11.6",
+    "bootstrap": "^5.2.3",
+    "crypto-browserify": "^3.12.0",
+    "crypto-js": "^4.1.1",
+    "highlight.js": "^11.7.0",
+    "jquery": "^3.6.3",
+    "moment": "^2.29.4",
+    "moment-timezone": "^0.5.40",
+    "path-browserify": "^1.0.1",
+    "toastr": "^2.1.4"
+  }
+}
