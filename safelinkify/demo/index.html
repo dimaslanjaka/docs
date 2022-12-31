@@ -285,11 +285,7 @@ npm install
 <tbody>
 <tr>
 <td><code>yarn start</code></td>
-<td>watch src-docs and start server</td>
-</tr>
-<tr>
-<td></td>
-<td>watch src and compile tsc webpack</td>
+<td>serve generated docs</td>
 </tr>
 <tr>
 <td><code>tsc</code></td>
@@ -298,6 +294,18 @@ npm install
 <tr>
 <td><code>webpack</code></td>
 <td>build safelink script</td>
+</tr>
+<tr>
+<td><code>npm run docs</code></td>
+<td>build docs</td>
+</tr>
+<tr>
+<td><code>npm run build</code></td>
+<td>build dist</td>
+</tr>
+<tr>
+<td><code>ts-node old-docs.ts</code></td>
+<td>(<em>deprecated</em>) watch src-docs and start server, watch src and compile tsc webpack</td>
 </tr>
 </tbody>
 </table>
@@ -826,6 +834,44 @@ gulp.task('safelink', () =&gt; {
 <li>[ <em>2022-12-29 16:00:20</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMmJiYjVhYw==">2bbb5ac</a> update deps</li>
 </ul>
 <p><strong>1.1.11</strong></p>
+<ul>
+<li>[ <em>2022-12-29 09:02:44</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNTlkMjcyMg==">59d2722</a> Update build from <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNjA2ZjBlMmI3NWNmYTg3ZDVlZGFlY2IzYTIyZWJkOGY1MjhlMjllMA==">https://github.com/dimaslanjaka/safelink/commit/606f0e2b75cfa87d5edaecb3a22ebd8f528e29e0</a></li>
+<li>[ <em>2022-12-29 16:06:22</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMjRkMTE0Mg==">24d1142</a> update task</li>
+<li>[ <em>2022-12-29 16:32:31</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMmZkZTAxMA==">2fde010</a> update docs</li>
+<li>[ <em>2022-12-29 16:32:37</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNjQ4ZjQ2Mw==">648f463</a> Merge branch ‘master’ of <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluaw==">https://github.com/dimaslanjaka/safelink</a></li>
+<li>[ <em>2022-12-29 09:33:58</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZDU5YTU0Yg==">d59a54b</a> Update build from <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNjQ4ZjQ2M2ZhZTFkMDBjZGVjOWNmYTNmZDllMTU3ODY1NzljNjVlZg==">https://github.com/dimaslanjaka/safelink/commit/648f463fae1d00cdec9cfa3fd9e15786579c65ef</a></li>
+<li>[ <em>2022-12-29 16:40:29</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvOTBkZTE3NQ==">90de175</a> update typedoc</li>
+<li>[ <em>2022-12-29 16:43:18</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYjhiMzM2Mw==">b8b3363</a> update typedocs</li>
+<li>[ <em>2022-12-29 09:45:12</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYzE2NmM4OQ==">c166c89</a> Update build from <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYjhiMzM2MzNjMTdiODU0OTM3MGM5YTdjY2U4NDQxZjQ5ZWI1MDA0OA==">https://github.com/dimaslanjaka/safelink/commit/b8b33633c17b8549370c9a7cce8441f49eb50048</a></li>
+<li>[ <em>2022-12-29 16:45:17</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYzMzMzNhOA==">c3333a8</a> rename <code>tests</code> to <code>src-docs</code></li>
+<li>[ <em>2022-12-29 16:45:30</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMTI2NDVkMw==">12645d3</a> Merge branch ‘master’ of <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluaw==">https://github.com/dimaslanjaka/safelink</a></li>
+<li>[ <em>2022-12-29 09:48:25</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvOWM5OTc2ZQ==">9c9976e</a> Update build from <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMTI2NDVkM2Y3ZjkwMDkwY2EwYTU2OGEwNWQ1YjE4OTkzMDQ5ODc2Yg==">https://github.com/dimaslanjaka/safelink/commit/12645d3f7f90090ca0a568a05d5b18993049876b</a></li>
+<li>[ <em>2022-12-29 16:53:59</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNzkyMGI3Mg==">7920b72</a> update deps</li>
+<li>[ <em>2022-12-29 16:54:17</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvYzI4NjIwMA==">c286200</a> Merge branch ‘master’ of <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluaw==">https://github.com/dimaslanjaka/safelink</a></li>
+<li>[ <em>2022-12-29 16:57:21</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZTdjODdmZQ==">e7c87fe</a> update deps</li>
+<li>[ <em>2022-12-29 09:59:13</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMDhjOTE2ZA==">08c916d</a> Update build from <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZTdjODdmZWMxZTI5NjE5YWM5YmI0ZmNjYzZkYzgzOThkYTI3YjIxNA==">https://github.com/dimaslanjaka/safelink/commit/e7c87fec1e29619ac9bb4fccc6dc8398da27b214</a></li>
+<li>[ <em>2022-12-29 17:00:39</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZjhlZTc1Ng==">f8ee756</a> update</li>
+<li>[ <em>2022-12-29 17:00:49</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNTVlOTNhMA==">55e93a0</a> Merge branch ‘master’ of <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluaw==">https://github.com/dimaslanjaka/safelink</a></li>
+<li>[ <em>2022-12-29 10:01:54</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZTI3NWVjNg==">e275ec6</a> Update build from <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNTVlOTNhMDNiMjEzYWRmYzNjZjQ3OTViNWEzZDVkMDVmODMwNjIzNw==">https://github.com/dimaslanjaka/safelink/commit/55e93a03b213adfc3cf4795b5a3d5d05f8306237</a></li>
+<li>[ <em>2022-12-29 17:16:19</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNzk1NGZiNg==">7954fb6</a> update</li>
+<li>[ <em>2022-12-29 17:16:29</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZDVlMWMxYQ==">d5e1c1a</a> Merge branch ‘master’ of <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluaw==">https://github.com/dimaslanjaka/safelink</a></li>
+<li>[ <em>2022-12-29 10:17:48</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvOGJmZDFjMg==">8bfd1c2</a> Update build from <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZDVlMWMxYTUxYjI0MTI5YmMxYTU1MmUxZTJmMWRiNmNkMmIyZWE1ZA==">https://github.com/dimaslanjaka/safelink/commit/d5e1c1a51b24129bc1a552e1e2f1db6cd2b2ea5d</a></li>
+<li>[ <em>2022-12-29 18:24:59</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZGNiM2U0NQ==">dcb3e45</a> update deps</li>
+<li>[ <em>2022-12-29 18:25:03</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMzZkMTg5OQ==">36d1899</a> Merge branch ‘master’ of <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluaw==">https://github.com/dimaslanjaka/safelink</a></li>
+<li>[ <em>2022-12-29 11:26:18</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZWRiMjVmOA==">edb25f8</a> Update build from <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMzZkMTg5OWY5OTE3YmM5OGZlYjcxOTgwNDU3NWY5YmFiNjFiZjIzNg==">https://github.com/dimaslanjaka/safelink/commit/36d1899f9917bc98feb719804575f9bab61bf236</a></li>
+<li>[ <em>2022-12-31 20:25:39</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNDYxNDgyMA==">4614820</a> Update postinstall.js</li>
+<li>[ <em>2022-12-31 13:27:00</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZTRhNWIzZg==">e4a5b3f</a> Update build from <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvNDYxNDgyMDBkN2NiZDc4ZmU2NjY3Y2ViNWM4MTRlNDMwMGQ1NWU0ZA==">https://github.com/dimaslanjaka/safelink/commit/46148200d7cbd78fe6667ceb5c814e4300d55e4d</a></li>
+<li>[ <em>2022-12-31 21:02:21</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMTAyN2ExMA==">1027a10</a> Update .prettierrc.json</li>
+<li>[ <em>2022-12-31 22:31:37</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMDU1ZDZkNw==">055d6d7</a> prepare update 1.1.12</li>
+</ul>
+<p><strong>1.1.12</strong></p>
+<ul>
+<li>[ <em>2022-12-31 22:32:28</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZmI1ZDAxMA==">fb5d010</a> 1.1.12</li>
+<li>[ <em>2022-12-31 22:38:09</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvOGVlZGE4YQ==">8eeda8a</a> update deps</li>
+<li>[ <em>2022-12-31 15:52:24</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvMzU1NDAwYQ==">355400a</a> Update build from <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvOGVlZGE4YTllMjkxZTU5Yzc5YWViYzkwNTg4MWE3OTg0NDg1ZTljNA==">https://github.com/dimaslanjaka/safelink/commit/8eeda8a9e291e59c79aebc905881a7984485e9c4</a></li>
+<li>[ <em>2022-12-31 23:08:30</em> ] <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zYWZlbGluay9jb21taXQvZmYyZTYzMQ==">ff2e631</a> update deps</li>
+</ul>
+<p><strong>1.1.13</strong></p>
 </div>
     </div>
   </div>
