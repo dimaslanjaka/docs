@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">48% </span>
+                <span class="strong">41.66% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>12/25</span>
+                <span class='fraction'>15/36</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/5</span>
+                <span class='fraction'>0/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">52.17% </span>
+                <span class="strong">41.66% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>12/23</span>
+                <span class='fraction'>15/36</span>
             </div>
         
             
@@ -108,32 +108,32 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import gulp from 'gulp';
 import { spawn } from 'hexo-util';
@@ -146,27 +146,27 @@ import './gulp.safelink';
 import './gulp.seo';
 &nbsp;
 // commit current project
-export function <span class="fstat-no" title="function not covered" >commitProject(</span>finish: gulp.TaskFunctionCallback) {
-  const gitDirs = <span class="cstat-no" title="statement not covered" >[join(process.cwd(), 'src-posts'), join(process.cwd(), 'source'), process.cwd()];</span>
-  const commit = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >() =&gt; {</span></span>
-<span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (!gitDirs.length) <span class="cstat-no" title="statement not covered" >return finish();</span></span>
-    const gitDir = <span class="cstat-no" title="statement not covered" >gitDirs[0];</span>
-    const opt = <span class="cstat-no" title="statement not covered" >{</span>
-      cwd: gitDir,
-      stdio: 'inherit'
-    };
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >export function commitProject(finish: gulp.TaskFunctionCallback) {</span></span>
+<span class="cstat-no" title="statement not covered" >  const gitDirs = [join(process.cwd(), 'src-posts'), join(process.cwd(), 'source'), process.cwd()];</span>
+<span class="cstat-no" title="statement not covered" >  const commit = () =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    if (!gitDirs.length) return finish();</span>
+<span class="cstat-no" title="statement not covered" >    const gitDir = gitDirs[0];</span>
+<span class="cstat-no" title="statement not covered" >    const opt = {</span>
+<span class="cstat-no" title="statement not covered" >      cwd: gitDir,</span>
+<span class="cstat-no" title="statement not covered" >      stdio: 'inherit'</span>
+<span class="cstat-no" title="statement not covered" >    };</span>
 <span class="cstat-no" title="statement not covered" >    return spawn('git', ['add', '-A'], &lt;any&gt;opt)</span>
-      .then(<span class="fstat-no" title="function not covered" >() =&gt; <span class="cstat-no" title="statement not covered" >s</span>pawn('git', ['commit', '-m', 'update ' + new Date()], &lt;any&gt;opt))</span>
-      .catch(<span class="fstat-no" title="function not covered" >(e</span>) =&gt; {
-<span class="cstat-no" title="statement not covered" >        <span class="missing-if-branch" title="if path not taken" >I</span>if (e instanceof Error) <span class="cstat-no" title="statement not covered" >console.log(e.message, gitDir);</span></span>
-      })
-      .finally(<span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      .then(() =&gt; spawn('git', ['commit', '-m', 'update ' + new Date()], &lt;any&gt;opt))</span>
+<span class="cstat-no" title="statement not covered" >      .catch((e) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        if (e instanceof Error) console.log(e.message, gitDir);</span>
+<span class="cstat-no" title="statement not covered" >      })</span>
+<span class="cstat-no" title="statement not covered" >      .finally(() =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >        gitDirs.shift();</span>
 <span class="cstat-no" title="statement not covered" >        commit();</span>
-      });
-  };
+<span class="cstat-no" title="statement not covered" >      });</span>
+<span class="cstat-no" title="statement not covered" >  };</span>
 <span class="cstat-no" title="statement not covered" >  return commit();</span>
-}
+<span class="cstat-no" title="statement not covered" >}</span>
 &nbsp;
 gulp.task('project-commit', commitProject);
 &nbsp;
@@ -177,8 +177,8 @@ export default gulp;
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
-                <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9pc3RhbmJ1bC5qcy5vcmcv" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2022-12-20T14:14:46.969Z
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2022-12-31T09:50:56.128Z
             </div>
         <script src="prettify.js"></script>
         <script>
