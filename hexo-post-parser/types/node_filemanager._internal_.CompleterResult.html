@@ -3,7 +3,7 @@
 <div class="table-cell" id="tsd-search" data-base="..">
 <div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M15.7824 13.833L12.6666 10.7177C12.5259 10.5771 12.3353 10.499 12.1353 10.499H11.6259C12.4884 9.39596 13.001 8.00859 13.001 6.49937C13.001 2.90909 10.0914 0 6.50048 0C2.90959 0 0 2.90909 0 6.49937C0 10.0896 2.90959 12.9987 6.50048 12.9987C8.00996 12.9987 9.39756 12.4863 10.5008 11.6239V12.1332C10.5008 12.3332 10.5789 12.5238 10.7195 12.6644L13.8354 15.7797C14.1292 16.0734 14.6042 16.0734 14.8948 15.7797L15.7793 14.8954C16.0731 14.6017 16.0731 14.1267 15.7824 13.833ZM6.50048 10.499C4.29094 10.499 2.50018 8.71165 2.50018 6.49937C2.50018 4.29021 4.28781 2.49976 6.50048 2.49976C8.71001 2.49976 10.5008 4.28708 10.5008 6.49937C10.5008 8.70852 8.71314 10.499 6.50048 10.499Z" fill="var(--color-text)"></path></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div>
 <div class="field">
-<div id="tsd-toolbar-links"><a href="https://www.webmanajemen.com">Homepage</a><a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYQ==">GitHub</a></div></div>
+<div id="tsd-toolbar-links"><a href="https://www.webmanajemen.com">Homepage</a><a href="https://github.com/dimaslanjaka">GitHub</a></div></div>
 <ul class="results">
 <li class="state loading">Preparing search index...</li>
 <li class="state failure">The search index is not available</li></ul><a href="../index.html" class="title">Hexo Post Parser</a></div>
@@ -49,6 +49,7 @@
 <ul>
 <li class="tsd-kind-module tsd-parent-kind-module"><a href="../modules/dateMapper._internal_.html">&lt;internal&gt;</a></li></ul></li>
 <li class="tsd-kind-module"><a href="../modules/generatePostId.html">generate<wbr/>Post<wbr/>Id</a></li>
+<li class="tsd-kind-module"><a href="../modules/globals.html">globals</a></li>
 <li class="tsd-kind-module"><a href="../modules/gulp_utils.html">gulp/utils</a>
 <ul>
 <li class="tsd-kind-module tsd-parent-kind-module"><a href="../modules/gulp_utils._internal_.html">&lt;internal&gt;</a></li></ul></li>
@@ -60,6 +61,9 @@
 <li class="tsd-kind-module"><a href="../modules/node_color.html">node/color</a>
 <ul>
 <li class="tsd-kind-module tsd-parent-kind-module"><a href="../modules/node_color._internal_.html">&lt;internal&gt;</a></li></ul></li>
+<li class="tsd-kind-module"><a href="../modules/node_debug.html">node/debug</a>
+<ul>
+<li class="tsd-kind-module tsd-parent-kind-module"><a href="../modules/node_debug._internal_.html">&lt;internal&gt;</a></li></ul></li>
 <li class="tsd-kind-module"><a href="../modules/node_escape_string_regexp.html">node/escape-<wbr/>string-<wbr/>regexp</a></li>
 <li class="current tsd-kind-module"><a href="../modules/node_filemanager.html">node/filemanager</a>
 <ul>
@@ -136,9 +140,7 @@
 <li class="tsd-kind-module"><a href="../modules/node_utils.html">node/utils</a></li>
 <li class="tsd-kind-module"><a href="../modules/node_uuid.html">node/uuid</a></li>
 <li class="tsd-kind-module"><a href="../modules/parsePermalink.html">parse<wbr/>Permalink</a></li>
-<li class="tsd-kind-module"><a href="../modules/parsePost.html">parse<wbr/>Post</a>
-<ul>
-<li class="tsd-kind-module tsd-parent-kind-module"><a href="../modules/parsePost._internal_.html">&lt;internal&gt;</a></li></ul></li>
+<li class="tsd-kind-module"><a href="../modules/parsePost.html">parse<wbr/>Post</a></li>
 <li class="tsd-kind-module"><a href="../modules/shortcodes_codeblock.html">shortcodes/codeblock</a></li>
 <li class="tsd-kind-module"><a href="../modules/shortcodes_css.html">shortcodes/css</a></li>
 <li class="tsd-kind-module"><a href="../modules/shortcodes_extractText.html">shortcodes/extract<wbr/>Text</a></li>
@@ -151,6 +153,8 @@
 <li class="tsd-kind-module"><a href="../modules/types__config.html">types/_<wbr/>config</a>
 <ul>
 <li class="tsd-kind-module tsd-parent-kind-module"><a href="../modules/types__config._internal_.html">&lt;internal&gt;</a></li></ul></li>
+<li class="tsd-kind-module"><a href="../modules/types_parseOptions.html">types/parse<wbr/>Options</a></li>
+<li class="tsd-kind-module"><a href="../modules/types_postAuthor.html">types/post<wbr/>Author</a></li>
 <li class="tsd-kind-module"><a href="../modules/types_postMap.html">types/post<wbr/>Map</a></li>
 <li class="tsd-kind-module"><a href="../modules/types_postMeta.html">types/post<wbr/>Meta</a></li>
 <li class="tsd-kind-module"><a href="../modules/utils_string.html">utils/string</a></li></ul></li></ul></div></details></nav>
@@ -181,6 +185,7 @@
 <li class="tsd-kind-interface tsd-parent-kind-module tsd-is-external"><a href="../interfaces/node_filemanager._internal_.IOptions-1.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg>IOptions</a></li>
 <li class="tsd-kind-interface tsd-parent-kind-module tsd-is-external"><a href="../interfaces/node_filemanager._internal_.Key.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg>Key</a></li>
 <li class="tsd-kind-interface tsd-parent-kind-module tsd-is-external"><a href="../interfaces/node_filemanager._internal_.MakeDirectoryOptions.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg>Make<wbr/>Directory<wbr/>Options</a></li>
+<li class="tsd-kind-interface tsd-parent-kind-module tsd-is-external"><a href="../interfaces/node_filemanager._internal_.Object.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg>Object</a></li>
 <li class="tsd-kind-interface tsd-parent-kind-module tsd-is-external"><a href="../interfaces/node_filemanager._internal_.ObjectEncodingOptions.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg>Object<wbr/>Encoding<wbr/>Options</a></li>
 <li class="tsd-kind-interface tsd-parent-kind-module tsd-is-external"><a href="../interfaces/node_filemanager._internal_.ReadLineOptions.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg>Read<wbr/>Line<wbr/>Options</a></li>
 <li class="tsd-kind-interface tsd-parent-kind-module tsd-is-external"><a href="../interfaces/node_filemanager._internal_.ReadStreamOptions.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg>Read<wbr/>Stream<wbr/>Options</a></li>
@@ -215,12 +220,14 @@
 <li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-external"><a href="node_filemanager._internal_.PromisifyAll.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-4194304-path"></use><use href="#icon-4194304-text"></use></svg>Promisify<wbr/>All</a></li>
 <li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-external"><a href="node_filemanager._internal_.PromisifyAllItems.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-4194304-path"></use><use href="#icon-4194304-text"></use></svg>Promisify<wbr/>All<wbr/>Items</a></li>
 <li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-external"><a href="node_filemanager._internal_.PromisifyAllKeys.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-4194304-path"></use><use href="#icon-4194304-text"></use></svg>Promisify<wbr/>All<wbr/>Keys</a></li>
+<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-external"><a href="node_filemanager._internal_.PropertyKey.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-4194304-path"></use><use href="#icon-4194304-text"></use></svg>Property<wbr/>Key</a></li>
 <li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-external"><a href="node_filemanager._internal_.Required.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-4194304-path"></use><use href="#icon-4194304-text"></use></svg>Required</a></li>
 <li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-external"><a href="node_filemanager._internal_.Resolvable.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-4194304-path"></use><use href="#icon-4194304-text"></use></svg>Resolvable</a></li>
 <li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-external"><a href="node_filemanager._internal_.ReturnType.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-4194304-path"></use><use href="#icon-4194304-text"></use></svg>Return<wbr/>Type</a></li>
 <li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-external"><a href="node_filemanager._internal_.WithoutLast.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-4194304-path"></use><use href="#icon-4194304-text"></use></svg>Without<wbr/>Last</a></li>
 <li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-external"><a href="node_filemanager._internal_.WriteFileOptions.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-4194304-path"></use><use href="#icon-4194304-text"></use></svg>Write<wbr/>File<wbr/>Options</a></li>
-<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="../functions/node_filemanager._internal_.Error-1.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-function)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-64-path"></rect><path d="M9.39 16V7.24H14.55V8.224H10.446V11.128H14.238V12.112H10.47V16H9.39Z" fill="var(--color-text)" id="icon-64-text"></path></svg>Error</a></li></ul></nav></div></div>
+<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="../functions/node_filemanager._internal_.Error-1.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-function)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-64-path"></rect><path d="M9.39 16V7.24H14.55V8.224H10.446V11.128H14.238V12.112H10.47V16H9.39Z" fill="var(--color-text)" id="icon-64-text"></path></svg>Error</a></li>
+<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="../functions/node_filemanager._internal_.Object-1.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>Object</a></li></ul></nav></div></div>
 <div class="overlay"></div><script src="../assets/main.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-106238155-1"></script><script>window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
