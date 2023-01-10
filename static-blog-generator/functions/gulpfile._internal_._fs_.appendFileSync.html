@@ -25,15 +25,15 @@
 <div class="tsd-comment tsd-typography"><p>Synchronously append data to a file, creating the file if it does not yet
 exist. <code>data</code> can be a string or a <code>Buffer</code>.</p>
 <p>The <code>mode</code> option only affects the newly created file. See <a href="../modules/gulpfile._internal_._fs_.open.html">open</a> for more details.</p>
-<pre><code class="language-js"><span class="hl-11">import</span><span class="hl-1"> { </span><span class="hl-5">appendFileSync</span><span class="hl-1"> } </span><span class="hl-11">from</span><span class="hl-1"> </span><span class="hl-2">&#39;fs&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-11">try</span><span class="hl-1"> {</span><br/><span class="hl-1">  </span><span class="hl-8">appendFileSync</span><span class="hl-1">(</span><span class="hl-2">&#39;message.txt&#39;</span><span class="hl-1">, </span><span class="hl-2">&#39;data to append&#39;</span><span class="hl-1">);</span><br/><span class="hl-1">  </span><span class="hl-5">console</span><span class="hl-1">.</span><span class="hl-8">log</span><span class="hl-1">(</span><span class="hl-2">&#39;The &quot;data to append&quot; was appended to file!&#39;</span><span class="hl-1">);</span><br/><span class="hl-1">} </span><span class="hl-11">catch</span><span class="hl-1"> (</span><span class="hl-5">err</span><span class="hl-1">) {</span><br/><span class="hl-1">  </span><span class="hl-3">// Handle the error</span><br/><span class="hl-1">}</span>
+<pre><code class="language-js"><span class="hl-10">import</span><span class="hl-1"> { </span><span class="hl-7">appendFileSync</span><span class="hl-1"> } </span><span class="hl-10">from</span><span class="hl-1"> </span><span class="hl-2">&#39;fs&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-10">try</span><span class="hl-1"> {</span><br/><span class="hl-1">  </span><span class="hl-6">appendFileSync</span><span class="hl-1">(</span><span class="hl-2">&#39;message.txt&#39;</span><span class="hl-1">, </span><span class="hl-2">&#39;data to append&#39;</span><span class="hl-1">);</span><br/><span class="hl-1">  </span><span class="hl-7">console</span><span class="hl-1">.</span><span class="hl-6">log</span><span class="hl-1">(</span><span class="hl-2">&#39;The &quot;data to append&quot; was appended to file!&#39;</span><span class="hl-1">);</span><br/><span class="hl-1">} </span><span class="hl-10">catch</span><span class="hl-1"> (</span><span class="hl-7">err</span><span class="hl-1">) {</span><br/><span class="hl-1">  </span><span class="hl-3">// Handle the error</span><br/><span class="hl-1">}</span>
 </code></pre>
 <p>If <code>options</code> is a string, then it specifies the encoding:</p>
-<pre><code class="language-js"><span class="hl-11">import</span><span class="hl-1"> { </span><span class="hl-5">appendFileSync</span><span class="hl-1"> } </span><span class="hl-11">from</span><span class="hl-1"> </span><span class="hl-2">&#39;fs&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-8">appendFileSync</span><span class="hl-1">(</span><span class="hl-2">&#39;message.txt&#39;</span><span class="hl-1">, </span><span class="hl-2">&#39;data to append&#39;</span><span class="hl-1">, </span><span class="hl-2">&#39;utf8&#39;</span><span class="hl-1">);</span>
+<pre><code class="language-js"><span class="hl-10">import</span><span class="hl-1"> { </span><span class="hl-7">appendFileSync</span><span class="hl-1"> } </span><span class="hl-10">from</span><span class="hl-1"> </span><span class="hl-2">&#39;fs&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-6">appendFileSync</span><span class="hl-1">(</span><span class="hl-2">&#39;message.txt&#39;</span><span class="hl-1">, </span><span class="hl-2">&#39;data to append&#39;</span><span class="hl-1">, </span><span class="hl-2">&#39;utf8&#39;</span><span class="hl-1">);</span>
 </code></pre>
 <p>The <code>path</code> may be specified as a numeric file descriptor that has been opened
 for appending (using <code>fs.open()</code> or <code>fs.openSync()</code>). The file descriptor will
 not be closed automatically.</p>
-<pre><code class="language-js"><span class="hl-11">import</span><span class="hl-1"> { </span><span class="hl-5">openSync</span><span class="hl-1">, </span><span class="hl-5">closeSync</span><span class="hl-1">, </span><span class="hl-5">appendFileSync</span><span class="hl-1"> } </span><span class="hl-11">from</span><span class="hl-1"> </span><span class="hl-2">&#39;fs&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">let</span><span class="hl-1"> </span><span class="hl-5">fd</span><span class="hl-1">;</span><br/><br/><span class="hl-11">try</span><span class="hl-1"> {</span><br/><span class="hl-1">  </span><span class="hl-5">fd</span><span class="hl-1"> = </span><span class="hl-8">openSync</span><span class="hl-1">(</span><span class="hl-2">&#39;message.txt&#39;</span><span class="hl-1">, </span><span class="hl-2">&#39;a&#39;</span><span class="hl-1">);</span><br/><span class="hl-1">  </span><span class="hl-8">appendFileSync</span><span class="hl-1">(</span><span class="hl-5">fd</span><span class="hl-1">, </span><span class="hl-2">&#39;data to append&#39;</span><span class="hl-1">, </span><span class="hl-2">&#39;utf8&#39;</span><span class="hl-1">);</span><br/><span class="hl-1">} </span><span class="hl-11">catch</span><span class="hl-1"> (</span><span class="hl-5">err</span><span class="hl-1">) {</span><br/><span class="hl-1">  </span><span class="hl-3">// Handle the error</span><br/><span class="hl-1">} </span><span class="hl-11">finally</span><span class="hl-1"> {</span><br/><span class="hl-1">  </span><span class="hl-11">if</span><span class="hl-1"> (</span><span class="hl-5">fd</span><span class="hl-1"> !== </span><span class="hl-4">undefined</span><span class="hl-1">)</span><br/><span class="hl-1">    </span><span class="hl-8">closeSync</span><span class="hl-1">(</span><span class="hl-5">fd</span><span class="hl-1">);</span><br/><span class="hl-1">}</span>
+<pre><code class="language-js"><span class="hl-10">import</span><span class="hl-1"> { </span><span class="hl-7">openSync</span><span class="hl-1">, </span><span class="hl-7">closeSync</span><span class="hl-1">, </span><span class="hl-7">appendFileSync</span><span class="hl-1"> } </span><span class="hl-10">from</span><span class="hl-1"> </span><span class="hl-2">&#39;fs&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">let</span><span class="hl-1"> </span><span class="hl-7">fd</span><span class="hl-1">;</span><br/><br/><span class="hl-10">try</span><span class="hl-1"> {</span><br/><span class="hl-1">  </span><span class="hl-7">fd</span><span class="hl-1"> = </span><span class="hl-6">openSync</span><span class="hl-1">(</span><span class="hl-2">&#39;message.txt&#39;</span><span class="hl-1">, </span><span class="hl-2">&#39;a&#39;</span><span class="hl-1">);</span><br/><span class="hl-1">  </span><span class="hl-6">appendFileSync</span><span class="hl-1">(</span><span class="hl-7">fd</span><span class="hl-1">, </span><span class="hl-2">&#39;data to append&#39;</span><span class="hl-1">, </span><span class="hl-2">&#39;utf8&#39;</span><span class="hl-1">);</span><br/><span class="hl-1">} </span><span class="hl-10">catch</span><span class="hl-1"> (</span><span class="hl-7">err</span><span class="hl-1">) {</span><br/><span class="hl-1">  </span><span class="hl-3">// Handle the error</span><br/><span class="hl-1">} </span><span class="hl-10">finally</span><span class="hl-1"> {</span><br/><span class="hl-1">  </span><span class="hl-10">if</span><span class="hl-1"> (</span><span class="hl-7">fd</span><span class="hl-1"> !== </span><span class="hl-4">undefined</span><span class="hl-1">)</span><br/><span class="hl-1">    </span><span class="hl-6">closeSync</span><span class="hl-1">(</span><span class="hl-7">fd</span><span class="hl-1">);</span><br/><span class="hl-1">}</span>
 </code></pre>
 
 <h3>Since</h3><p>v0.6.7</p>
@@ -77,19 +77,18 @@ not be closed automatically.</p>
 <ul>
 <li class="tsd-kind-module tsd-parent-kind-module"><a href="../modules/_config._internal_.html">&lt;internal&gt;</a>
 <ul>
-<li class="tsd-kind-namespace tsd-parent-kind-module"><a href="../modules/_config._internal_._D__Repositories_static_blog_generator_src__config_.html">&quot;<wbr/>D:/<wbr/>Repositories/static-<wbr/>blog-<wbr/>generator/src/_<wbr/>config&quot;</a></li></ul></li></ul></li>
+<li class="tsd-kind-namespace tsd-parent-kind-module"><a href="../modules/_config._internal_.__home_runner_work_static_blog_generator_static_blog_generator_src__config_.html">&quot;/home/runner/work/static-<wbr/>blog-<wbr/>generator/static-<wbr/>blog-<wbr/>generator/src/_<wbr/>config&quot;</a></li>
+<li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-external"><a href="../modules/_config._internal_._node_stream_consumers_.html">&quot;node:stream/consumers&quot;</a></li>
+<li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-external"><a href="../modules/_config._internal_._node_stream_promises_.html">&quot;node:stream/promises&quot;</a></li>
+<li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-external"><a href="../modules/_config._internal_.Bluebird.html">Bluebird</a></li>
+<li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-external"><a href="../modules/_config._internal_.EventEmitter.html">Event<wbr/>Emitter</a></li>
+<li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-external"><a href="../modules/_config._internal_.internal.html">internal</a>
+<ul>
+<li class="tsd-kind-namespace tsd-parent-kind-namespace tsd-is-external"><a href="../modules/_config._internal_.internal.finished.html">finished</a></li>
+<li class="tsd-kind-namespace tsd-parent-kind-namespace tsd-is-external"><a href="../modules/_config._internal_.internal.pipeline.html">pipeline</a></li></ul></li></ul></li></ul></li>
 <li class="tsd-kind-module"><a href="../modules/api.html">api</a>
 <ul>
-<li class="tsd-kind-module tsd-parent-kind-module"><a href="../modules/api._internal_.html">&lt;internal&gt;</a>
-<ul>
-<li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-external"><a href="../modules/api._internal_._node_stream_consumers_.html">&quot;node:stream/consumers&quot;</a></li>
-<li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-external"><a href="../modules/api._internal_._node_stream_promises_.html">&quot;node:stream/promises&quot;</a></li>
-<li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-external"><a href="../modules/api._internal_.Bluebird.html">Bluebird</a></li>
-<li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-external"><a href="../modules/api._internal_.EventEmitter.html">Event<wbr/>Emitter</a></li>
-<li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-external"><a href="../modules/api._internal_.internal.html">internal</a>
-<ul>
-<li class="tsd-kind-namespace tsd-parent-kind-namespace tsd-is-external"><a href="../modules/api._internal_.internal.finished.html">finished</a></li>
-<li class="tsd-kind-namespace tsd-parent-kind-namespace tsd-is-external"><a href="../modules/api._internal_.internal.pipeline.html">pipeline</a></li></ul></li></ul></li></ul></li>
+<li class="tsd-kind-module tsd-parent-kind-module"><a href="../modules/api._internal_.html">&lt;internal&gt;</a></li></ul></li>
 <li class="tsd-kind-module"><a href="../modules/defaults.html">defaults</a></li>
 <li class="tsd-kind-module"><a href="../modules/globals.html">globals</a></li>
 <li class="tsd-kind-module"><a href="../modules/gulp_utils_gulp_cache.html">gulp-<wbr/>utils/gulp.cache</a>
@@ -157,6 +156,9 @@ not be closed automatically.</p>
 <li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-external"><a href="../modules/gulpfile.default.html">default</a></li></ul></li>
 <li class="tsd-kind-module"><a href="../modules/index.html">index</a></li>
 <li class="tsd-kind-module"><a href="../modules/post_copy.html">post/copy</a></li>
+<li class="tsd-kind-module"><a href="../modules/post_permalink.html">post/permalink</a>
+<ul>
+<li class="tsd-kind-module tsd-parent-kind-module"><a href="../modules/post_permalink._internal_.html">&lt;internal&gt;</a></li></ul></li>
 <li class="tsd-kind-module"><a href="../modules/post_update.html">post/update</a></li>
 <li class="tsd-kind-module"><a href="../modules/sitemap.html">sitemap</a>
 <ul>
@@ -166,6 +168,7 @@ not be closed automatically.</p>
 <li class="tsd-kind-module tsd-parent-kind-module"><a href="../modules/sitemap_archive._internal_.html">&lt;internal&gt;</a></li></ul></li>
 <li class="tsd-kind-module"><a href="../modules/sitemap_pages.html">sitemap/pages</a></li>
 <li class="tsd-kind-module"><a href="../modules/sitemap_posts.html">sitemap/posts</a></li>
+<li class="tsd-kind-module"><a href="../modules/utils.html">utils</a></li>
 <li class="tsd-kind-module"><a href="../modules/utils_array.html">utils/array</a></li>
 <li class="tsd-kind-module"><a href="../modules/utils_chain.html">utils/chain</a></li>
 <li class="tsd-kind-module"><a href="../modules/utils_debug.html">utils/debug</a></li>

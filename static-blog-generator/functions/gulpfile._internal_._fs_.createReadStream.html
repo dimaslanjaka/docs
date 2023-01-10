@@ -20,7 +20,7 @@
 <h1>Function createReadStream</h1></div>
 <section class="tsd-panel">
 <ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace tsd-is-external">
-<li class="tsd-signature tsd-anchor-link" id="createReadStream">create<wbr/>Read<wbr/>Stream<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><a href="../types/gulpfile._internal_._fs_.PathLike.html" class="tsd-signature-type" data-tsd-kind="Type alias">PathLike</a>, options<span class="tsd-signature-symbol">?: </span><a href="../types/api._internal_.BufferEncoding.html" class="tsd-signature-type" data-tsd-kind="Type alias">BufferEncoding</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/gulpfile._internal_.ReadStreamOptions.html" class="tsd-signature-type" data-tsd-kind="Interface">ReadStreamOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/gulpfile._internal_._fs_.ReadStream.html" class="tsd-signature-type" data-tsd-kind="Class">ReadStream</a><a href="#createReadStream" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" id="icon-anchor-a"></path><path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" id="icon-anchor-b"></path><path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" id="icon-anchor-c"></path></svg></a></li>
+<li class="tsd-signature tsd-anchor-link" id="createReadStream">create<wbr/>Read<wbr/>Stream<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><a href="../types/gulpfile._internal_._fs_.PathLike.html" class="tsd-signature-type" data-tsd-kind="Type alias">PathLike</a>, options<span class="tsd-signature-symbol">?: </span><a href="../types/_config._internal_.BufferEncoding.html" class="tsd-signature-type" data-tsd-kind="Type alias">BufferEncoding</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/gulpfile._internal_.ReadStreamOptions.html" class="tsd-signature-type" data-tsd-kind="Interface">ReadStreamOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/gulpfile._internal_._fs_.ReadStream.html" class="tsd-signature-type" data-tsd-kind="Class">ReadStream</a><a href="#createReadStream" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" id="icon-anchor-a"></path><path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" id="icon-anchor-b"></path><path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" id="icon-anchor-c"></path></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Unlike the 16 kb default <code>highWaterMark</code> for a <code>stream.Readable</code>, the stream
 returned by this method has a default <code>highWaterMark</code> of 64 kb.</p>
@@ -42,7 +42,7 @@ destroyed.  Set the <code>emitClose</code> option to <code>false</code> to chang
 <p>By providing the <code>fs</code> option, it is possible to override the corresponding <code>fs</code>implementations for <code>open</code>, <code>read</code>, and <code>close</code>. When providing the <code>fs</code> option,
 an override for <code>read</code> is required. If no <code>fd</code> is provided, an override for<code>open</code> is also required. If <code>autoClose</code> is <code>true</code>, an override for <code>close</code> is
 also required.</p>
-<pre><code class="language-js"><span class="hl-11">import</span><span class="hl-1"> { </span><span class="hl-5">createReadStream</span><span class="hl-1"> } </span><span class="hl-11">from</span><span class="hl-1"> </span><span class="hl-2">&#39;fs&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-3">// Create a stream from some character device.</span><br/><span class="hl-4">const</span><span class="hl-1"> </span><span class="hl-7">stream</span><span class="hl-1"> = </span><span class="hl-8">createReadStream</span><span class="hl-1">(</span><span class="hl-2">&#39;/dev/input/event0&#39;</span><span class="hl-1">);</span><br/><span class="hl-8">setTimeout</span><span class="hl-1">(() </span><span class="hl-4">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1">  </span><span class="hl-5">stream</span><span class="hl-1">.</span><span class="hl-8">close</span><span class="hl-1">(); </span><span class="hl-3">// This may not close the stream.</span><br/><span class="hl-1">  </span><span class="hl-3">// Artificially marking end-of-stream, as if the underlying resource had</span><br/><span class="hl-1">  </span><span class="hl-3">// indicated end-of-file by itself, allows the stream to close.</span><br/><span class="hl-1">  </span><span class="hl-3">// This does not cancel pending read operations, and if there is such an</span><br/><span class="hl-1">  </span><span class="hl-3">// operation, the process may still not be able to exit successfully</span><br/><span class="hl-1">  </span><span class="hl-3">// until it finishes.</span><br/><span class="hl-1">  </span><span class="hl-5">stream</span><span class="hl-1">.</span><span class="hl-8">push</span><span class="hl-1">(</span><span class="hl-4">null</span><span class="hl-1">);</span><br/><span class="hl-1">  </span><span class="hl-5">stream</span><span class="hl-1">.</span><span class="hl-8">read</span><span class="hl-1">(</span><span class="hl-9">0</span><span class="hl-1">);</span><br/><span class="hl-1">}, </span><span class="hl-9">100</span><span class="hl-1">);</span>
+<pre><code class="language-js"><span class="hl-10">import</span><span class="hl-1"> { </span><span class="hl-7">createReadStream</span><span class="hl-1"> } </span><span class="hl-10">from</span><span class="hl-1"> </span><span class="hl-2">&#39;fs&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-3">// Create a stream from some character device.</span><br/><span class="hl-4">const</span><span class="hl-1"> </span><span class="hl-5">stream</span><span class="hl-1"> = </span><span class="hl-6">createReadStream</span><span class="hl-1">(</span><span class="hl-2">&#39;/dev/input/event0&#39;</span><span class="hl-1">);</span><br/><span class="hl-6">setTimeout</span><span class="hl-1">(() </span><span class="hl-4">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1">  </span><span class="hl-7">stream</span><span class="hl-1">.</span><span class="hl-6">close</span><span class="hl-1">(); </span><span class="hl-3">// This may not close the stream.</span><br/><span class="hl-1">  </span><span class="hl-3">// Artificially marking end-of-stream, as if the underlying resource had</span><br/><span class="hl-1">  </span><span class="hl-3">// indicated end-of-file by itself, allows the stream to close.</span><br/><span class="hl-1">  </span><span class="hl-3">// This does not cancel pending read operations, and if there is such an</span><br/><span class="hl-1">  </span><span class="hl-3">// operation, the process may still not be able to exit successfully</span><br/><span class="hl-1">  </span><span class="hl-3">// until it finishes.</span><br/><span class="hl-1">  </span><span class="hl-7">stream</span><span class="hl-1">.</span><span class="hl-6">push</span><span class="hl-1">(</span><span class="hl-4">null</span><span class="hl-1">);</span><br/><span class="hl-1">  </span><span class="hl-7">stream</span><span class="hl-1">.</span><span class="hl-6">read</span><span class="hl-1">(</span><span class="hl-8">0</span><span class="hl-1">);</span><br/><span class="hl-1">}, </span><span class="hl-8">100</span><span class="hl-1">);</span>
 </code></pre>
 <p>If <code>autoClose</code> is false, then the file descriptor won&#39;t be closed, even if
 there&#39;s an error. It is the application&#39;s responsibility to close it and make
@@ -52,7 +52,7 @@ automatically.</p>
 <p><code>mode</code> sets the file mode (permission and sticky bits), but only if the
 file was created.</p>
 <p>An example to read the last 10 bytes of a file which is 100 bytes long:</p>
-<pre><code class="language-js"><span class="hl-11">import</span><span class="hl-1"> { </span><span class="hl-5">createReadStream</span><span class="hl-1"> } </span><span class="hl-11">from</span><span class="hl-1"> </span><span class="hl-2">&#39;fs&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-8">createReadStream</span><span class="hl-1">(</span><span class="hl-2">&#39;sample.txt&#39;</span><span class="hl-1">, { </span><span class="hl-5">start:</span><span class="hl-1"> </span><span class="hl-9">90</span><span class="hl-1">, </span><span class="hl-5">end:</span><span class="hl-1"> </span><span class="hl-9">99</span><span class="hl-1"> });</span>
+<pre><code class="language-js"><span class="hl-10">import</span><span class="hl-1"> { </span><span class="hl-7">createReadStream</span><span class="hl-1"> } </span><span class="hl-10">from</span><span class="hl-1"> </span><span class="hl-2">&#39;fs&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-6">createReadStream</span><span class="hl-1">(</span><span class="hl-2">&#39;sample.txt&#39;</span><span class="hl-1">, { </span><span class="hl-7">start:</span><span class="hl-1"> </span><span class="hl-8">90</span><span class="hl-1">, </span><span class="hl-7">end:</span><span class="hl-1"> </span><span class="hl-8">99</span><span class="hl-1"> });</span>
 </code></pre>
 <p>If <code>options</code> is a string, then it specifies the encoding.</p>
 
@@ -64,7 +64,7 @@ file was created.</p>
 <li>
 <h5>path: <a href="../types/gulpfile._internal_._fs_.PathLike.html" class="tsd-signature-type" data-tsd-kind="Type alias">PathLike</a></h5></li>
 <li>
-<h5><code class="tsd-tag ts-flagOptional">Optional</code> options: <a href="../types/api._internal_.BufferEncoding.html" class="tsd-signature-type" data-tsd-kind="Type alias">BufferEncoding</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/gulpfile._internal_.ReadStreamOptions.html" class="tsd-signature-type" data-tsd-kind="Interface">ReadStreamOptions</a></h5></li></ul></div>
+<h5><code class="tsd-tag ts-flagOptional">Optional</code> options: <a href="../types/_config._internal_.BufferEncoding.html" class="tsd-signature-type" data-tsd-kind="Type alias">BufferEncoding</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/gulpfile._internal_.ReadStreamOptions.html" class="tsd-signature-type" data-tsd-kind="Interface">ReadStreamOptions</a></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <a href="../classes/gulpfile._internal_._fs_.ReadStream.html" class="tsd-signature-type" data-tsd-kind="Class">ReadStream</a></h4><aside class="tsd-sources">
 <ul>
 <li>Defined in node_modules/@types/node/fs.d.ts:3538</li></ul></aside></li></ul></section></div>
@@ -93,19 +93,18 @@ file was created.</p>
 <ul>
 <li class="tsd-kind-module tsd-parent-kind-module"><a href="../modules/_config._internal_.html">&lt;internal&gt;</a>
 <ul>
-<li class="tsd-kind-namespace tsd-parent-kind-module"><a href="../modules/_config._internal_._D__Repositories_static_blog_generator_src__config_.html">&quot;<wbr/>D:/<wbr/>Repositories/static-<wbr/>blog-<wbr/>generator/src/_<wbr/>config&quot;</a></li></ul></li></ul></li>
+<li class="tsd-kind-namespace tsd-parent-kind-module"><a href="../modules/_config._internal_.__home_runner_work_static_blog_generator_static_blog_generator_src__config_.html">&quot;/home/runner/work/static-<wbr/>blog-<wbr/>generator/static-<wbr/>blog-<wbr/>generator/src/_<wbr/>config&quot;</a></li>
+<li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-external"><a href="../modules/_config._internal_._node_stream_consumers_.html">&quot;node:stream/consumers&quot;</a></li>
+<li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-external"><a href="../modules/_config._internal_._node_stream_promises_.html">&quot;node:stream/promises&quot;</a></li>
+<li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-external"><a href="../modules/_config._internal_.Bluebird.html">Bluebird</a></li>
+<li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-external"><a href="../modules/_config._internal_.EventEmitter.html">Event<wbr/>Emitter</a></li>
+<li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-external"><a href="../modules/_config._internal_.internal.html">internal</a>
+<ul>
+<li class="tsd-kind-namespace tsd-parent-kind-namespace tsd-is-external"><a href="../modules/_config._internal_.internal.finished.html">finished</a></li>
+<li class="tsd-kind-namespace tsd-parent-kind-namespace tsd-is-external"><a href="../modules/_config._internal_.internal.pipeline.html">pipeline</a></li></ul></li></ul></li></ul></li>
 <li class="tsd-kind-module"><a href="../modules/api.html">api</a>
 <ul>
-<li class="tsd-kind-module tsd-parent-kind-module"><a href="../modules/api._internal_.html">&lt;internal&gt;</a>
-<ul>
-<li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-external"><a href="../modules/api._internal_._node_stream_consumers_.html">&quot;node:stream/consumers&quot;</a></li>
-<li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-external"><a href="../modules/api._internal_._node_stream_promises_.html">&quot;node:stream/promises&quot;</a></li>
-<li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-external"><a href="../modules/api._internal_.Bluebird.html">Bluebird</a></li>
-<li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-external"><a href="../modules/api._internal_.EventEmitter.html">Event<wbr/>Emitter</a></li>
-<li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-external"><a href="../modules/api._internal_.internal.html">internal</a>
-<ul>
-<li class="tsd-kind-namespace tsd-parent-kind-namespace tsd-is-external"><a href="../modules/api._internal_.internal.finished.html">finished</a></li>
-<li class="tsd-kind-namespace tsd-parent-kind-namespace tsd-is-external"><a href="../modules/api._internal_.internal.pipeline.html">pipeline</a></li></ul></li></ul></li></ul></li>
+<li class="tsd-kind-module tsd-parent-kind-module"><a href="../modules/api._internal_.html">&lt;internal&gt;</a></li></ul></li>
 <li class="tsd-kind-module"><a href="../modules/defaults.html">defaults</a></li>
 <li class="tsd-kind-module"><a href="../modules/globals.html">globals</a></li>
 <li class="tsd-kind-module"><a href="../modules/gulp_utils_gulp_cache.html">gulp-<wbr/>utils/gulp.cache</a>
@@ -173,6 +172,9 @@ file was created.</p>
 <li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-external"><a href="../modules/gulpfile.default.html">default</a></li></ul></li>
 <li class="tsd-kind-module"><a href="../modules/index.html">index</a></li>
 <li class="tsd-kind-module"><a href="../modules/post_copy.html">post/copy</a></li>
+<li class="tsd-kind-module"><a href="../modules/post_permalink.html">post/permalink</a>
+<ul>
+<li class="tsd-kind-module tsd-parent-kind-module"><a href="../modules/post_permalink._internal_.html">&lt;internal&gt;</a></li></ul></li>
 <li class="tsd-kind-module"><a href="../modules/post_update.html">post/update</a></li>
 <li class="tsd-kind-module"><a href="../modules/sitemap.html">sitemap</a>
 <ul>
@@ -182,6 +184,7 @@ file was created.</p>
 <li class="tsd-kind-module tsd-parent-kind-module"><a href="../modules/sitemap_archive._internal_.html">&lt;internal&gt;</a></li></ul></li>
 <li class="tsd-kind-module"><a href="../modules/sitemap_pages.html">sitemap/pages</a></li>
 <li class="tsd-kind-module"><a href="../modules/sitemap_posts.html">sitemap/posts</a></li>
+<li class="tsd-kind-module"><a href="../modules/utils.html">utils</a></li>
 <li class="tsd-kind-module"><a href="../modules/utils_array.html">utils/array</a></li>
 <li class="tsd-kind-module"><a href="../modules/utils_chain.html">utils/chain</a></li>
 <li class="tsd-kind-module"><a href="../modules/utils_debug.html">utils/debug</a></li>

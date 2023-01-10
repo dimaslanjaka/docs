@@ -25,7 +25,7 @@
 <div class="tsd-comment tsd-typography"><p>Truncates the file. No arguments other than a possible exception are
 given to the completion callback. A file descriptor can also be passed as the
 first argument. In this case, <code>fs.ftruncate()</code> is called.</p>
-<pre><code class="language-js"><span class="hl-11">import</span><span class="hl-1"> { </span><span class="hl-5">truncate</span><span class="hl-1"> } </span><span class="hl-11">from</span><span class="hl-1"> </span><span class="hl-2">&#39;fs&#39;</span><span class="hl-1">;</span><br/><span class="hl-3">// Assuming that &#39;path/file.txt&#39; is a regular file.</span><br/><span class="hl-8">truncate</span><span class="hl-1">(</span><span class="hl-2">&#39;path/file.txt&#39;</span><span class="hl-1">, (</span><span class="hl-5">err</span><span class="hl-1">) </span><span class="hl-4">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1">  </span><span class="hl-11">if</span><span class="hl-1"> (</span><span class="hl-5">err</span><span class="hl-1">) </span><span class="hl-11">throw</span><span class="hl-1"> </span><span class="hl-5">err</span><span class="hl-1">;</span><br/><span class="hl-1">  </span><span class="hl-5">console</span><span class="hl-1">.</span><span class="hl-8">log</span><span class="hl-1">(</span><span class="hl-2">&#39;path/file.txt was truncated&#39;</span><span class="hl-1">);</span><br/><span class="hl-1">});</span>
+<pre><code class="language-js"><span class="hl-10">import</span><span class="hl-1"> { </span><span class="hl-7">truncate</span><span class="hl-1"> } </span><span class="hl-10">from</span><span class="hl-1"> </span><span class="hl-2">&#39;fs&#39;</span><span class="hl-1">;</span><br/><span class="hl-3">// Assuming that &#39;path/file.txt&#39; is a regular file.</span><br/><span class="hl-6">truncate</span><span class="hl-1">(</span><span class="hl-2">&#39;path/file.txt&#39;</span><span class="hl-1">, (</span><span class="hl-7">err</span><span class="hl-1">) </span><span class="hl-4">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1">  </span><span class="hl-10">if</span><span class="hl-1"> (</span><span class="hl-7">err</span><span class="hl-1">) </span><span class="hl-10">throw</span><span class="hl-1"> </span><span class="hl-7">err</span><span class="hl-1">;</span><br/><span class="hl-1">  </span><span class="hl-7">console</span><span class="hl-1">.</span><span class="hl-6">log</span><span class="hl-1">(</span><span class="hl-2">&#39;path/file.txt was truncated&#39;</span><span class="hl-1">);</span><br/><span class="hl-1">});</span>
 </code></pre>
 <p>Passing a file descriptor is deprecated and may result in an error being thrown
 in the future.</p>
@@ -86,19 +86,18 @@ in the future.</p>
 <ul>
 <li class="tsd-kind-module tsd-parent-kind-module"><a href="../modules/_config._internal_.html">&lt;internal&gt;</a>
 <ul>
-<li class="tsd-kind-namespace tsd-parent-kind-module"><a href="../modules/_config._internal_._D__Repositories_static_blog_generator_src__config_.html">&quot;<wbr/>D:/<wbr/>Repositories/static-<wbr/>blog-<wbr/>generator/src/_<wbr/>config&quot;</a></li></ul></li></ul></li>
+<li class="tsd-kind-namespace tsd-parent-kind-module"><a href="../modules/_config._internal_.__home_runner_work_static_blog_generator_static_blog_generator_src__config_.html">&quot;/home/runner/work/static-<wbr/>blog-<wbr/>generator/static-<wbr/>blog-<wbr/>generator/src/_<wbr/>config&quot;</a></li>
+<li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-external"><a href="../modules/_config._internal_._node_stream_consumers_.html">&quot;node:stream/consumers&quot;</a></li>
+<li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-external"><a href="../modules/_config._internal_._node_stream_promises_.html">&quot;node:stream/promises&quot;</a></li>
+<li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-external"><a href="../modules/_config._internal_.Bluebird.html">Bluebird</a></li>
+<li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-external"><a href="../modules/_config._internal_.EventEmitter.html">Event<wbr/>Emitter</a></li>
+<li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-external"><a href="../modules/_config._internal_.internal.html">internal</a>
+<ul>
+<li class="tsd-kind-namespace tsd-parent-kind-namespace tsd-is-external"><a href="../modules/_config._internal_.internal.finished.html">finished</a></li>
+<li class="tsd-kind-namespace tsd-parent-kind-namespace tsd-is-external"><a href="../modules/_config._internal_.internal.pipeline.html">pipeline</a></li></ul></li></ul></li></ul></li>
 <li class="tsd-kind-module"><a href="../modules/api.html">api</a>
 <ul>
-<li class="tsd-kind-module tsd-parent-kind-module"><a href="../modules/api._internal_.html">&lt;internal&gt;</a>
-<ul>
-<li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-external"><a href="../modules/api._internal_._node_stream_consumers_.html">&quot;node:stream/consumers&quot;</a></li>
-<li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-external"><a href="../modules/api._internal_._node_stream_promises_.html">&quot;node:stream/promises&quot;</a></li>
-<li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-external"><a href="../modules/api._internal_.Bluebird.html">Bluebird</a></li>
-<li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-external"><a href="../modules/api._internal_.EventEmitter.html">Event<wbr/>Emitter</a></li>
-<li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-external"><a href="../modules/api._internal_.internal.html">internal</a>
-<ul>
-<li class="tsd-kind-namespace tsd-parent-kind-namespace tsd-is-external"><a href="../modules/api._internal_.internal.finished.html">finished</a></li>
-<li class="tsd-kind-namespace tsd-parent-kind-namespace tsd-is-external"><a href="../modules/api._internal_.internal.pipeline.html">pipeline</a></li></ul></li></ul></li></ul></li>
+<li class="tsd-kind-module tsd-parent-kind-module"><a href="../modules/api._internal_.html">&lt;internal&gt;</a></li></ul></li>
 <li class="tsd-kind-module"><a href="../modules/defaults.html">defaults</a></li>
 <li class="tsd-kind-module"><a href="../modules/globals.html">globals</a></li>
 <li class="tsd-kind-module"><a href="../modules/gulp_utils_gulp_cache.html">gulp-<wbr/>utils/gulp.cache</a>
@@ -166,6 +165,9 @@ in the future.</p>
 <li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-external"><a href="../modules/gulpfile.default.html">default</a></li></ul></li>
 <li class="tsd-kind-module"><a href="../modules/index.html">index</a></li>
 <li class="tsd-kind-module"><a href="../modules/post_copy.html">post/copy</a></li>
+<li class="tsd-kind-module"><a href="../modules/post_permalink.html">post/permalink</a>
+<ul>
+<li class="tsd-kind-module tsd-parent-kind-module"><a href="../modules/post_permalink._internal_.html">&lt;internal&gt;</a></li></ul></li>
 <li class="tsd-kind-module"><a href="../modules/post_update.html">post/update</a></li>
 <li class="tsd-kind-module"><a href="../modules/sitemap.html">sitemap</a>
 <ul>
@@ -175,6 +177,7 @@ in the future.</p>
 <li class="tsd-kind-module tsd-parent-kind-module"><a href="../modules/sitemap_archive._internal_.html">&lt;internal&gt;</a></li></ul></li>
 <li class="tsd-kind-module"><a href="../modules/sitemap_pages.html">sitemap/pages</a></li>
 <li class="tsd-kind-module"><a href="../modules/sitemap_posts.html">sitemap/posts</a></li>
+<li class="tsd-kind-module"><a href="../modules/utils.html">utils</a></li>
 <li class="tsd-kind-module"><a href="../modules/utils_array.html">utils/array</a></li>
 <li class="tsd-kind-module"><a href="../modules/utils_chain.html">utils/chain</a></li>
 <li class="tsd-kind-module"><a href="../modules/utils_debug.html">utils/debug</a></li>
