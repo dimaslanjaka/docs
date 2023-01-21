@@ -30,11 +30,11 @@ created.</p>
 and sticky bits), or an object with a <code>mode</code> property and a <code>recursive</code>property indicating whether parent directories should be created. Calling<code>fs.mkdir()</code> when <code>path</code> is a directory that
 exists results in an error only
 when <code>recursive</code> is false.</p>
-<pre><code class="language-js"><span class="hl-5">import</span><span class="hl-1"> { </span><span class="hl-7">mkdir</span><span class="hl-1"> } </span><span class="hl-5">from</span><span class="hl-1"> </span><span class="hl-4">&#39;fs&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-6">// Creates /tmp/a/apple, regardless of whether `/tmp` and /tmp/a exist.</span><br/><span class="hl-3">mkdir</span><span class="hl-1">(</span><span class="hl-4">&#39;/tmp/a/apple&#39;</span><span class="hl-1">, { </span><span class="hl-7">recursive:</span><span class="hl-1"> </span><span class="hl-0">true</span><span class="hl-1"> }, (</span><span class="hl-7">err</span><span class="hl-1">) </span><span class="hl-0">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1">  </span><span class="hl-5">if</span><span class="hl-1"> (</span><span class="hl-7">err</span><span class="hl-1">) </span><span class="hl-5">throw</span><span class="hl-1"> </span><span class="hl-7">err</span><span class="hl-1">;</span><br/><span class="hl-1">});</span>
+<pre><code class="language-js"><span class="hl-9">import</span><span class="hl-1"> { </span><span class="hl-8">mkdir</span><span class="hl-1"> } </span><span class="hl-9">from</span><span class="hl-1"> </span><span class="hl-2">&#39;fs&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Creates /tmp/a/apple, regardless of whether `/tmp` and /tmp/a exist.</span><br/><span class="hl-7">mkdir</span><span class="hl-1">(</span><span class="hl-2">&#39;/tmp/a/apple&#39;</span><span class="hl-1">, { </span><span class="hl-8">recursive:</span><span class="hl-1"> </span><span class="hl-5">true</span><span class="hl-1"> }, (</span><span class="hl-8">err</span><span class="hl-1">) </span><span class="hl-5">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1">  </span><span class="hl-9">if</span><span class="hl-1"> (</span><span class="hl-8">err</span><span class="hl-1">) </span><span class="hl-9">throw</span><span class="hl-1"> </span><span class="hl-8">err</span><span class="hl-1">;</span><br/><span class="hl-1">});</span>
 </code></pre>
 <p>On Windows, using <code>fs.mkdir()</code> on the root directory even with recursion will
 result in an error:</p>
-<pre><code class="language-js"><span class="hl-5">import</span><span class="hl-1"> { </span><span class="hl-7">mkdir</span><span class="hl-1"> } </span><span class="hl-5">from</span><span class="hl-1"> </span><span class="hl-4">&#39;fs&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-3">mkdir</span><span class="hl-1">(</span><span class="hl-4">&#39;/&#39;</span><span class="hl-1">, { </span><span class="hl-7">recursive:</span><span class="hl-1"> </span><span class="hl-0">true</span><span class="hl-1"> }, (</span><span class="hl-7">err</span><span class="hl-1">) </span><span class="hl-0">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1">  </span><span class="hl-6">// =&gt; [Error: EPERM: operation not permitted, mkdir &#39;C:\&#39;]</span><br/><span class="hl-1">});</span>
+<pre><code class="language-js"><span class="hl-9">import</span><span class="hl-1"> { </span><span class="hl-8">mkdir</span><span class="hl-1"> } </span><span class="hl-9">from</span><span class="hl-1"> </span><span class="hl-2">&#39;fs&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-7">mkdir</span><span class="hl-1">(</span><span class="hl-2">&#39;/&#39;</span><span class="hl-1">, { </span><span class="hl-8">recursive:</span><span class="hl-1"> </span><span class="hl-5">true</span><span class="hl-1"> }, (</span><span class="hl-8">err</span><span class="hl-1">) </span><span class="hl-5">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1">  </span><span class="hl-4">// =&gt; [Error: EPERM: operation not permitted, mkdir &#39;C:\&#39;]</span><br/><span class="hl-1">});</span>
 </code></pre>
 <p>See the POSIX <a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cDovL21hbjcub3JnL2xpbnV4L21hbi1wYWdlcy9tYW4yL21rZGlyLjIuaHRtbA=="><code>mkdir(2)</code></a> documentation for more details.</p>
 
@@ -165,6 +165,7 @@ should be created. If a string is passed, it is parsed as an octal integer. If n
 <ul>
 <li class="tsd-kind-module tsd-parent-kind-module"><a href="../modules/dateMapper._internal_.html">&lt;internal&gt;</a></li></ul></li>
 <li class="tsd-kind-module"><a href="../modules/generatePostId.html">generate<wbr/>Post<wbr/>Id</a></li>
+<li class="tsd-kind-module"><a href="../modules/globals.html">globals</a></li>
 <li class="tsd-kind-module"><a href="../modules/gulp_utils.html">gulp/utils</a>
 <ul>
 <li class="tsd-kind-module tsd-parent-kind-module"><a href="../modules/gulp_utils._internal_.html">&lt;internal&gt;</a></li></ul></li>
@@ -176,6 +177,9 @@ should be created. If a string is passed, it is parsed as an octal integer. If n
 <li class="tsd-kind-module"><a href="../modules/node_color.html">node/color</a>
 <ul>
 <li class="tsd-kind-module tsd-parent-kind-module"><a href="../modules/node_color._internal_.html">&lt;internal&gt;</a></li></ul></li>
+<li class="tsd-kind-module"><a href="../modules/node_debug.html">node/debug</a>
+<ul>
+<li class="tsd-kind-module tsd-parent-kind-module"><a href="../modules/node_debug._internal_.html">&lt;internal&gt;</a></li></ul></li>
 <li class="tsd-kind-module"><a href="../modules/node_escape_string_regexp.html">node/escape-<wbr/>string-<wbr/>regexp</a></li>
 <li class="current tsd-kind-module"><a href="../modules/node_filemanager.html">node/filemanager</a>
 <ul>
@@ -252,9 +256,7 @@ should be created. If a string is passed, it is parsed as an octal integer. If n
 <li class="tsd-kind-module"><a href="../modules/node_utils.html">node/utils</a></li>
 <li class="tsd-kind-module"><a href="../modules/node_uuid.html">node/uuid</a></li>
 <li class="tsd-kind-module"><a href="../modules/parsePermalink.html">parse<wbr/>Permalink</a></li>
-<li class="tsd-kind-module"><a href="../modules/parsePost.html">parse<wbr/>Post</a>
-<ul>
-<li class="tsd-kind-module tsd-parent-kind-module"><a href="../modules/parsePost._internal_.html">&lt;internal&gt;</a></li></ul></li>
+<li class="tsd-kind-module"><a href="../modules/parsePost.html">parse<wbr/>Post</a></li>
 <li class="tsd-kind-module"><a href="../modules/shortcodes_codeblock.html">shortcodes/codeblock</a></li>
 <li class="tsd-kind-module"><a href="../modules/shortcodes_css.html">shortcodes/css</a></li>
 <li class="tsd-kind-module"><a href="../modules/shortcodes_extractText.html">shortcodes/extract<wbr/>Text</a></li>
@@ -267,6 +269,8 @@ should be created. If a string is passed, it is parsed as an octal integer. If n
 <li class="tsd-kind-module"><a href="../modules/types__config.html">types/_<wbr/>config</a>
 <ul>
 <li class="tsd-kind-module tsd-parent-kind-module"><a href="../modules/types__config._internal_.html">&lt;internal&gt;</a></li></ul></li>
+<li class="tsd-kind-module"><a href="../modules/types_parseOptions.html">types/parse<wbr/>Options</a></li>
+<li class="tsd-kind-module"><a href="../modules/types_postAuthor.html">types/post<wbr/>Author</a></li>
 <li class="tsd-kind-module"><a href="../modules/types_postMap.html">types/post<wbr/>Map</a></li>
 <li class="tsd-kind-module"><a href="../modules/types_postMeta.html">types/post<wbr/>Meta</a></li>
 <li class="tsd-kind-module"><a href="../modules/utils_string.html">utils/string</a></li></ul></li></ul></div></details></nav>

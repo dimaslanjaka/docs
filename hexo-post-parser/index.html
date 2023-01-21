@@ -38,6 +38,18 @@
 <li>Auto find meta description when not set</li>
 </ul>
 
+<a href="#configuration-needed" id="configuration-needed" style="color: inherit; text-decoration: none;">
+  <h2>Configuration needed</h2>
+</a>
+<ul>
+<li>file <code>_config.yml</code></li>
+</ul>
+<pre><code class="language-yaml"><span class="hl-0">url</span><span class="hl-1">: </span><span class="hl-2">&quot;https://domain.com/&quot;</span><br/><span class="hl-0">root</span><span class="hl-1">: </span><span class="hl-2">&quot;/&quot;</span><br/><span class="hl-0">permalink</span><span class="hl-1">: </span><span class="hl-2">&quot;:year/:month/:title.html&quot;</span><br/><span class="hl-0">generator</span><span class="hl-1">:</span><br/><span class="hl-1">  </span><span class="hl-0">type</span><span class="hl-1">: </span><span class="hl-3">&#39;hexo&#39;</span><span class="hl-1"> </span><span class="hl-4"># or jekyll</span><br/><span class="hl-1">  </span><span class="hl-0">cache</span><span class="hl-1">: </span><span class="hl-5">true</span><span class="hl-1"> </span><span class="hl-4"># enable caching</span><br/><span class="hl-1">  </span><span class="hl-0">verbose</span><span class="hl-1">: </span><span class="hl-5">false</span><span class="hl-1"> </span><span class="hl-4"># enable verbose</span><br/><span class="hl-1">  </span><span class="hl-0">amp</span><span class="hl-1">: </span><span class="hl-5">false</span><span class="hl-1"> </span><span class="hl-4"># transform shortcodes to amp html</span>
+</code></pre>
+<p>parse post overriden options</p>
+<pre><code class="language-typescript"><span class="hl-5">const</span><span class="hl-1"> { </span><span class="hl-6">parsePost</span><span class="hl-1"> } = </span><span class="hl-7">require</span><span class="hl-1">(</span><span class="hl-2">&#39;hexo-post-parser&#39;</span><span class="hl-1">);</span><br/><span class="hl-7">parsePost</span><span class="hl-1">(</span><span class="hl-2">&#39;/path/to/file.md&#39;</span><span class="hl-1">, {</span><br/><span class="hl-8">shortcodes:</span><span class="hl-1"> {</span><br/><span class="hl-1">  </span><span class="hl-8">youtube:</span><span class="hl-1"> </span><span class="hl-5">true</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-8">css:</span><span class="hl-1"> </span><span class="hl-5">true</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-8">include:</span><span class="hl-1"> </span><span class="hl-5">true</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-8">link:</span><span class="hl-1"> </span><span class="hl-5">true</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-8">now:</span><span class="hl-1"> </span><span class="hl-5">true</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-8">script:</span><span class="hl-1"> </span><span class="hl-5">true</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-8">text:</span><span class="hl-1"> </span><span class="hl-5">true</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-8">codeblock:</span><span class="hl-1"> </span><span class="hl-5">true</span><br/><span class="hl-1">},</span><br/><span class="hl-8">config:</span><span class="hl-1"> {</span><br/><span class="hl-1">  </span><span class="hl-8">generator:</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-8">cache:</span><span class="hl-1"> </span><span class="hl-5">false</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-8">verbose:</span><span class="hl-1"> </span><span class="hl-5">false</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-8">amp:</span><span class="hl-1"> </span><span class="hl-5">false</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-8">type:</span><span class="hl-1"> </span><span class="hl-2">&#39;hexo&#39;</span><br/><span class="hl-1">  }</span><br/><span class="hl-1">},</span><br/><span class="hl-8">formatDate:</span><span class="hl-1"> </span><span class="hl-5">true</span><span class="hl-1">,</span><br/><span class="hl-8">fix:</span><span class="hl-1"> </span><span class="hl-5">true</span><span class="hl-1">,</span><br/><span class="hl-8">sourceFile:</span><span class="hl-1"> </span><span class="hl-8">file</span><span class="hl-1">.</span><span class="hl-8">path</span><br/><span class="hl-1">})</span>
+</code></pre>
+
 <a href="#shortcodes" id="shortcodes" style="color: inherit; text-decoration: none;">
   <h2>Shortcodes</h2>
 </a>
@@ -56,6 +68,10 @@
 <td align="left"><code>&lt;!-- script folder/script.js --&gt;</code></td>
 <td align="left">Include JS file as html script <code>&lt;script&gt;codes&lt;/script&gt;</code></td>
 </tr>
+<tr>
+<td align="left"><code>{% youtube video_id %}</code></td>
+<td align="left">transform youtube tag (AMP Supported)</td>
+</tr>
 </tbody></table>
 
 <a href="#usage-sample" id="usage-sample" style="color: inherit; text-decoration: none;">
@@ -64,7 +80,7 @@
 <ul>
 <li><a href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RpbWFzbGFuamFrYS9zdGF0aWMtYmxvZy1nZW5lcmF0b3ItaGV4by9ibG9iL21hc3Rlci9wYWNrYWdlcy9ndWxwLXNiZy9zcmMvZ3VscC5wb3N0LnRz">Usages with GULP</a></li>
 </ul>
-<pre><code class="language-js"><span class="hl-0">const</span><span class="hl-1"> </span><span class="hl-2">fs</span><span class="hl-1"> = </span><span class="hl-3">require</span><span class="hl-1">(</span><span class="hl-4">&#39;fs&#39;</span><span class="hl-1">);</span><br/><span class="hl-1">(</span><span class="hl-0">async</span><span class="hl-1"> </span><span class="hl-0">function</span><span class="hl-1">(){</span><br/><span class="hl-1">  </span><span class="hl-0">const</span><span class="hl-1"> { </span><span class="hl-2">parsePost</span><span class="hl-1">, </span><span class="hl-2">buildPost</span><span class="hl-1"> } = </span><span class="hl-3">require</span><span class="hl-1">(</span><span class="hl-4">&#39;hexo-post-parser&#39;</span><span class="hl-1">);</span><br/><span class="hl-1">  </span><span class="hl-0">const</span><span class="hl-1"> </span><span class="hl-2">parse</span><span class="hl-1"> = </span><span class="hl-5">await</span><span class="hl-1"> </span><span class="hl-3">parsePost</span><span class="hl-1">(</span><span class="hl-4">&#39;path/to/markdown/file.md&#39;</span><span class="hl-1">);</span><br/><span class="hl-1">  </span><span class="hl-6">// dump parsed post to json</span><br/><span class="hl-1">  </span><span class="hl-7">fs</span><span class="hl-1">.</span><span class="hl-3">writeFileSync</span><span class="hl-1">(</span><span class="hl-4">&#39;path/to/file.json&#39;</span><span class="hl-1">, </span><span class="hl-2">JSON</span><span class="hl-1">.</span><span class="hl-3">stringify</span><span class="hl-1">(</span><span class="hl-7">parse</span><span class="hl-1">, </span><span class="hl-0">null</span><span class="hl-1">, </span><span class="hl-8">2</span><span class="hl-1">));</span><br/><span class="hl-1">  </span><span class="hl-6">// build parsed post</span><br/><span class="hl-1">  </span><span class="hl-7">fs</span><span class="hl-1">.</span><span class="hl-3">writeFileSync</span><span class="hl-1">(</span><span class="hl-4">&#39;path/to/file.md&#39;</span><span class="hl-1">, </span><span class="hl-3">buildPost</span><span class="hl-1">(</span><span class="hl-7">parse</span><span class="hl-1">));</span><br/><span class="hl-1">})();</span>
+<pre><code class="language-js"><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-6">fs</span><span class="hl-1"> = </span><span class="hl-7">require</span><span class="hl-1">(</span><span class="hl-2">&#39;fs&#39;</span><span class="hl-1">);</span><br/><span class="hl-1">(</span><span class="hl-5">async</span><span class="hl-1"> </span><span class="hl-5">function</span><span class="hl-1">(){</span><br/><span class="hl-1">  </span><span class="hl-5">const</span><span class="hl-1"> { </span><span class="hl-6">parsePost</span><span class="hl-1">, </span><span class="hl-6">buildPost</span><span class="hl-1"> } = </span><span class="hl-7">require</span><span class="hl-1">(</span><span class="hl-2">&#39;hexo-post-parser&#39;</span><span class="hl-1">);</span><br/><span class="hl-1">  </span><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-6">parse</span><span class="hl-1"> = </span><span class="hl-9">await</span><span class="hl-1"> </span><span class="hl-7">parsePost</span><span class="hl-1">(</span><span class="hl-2">&#39;path/to/markdown/file.md&#39;</span><span class="hl-1">);</span><br/><span class="hl-1">  </span><span class="hl-4">// dump parsed post to json</span><br/><span class="hl-1">  </span><span class="hl-8">fs</span><span class="hl-1">.</span><span class="hl-7">writeFileSync</span><span class="hl-1">(</span><span class="hl-2">&#39;path/to/file.json&#39;</span><span class="hl-1">, </span><span class="hl-6">JSON</span><span class="hl-1">.</span><span class="hl-7">stringify</span><span class="hl-1">(</span><span class="hl-8">parse</span><span class="hl-1">, </span><span class="hl-5">null</span><span class="hl-1">, </span><span class="hl-10">2</span><span class="hl-1">));</span><br/><span class="hl-1">  </span><span class="hl-4">// build parsed post</span><br/><span class="hl-1">  </span><span class="hl-8">fs</span><span class="hl-1">.</span><span class="hl-7">writeFileSync</span><span class="hl-1">(</span><span class="hl-2">&#39;path/to/file.md&#39;</span><span class="hl-1">, </span><span class="hl-7">buildPost</span><span class="hl-1">(</span><span class="hl-8">parse</span><span class="hl-1">));</span><br/><span class="hl-1">})();</span>
 </code></pre>
 
 <a href="#project-sample" id="project-sample" style="color: inherit; text-decoration: none;">
@@ -118,6 +134,7 @@
 <ul>
 <li class="tsd-kind-module tsd-parent-kind-module"><a href="modules/dateMapper._internal_.html">&lt;internal&gt;</a></li></ul></li>
 <li class="tsd-kind-module"><a href="modules/generatePostId.html">generate<wbr/>Post<wbr/>Id</a></li>
+<li class="tsd-kind-module"><a href="modules/globals.html">globals</a></li>
 <li class="tsd-kind-module"><a href="modules/gulp_utils.html">gulp/utils</a>
 <ul>
 <li class="tsd-kind-module tsd-parent-kind-module"><a href="modules/gulp_utils._internal_.html">&lt;internal&gt;</a></li></ul></li>
@@ -129,6 +146,9 @@
 <li class="tsd-kind-module"><a href="modules/node_color.html">node/color</a>
 <ul>
 <li class="tsd-kind-module tsd-parent-kind-module"><a href="modules/node_color._internal_.html">&lt;internal&gt;</a></li></ul></li>
+<li class="tsd-kind-module"><a href="modules/node_debug.html">node/debug</a>
+<ul>
+<li class="tsd-kind-module tsd-parent-kind-module"><a href="modules/node_debug._internal_.html">&lt;internal&gt;</a></li></ul></li>
 <li class="tsd-kind-module"><a href="modules/node_escape_string_regexp.html">node/escape-<wbr/>string-<wbr/>regexp</a></li>
 <li class="tsd-kind-module"><a href="modules/node_filemanager.html">node/filemanager</a>
 <ul>
@@ -205,9 +225,7 @@
 <li class="tsd-kind-module"><a href="modules/node_utils.html">node/utils</a></li>
 <li class="tsd-kind-module"><a href="modules/node_uuid.html">node/uuid</a></li>
 <li class="tsd-kind-module"><a href="modules/parsePermalink.html">parse<wbr/>Permalink</a></li>
-<li class="tsd-kind-module"><a href="modules/parsePost.html">parse<wbr/>Post</a>
-<ul>
-<li class="tsd-kind-module tsd-parent-kind-module"><a href="modules/parsePost._internal_.html">&lt;internal&gt;</a></li></ul></li>
+<li class="tsd-kind-module"><a href="modules/parsePost.html">parse<wbr/>Post</a></li>
 <li class="tsd-kind-module"><a href="modules/shortcodes_codeblock.html">shortcodes/codeblock</a></li>
 <li class="tsd-kind-module"><a href="modules/shortcodes_css.html">shortcodes/css</a></li>
 <li class="tsd-kind-module"><a href="modules/shortcodes_extractText.html">shortcodes/extract<wbr/>Text</a></li>
@@ -220,6 +238,8 @@
 <li class="tsd-kind-module"><a href="modules/types__config.html">types/_<wbr/>config</a>
 <ul>
 <li class="tsd-kind-module tsd-parent-kind-module"><a href="modules/types__config._internal_.html">&lt;internal&gt;</a></li></ul></li>
+<li class="tsd-kind-module"><a href="modules/types_parseOptions.html">types/parse<wbr/>Options</a></li>
+<li class="tsd-kind-module"><a href="modules/types_postAuthor.html">types/post<wbr/>Author</a></li>
 <li class="tsd-kind-module"><a href="modules/types_postMap.html">types/post<wbr/>Map</a></li>
 <li class="tsd-kind-module"><a href="modules/types_postMeta.html">types/post<wbr/>Meta</a></li>
 <li class="tsd-kind-module"><a href="modules/utils_string.html">utils/string</a></li></ul></li></ul></div></details></nav></div></div>
