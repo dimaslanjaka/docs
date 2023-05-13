@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+ <html lang="en"> 
+<head>
+  <meta charset="utf-8">
+  
+  <title>language php test | hexo-shortcodes documentation</title>
+  <meta name="author" content="Dimas Lanjaka">
+
+  
+  <meta name="description" content="All in one collection shortcodes for hexo">
+  
+
+  
+  
+<link rel="stylesheet" href="/docs/hexo-shortcodes/css/style.css">
+
+  
+  
+<link rel="stylesheet" href="/docs/hexo-shortcodes/fancybox/jquery.fancybox.min.css">
+
+  
+  <!--[if lt IE 9]><script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script><![endif]-->
+  
+<meta name="generator" content="Hexo 7.0.0-rc1"></head>
+
+<body>
+  <header id="header" class="inner"><nav>
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+</nav></header>
+  <div id="content" class="inner"><article class="h-entry page" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  
+  <header>
+    
+  
+    <h1 class="p-name title" itemprop="headline name">language php test</h1>
+  
+
+    
+  </header>
+  <div class="e-content entry-content">
+    
+      <h2 id="paste-manual">paste manual</h2>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">require</span> <span class="keyword">__DIR__</span> . <span class="string">&#x27;/../vendor/autoload.php&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> <span class="title">Curl</span>\<span class="title">Curl</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// curl --request DELETE &quot;https://httpbin.org/delete?key=value&quot; --data &quot;a=1&amp;b=2&amp;c=3&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="variable">$curl</span> = <span class="keyword">new</span> <span class="title class_">Curl</span>();</span><br><span class="line"><span class="variable">$curl</span>-&gt;<span class="title function_ invoke__">delete</span>(</span><br><span class="line">    <span class="string">&#x27;https://httpbin.org/delete&#x27;</span>,</span><br><span class="line">    [</span><br><span class="line">        <span class="string">&#x27;key&#x27;</span> =&gt; <span class="string">&#x27;value&#x27;</span>,</span><br><span class="line">    ],</span><br><span class="line">    [</span><br><span class="line">        <span class="string">&#x27;a&#x27;</span> =&gt; <span class="string">&#x27;1&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;b&#x27;</span> =&gt; <span class="string">&#x27;2&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;c&#x27;</span> =&gt; <span class="string">&#x27;3&#x27;</span>,</span><br><span class="line">    ]</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (<span class="variable">$curl</span>-&gt;error) &#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&#x27;Error: &#x27;</span> . <span class="variable">$curl</span>-&gt;errorMessage . <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&#x27;Data server received via DELETE:&#x27;</span> . <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    <span class="title function_ invoke__">var_dump</span>(<span class="variable">$curl</span>-&gt;response-&gt;form);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="github-shortcode">github shortcode</h2>
+<figure class="highlight php"><figcaption>php</figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">require</span> <span class="keyword">__DIR__</span> . <span class="string">&#x27;/../vendor/autoload.php&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> <span class="title">Curl</span>\<span class="title">Curl</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// curl --request DELETE &quot;https://httpbin.org/delete?key=value&quot; --data &quot;a=1&amp;b=2&amp;c=3&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="variable">$curl</span> = <span class="keyword">new</span> <span class="title class_">Curl</span>();</span><br><span class="line"><span class="variable">$curl</span>-&gt;<span class="title function_ invoke__">delete</span>(</span><br><span class="line">    <span class="string">&#x27;https://httpbin.org/delete&#x27;</span>,</span><br><span class="line">    [</span><br><span class="line">        <span class="string">&#x27;key&#x27;</span> =&gt; <span class="string">&#x27;value&#x27;</span>,</span><br><span class="line">    ],</span><br><span class="line">    [</span><br><span class="line">        <span class="string">&#x27;a&#x27;</span> =&gt; <span class="string">&#x27;1&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;b&#x27;</span> =&gt; <span class="string">&#x27;2&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;c&#x27;</span> =&gt; <span class="string">&#x27;3&#x27;</span>,</span><br><span class="line">    ]</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (<span class="variable">$curl</span>-&gt;error) &#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&#x27;Error: &#x27;</span> . <span class="variable">$curl</span>-&gt;errorMessage . <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&#x27;Data server received via DELETE:&#x27;</span> . <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    <span class="title function_ invoke__">var_dump</span>(<span class="variable">$curl</span>-&gt;response-&gt;form);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+    
+    
+  </div>
+  
+</article>
+</div>
+  <footer id="footer" class="inner"><div class="social alignright">
+  
+  
+  
+  <a class="rss" href="/docs/hexo-shortcodes/atom.xml" title="RSS">RSS</a>
+</div>
+<p>
+  
+  &copy; 2023 Dimas Lanjaka
+  
+</p>
+<div class="clearfix"></div></footer>
+  
+<script src="/docs/hexo-shortcodes/js/jquery-3.4.1.min.js"></script>
+
+
+<script src="/docs/hexo-shortcodes/js/jquery.imagesloaded.min.js"></script>
+
+
+<script src="/docs/hexo-shortcodes/js/gallery.js"></script>
+
+
+
+
+
+
+<script src="/docs/hexo-shortcodes/fancybox/jquery.fancybox.min.js"></script>
+
+<script>
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<div id="phasebeam">
+  <canvas></canvas>
+  <canvas></canvas>
+  <canvas></canvas>
+</div>
+
+<script src="/docs/hexo-shortcodes/js/phasebeam.js"></script>
+
+
+<script src="/docs/hexo-shortcodes/hexo-shortcodes-lib/githubcard.js"></script>
+<link rel="stylesheet" href="/docs/hexo-shortcodes/hexo-shortcodes-lib/gist.css" />
+</body>
+      
+</html>
