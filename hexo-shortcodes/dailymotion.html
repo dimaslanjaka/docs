@@ -1,6 +1,4 @@
-<!DOCTYPE html>
- <html lang="en"> 
-<head>
+<!DOCTYPE html><html lang="en"><head>
   <meta charset="utf-8">
   
   <title>hexo-shortcodes dailymotion tag | hexo-shortcodes documentation</title>
@@ -33,7 +31,7 @@
     
   </ul>
 </nav></header>
-  <div id="content" class="inner"><article class="h-entry page" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div id="content" class="inner"><article class="h-entry page" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
   
   <header>
     
@@ -46,46 +44,46 @@
   <div class="e-content entry-content">
     
       <p>dailymotion shortcode tag for hexo</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% dailymotion [player:player_id] [video:video_id] [playlist:playlist_id] %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">{% dailymotion [player:player_id] [video:video_id] [playlist:playlist_id] %}</span><br></pre></td></tr></tbody></table></figure>
 <h3 id="Parameters">Parameters</h3>
 <ul>
-<li><code>player:player_id</code>: (optional) Identifier of your custom player configuration (See <a target="_blank" rel="noopener" href="https://developers.dailymotion.com/player/#getting-started">Getting Started section in Dailymotion Video player documentation</a>.</li>
+<li><code>player:player_id</code>: (optional) Identifier of your custom player configuration (See <a target="_blank" rel="noopener" href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9kZXZlbG9wZXJzLmRhaWx5bW90aW9uLmNvbS9wbGF5ZXIvI2dldHRpbmctc3RhcnRlZA==">Getting Started section in Dailymotion Video player documentation</a>.</li>
 <li><code>video:video_id</code>: (optional) Identifier of the video to be loaded within the player</li>
 <li><code>playlist:playlist_id</code>: (optional) Identifier of the playlist to be loaded within the player</li>
 </ul>
 <p>All parameters are optional, but you must add either a <code>video</code> or <code>playlist</code> or the player will remains an empty black rectangle.</p>
-<p>See <a target="_blank" rel="noopener" href="https://developers.dailymotion.com/player/">Video player documentation – Dailymotion for Developers</a> for details about how Dailymotion player works.</p>
-<h3 id=""><a target="_blank" rel="noopener" href="https://github.com/dharFr/hexo-tag-dailymotion/tree/main#example-usages"></a></h3>
+<p>See <a target="_blank" rel="noopener" href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9kZXZlbG9wZXJzLmRhaWx5bW90aW9uLmNvbS9wbGF5ZXIv">Video player documentation – Dailymotion for Developers</a> for details about how Dailymotion player works.</p>
+<h3 id=""><a target="_blank" rel="noopener" href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RoYXJGci9oZXhvLXRhZy1kYWlseW1vdGlvbi90cmVlL21haW4jZXhhbXBsZS11c2FnZXM="></a></h3>
 <h3 id="Example-usages">Example usages</h3>
-<h4 id="-2"><a target="_blank" rel="noopener" href="https://github.com/dharFr/hexo-tag-dailymotion/tree/main#embed-a-video"></a></h4>
+<h4 id="-2"><a target="_blank" rel="noopener" href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RoYXJGci9oZXhvLXRhZy1kYWlseW1vdGlvbi90cmVlL21haW4jZW1iZWQtYS12aWRlbw=="></a></h4>
 <h4 id="Embed-a-video">Embed a video</h4>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% dailymotion player:xakn video:x84sh87 %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">{% dailymotion player:xakn video:x84sh87 %}</span><br></pre></td></tr></tbody></table></figure>
 <p>will inject the following into hexo rendered page or post</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;https://geo.dailymotion.com/player/xakn.js&quot; data-video=&quot;x84sh87&quot; &gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-<h4 id="-3"><a target="_blank" rel="noopener" href="https://github.com/dharFr/hexo-tag-dailymotion/tree/main#embed-a-playlist"></a></h4>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src="https://geo.dailymotion.com/player/xakn.js" data-video="x84sh87" &gt;&lt;/script&gt;</span><br></pre></td></tr></tbody></table></figure>
+<h4 id="-3"><a target="_blank" rel="noopener" href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RoYXJGci9oZXhvLXRhZy1kYWlseW1vdGlvbi90cmVlL21haW4jZW1iZWQtYS1wbGF5bGlzdA=="></a></h4>
 <h4 id="Embed-a-playlist">Embed a playlist</h4>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;% dailymotion player:xakn playlist:x79dlo %&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">{% dailymotion player:xakn playlist:x79dlo %}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
 <p>will inject the following into hexo rendered page or post</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;https://geo.dailymotion.com/player/xakn.js&quot; data-playlist=&quot;x79dlo&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-<h4 id="-4"><a target="_blank" rel="noopener" href="https://github.com/dharFr/hexo-tag-dailymotion/tree/main#embed-a-video-and-a-playlist"></a></h4>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src="https://geo.dailymotion.com/player/xakn.js" data-playlist="x79dlo"&gt;&lt;/script&gt;</span><br></pre></td></tr></tbody></table></figure>
+<h4 id="-4"><a target="_blank" rel="noopener" href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RoYXJGci9oZXhvLXRhZy1kYWlseW1vdGlvbi90cmVlL21haW4jZW1iZWQtYS12aWRlby1hbmQtYS1wbGF5bGlzdA=="></a></h4>
 <h4 id="Embed-a-video-and-a-playlist">Embed a video and a playlist</h4>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;% dailymotion player:xakn video:x84sh87 playlist:x79dlo %&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">{% dailymotion player:xakn video:x84sh87 playlist:x79dlo %}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
 <p>will inject the following into hexo rendered page or post</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;https://geo.dailymotion.com/player/xakn.js&quot; data-video=&quot;x84sh87&quot; data-playlist=&quot;x79dlo&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-<h4 id="-5"><a target="_blank" rel="noopener" href="https://github.com/dharFr/hexo-tag-dailymotion/tree/main#embed-a-default-player"></a></h4>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src="https://geo.dailymotion.com/player/xakn.js" data-video="x84sh87" data-playlist="x79dlo"&gt;&lt;/script&gt;</span><br></pre></td></tr></tbody></table></figure>
+<h4 id="-5"><a target="_blank" rel="noopener" href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RoYXJGci9oZXhvLXRhZy1kYWlseW1vdGlvbi90cmVlL21haW4jZW1iZWQtYS1kZWZhdWx0LXBsYXllcg=="></a></h4>
 <h4 id="Embed-a-default-player">Embed a default player</h4>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;% dailymotion video:x84sh87 %&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">{% dailymotion video:x84sh87 %}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
 <p>will inject the following into hexo rendered page or post</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;https://geo.dailymotion.com/player.js&quot; data-video=&quot;x84sh87&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-<h4 id="-6"><a target="_blank" rel="noopener" href="https://github.com/dharFr/hexo-tag-dailymotion/tree/main#embed-a-player-with-parameters"></a></h4>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src="https://geo.dailymotion.com/player.js" data-video="x84sh87"&gt;&lt;/script&gt;</span><br></pre></td></tr></tbody></table></figure>
+<h4 id="-6"><a target="_blank" rel="noopener" href="https://www.webmanajemen.com/page/safelink.html?url=aHR0cHM6Ly9naXRodWIuY29tL2RoYXJGci9oZXhvLXRhZy1kYWlseW1vdGlvbi90cmVlL21haW4jZW1iZWQtYS1wbGF5ZXItd2l0aC1wYXJhbWV0ZXJz"></a></h4>
 <h4 id="Embed-a-player-with-parameters">Embed a player with parameters</h4>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;% dailymotion player:xakn video:x84sh87 params:startTime=15 %&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">{% dailymotion player:xakn video:x84sh87 params:startTime=15 %}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
 <p>will inject the following into hexo rendered page or post</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;https://geo.dailymotion.com/player/xakn.js&quot; data-video=&quot;x84sh87&quot; data-params=&quot;startTime=15&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src="https://geo.dailymotion.com/player/xakn.js" data-video="x84sh87" data-params="startTime=15"&gt;&lt;/script&gt;</span><br></pre></td></tr></tbody></table></figure>
 <hr>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% dailymotion player:xakn video:x84sh87 params:startTime=15&amp;mute=true&amp;loop=true %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">{% dailymotion player:xakn video:x84sh87 params:startTime=15&amp;mute=true&amp;loop=true %}</span><br></pre></td></tr></tbody></table></figure>
 <p>will inject the following into hexo rendered page or post</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;https://geo.dailymotion.com/player/xakn.js&quot; data-video=&quot;x84sh87&quot; data-params=&quot;startTime=15&amp;mute=true&amp;loop=true&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src="https://geo.dailymotion.com/player/xakn.js" data-video="x84sh87" data-params="startTime=15&amp;mute=true&amp;loop=true"&gt;&lt;/script&gt;</span><br></pre></td></tr></tbody></table></figure>
     
     
   </div>
@@ -100,7 +98,7 @@
 </div>
 <p>
   
-  &copy; 2023 Dimas Lanjaka
+  © 2023 Dimas Lanjaka
   
 </p>
 <div class="clearfix"></div></footer>
@@ -137,7 +135,7 @@
 
 
 <script src="/docs/hexo-shortcodes/hexo-shortcodes-lib/githubcard.js"></script>
-<link rel="stylesheet" href="/docs/hexo-shortcodes/hexo-shortcodes-lib/gist.css" />
-</body>
+<link rel="stylesheet" href="/docs/hexo-shortcodes/hexo-shortcodes-lib/gist.css">
+
       
-</html>
+</body></html>

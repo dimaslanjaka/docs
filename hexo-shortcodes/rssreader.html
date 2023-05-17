@@ -1,6 +1,4 @@
-<!DOCTYPE html>
- <html lang="en"> 
-<head>
+<!DOCTYPE html><html lang="en"><head>
   <meta charset="utf-8">
   
   <title>hexo-shortcodes rss reader | hexo-shortcodes documentation</title>
@@ -33,7 +31,7 @@
     
   </ul>
 </nav></header>
-  <div id="content" class="inner"><article class="h-entry page" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div id="content" class="inner"><article class="h-entry page" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
   
   <header>
     
@@ -47,7 +45,7 @@
     
       <h2 id="Hexo-shortcode-rss-reader">Hexo shortcode rss reader</h2>
 <p>display any rss to your hexo site.</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% rssreader [url] [limit:n] [debug:[true|false]] [randomize:[true|false]] %&#125;</span><br><span class="line">&lt;!-- html result formats each item --&gt;</span><br><span class="line">&#123;% endrssreader %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">{% rssreader [url] [limit:n] [debug:[true|false]] [randomize:[true|false]] %}</span><br><span class="line">&lt;!-- html result formats each item --&gt;</span><br><span class="line">{% endrssreader %}</span><br></pre></td></tr></tbody></table></figure>
 <h2 id="Options">Options</h2>
 <p>rss reader options.</p>
 <table>
@@ -121,7 +119,7 @@
 <blockquote>
 <p>when you done debugging, remove <code>debug</code> option.</p>
 </blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% rssreader https://www.webmanajemen.com/rss.xml debug:true %&#125;&#123;% endrssreader %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">{% rssreader https://www.webmanajemen.com/rss.xml debug:true %}{% endrssreader %}</span><br></pre></td></tr></tbody></table></figure>
 <p>sample result from <a href="https://www.webmanajemen.com/rss.xml">https://www.webmanajemen.com/rss.xml</a></p>
 <pre><code class="highlight json">[
   "title",
@@ -137,7 +135,7 @@
   "isoDate"
 ]</code></pre>
 <h2 id="Example">Example</h2>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;% rssreader https://www.webmanajemen.com/rss.xml limit:10 %&#125;</span><br><span class="line">&lt;div style=&quot;margin-bottom: 7px; padding: 7px&quot;&gt;</span><br><span class="line">  &lt;div style=&quot;display: flex&quot;&gt;</span><br><span class="line">    &lt;div&gt;$image&lt;/div&gt;</span><br><span class="line">    &lt;div&gt;&lt;h2&gt;$title&lt;/h2&gt;&lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;p&gt;$content&lt;/p&gt;</span><br><span class="line">  &lt;a href=&quot;$link&quot; rel=&quot;follow&quot;&gt;Read More&lt;/a&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&#123;% endrssreader %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">{% rssreader https://www.webmanajemen.com/rss.xml limit:10 %}</span><br><span class="line">&lt;div style="margin-bottom: 7px; padding: 7px"&gt;</span><br><span class="line">  &lt;div style="display: flex"&gt;</span><br><span class="line">    &lt;div&gt;$image&lt;/div&gt;</span><br><span class="line">    &lt;div&gt;&lt;h2&gt;$title&lt;/h2&gt;&lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;p&gt;$content&lt;/p&gt;</span><br><span class="line">  &lt;a href="$link" rel="follow"&gt;Read More&lt;/a&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">{% endrssreader %}</span><br></pre></td></tr></tbody></table></figure>
 <div style="margin-bottom: 7px; padding: 7px">
   <div style="display: flex">
     <div></div>
@@ -233,7 +231,7 @@
 </div>
 <p>
   
-  &copy; 2023 Dimas Lanjaka
+  © 2023 Dimas Lanjaka
   
 </p>
 <div class="clearfix"></div></footer>
@@ -270,7 +268,7 @@
 
 
 <script src="/docs/hexo-shortcodes/hexo-shortcodes-lib/githubcard.js"></script>
-<link rel="stylesheet" href="/docs/hexo-shortcodes/hexo-shortcodes-lib/gist.css" />
-</body>
+<link rel="stylesheet" href="/docs/hexo-shortcodes/hexo-shortcodes-lib/gist.css">
+
       
-</html>
+</body></html>
