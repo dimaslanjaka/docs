@@ -50,6 +50,15 @@
 var getJSON = require("async-get-json");
 
 await getJSON("https://storage.googleapis.com/maps-devrel/google.json");</div>
+<h2 id="auto-fix-on-duplicated-id">auto fix on duplicated id</h2>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;% npmrunkit id:custom %&#125;</span><br><span class="line">const boxen = require(&quot;boxen&quot;);</span><br><span class="line">const options = &#123;</span><br><span class="line"><span class="code">    borderStyle: &quot;classic&quot;,</span></span><br><span class="line"><span class="code">    padding: 1</span></span><br><span class="line"><span class="code">&#125;;</span></span><br><span class="line"><span class="code">const title = boxen(&quot;Boxen gets your text noticed!&quot;, options);</span></span><br><span class="line"><span class="code">title + &quot;\nAny other text is simply text :)&quot;;</span></span><br><span class="line"><span class="code">&#123;% endnpmrunkit %&#125;</span></span><br></pre></td></tr></table></figure>
+<script src="https://embed.runkit.com" data-element-id="cabf4bd641dbe22362bff7257c4e94f6"></script><div id="cabf4bd641dbe22362bff7257c4e94f6">const boxen = require("boxen");
+const options = {
+    borderStyle: "classic",
+    padding: 1
+};
+const title = boxen("Boxen gets your text noticed!", options);
+title + "\nAny other text is simply text :)";</div>
     
     
   </div>
