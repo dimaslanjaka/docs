@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+ <html lang="en"> 
+<head>
   <meta charset="utf-8">
   
   <title>hexo-shortcodes rss reader | hexo-shortcodes documentation</title>
@@ -31,7 +33,7 @@
     
   </ul>
 </nav></header>
-  <div id="content" class="inner"><article class="h-entry page" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+  <div id="content" class="inner"><article class="h-entry page" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   
   <header>
     
@@ -45,7 +47,7 @@
     
       <h2 id="Hexo-shortcode-rss-reader">Hexo shortcode rss reader</h2>
 <p>display any rss to your hexo site.</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">{% rssreader [url] [limit:n] [debug:[true|false]] [randomize:[true|false]] %}</span><br><span class="line">&lt;!-- html result formats each item --&gt;</span><br><span class="line">{% endrssreader %}</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% rssreader [url] [limit:n] [debug:[true|false]] [randomize:[true|false]] %&#125;</span><br><span class="line">&lt;!-- html result formats each item --&gt;</span><br><span class="line">&#123;% endrssreader %&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="Options">Options</h2>
 <p>rss reader options.</p>
 <table>
@@ -119,7 +121,7 @@
 <blockquote>
 <p>when you done debugging, remove <code>debug</code> option.</p>
 </blockquote>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">{% rssreader https://www.webmanajemen.com/rss.xml debug:true %}{% endrssreader %}</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% rssreader https://www.webmanajemen.com/rss.xml debug:true %&#125;&#123;% endrssreader %&#125;</span><br></pre></td></tr></table></figure>
 <p>sample result from <a href="https://www.webmanajemen.com/rss.xml">https://www.webmanajemen.com/rss.xml</a></p>
 <pre><code class="highlight json">[
   "title",
@@ -135,30 +137,46 @@
   "isoDate"
 ]</code></pre>
 <h2 id="Example">Example</h2>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">{% rssreader https://www.webmanajemen.com/rss.xml limit:10 %}</span><br><span class="line">&lt;div style="margin-bottom: 7px; padding: 7px"&gt;</span><br><span class="line">  &lt;div style="display: flex"&gt;</span><br><span class="line">    &lt;div&gt;$image&lt;/div&gt;</span><br><span class="line">    &lt;div&gt;&lt;h2&gt;$title&lt;/h2&gt;&lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;p&gt;$content&lt;/p&gt;</span><br><span class="line">  &lt;a href="$link" rel="follow"&gt;Read More&lt;/a&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">{% endrssreader %}</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;% rssreader https://www.webmanajemen.com/rss.xml limit:10 %&#125;</span><br><span class="line">&lt;div style=&quot;margin-bottom: 7px; padding: 7px&quot;&gt;</span><br><span class="line">  &lt;div style=&quot;display: flex&quot;&gt;</span><br><span class="line">    &lt;div&gt;$image&lt;/div&gt;</span><br><span class="line">    &lt;div&gt;&lt;h2&gt;$title&lt;/h2&gt;&lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;p&gt;$content&lt;/p&gt;</span><br><span class="line">  &lt;a href=&quot;$link&quot; rel=&quot;follow&quot;&gt;Read More&lt;/a&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&#123;% endrssreader %&#125;</span><br></pre></td></tr></table></figure>
 <div style="margin-bottom: 7px; padding: 7px">
   <div style="display: flex">
     <div></div>
-    <div><h2>Hexo pull request 20-04-2023</h2></div>
+    <div><h2>Hexo pull request 20-02-2023</h2></div>
   </div>
-  <p>Hexo pull request 20-04-2023</p>
+  <p>Hexo pull request 20-02-2023</p>
   <a href="https://www.webmanajemen.com/hexo/pull-request-20-04-2023.html" rel="follow">Read More</a>
 </div>
 <div style="margin-bottom: 7px; padding: 7px">
   <div style="display: flex">
     <div></div>
-    <div><h2>Hexo pull request 20-04-2023</h2></div>
+    <div><h2>rollback commit github</h2></div>
   </div>
-  <p>Hexo pull request 20-04-2023</p>
-  <a href="https://www.webmanajemen.com/hexo/pull-request-20-04-2023.html" rel="follow">Read More</a>
+  <p>rollback commit github Rogue Coder? Working alone and just want to do well? Follow the steps below. These steps have worked reliably for me and many others over the years. Collaborate with others? Git is complicated. Please read the comments below this answer, consider other answers, and discuss wit</p>
+  <a href="https://www.webmanajemen.com/2023/05/git-rollback-commit-hash.html" rel="follow">Read More</a>
 </div>
 <div style="margin-bottom: 7px; padding: 7px">
   <div style="display: flex">
     <div></div>
-    <div><h2>Conventional Commit Messages</h2></div>
+    <div><h2>remove files from git history for specific size</h2></div>
   </div>
-  <p>Github Conventional Commit Messages</p>
-  <a href="https://www.webmanajemen.com/2023/04/git-conventional-commit.html" rel="follow">Read More</a>
+  <p>remove files from git history for specific size delete big files from git history example deleting files more than 100Mb bfg --strip-blobs-bigger-than 100M . clean old logs before push git reflog expire --expire=now --all git gc --prune=now --aggressive push git push</p>
+  <a href="https://www.webmanajemen.com/2023/05/git-remove-big-files.html" rel="follow">Read More</a>
+</div>
+<div style="margin-bottom: 7px; padding: 7px">
+  <div style="display: flex">
+    <div></div>
+    <div><h2>removes node_modules from git history</h2></div>
+  </div>
+  <p>removes node_modules from git history WARNING: git filter-branch is no longer officially recommended. WARNING no longer officially recommended The official recommendation is to use git-filter-repo. git-filter-repo see Andr Anjos answer for details. Andr Anjos answer for details If you are here</p>
+  <a href="https://www.webmanajemen.com/2023/05/removes-nodemodules-from-git-history.html" rel="follow">Read More</a>
+</div>
+<div style="margin-bottom: 7px; padding: 7px">
+  <div style="display: flex">
+    <div></div>
+    <div><h2>npm upgrade failed err code EEXIST</h2></div>
+  </div>
+  <p>How to fix upgrade npm ERR code EEXIST in nodejs</p>
+  <a href="https://www.webmanajemen.com/NodeJS/npm-install-failed.html" rel="follow">Read More</a>
 </div>
 <div style="margin-bottom: 7px; padding: 7px">
   <div style="display: flex">
@@ -179,22 +197,6 @@
 <div style="margin-bottom: 7px; padding: 7px">
   <div style="display: flex">
     <div></div>
-    <div><h2>Bug Report Chimeraland v2.0.2.117</h2></div>
-  </div>
-  <p>Bug Report Chimeraland v2.0.2.117 Chimeraland v2.0.2.117 - Bug Report List of bugs, chimeraland v2.0.2.117. Broken display of weapon stats and armor sets Basic display stats got broken, sample list below: Tranquil fan Heavy Sword Many item names have been changed Many items name got changed, sampl</p>
-  <a href="https://www.webmanajemen.com/chimeraland/report/bug-report-v202117.html" rel="follow">Read More</a>
-</div>
-<div style="margin-bottom: 7px; padding: 7px">
-  <div style="display: flex">
-    <div></div>
-    <div><h2>How to setup jest typescript and code runner in vscode</h2></div>
-  </div>
-  <p>How to setup jest typescript and code runner in vscode How to setup jest typescript with code runner in vscode with this technique you can directly run test single file in vscode without typings manually in terminal, see below screenshot Requirements install vscode code-runneroptional install vsco</p>
-  <a href="https://www.webmanajemen.com/2023/04/setup-jest-code-runner-vscode.html" rel="follow">Read More</a>
-</div>
-<div style="margin-bottom: 7px; padding: 7px">
-  <div style="display: flex">
-    <div></div>
     <div><h2>How to setup jest typescript and code runner in vscode</h2></div>
   </div>
   <p>How to setup jest typescript and code runner in vscode How to setup jest typescript with code runner in vscode with this technique you can directly run test single file in vscode without typings manually in terminal, see below screenshot Requirements install vscode code-runneroptional install vsco</p>
@@ -211,10 +213,10 @@
 <div style="margin-bottom: 7px; padding: 7px">
   <div style="display: flex">
     <div></div>
-    <div><h2>Monster mamba</h2></div>
+    <div><h2>bash script delete folder recursively</h2></div>
   </div>
-  <p>Monster mamba mamba Information from Chimeralandmamba default attribute GRADEAttackHealth Point HPDefenseDelicacies/Tasty for mambaGalleries for mamba mamba Information from Chimeraland mamba default attribute GRADEAttackHealth Point HPDefense mamba GRADEAttackHealth Point HPDefense GRADE Att</p>
-  <a href="https://www.webmanajemen.com/chimeraland/monsters/mamba.html" rel="follow">Read More</a>
+  <p>bash script delete folder recursively script bash to recursive delete folder /usr/bin/env bash make cygwin bin as priorityexport PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:PATH;set -o igncr 2>/dev/null set -o igncr; cygwin encoding fixbasedir=dirname 0</p>
+  <a href="https://www.webmanajemen.com/2023/04/bash-delete-folder-recursive.html" rel="follow">Read More</a>
 </div>
 
     
@@ -231,7 +233,7 @@
 </div>
 <p>
   
-  © 2023 Dimas Lanjaka
+  &copy; 2023 Dimas Lanjaka
   
 </p>
 <div class="clearfix"></div></footer>
@@ -268,7 +270,7 @@
 
 
 <script src="/docs/hexo-shortcodes/hexo-shortcodes-lib/githubcard.js"></script>
-<link rel="stylesheet" href="/docs/hexo-shortcodes/hexo-shortcodes-lib/gist.css">
-
+<link rel="stylesheet" href="/docs/hexo-shortcodes/hexo-shortcodes-lib/gist.css" />
+</body>
       
-</body></html>
+</html>

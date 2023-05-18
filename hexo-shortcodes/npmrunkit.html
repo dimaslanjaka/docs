@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Videos | hexo-shortcodes documentation</title>
+  <title>embed any javascript codes | hexo-shortcodes documentation</title>
   <meta name="author" content="Dimas Lanjaka">
 
   
@@ -38,18 +38,18 @@
   <header>
     
   
-    <h1 class="p-name title" itemprop="headline name">Videos</h1>
+    <h1 class="p-name title" itemprop="headline name">embed any javascript codes</h1>
   
 
     
   </header>
   <div class="e-content entry-content">
     
-      <p>This is a video test post.</p>
-<p><strong>Youtube</strong></p>
-<div class="video-container"><iframe src="https://www.youtube.com/embed/TIbZDRXM-Tg" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
-<p><strong>Vimeo</strong></p>
-<div class="video-container"><iframe src="https://player.vimeo.com/video/82090131" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+      <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;% npmrunkit id:custom %&#125;</span><br><span class="line">// GeoJSON!</span><br><span class="line">var getJSON = require(&quot;async-get-json&quot;);</span><br><span class="line"></span><br><span class="line">await getJSON(&quot;https://storage.googleapis.com/maps-devrel/google.json&quot;);</span><br><span class="line">&#123;% endnpmrunkit %&#125;</span><br></pre></td></tr></table></figure>
+<script src="https://embed.runkit.com" data-element-id="880947a7eeb39293a8b52ea74d3cfdda"></script><div id="880947a7eeb39293a8b52ea74d3cfdda">// GeoJSON!
+var getJSON = require("async-get-json");
+
+await getJSON("https://storage.googleapis.com/maps-devrel/google.json");</div>
     
     
   </div>
