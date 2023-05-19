@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Videos | hexo-shortcodes documentation</title>
-  <meta name="author" content="Dimas Lanjaka">
+  <title>Videos | HexoJS Shortcodes</title>
+  <meta name="author" content="Dimas Lanjaka (L3n4r0x)">
 
   
   <meta name="description" content="All in one collection shortcodes for hexo">
@@ -47,7 +47,15 @@
     
       <p>This is a video test post.</p>
 <p><strong>Youtube</strong></p>
-<div class="video-container"><iframe src="https://www.youtube.com/embed/TIbZDRXM-Tg" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% youtube TIbZDRXM-Tg %&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>Embed a video</strong></p>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/lJIrF4YjHfQ" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+<p><strong>Embed a playlist</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% youtube PL9hW1uS6HUfscJ9DHkOSoOX45MjXduUxo &#x27;playlist&#x27; %&#125;</span><br></pre></td></tr></table></figure>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/videoseries?list=RD4SIbfc02jaY" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+<p><strong>Enable privacy-enhanced mode</strong></p>
+<p>YouTube’s cookie is not used in this mode.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;% youtube lJIrF4YjHfQ false %&#125;\</span><br><span class="line">&#123;% youtube PL9hW1uS6HUfscJ9DHkOSoOX45MjXduUxo &#x27;playlist&#x27; false %&#125;</span><br></pre></td></tr></table></figure>
 <p><strong>Vimeo</strong></p>
 <div class="video-container"><iframe src="https://player.vimeo.com/video/82090131" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
     
@@ -64,7 +72,7 @@
 </div>
 <p>
   
-  &copy; 2023 Dimas Lanjaka
+  &copy; 2023 Dimas Lanjaka (L3n4r0x)
   
 </p>
 <div class="clearfix"></div></footer>

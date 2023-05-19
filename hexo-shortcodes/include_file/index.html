@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+ <html lang="en"> 
+<head>
+  <meta charset="utf-8">
+  
+  <title>Include any files to Hexo Post | HexoJS Shortcodes</title>
+  <meta name="author" content="Dimas Lanjaka (L3n4r0x)">
+
+  
+  <meta name="description" content="All in one collection shortcodes for hexo">
+  
+
+  
+  
+<link rel="stylesheet" href="/docs/hexo-shortcodes/css/style.css">
+
+  
+  
+<link rel="stylesheet" href="/docs/hexo-shortcodes/fancybox/jquery.fancybox.min.css">
+
+  
+  <!--[if lt IE 9]><script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script><![endif]-->
+  
+<meta name="generator" content="Hexo 7.0.0-rc1"></head>
+
+<body>
+  <header id="header" class="inner"><nav>
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+</nav></header>
+  <div id="content" class="inner"><article class="h-entry page" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  
+  <header>
+    
+  
+    <h1 class="p-name title" itemprop="headline name">Include any files to Hexo Post</h1>
+  
+
+    
+  </header>
+  <div class="e-content entry-content">
+    
+      <p>include any local files with syntax highlighter</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;% include_file [title] [lang:language] [from:line] [to:line] path/to/file %&#125;</span><br><span class="line">&#123;% include_file [title:&#x27;scoped title&#x27;] [lang:language] [from:line] [to:line] path/to/file %&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="path-relative-to-source-directory">path relative to source directory</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% include_file &#x27;fixtures/include-one.txt&#x27; %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><figcaption><span>include-one.txt</span><a href="/docs/hexo-shortcodes/downloads/code/fixtures/include-one.txt">view raw</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">first included</span><br></pre></td></tr></table></figure>
+<h2 id="path-relative-to-current-file-with-space">path relative to current file (with space)</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% include_file &#x27;../fixtures/include two.txt&#x27; %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><figcaption><span>include two.txt</span><a href="/docs/hexo-shortcodes/downloads/fixtures/include two.txt">view raw</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">second included</span><br></pre></td></tr></table></figure>
+<h2 id="include-code-alias">include_code alias</h2>
+<p>Inserts code snippets in <code>source/downloads/code</code> folder. The folder location can be specified through the <code>code_dir</code> option in the config.</p>
+<h3 id="Embed-the-whole-content-of-test-js">Embed the whole content of test.js</h3>
+<figure class="highlight javascript"><figcaption><span>test.js</span><a href="/docs/hexo-shortcodes/downloads/code/fixtures/test.js">view raw</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// global variables</span></span><br><span class="line"><span class="keyword">const</span> toMatch = <span class="keyword">new</span> <span class="title class_">Date</span>(<span class="string">&#x27;2022-12-01T09:30:20&#x27;</span>);</span><br><span class="line"><span class="keyword">let</span> data = <span class="string">`date to match: <span class="subst">${toMatch}</span>&lt;br/&gt;`</span>;</span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;variables&#x27;</span>).<span class="property">innerHTML</span> = data;</span><br><span class="line"></span><br><span class="line"><span class="comment">// method 1 using timestamp</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> yourDate = toMatch.<span class="title function_">getTime</span>(); <span class="comment">//Get the timestamp</span></span><br><span class="line"><span class="keyword">const</span> today = <span class="title class_">Date</span>.<span class="title function_">now</span>();</span><br><span class="line"><span class="comment">// 2 days in millisecond</span></span><br><span class="line"><span class="keyword">const</span> day = <span class="number">60</span> * <span class="number">60</span> * <span class="number">1000</span> * <span class="number">24</span> * <span class="number">2</span>;</span><br><span class="line">data = <span class="string">`</span></span><br><span class="line"><span class="string">today: <span class="subst">${today}</span>&lt;br/&gt;</span></span><br><span class="line"><span class="string">yourDate: <span class="subst">${yourDate}</span>&lt;br/&gt;</span></span><br><span class="line"><span class="string">2 days in millisecond: <span class="subst">${day}</span>&lt;br/&gt;</span></span><br><span class="line"><span class="string">today - yourDate: <span class="subst">${today - yourDate}</span>&lt;br/&gt;</span></span><br><span class="line"><span class="string">is greater than 2 days: <span class="subst">${today - yourDate &gt; day ? <span class="string">&#x27;&lt;span class=green&gt;true&lt;/span&gt;&#x27;</span> : <span class="string">&#x27;&lt;span class=red&gt;false&lt;/span&gt;&#x27;</span>}</span>`</span>;</span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;timestamp&#x27;</span>).<span class="property">innerHTML</span> = data;</span><br><span class="line"></span><br><span class="line"><span class="comment">// method 2 using hours</span></span><br><span class="line"><span class="keyword">const</span> now = <span class="keyword">new</span> <span class="title class_">Date</span>();</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> msBetweenDates = <span class="title class_">Math</span>.<span class="title function_">abs</span>(toMatch.<span class="title function_">getTime</span>() - now.<span class="title function_">getTime</span>());</span><br><span class="line"></span><br><span class="line"><span class="comment">// 👇️ convert ms to hours                  min  sec   ms</span></span><br><span class="line"><span class="keyword">const</span> hoursBetweenDates = msBetweenDates / (<span class="number">60</span> * <span class="number">60</span> * <span class="number">1000</span>);</span><br><span class="line"></span><br><span class="line">data = <span class="string">`</span></span><br><span class="line"><span class="string">hoursBetweenDates: <span class="subst">${hoursBetweenDates}</span>&lt;br/&gt;</span></span><br><span class="line"><span class="string">date is within 24 hours: <span class="subst">${</span></span></span><br><span class="line"><span class="subst"><span class="string">  hoursBetweenDates &lt; <span class="number">24</span> ? <span class="string">&#x27;&lt;span class=green&gt;true&lt;/span&gt;&#x27;</span> : <span class="string">&#x27;&lt;span class=red&gt;false&lt;/span&gt;&#x27;</span></span></span></span><br><span class="line"><span class="subst"><span class="string">}</span>&lt;br/&gt;</span></span><br><span class="line"><span class="string">date is greater than 48 hours: <span class="subst">${</span></span></span><br><span class="line"><span class="subst"><span class="string">  hoursBetweenDates &gt; <span class="number">48</span> ? <span class="string">&#x27;&lt;span class=green&gt;true&lt;/span&gt;&#x27;</span> : <span class="string">&#x27;&lt;span class=red&gt;false&lt;/span&gt;&#x27;</span></span></span></span><br><span class="line"><span class="subst"><span class="string">}</span>&lt;br/&gt;</span></span><br><span class="line"><span class="string">`</span>;</span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;hours&#x27;</span>).<span class="property">innerHTML</span> = data;</span><br><span class="line"></span><br><span class="line"><span class="comment">// unused</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">_isOverEighteen</span>(<span class="params">year = <span class="number">0</span>, month = <span class="number">0</span>, day = <span class="number">0</span></span>) {</span><br><span class="line">  <span class="keyword">var</span> now = <span class="built_in">parseInt</span>(<span class="keyword">new</span> <span class="title class_">Date</span>().<span class="title function_">toISOString</span>().<span class="title function_">slice</span>(<span class="number">0</span>, <span class="number">10</span>).<span class="title function_">replace</span>(<span class="regexp">/-/g</span>, <span class="string">&#x27;&#x27;</span>));</span><br><span class="line">  <span class="keyword">var</span> dob = year * <span class="number">10000</span> + month * <span class="number">100</span> + day * <span class="number">1</span>; <span class="comment">// Coerces strings to integers</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> now - dob &gt; <span class="number">180000</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<h3 id="Embed-line-3-only">Embed line 3 only</h3>
+<figure class="highlight javascript"><figcaption><span>test.js</span><a href="/docs/hexo-shortcodes/downloads/code/fixtures/test.js">view raw</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> data = <span class="string">`date to match: <span class="subst">${toMatch}</span>&lt;br/&gt;`</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="Embed-line-5-to-8">Embed line 5 to 8</h3>
+<figure class="highlight javascript"><figcaption><span>test.js</span><a href="/docs/hexo-shortcodes/downloads/code/fixtures/test.js">view raw</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// method 1 using timestamp</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> yourDate = toMatch.<span class="title function_">getTime</span>(); <span class="comment">//Get the timestamp</span></span><br></pre></td></tr></table></figure>
+<h3 id="Embed-line-5-to-the-end-of-file">Embed line 5 to the end of file</h3>
+<figure class="highlight javascript"><figcaption><span>test.js</span><a href="/docs/hexo-shortcodes/downloads/code/fixtures/test.js">view raw</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// method 1 using timestamp</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> yourDate = toMatch.<span class="title function_">getTime</span>(); <span class="comment">//Get the timestamp</span></span><br><span class="line"><span class="keyword">const</span> today = <span class="title class_">Date</span>.<span class="title function_">now</span>();</span><br><span class="line"><span class="comment">// 2 days in millisecond</span></span><br><span class="line"><span class="keyword">const</span> day = <span class="number">60</span> * <span class="number">60</span> * <span class="number">1000</span> * <span class="number">24</span> * <span class="number">2</span>;</span><br><span class="line">data = <span class="string">`</span></span><br><span class="line"><span class="string">today: <span class="subst">${today}</span>&lt;br/&gt;</span></span><br><span class="line"><span class="string">yourDate: <span class="subst">${yourDate}</span>&lt;br/&gt;</span></span><br><span class="line"><span class="string">2 days in millisecond: <span class="subst">${day}</span>&lt;br/&gt;</span></span><br><span class="line"><span class="string">today - yourDate: <span class="subst">${today - yourDate}</span>&lt;br/&gt;</span></span><br><span class="line"><span class="string">is greater than 2 days: <span class="subst">${today - yourDate &gt; day ? <span class="string">&#x27;&lt;span class=green&gt;true&lt;/span&gt;&#x27;</span> : <span class="string">&#x27;&lt;span class=red&gt;false&lt;/span&gt;&#x27;</span>}</span>`</span>;</span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;timestamp&#x27;</span>).<span class="property">innerHTML</span> = data;</span><br><span class="line"></span><br><span class="line"><span class="comment">// method 2 using hours</span></span><br><span class="line"><span class="keyword">const</span> now = <span class="keyword">new</span> <span class="title class_">Date</span>();</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> msBetweenDates = <span class="title class_">Math</span>.<span class="title function_">abs</span>(toMatch.<span class="title function_">getTime</span>() - now.<span class="title function_">getTime</span>());</span><br><span class="line"></span><br><span class="line"><span class="comment">// 👇️ convert ms to hours                  min  sec   ms</span></span><br><span class="line"><span class="keyword">const</span> hoursBetweenDates = msBetweenDates / (<span class="number">60</span> * <span class="number">60</span> * <span class="number">1000</span>);</span><br><span class="line"></span><br><span class="line">data = <span class="string">`</span></span><br><span class="line"><span class="string">hoursBetweenDates: <span class="subst">${hoursBetweenDates}</span>&lt;br/&gt;</span></span><br><span class="line"><span class="string">date is within 24 hours: <span class="subst">${</span></span></span><br><span class="line"><span class="subst"><span class="string">  hoursBetweenDates &lt; <span class="number">24</span> ? <span class="string">&#x27;&lt;span class=green&gt;true&lt;/span&gt;&#x27;</span> : <span class="string">&#x27;&lt;span class=red&gt;false&lt;/span&gt;&#x27;</span></span></span></span><br><span class="line"><span class="subst"><span class="string">}</span>&lt;br/&gt;</span></span><br><span class="line"><span class="string">date is greater than 48 hours: <span class="subst">${</span></span></span><br><span class="line"><span class="subst"><span class="string">  hoursBetweenDates &gt; <span class="number">48</span> ? <span class="string">&#x27;&lt;span class=green&gt;true&lt;/span&gt;&#x27;</span> : <span class="string">&#x27;&lt;span class=red&gt;false&lt;/span&gt;&#x27;</span></span></span></span><br><span class="line"><span class="subst"><span class="string">}</span>&lt;br/&gt;</span></span><br><span class="line"><span class="string">`</span>;</span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;hours&#x27;</span>).<span class="property">innerHTML</span> = data;</span><br><span class="line"></span><br><span class="line"><span class="comment">// unused</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">_isOverEighteen</span>(<span class="params">year = <span class="number">0</span>, month = <span class="number">0</span>, day = <span class="number">0</span></span>) {</span><br><span class="line">  <span class="keyword">var</span> now = <span class="built_in">parseInt</span>(<span class="keyword">new</span> <span class="title class_">Date</span>().<span class="title function_">toISOString</span>().<span class="title function_">slice</span>(<span class="number">0</span>, <span class="number">10</span>).<span class="title function_">replace</span>(<span class="regexp">/-/g</span>, <span class="string">&#x27;&#x27;</span>));</span><br><span class="line">  <span class="keyword">var</span> dob = year * <span class="number">10000</span> + month * <span class="number">100</span> + day * <span class="number">1</span>; <span class="comment">// Coerces strings to integers</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> now - dob &gt; <span class="number">180000</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<h3 id="Embed-line-1-to-8">Embed line 1 to 8</h3>
+<figure class="highlight javascript"><figcaption><span>test.js</span><a href="/docs/hexo-shortcodes/downloads/code/fixtures/test.js">view raw</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// global variables</span></span><br><span class="line"><span class="keyword">const</span> toMatch = <span class="keyword">new</span> <span class="title class_">Date</span>(<span class="string">&#x27;2022-12-01T09:30:20&#x27;</span>);</span><br><span class="line"><span class="keyword">let</span> data = <span class="string">`date to match: <span class="subst">${toMatch}</span>&lt;br/&gt;`</span>;</span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;variables&#x27;</span>).<span class="property">innerHTML</span> = data;</span><br><span class="line"></span><br><span class="line"><span class="comment">// method 1 using timestamp</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> yourDate = toMatch.<span class="title function_">getTime</span>(); <span class="comment">//Get the timestamp</span></span><br></pre></td></tr></table></figure>
+    
+    
+  </div>
+  
+</article>
+</div>
+  <footer id="footer" class="inner"><div class="social alignright">
+  
+  
+  
+  <a class="rss" href="/docs/hexo-shortcodes/atom.xml" title="RSS">RSS</a>
+</div>
+<p>
+  
+  &copy; 2023 Dimas Lanjaka (L3n4r0x)
+  
+</p>
+<div class="clearfix"></div></footer>
+  
+<script src="/docs/hexo-shortcodes/js/jquery-3.4.1.min.js"></script>
+
+
+<script src="/docs/hexo-shortcodes/js/jquery.imagesloaded.min.js"></script>
+
+
+<script src="/docs/hexo-shortcodes/js/gallery.js"></script>
+
+
+
+
+
+
+<script src="/docs/hexo-shortcodes/fancybox/jquery.fancybox.min.js"></script>
+
+<script>
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<div id="phasebeam">
+  <canvas></canvas>
+  <canvas></canvas>
+  <canvas></canvas>
+</div>
+
+<script src="/docs/hexo-shortcodes/js/phasebeam.js"></script>
+
+
+<script src="/docs/hexo-shortcodes/hexo-shortcodes-lib/githubcard.js"></script>
+<link rel="stylesheet" href="/docs/hexo-shortcodes/hexo-shortcodes-lib/gist.css" />
+</body>
+      
+</html>
