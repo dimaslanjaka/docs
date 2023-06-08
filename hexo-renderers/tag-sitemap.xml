@@ -3,7 +3,7 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.webmanajemen.com/docs/hexo-renderers</loc>
-    <lastmod>2023-06-08T20:17:04+07:00</lastmod>
+    <lastmod>2023-06-08T21:30:43+07:00</lastmod>
     <priority>1</priority>
     <changefreq>daily</changefreq>
   </url>
@@ -32,6 +32,12 @@
     <priority>0.2</priority>
   </url>
   <url>
+    <loc>https://www.webmanajemen.com/tags/pug/</loc>
+    <lastmod>2015-06-05T15:23:53+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  <url>
     <loc>https://www.webmanajemen.com/tags/njk/</loc>
     <lastmod>2016-07-05T23:38:24+07:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -40,12 +46,6 @@
   <url>
     <loc>https://www.webmanajemen.com/tags/post-has-5/</loc>
     <lastmod>2013-03-03T20:22:33+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  <url>
-    <loc>https://www.webmanajemen.com/tags/pug/</loc>
-    <lastmod>2015-06-05T15:23:53+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

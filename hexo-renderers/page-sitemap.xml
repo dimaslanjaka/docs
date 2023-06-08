@@ -3,9 +3,15 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.webmanajemen.com/docs/hexo-renderers</loc>
-    <lastmod>2023-06-08T20:17:04+07:00</lastmod>
+    <lastmod>2023-06-08T21:30:43+07:00</lastmod>
     <priority>1</priority>
     <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://www.webmanajemen.com/docs/hexo-renderers/ejs.html</loc>
+    <lastmod>2023-03-27T11:54:06+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.webmanajemen.com/docs/hexo-renderers/helpers.html</loc>
@@ -32,8 +38,8 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.webmanajemen.com/docs/hexo-renderers/ejs.html</loc>
-    <lastmod>2023-03-27T11:54:06+07:00</lastmod>
+    <loc>https://www.webmanajemen.com/docs/hexo-renderers/markdown-it/attrs.html</loc>
+    <lastmod>2023-05-22T17:43:29+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -50,14 +56,8 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.webmanajemen.com/docs/hexo-renderers/markdown-it/attrs.html</loc>
-    <lastmod>2023-05-22T17:43:29+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.webmanajemen.com/docs/hexo-renderers/page/random/post-12.html</loc>
-    <lastmod>2015-10-06T14:57:56+07:00</lastmod>
+    <loc>https://www.webmanajemen.com/docs/hexo-renderers/page/random/post-1.html</loc>
+    <lastmod>2013-08-19T11:16:45+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -74,26 +74,26 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.webmanajemen.com/docs/hexo-renderers/page/random/post-11.html</loc>
+    <lastmod>2013-01-09T07:04:23+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.webmanajemen.com/docs/hexo-renderers/page/random/post-12.html</loc>
+    <lastmod>2015-10-06T14:57:56+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.webmanajemen.com/docs/hexo-renderers/page/random/post-14.html</loc>
+    <lastmod>2016-07-21T16:18:10+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.webmanajemen.com/docs/hexo-renderers/page/random/post-13.html</loc>
     <lastmod>2016-11-29T02:59:02+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.webmanajemen.com/docs/hexo-renderers/page/random/post-16.html</loc>
-    <lastmod>2012-08-29T05:17:34+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.webmanajemen.com/docs/hexo-renderers/page/random/post-1.html</loc>
-    <lastmod>2013-08-19T11:16:45+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.webmanajemen.com/docs/hexo-renderers/page/random/post-2.html</loc>
-    <lastmod>2011-12-31T21:05:41+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -104,20 +104,32 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.webmanajemen.com/docs/hexo-renderers/page/random/post-16.html</loc>
+    <lastmod>2012-08-29T05:17:34+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.webmanajemen.com/docs/hexo-renderers/page/random/post-17.html</loc>
     <lastmod>2012-09-20T07:26:05+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.webmanajemen.com/docs/hexo-renderers/page/random/post-4.html</loc>
-    <lastmod>2012-09-20T10:58:50+07:00</lastmod>
+    <loc>https://www.webmanajemen.com/docs/hexo-renderers/page/random/post-18.html</loc>
+    <lastmod>2013-01-12T06:00:54+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.webmanajemen.com/docs/hexo-renderers/page/random/post-19.html</loc>
     <lastmod>2016-09-13T12:29:43+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.webmanajemen.com/docs/hexo-renderers/page/random/post-2.html</loc>
+    <lastmod>2011-12-31T21:05:41+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -134,20 +146,14 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.webmanajemen.com/docs/hexo-renderers/page/random/post-4.html</loc>
+    <lastmod>2012-09-20T10:58:50+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.webmanajemen.com/docs/hexo-renderers/page/random/post-5.html</loc>
     <lastmod>2014-10-15T10:43:08+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.webmanajemen.com/docs/hexo-renderers/page/random/post-8.html</loc>
-    <lastmod>2012-04-01T15:20:45+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.webmanajemen.com/docs/hexo-renderers/page/random/post-9.html</loc>
-    <lastmod>2012-07-15T03:18:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -160,6 +166,18 @@
   <url>
     <loc>https://www.webmanajemen.com/docs/hexo-renderers/page/random/post-7.html</loc>
     <lastmod>2015-06-12T20:53:51+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.webmanajemen.com/docs/hexo-renderers/page/random/post-8.html</loc>
+    <lastmod>2012-04-01T15:20:45+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.webmanajemen.com/docs/hexo-renderers/page/random/post-9.html</loc>
+    <lastmod>2012-07-15T03:18:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
