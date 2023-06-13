@@ -3,7 +3,7 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.webmanajemen.com/docs/hexo-renderers</loc>
-    <lastmod>2023-06-13T01:12:04+07:00</lastmod>
+    <lastmod>2023-06-13T16:58:13+07:00</lastmod>
     <priority>1</priority>
     <changefreq>daily</changefreq>
   </url>
@@ -15,61 +15,55 @@
   </url>
   <url>
     <loc>https://www.webmanajemen.com/categories/random/</loc>
-    <lastmod>2018-11-06T23:54:23+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  <url>
-    <loc>https://www.webmanajemen.com/categories/random/uncategorized/</loc>
-    <lastmod>2018-11-06T23:54:23+07:00</lastmod>
+    <lastmod>2021-06-13T16:12:58+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   <url>
     <loc>https://www.webmanajemen.com/categories/random/post-has-0/</loc>
-    <lastmod>2014-07-10T00:46:55+07:00</lastmod>
+    <lastmod>2021-02-16T08:10:10+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   <url>
-    <loc>https://www.webmanajemen.com/categories/random/uncategorized/njk/</loc>
-    <lastmod>Invalid date</lastmod>
+    <loc>https://www.webmanajemen.com/categories/random/uncategorized/</loc>
+    <lastmod>2021-06-13T16:12:58+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   <url>
-    <loc>https://www.webmanajemen.com/categories/random/uncategorized/pug/</loc>
-    <lastmod>2018-11-06T23:54:23+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  <url>
-    <loc>https://www.webmanajemen.com/categories/random/uncategorized/ejs/</loc>
-    <lastmod>2017-01-29T22:04:15+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  <url>
-    <loc>https://www.webmanajemen.com/categories/random/post-has-0/pug/</loc>
-    <lastmod>Invalid date</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  <url>
-    <loc>https://www.webmanajemen.com/categories/random/post-has-0/njk/</loc>
-    <lastmod>Invalid date</lastmod>
+    <loc>https://www.webmanajemen.com/categories/random/post-has-0/ejs/</loc>
+    <lastmod>2021-02-16T08:10:10+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   <url>
     <loc>https://www.webmanajemen.com/categories/random/uncategorized/nunjucks/</loc>
-    <lastmod>2018-02-17T01:43:37+07:00</lastmod>
+    <lastmod>2020-11-09T19:29:09+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://www.webmanajemen.com/categories/random/uncategorized/pug/</loc>
+    <lastmod>2020-07-04T15:56:10+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://www.webmanajemen.com/categories/random/uncategorized/ejs/</loc>
+    <lastmod>2021-06-13T16:12:58+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://www.webmanajemen.com/categories/random/post-has-0/pug/</loc>
+    <lastmod>2019-03-26T04:28:13+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   <url>
     <loc>https://www.webmanajemen.com/categories/random/post-has-0/nunjucks/</loc>
-    <lastmod>2014-07-10T00:46:55+07:00</lastmod>
+    <lastmod>2019-07-14T02:02:32+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
