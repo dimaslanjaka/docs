@@ -1,0 +1,15 @@
+https://www.webmanajemen.com/docs/hexo-shortcodes/index.html
+https://www.webmanajemen.com/docs/hexo-shortcodes/codepen.html
+https://www.webmanajemen.com/docs/hexo-shortcodes/gist.html
+https://www.webmanajemen.com/docs/hexo-shortcodes/jsfiddle.html
+https://www.webmanajemen.com/docs/hexo-shortcodes/githubCard.html
+https://www.webmanajemen.com/docs/hexo-shortcodes/rssreader.html
+https://www.webmanajemen.com/docs/hexo-shortcodes/github.html
+https://www.webmanajemen.com/docs/hexo-shortcodes/npmrunkit.html
+https://www.webmanajemen.com/docs/hexo-shortcodes/videos.html
+https://www.webmanajemen.com/docs/hexo-shortcodes/lang/php.html
+https://www.webmanajemen.com/docs/hexo-shortcodes/include_file/index.html
+https://www.webmanajemen.com/docs/hexo-shortcodes/fixtures/include-one.txt
+https://www.webmanajemen.com/docs/hexo-shortcodes/include_file/custom-template.html
+https://www.webmanajemen.com/docs/hexo-shortcodes/include_file/custom-lines.html
+https://www.webmanajemen.com/docs/hexo-shortcodes/include_file/render-markdown.html
