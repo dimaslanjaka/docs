@@ -1,3 +1,6 @@
+https://www.webmanajemen.com/docs/safelinkify/
+https://www.webmanajemen.com/docs/hexo-post-parser/
+https://www.webmanajemen.com/docs/git-command-helper/
 https://www.webmanajemen.com/docs/hexo-shortcodes/index.html
 https://www.webmanajemen.com/docs/hexo-shortcodes/codepen.html
 https://www.webmanajemen.com/docs/hexo-shortcodes/gist.html
