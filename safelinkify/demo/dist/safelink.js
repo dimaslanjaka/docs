@@ -119,7 +119,7 @@ var safelink = /** @class */ (function () {
                             regex = /<a\s+(?:[^>]*?\s+)?href=(["'])(.*?)\1/gim;
                             processStr = function (content, href) {
                                 var parseUrl = self.parseUrl(href);
-                                if (!parseUrl) {
+                                if (parseUrl) {
                                     // return anonymized href
                                     return content.replace(href, parseUrl);
                                 }
@@ -183,7 +183,7 @@ var safelink = /** @class */ (function () {
     /**
      * parse single url
      * @param url
-     * @returns return redirect url
+     * @returns return redirect url or original url
      * * when redirect not set, will return encoded URL only
      */
     safelink.prototype.parseUrl = function (url) {

@@ -66,7 +66,7 @@
 </code><button>Copy</button></pre>
 <a id="md:yarn" class="tsd-anchor"></a><h3><a href="#md:yarn">yarn</a></h3><pre><code><span class="hl-4">yarn</span><span class="hl-1"> </span><span class="hl-4">install</span><span class="hl-1"> </span><span class="hl-4">safelinkify</span><span class="hl-1"> --</span><span class="hl-4">dev</span>
 </code><button>Copy</button></pre>
-<a id="md:development" class="tsd-anchor"></a><h2><a href="#md:development">Development</a></h2><pre><code class="language-bash"><span class="hl-0">git</span><span class="hl-1"> </span><span class="hl-2">clone</span><span class="hl-1"> </span><span class="hl-3">--single-branch</span><span class="hl-1"> </span><span class="hl-3">--branch</span><span class="hl-1"> </span><span class="hl-2">main</span><span class="hl-1"> </span><span class="hl-2">https://github.com/dimaslanjaka/safelink</span><span class="hl-1"> </span><span class="hl-2">foldername</span><br/><span class="hl-0">cd</span><span class="hl-1"> </span><span class="hl-2">foldername</span><br/><span class="hl-5"># install dependents</span><br/><span class="hl-0">yarn</span><span class="hl-1"> </span><span class="hl-2">install</span><br/><span class="hl-5"># or</span><br/><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">install</span>
+<a id="md:development" class="tsd-anchor"></a><h2><a href="#md:development">Development</a></h2><pre><code class="language-bash"><span class="hl-0">git</span><span class="hl-1"> </span><span class="hl-2">clone</span><span class="hl-1"> </span><span class="hl-3">--single-branch</span><span class="hl-1"> </span><span class="hl-3">--branch</span><span class="hl-1"> </span><span class="hl-2">main</span><span class="hl-1"> </span><span class="hl-2">https://github.com/dimaslanjaka/safelink</span><span class="hl-1"> </span><span class="hl-2">foldername</span><br/><span class="hl-0">cd</span><span class="hl-1"> </span><span class="hl-2">foldername</span><br/><span class="hl-0">yarn</span><span class="hl-1"> </span><span class="hl-2">install</span><span class="hl-1"> </span><span class="hl-5"># npm install</span>
 </code><button>Copy</button></pre>
 <table>
 <thead>
@@ -80,12 +80,8 @@
 <td>serve generated docs</td>
 </tr>
 <tr>
-<td><code>tsc</code></td>
-<td>build definition and js files</td>
-</tr>
-<tr>
-<td><code>webpack</code></td>
-<td>build safelink script</td>
+<td><code>yarn dev</code></td>
+<td>watch and build docs</td>
 </tr>
 <tr>
 <td><code>npm run docs</code></td>
@@ -94,10 +90,6 @@
 <tr>
 <td><code>npm run build</code></td>
 <td>build dist</td>
-</tr>
-<tr>
-<td><code>ts-node old-docs.ts</code></td>
-<td>(<em>deprecated</em>) watch src-docs and start server, watch src and compile tsc webpack</td>
 </tr>
 </tbody></table>
 <a id="md:usages" class="tsd-anchor"></a><h2><a href="#md:usages">Usages</a></h2><p>Setup options:</p>

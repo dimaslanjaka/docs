@@ -3833,7 +3833,7 @@
 		},
 		{
 			"kind": "code",
-			"text": "```bash\ngit clone --single-branch --branch main https://github.com/dimaslanjaka/safelink foldername\ncd foldername\n# install dependents\nyarn install\n# or\nnpm install\n```"
+			"text": "```bash\ngit clone --single-branch --branch main https://github.com/dimaslanjaka/safelink foldername\ncd foldername\nyarn install # npm install\n```"
 		},
 		{
 			"kind": "text",
@@ -3845,23 +3845,15 @@
 		},
 		{
 			"kind": "text",
-			"text": "    | serve generated docs           |\n| "
+			"text": " | serve generated docs              |\n| "
 		},
 		{
 			"kind": "code",
-			"text": "`tsc`"
+			"text": "`yarn dev`"
 		},
 		{
 			"kind": "text",
-			"text": "           | build definition and js files  |\n| "
-		},
-		{
-			"kind": "code",
-			"text": "`webpack`"
-		},
-		{
-			"kind": "text",
-			"text": "       | build safelink script          |\n| "
+			"text": "   | watch and build docs              |\n| "
 		},
 		{
 			"kind": "code",
@@ -3877,15 +3869,7 @@
 		},
 		{
 			"kind": "text",
-			"text": " | build dist |\n| "
-		},
-		{
-			"kind": "code",
-			"text": "`ts-node old-docs.ts`"
-		},
-		{
-			"kind": "text",
-			"text": " | (_deprecated_) watch src-docs and start server, watch src and compile tsc webpack |\n\n## Usages\nSetup options:\n"
+			"text": " | build dist |\n\n## Usages\nSetup options:\n"
 		},
 		{
 			"kind": "code",
