@@ -2909,7 +2909,7 @@
 												"content": [
 													{
 														"kind": "text",
-														"text": "return redirect url\n* when redirect not set, will return encoded URL only"
+														"text": "return redirect url or original url\n* when redirect not set, will return encoded URL only"
 													}
 												]
 											}
