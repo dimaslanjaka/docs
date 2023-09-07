@@ -1,29 +1,29 @@
 {
   "name": "safelinkify",
-  "version": "1.1.13",
-  "description": "NodeJS anonymizer external links. Anonymize external links to outbound page redirector for SEO.",
+  "version": "1.2.1",
+  "description": "NodeJS anonymizer external links into outbound page. Anonymize external links to outbound page redirector for SEO.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist",
     "readme.md",
     "tsconfig*.json",
-    "postinstall.js"
+    "typings",
+    "!**/*.tsbuildinfo"
   ],
   "scripts": {
     "start": "ts-node typedoc-server.js",
-    "prebuild": "git pull -X theirs",
     "build": "tsc -p tsconfig.build.json && webpack",
-    "postbuild": "node packer.js",
+    "clean": "rm -rf dist tmp && npm run build && npm run docs",
+    "pack": "node packer.js --yarn",
     "docs": "node docs.js && webpack",
-    "postinstall": "node postinstall.js",
     "dev": "nodemon",
-    "preupdate": "curl -L https://github.com/microsoft/TypeScript/raw/main/lib/lib.dom.d.ts > src/lib/lib.dom.ts && curl -L https://github.com/dimaslanjaka/nodejs-package-types/raw/main/typedoc-server.js > typedoc-server.js",
-    "update": "curl -L https://github.com/dimaslanjaka/nodejs-package-types/raw/main/.github/workflows/build-release.yml > .github/workflows/build-release.yml && curl -L https://github.com/dimaslanjaka/nodejs-package-types/raw/main/postinstall.js > postinstall.js && curl -L https://github.com/dimaslanjaka/nodejs-package-types/raw/main/packer.js > packer.js && npx npm-check-updates -u -x chalk,hexo && npm install --cache tmp/npm"
+    "update:ncu": "npx npm-check-updates --enginesNode -u -x chalk,hexo,jsdom,deepmerge-ts",
+    "update": "curl -L https://github.com/dimaslanjaka/nodejs-package-types/raw/main/.github/workflows/build-release.yml > .github/workflows/build-release.yml && curl -L https://github.com/dimaslanjaka/nodejs-package-types/raw/main/postinstall.js > postinstall.js && curl -L https://github.com/dimaslanjaka/nodejs-package-types/raw/main/packer.js > packer.js && curl -L https://github.com/dimaslanjaka/nodejs-package-types/raw/main/typedoc-server.js > typedoc-server.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dimaslanjaka/safelink.git"
+    "url": "git+https://github.com/dimaslanjaka/safelink.git"
   },
   "keywords": [
     "safelink",
@@ -31,33 +31,24 @@
     "hyperlinks",
     "redirector"
   ],
-  "author": {
-    "email": "dimaslanjaka@gmail.com",
-    "name": "Dimas Lanjaka",
-    "url": "https://www.webmanajemen.com"
-  },
-  "license": "ISC",
+  "author": "Dimas Lanjaka <dimaslanjaka@gmail.com> (https://www.webmanajemen.com)",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/dimaslanjaka/safelink/issues"
   },
   "homepage": "https://www.webmanajemen.com/docs/safelinkify",
   "devDependencies": {},
   "dependencies": {
-    "@popperjs/core": "^2.11.6",
-    "bootstrap": "^5.2.3",
-    "crypto-browserify": "^3.12.0",
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.1",
     "crypto-js": "^4.1.1",
-    "highlight.js": "^11.7.0",
-    "jquery": "^3.6.3",
+    "highlight.js": "11.8.0",
+    "jquery": "^3.7.1",
     "moment": "^2.29.4",
-    "moment-timezone": "^0.5.40",
-    "path-browserify": "^1.0.1",
-    "toastr": "^2.1.4"
+    "moment-timezone": "^0.5.43"
   },
-  "optionalDependencies": {
-    "cross-spawn": "https://github.com/dimaslanjaka/node-cross-spawn/tarball/typescript",
-    "git-command-helper": "https://github.com/dimaslanjaka/git-command-helper/raw/master/release/git-command-helper.tgz",
-    "nodejs-package-types": "https://github.com/dimaslanjaka/nodejs-package-types/raw/main/release/nodejs-package-types.tgz",
-    "persistent-cache": "https://github.com/dimaslanjaka/persistent-cache/tarball/improve2"
+  "packageManager": "yarn@3.6.3",
+  "engines": {
+    "node": ">=14"
   }
 }
