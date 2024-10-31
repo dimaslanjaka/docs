@@ -1,0 +1,90 @@
+/* Apply fixed positioning only on screens wider than 1024px (large and up) */
+@media (min-width: 1024px) {
+  .fixed-left-aside {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 15%;
+  }
+  .fixed-right-aside {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 15%;
+  }
+  .main-content {
+      margin-left: 15%;
+      margin-right: 15%;
+      overflow-wrap: break-word; /* Ensures long text wraps */
+      word-break: break-word;
+      width: 75%;
+  }
+}
+/* Additional styling for better readability */
+.content-wrapper {
+  max-width: 100% !important; /* Ensure full-width wrapping */
+  overflow-wrap: anywhere; /* Allows breaking within long words */
+}
+
+.highlight {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.highlight table {
+  width: 100%;
+  table-layout: auto;
+}
+
+.highlight .gutter {
+  white-space: nowrap;
+  width: 1%;
+}
+
+.highlight .code pre {
+  /* white-space: nowrap; */
+  word-wrap: break-word;
+}
+
+
+* {
+  word-break: break-all;
+}
+
+/* Ensures the code block is contained and scrollable */
+.highlight {
+  overflow-x: auto;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Table adjustments for responsive styling */
+.highlight table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Styling gutter and code columns */
+.highlight .gutter,
+.highlight .code {
+  padding: 0.5rem;
+  white-space: pre-wrap; /* Wrap text if necessary */
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 600px) {
+  .highlight table {
+    display: block;
+    width: 100%;
+  }
+  .highlight .gutter,
+  .highlight .code {
+    display: inline-block;
+    width: auto;
+  }
+  .highlight .code {
+    padding-left: 0;
+  }
+}
