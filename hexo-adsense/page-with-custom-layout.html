@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Sidebar with Bootstrap 5</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+    <link rel="stylesheet" href="/docs/hexo-adsense/css/hexo-adsense-layout2.css" />
+  <meta name="generator" content="Hexo 7.3.0"><script id="hexo-adsense-config" type="application/json">{"enable":true,"article_ads":true,"pub":"ca-pub-1048456668116270","adblock":true,"https":true,"field":"site","type":"javascript","exclude":["*.min.html","exclude/**/*"],"development":false,"args":{"_":[]},"debug":false,"safe":false,"silent":false,"env":"development","version":"7.3.0","cmd":"generate","init":true,"adsense":{"enable":true,"pub":"ca-pub-1048456668116270","article_ads":true,"field":"site","https":true,"adblock":true,"exclude":["*.min.html","exclude/**/*"]}}</script><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1048456668116270" crossorigin="anonymous"></script></head>
+  <body>
+    <!-- Sidebar -->
+    <div id="sidebar" class="d-flex flex-column">
+      <h2 class="p-3">Sidebar</h2>
+      
+      <div class="flex-column" hexo-adsense-fill=""></div>
+    </div>
+    <!-- Content -->
+    <div id="post">
+      <h1>Main Content</h1>
+      <p>This is the main content area.</p>
+      <p>This is page with custom layout</p>
+<h1>Gist markdown examples</h1>
+<p>A collection of Markdown code and tricks that were tested to work in Gist.</p>
+<p>This and all public gists in <a target="_blank" rel="noopener" href="https://gist.github.com/ww9">https://gist.github.com/ww9</a> are <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Public_domain_equivalent_license">Public Domain</a>. Do whatever you want with it including , no need to credit me.</p>
+<h3>Todo</h3>
+<ul>
+<li>Reformat this whole document and assimilate these:<ul>
+<li><a target="_blank" rel="noopener" href="https://gist.github.com/jonschlinkert/5854601">https://gist.github.com/jonschlinkert/5854601</a></li>
+<li><a target="_blank" rel="noopener" href="https://gist.github.com/ringmatthew/9f7bbfd102003963f9be7dbcf7d40e51">https://gist.github.com/ringmatthew/9f7bbfd102003963f9be7dbcf7d40e51</a></li>
+<li><a target="_blank" rel="noopener" href="https://gist.github.com/DavidWells/7d2e0e1bc78f4ac59a123ddf8b74932d">https://gist.github.com/DavidWells/7d2e0e1bc78f4ac59a123ddf8b74932d</a></li>
+<li><a target="_blank" rel="noopener" href="https://gist.github.com/haydenk/958b433ee107537bb166b98b59262b2a">https://gist.github.com/haydenk/958b433ee107537bb166b98b59262b2a</a></li>
+<li><a target="_blank" rel="noopener" href="https://gist.github.com/asabaylus/3071099">https://gist.github.com/asabaylus/3071099</a></li>
+<li><a target="_blank" rel="noopener" href="https://gist.github.com/t-nissie/9580883">https://gist.github.com/t-nissie/9580883</a> (Add images, secret gists, anti-spam protection)</li>
+<li><a target="_blank" rel="noopener" href="https://guides.github.com/features/mastering-markdown/">https://guides.github.com/features/mastering-markdown/</a></li>
+<li><a target="_blank" rel="noopener" href="https://gist.github.com/cyhsutw/d5983d166fb70ff651f027b2aa56ee4e#file-mathjax-ipynb">https://gist.github.com/cyhsutw/d5983d166fb70ff651f027b2aa56ee4e#file-mathjax-ipynb</a> (Python notebook, Math syntax)</li>
+</ul>
+</li>
+</ul>
+<h5>Table of Contents</h5>
+<p><a href="#headers">Headers</a><br><a href="#emphasis">Emphasis</a><br><a href="#lists">Lists</a><br><a href="#links">Links</a><br><a href="#images">Images</a><br><a href="#code">Code and Syntax Highlighting</a><br><a href="#tables">Tables</a><br><a href="#blockquotes">Blockquotes</a><br><a href="#html">Inline HTML</a><br><a href="#hr">Horizontal Rule</a><br><a href="#lines">Line Breaks</a><br><a href="#videos">YouTube Videos</a><br><a href="#tex">TeX Mathematical Formulae</a></p>
+<h3>Task lists</h3>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> [x] Task 1</span><br><span class="line"><span class="bullet">-</span> [ ] Task 2</span><br><span class="line"><span class="bullet">-</span> [ ] Task 3</span><br></pre></td></tr></table></figure>
+
+<p>Result:</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> Task 1</li>
+<li><input disabled="" type="checkbox"> Task 2</li>
+<li><input disabled="" type="checkbox"> Task 3</li>
+</ul>
+<h2>Headers</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"># H1</span><br><span class="line">## H2</span><br><span class="line">### H3</span><br><span class="line">#### H4</span><br><span class="line">##### H5</span><br><span class="line">###### H6</span><br><span class="line"></span><br><span class="line">Alternatively, for H1 and H2, an underline-ish style:</span><br><span class="line"></span><br><span class="line">Alt-H1</span><br><span class="line">======</span><br><span class="line"></span><br><span class="line">Alt-H2</span><br><span class="line">------</span><br></pre></td></tr></table></figure>
+
+<h1>H1</h1>
+<h2>H2</h2>
+<h3>H3</h3>
+<h4>H4</h4>
+<h5>H5</h5>
+<h6>H6</h6>
+<p>Alternatively, for H1 and H2, an underline-ish style:</p>
+<h1>Alt-H1</h1>
+<h2>Alt-H2</h2>
+<a name="emphasis"/>
+
+<h2>Emphasis</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Emphasis, aka italics, with *asterisks* or _underscores_.</span><br><span class="line"></span><br><span class="line">Strong emphasis, aka bold, with **asterisks** or __underscores__.</span><br><span class="line"></span><br><span class="line">Combined emphasis with **asterisks and _underscores_**.</span><br><span class="line"></span><br><span class="line">Strikethrough uses two tildes. ~~Scratch this.~~</span><br></pre></td></tr></table></figure>
+
+<p>Emphasis, aka italics, with <em>asterisks</em> or <em>underscores</em>.</p>
+<p>Strong emphasis, aka bold, with <strong>asterisks</strong> or <strong>underscores</strong>.</p>
+<p>Combined emphasis with <strong>asterisks and <em>underscores</em></strong>.</p>
+<p>Strikethrough uses two tildes. <del>Scratch this.</del></p>
+<a name="lists"/>
+
+<h2>Lists</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">1. First ordered list item</span><br><span class="line">2. Another item</span><br><span class="line">  * Unordered sub-list.</span><br><span class="line">1. Actual numbers don&#x27;t matter, just that it&#x27;s a number</span><br><span class="line">  1. Ordered sub-list</span><br><span class="line">4. And another item.</span><br><span class="line"></span><br><span class="line">   Some text that should be aligned with the above item.</span><br><span class="line"></span><br><span class="line">* Unordered list can use asterisks</span><br><span class="line">- Or minuses</span><br><span class="line">+ Or pluses</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>First ordered list item</li>
+<li>Another item</li>
+</ol>
+<ul>
+<li>Unordered sub-list.</li>
+</ul>
+<ol>
+<li><p>Actual numbers don&#39;t matter, just that it&#39;s a number</p>
+</li>
+<li><p>Ordered sub-list</p>
+</li>
+<li><p>And another item.</p>
+<p>Some text that should be aligned with the above item.</p>
+</li>
+</ol>
+<ul>
+<li>Unordered list can use asterisks</li>
+</ul>
+<ul>
+<li>Or minuses</li>
+</ul>
+<ul>
+<li>Or pluses</li>
+</ul>
+<a name="links"/>
+
+<h2>Links</h2>
+<p>There are two ways to create links.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">[I&#x27;m an inline-style link](https://www.google.com)</span><br><span class="line"></span><br><span class="line">[I&#x27;m a reference-style link][Arbitrary case-insensitive reference text]</span><br><span class="line"></span><br><span class="line">[You can use numbers for reference-style link definitions][1]</span><br><span class="line"></span><br><span class="line">Or leave it empty and use the [link text itself]</span><br><span class="line"></span><br><span class="line">URLs and URLs in angle brackets will automatically get turned into links.</span><br><span class="line">http://www.example.com or &lt;http://www.example.com&gt; and sometimes</span><br><span class="line">example.com (but not on Github, for example).</span><br><span class="line"></span><br><span class="line">Some text to show that the reference links can follow later.</span><br><span class="line"></span><br><span class="line">[arbitrary case-insensitive reference text]: https://www.mozilla.org</span><br><span class="line">[1]: http://slashdot.org</span><br><span class="line">[link text itself]: http://www.reddit.com</span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://www.google.com">I&#39;m an inline-style link</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.mozilla.org">I&#39;m a reference-style link</a></p>
+<p><a target="_blank" rel="noopener" href="http://slashdot.org">You can use numbers for reference-style link definitions</a></p>
+<p>Or leave it empty and use the <a target="_blank" rel="noopener" href="http://www.reddit.com">link text itself</a></p>
+<p>URLs and URLs in angle brackets will automatically get turned into links.<br><a target="_blank" rel="noopener" href="http://www.example.com">http://www.example.com</a> or <a target="_blank" rel="noopener" href="http://www.example.com">http://www.example.com</a> and sometimes<br>example.com (but not on Github, for example).</p>
+<p>Some text to show that the reference links can follow later.</p>
+<a name="images"/>
+
+<h2>Images</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Here&#x27;s our logo (hover to see the title text):</span><br><span class="line"></span><br><span class="line">Inline-style:</span><br><span class="line">![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png &quot;Logo Title Text 1&quot;)</span><br><span class="line"></span><br><span class="line">Reference-style:</span><br><span class="line">![alt text][logo]</span><br><span class="line"></span><br><span class="line">[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png &quot;Logo Title Text 2&quot;</span><br></pre></td></tr></table></figure>
+
+<p>Here&#39;s our logo (hover to see the title text):</p>
+<p>Inline-style:<br><img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" alt="alt text" title="Logo Title Text 1"></p>
+<p>Reference-style:<br><img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" alt="alt text" title="Logo Title Text 2"></p>
+<a name="code"/>
+
+<h2>Code and Syntax Highlighting</h2>
+<p>Code blocks are part of the Markdown spec, but syntax highlighting isn&#39;t. However, many renderers -- like Github&#39;s and <em>Markdown Here</em> -- support syntax highlighting. <em>Markdown Here</em> supports highlighting for dozens of languages (and not-really-languages, like diffs and HTTP headers); to see the complete list, and how to write the language names, see the <a target="_blank" rel="noopener" href="http://softwaremaniacs.org/media/soft/highlight/test.html">highlight.js demo page</a>.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Inline `code` has `back-ticks around` it.</span><br></pre></td></tr></table></figure>
+
+<p>Inline <code>code</code> has <code>back-ticks around</code> it.</p>
+<p>Blocks of code are either fenced by lines with three back-ticks <code>```</code>, or are indented with four spaces. I recommend only using the fenced code blocks -- they&#39;re easier and only they support syntax highlighting.</p>
+<pre lang="no-highlight"><code>```javascript
+var s = "JavaScript syntax highlighting";
+alert(s);
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">```python</span><br><span class="line">s = &quot;Python syntax highlighting&quot;</span><br><span class="line">print s</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">No language indicated, so no syntax highlighting.</span><br><span class="line">But let&#x27;s throw in a &amp;lt;b&amp;gt;tag&amp;lt;/b&amp;gt;.</span><br></pre></td></tr></table></figure>
+</code></pre>
+
+
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s = <span class="string">&quot;JavaScript syntax highlighting&quot;</span>;</span><br><span class="line"><span class="title function_">alert</span>(s);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">&quot;Python syntax highlighting&quot;</span></span><br><span class="line"><span class="built_in">print</span> s</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">No language indicated, so no syntax highlighting in Markdown Here (varies on Github).</span><br><span class="line">But let&#x27;s throw in a &lt;b&gt;tag&lt;/b&gt;.</span><br></pre></td></tr></table></figure>
+
+<p>Again, to see what languages are available for highlighting, and how to write those language names, see the <a target="_blank" rel="noopener" href="http://softwaremaniacs.org/media/soft/highlight/test.html">highlight.js demo page</a>.</p>
+<a name="tables"/>
+
+<h2>Tables</h2>
+<p>Tables aren&#39;t part of the core Markdown spec, but they are part of GFM and <em>Markdown Here</em> supports them. They are an easy way of adding tables to your email -- a task that would otherwise require copy-pasting from another application.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">Colons can be used to align columns.</span><br><span class="line"></span><br><span class="line">| Tables        | Are           | Cool  |</span><br><span class="line">| ------------- |:-------------:| -----:|</span><br><span class="line">| col 3 is      | right-aligned | $1600 |</span><br><span class="line">| col 2 is      | centered      |   $12 |</span><br><span class="line">| zebra stripes | are neat      |    $1 |</span><br><span class="line"></span><br><span class="line">The outer pipes (|) are optional, and you don&#x27;t need to make the raw Markdown line up prettily. You can also use inline Markdown.</span><br><span class="line"></span><br><span class="line">Markdown | Less | Pretty</span><br><span class="line">--- | --- | ---</span><br><span class="line">*Still* | `renders` | **nicely**</span><br><span class="line">1 | 2 | 3</span><br></pre></td></tr></table></figure>
+
+<p>Colons can be used to align columns.</p>
+<table>
+<thead>
+<tr>
+<th>Tables</th>
+<th align="center">Are</th>
+<th align="right">Cool</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>col 3 is</td>
+<td align="center">right-aligned</td>
+<td align="right">$1600</td>
+</tr>
+<tr>
+<td>col 2 is</td>
+<td align="center">centered</td>
+<td align="right">$12</td>
+</tr>
+<tr>
+<td>zebra stripes</td>
+<td align="center">are neat</td>
+<td align="right">$1</td>
+</tr>
+</tbody></table>
+<p>The outer pipes (|) are optional, and you don&#39;t need to make the raw Markdown line up prettily. You can also use inline Markdown.</p>
+<table>
+<thead>
+<tr>
+<th>Markdown</th>
+<th>Less</th>
+<th>Pretty</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><em>Still</em></td>
+<td><code>renders</code></td>
+<td><strong>nicely</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+</tbody></table>
+<a name="blockquotes"/>
+
+<h2>Blockquotes</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; Blockquotes are very handy in email to emulate reply text.</span><br><span class="line">&gt; This line is part of the same quote.</span><br><span class="line"></span><br><span class="line">Quote break.</span><br><span class="line"></span><br><span class="line">&gt; This is a very long line that will still be quoted properly when it wraps. Oh boy let&#x27;s keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote.</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Blockquotes are very handy in email to emulate reply text.<br>This line is part of the same quote.</p>
+</blockquote>
+<p>Quote break.</p>
+<blockquote>
+<p>This is a very long line that will still be quoted properly when it wraps. Oh boy let&#39;s keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can <em>put</em> <strong>Markdown</strong> into a blockquote.</p>
+</blockquote>
+<a name="html"/>
+
+<h2>Inline HTML</h2>
+<p>You can also use raw HTML in your Markdown, and it&#39;ll mostly work pretty well.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;dl&gt;</span><br><span class="line">  &lt;dt&gt;Definition list&lt;/dt&gt;</span><br><span class="line">  &lt;dd&gt;Is something people use sometimes.&lt;/dd&gt;</span><br><span class="line"></span><br><span class="line">  &lt;dt&gt;Markdown in HTML&lt;/dt&gt;</span><br><span class="line">  &lt;dd&gt;Does *not* work **very** well. Use HTML &lt;em&gt;tags&lt;/em&gt;.&lt;/dd&gt;</span><br><span class="line">&lt;/dl&gt;</span><br></pre></td></tr></table></figure>
+
+<dl>
+  <dt>Definition list</dt>
+  <dd>Is something people use sometimes.</dd>
+
+  <dt>Markdown in HTML</dt>
+  <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
+</dl>
+
+<a name="hr"/>
+
+<h2>Horizontal Rule</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Three or more...</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">Hyphens</span><br><span class="line"></span><br><span class="line">***</span><br><span class="line"></span><br><span class="line">Asterisks</span><br><span class="line"></span><br><span class="line">___</span><br><span class="line"></span><br><span class="line">Underscores</span><br></pre></td></tr></table></figure>
+
+<p>Three or more...</p>
+<hr>
+<p>Hyphens</p>
+<hr>
+<p>Asterisks</p>
+<hr>
+<p>Underscores</p>
+<a name="lines"/>
+
+<h2>Line Breaks</h2>
+<p>My basic recommendation for learning how line breaks work is to experiment and discover -- hit &lt;Enter&gt; once (i.e., insert one newline), then hit it twice (i.e., insert two newlines), see what happens. You&#39;ll soon learn to get what you want. &quot;Markdown Toggle&quot; is your friend.</p>
+<p>Here are some things to try out:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Here&#x27;s a line for us to start with.</span><br><span class="line"></span><br><span class="line">This line is separated from the one above by two newlines, so it will be a *separate paragraph*.</span><br><span class="line"></span><br><span class="line">This line is also a separate paragraph, but...</span><br><span class="line">This line is only separated by a single newline, so it&#x27;s a separate line in the *same paragraph*.</span><br></pre></td></tr></table></figure>
+
+<p>Here&#39;s a line for us to start with.</p>
+<p>This line is separated from the one above by two newlines, so it will be a <em>separate paragraph</em>.</p>
+<p>This line is also begins a separate paragraph, but...<br>This line is only separated by a single newline, so it&#39;s a separate line in the <em>same paragraph</em>.</p>
+<p>(Technical note: <em>Markdown Here</em> uses GFM line breaks, so there&#39;s no need to use MD&#39;s two-space line breaks.)</p>
+<a name="videos"/>
+
+<h2>YouTube Videos</h2>
+<p>They can&#39;t be added directly but you can add an image with a link to the video like this:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;http://www.youtube.com/watch?feature=player_embedded&amp;v=YOUTUBE_VIDEO_ID_HERE</span><br><span class="line">&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg&quot;</span><br><span class="line">alt=&quot;IMAGE ALT TEXT HERE&quot; width=&quot;240&quot; height=&quot;180&quot; border=&quot;10&quot; /&gt;&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+
+<p>Or, in pure Markdown, but losing the image sizing and border:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)</span><br></pre></td></tr></table></figure>
+
+<a name="tex"/>
+
+<h2>TeX Mathematical Formulae</h2>
+<p>A full description of TeX math symbols is beyond the scope of this cheatsheet. Here&#39;s a <a target="_blank" rel="noopener" href="https://en.wikibooks.org/wiki/LaTeX/Mathematics">good reference</a>, and you can try stuff out on <a target="_blank" rel="noopener" href="https://www.codecogs.com/latex/eqneditor.php">CodeCogs</a>. You can also play with formulae in the Markdown Here options page.</p>
+<p>Here are some examples to try out:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$-b \pm \sqrt&#123;b^2 - 4ac&#125; \over 2a$</span><br><span class="line">$x = a_0 + \frac&#123;1&#125;&#123;a_1 + \frac&#123;1&#125;&#123;a_2 + \frac&#123;1&#125;&#123;a_3 + a_4&#125;&#125;&#125;$</span><br><span class="line">$\forall x \in X, \quad \exists y \leq \epsilon$</span><br></pre></td></tr></table></figure>
+
+<p>The beginning and ending dollar signs (<code>$</code>) are the delimiters for the TeX markup.</p>
+
+    </div>
+    <!-- Bootstrap JS (optional for responsive components) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+<script src="/docs/hexo-adsense/hexo-shortcodes-lib/githubcard.js"></script>
+<link rel="stylesheet" href="/docs/hexo-adsense/hexo-shortcodes-lib/gist.css" />
+<div id="hexo-adsense-hidden" style="display:none"><div hexo-adsense="ads-content">
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-1048456668116270"
+     data-ad-slot="7838432964"></ins>
+<script>
+     
+</script></div><div hexo-adsense="ads-content">
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-1048456668116270"
+     data-ad-slot="8640099506"></ins>
+<script>
+     
+</script></div><div hexo-adsense="ads-content">
+<!-- RedxVideo -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1048456668116270"
+     data-ad-slot="4882617398"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     
+</script></div><div hexo-adsense="ads-content">
+<!-- Ads -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1048456668116270"
+     data-ad-slot="2439767401"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     
+</script></div></div><script src='/docs/hexo-adsense/hexo-adsense/article-ads.js?hash=e2992c5101ea2c869e99366e044a000a'></script><link rel="stylesheet" href='/docs/hexo-adsense/hexo-adsense/article-ads.css?hash=8fe6766b5f3770e79e8954de1e0baede'></body>
+      
+</html>

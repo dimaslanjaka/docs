@@ -1,0 +1,26 @@
+/* Sidebar styling */
+#sidebar {
+  width: 350px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: #f8f9fa;
+  overflow-y: auto;
+}
+/* Content area styling */
+#post {
+  margin-left: 350px;
+  padding: 20px;
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #sidebar {
+    width: 100%;
+    position: relative;
+    height: auto;
+  }
+  #post {
+    margin-left: 0;
+  }
+}
