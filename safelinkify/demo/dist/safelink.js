@@ -9,8 +9,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g = Object.create((typeof Iterator === "function" ? Iterator : Object).prototype);
+    return g.next = verb(0), g["throw"] = verb(1), g["return"] = verb(2), typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
     function verb(n) { return function (v) { return step([n, v]); }; }
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
@@ -49,13 +49,13 @@ var safelink = /** @class */ (function () {
     function safelink(opt) {
         this.options = {
             exclude: [],
-            redirect: [],
+            redirect: [], // 'https://www.webmanajemen.com/page/safelink.html?url='
             password: 'root',
             verbose: false,
             type: 'base64'
         };
         this.parseQuery = parseQuery_1.default;
-        if (typeof opt.redirect == 'string')
+        if (opt && typeof opt.redirect == 'string')
             opt.redirect = [opt.redirect];
         this.options = Object.assign(this.options, opt);
     }
@@ -68,6 +68,14 @@ var safelink = /** @class */ (function () {
         var excludes = this.options.exclude;
         var value = String(url);
         var parsed = url instanceof URL ? url : (0, toURL_1.default)(value);
+        // skip empty string
+        if (typeof url === 'string' && url.length === 0) {
+            return true;
+        }
+        // skip url starts with ? and #
+        if (value.match(/^(\?|#)/)) {
+            return true;
+        }
         // only process url with protocol
         if (value.match(/^(?:(ht|f)tp(s?):\/\/)?/)) {
             for (var i = 0; i < excludes.length; i++) {

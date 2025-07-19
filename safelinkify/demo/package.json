@@ -1,6 +1,6 @@
 {
   "name": "safelinkify",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "NodeJS anonymizer external links into outbound page. Anonymize external links to outbound page redirector for SEO.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -11,15 +11,36 @@
     "typings",
     "!**/*.tsbuildinfo"
   ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.js",
+      "browser": {
+        "require": "./dist/bundle.js",
+        "import": "./dist/index.js"
+      }
+    },
+    "./package.json": "./package.json",
+    "./browser_module": {
+      "types": "./dist/safelink-browser-module.d.ts",
+      "require": "./dist/safelink-browser-module.cjs",
+      "import": "./dist/safelink-browser-module.mjs"
+    }
+  },
   "scripts": {
     "start": "ts-node typedoc-server.js",
-    "build": "tsc -p tsconfig.build.json && webpack",
+    "build": "tsc -p tsconfig.build.json && webpack && rollup -c",
     "clean": "rm -rf dist tmp && npm run build && npm run docs",
     "pack": "node packer.js --yarn",
     "docs": "node docs.js && webpack",
     "dev": "nodemon",
-    "update:ncu": "npx npm-check-updates --enginesNode -u -x chalk,hexo,jsdom,deepmerge-ts",
-    "update": "curl -L https://github.com/dimaslanjaka/nodejs-package-types/raw/main/.github/workflows/build-release.yml > .github/workflows/build-release.yml && curl -L https://github.com/dimaslanjaka/nodejs-package-types/raw/main/postinstall.js > postinstall.js && curl -L https://github.com/dimaslanjaka/nodejs-package-types/raw/main/packer.js > packer.js && curl -L https://github.com/dimaslanjaka/nodejs-package-types/raw/main/typedoc-server.js > typedoc-server.js"
+    "update:ncu": "npx npm-check-updates --enginesNode -u -x chalk,hexo,jsdom,deepmerge-ts,@types/node",
+    "update": "curl -L https://github.com/dimaslanjaka/nodejs-package-types/raw/main/.github/workflows/build-release.yml > .github/workflows/build-release.yml && curl -L https://github.com/dimaslanjaka/nodejs-package-types/raw/main/postinstall.js > postinstall.js && curl -L https://github.com/dimaslanjaka/nodejs-package-types/raw/main/packer.js > packer.js && curl -L https://github.com/dimaslanjaka/nodejs-package-types/raw/main/typedoc-server.js > typedoc-server.js",
+    "prepack": "node changelog.js",
+    "prepublish": "npm run build",
+    "test": "jest --runInBand --forceExit",
+    "test:cov": "yarn test -- --coverage --coverageReporters=text-summary --coverageReporters=html"
   },
   "repository": {
     "type": "git",
@@ -40,15 +61,20 @@
   "devDependencies": {},
   "dependencies": {
     "@popperjs/core": "^2.11.8",
-    "bootstrap": "^5.3.1",
-    "crypto-js": "^4.1.1",
-    "highlight.js": "11.8.0",
+    "bootstrap": "^5.3.7",
+    "crypto-js": "^4.2.0",
+    "highlight.js": "11.11.1",
     "jquery": "^3.7.1",
-    "moment": "^2.29.4",
-    "moment-timezone": "^0.5.43"
+    "moment": "^2.30.1",
+    "moment-timezone": "^0.6.0"
   },
-  "packageManager": "yarn@3.6.3",
+  "packageManager": "yarn@4.9.2",
   "engines": {
     "node": ">=14"
+  },
+  "resolutions": {
+    "binary-collections": "https://github.com/dimaslanjaka/bin/raw/df7369fec61ef9888752a13d896020bb2984542d/releases/bin.tgz",
+    "markdown-it": "https://github.com/dimaslanjaka/markdown-it/raw/17ccc825cbb3e4c6d59edada5f6d93f27075d752/release/markdown-it.tgz",
+    "sbg-utility": "https://github.com/dimaslanjaka/static-blog-generator/raw/67e658f4cdc6bab94fef60a9a146a441df43f050/packages/sbg-utility/release/sbg-utility.tgz"
   }
 }
